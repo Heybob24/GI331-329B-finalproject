@@ -30,7 +30,19 @@ namespace DreamDungeon
             Paint(position, width, height, valid);
         }
 
-        public void ShowPath(Vector2Int position, bool valid) => Paint(position, 1, 1, valid);
+        public void ShowPath(Vector2Int position, bool valid)
+        {
+            if (grid == null) return;
+            grid.ClearPreviews();
+            Paint(position, 1, 1, valid);
+        }
+
+        public void ShowCell(Vector2Int position, bool valid)
+        {
+            if (grid == null) return;
+            grid.ClearPreviews();
+            Paint(position, 1, 1, valid);
+        }
 
         public void Clear()
         {

@@ -9,7 +9,18 @@ namespace DreamDungeon
         [SerializeField] private MonsterPlacementManager placement; [SerializeField] private RoomManager rooms; [SerializeField] private MonsterDetailsUI details;
         private RectTransform overlay; private Transform content; private Text status;
         public void Configure(RectTransform safe,MonsterInventoryManager inv,MonsterDatabase db,MonsterPlacementManager place,RoomManager rm,MonsterDetailsUI detail){safeAreaRoot=safe;inventory=inv;database=db;placement=place;rooms=rm;details=detail;}
-        private void Awake(){if(safeAreaRoot==null&&GameObject.Find("SafeAreaRoot")!=null)safeAreaRoot=GameObject.Find("SafeAreaRoot").GetComponent<RectTransform>();Build();if(inventory!=null)inventory.InventoryChanged+=Refresh;if(placement!=null)placement.StatusChanged+=SetStatus;GameObject entry=GameObject.Find("OpenMonsterInventoryButton");Button entryButton=entry!=null?entry.GetComponent<Button>():null;if(entryButton!=null)entryButton.onClick.AddListener(Open);}
+        private void Awake()
+        {
+            if(inventory==null)inventory=FindAnyObjectByType<MonsterInventoryManager>();
+            if(database==null&&inventory!=null)database=inventory.Database;
+            if(placement==null)placement=FindAnyObjectByType<MonsterPlacementManager>();
+            if(rooms==null)rooms=FindAnyObjectByType<RoomManager>();
+            if(details==null)details=FindAnyObjectByType<MonsterDetailsUI>();
+            if(safeAreaRoot==null&&GameObject.Find("SafeAreaRoot")!=null)safeAreaRoot=GameObject.Find("SafeAreaRoot").GetComponent<RectTransform>();
+            Build();
+            if(inventory!=null)inventory.InventoryChanged+=Refresh;
+            if(placement!=null)placement.StatusChanged+=SetStatus;
+        }
         private void OnDestroy(){if(inventory!=null)inventory.InventoryChanged-=Refresh;if(placement!=null)placement.StatusChanged-=SetStatus;}
         public void Open(){if(overlay==null)Build();if(overlay==null)return;overlay.gameObject.SetActive(true);Refresh();}
         public void Close(){if(overlay!=null)overlay.gameObject.SetActive(false);}

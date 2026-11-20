@@ -54,6 +54,11 @@ namespace DreamDungeon
             foreach (var pair in next) if (pair.Value < GetPlaced(pair.Key)) { error = $"Ownership for '{pair.Key}' is below its placed quantity."; return false; }
             owned.Clear(); foreach (var pair in next) owned.Add(pair.Key, pair.Value); InventoryChanged?.Invoke(); error = string.Empty; return true;
         }
+        public void ResetInventory()
+        {
+            owned.Clear();
+            InventoryChanged?.Invoke();
+        }
         private void NotifyChanged() => InventoryChanged?.Invoke();
     }
     [Serializable] public sealed class MonsterInventorySaveData { public List<MonsterOwnershipRecord> entries = new List<MonsterOwnershipRecord>(); }

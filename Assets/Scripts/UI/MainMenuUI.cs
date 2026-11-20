@@ -25,7 +25,13 @@ namespace DreamDungeon
             if (button != null) button.onClick.AddListener(action);
         }
 
-        public void Play() => SceneLoader.Load("DungeonEditor");
+        public void Play()
+        {
+            GameManager.RequestNewGame();
+            BattleSession.Reset();
+            SaveManager.Instance?.ResetGame();
+            SceneLoader.Load("DungeonEditor");
+        }
         public void ShowMonsters() => ShowComingSoon("MONSTERS");
         public void ShowShop() => ShowComingSoon("SHOP");
         public void ShowSettings() => ShowComingSoon("SETTINGS");

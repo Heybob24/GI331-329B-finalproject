@@ -29,9 +29,31 @@ namespace DreamDungeon
         {
             if (inventory == null) { Report("Monster Inventory Manager is not configured."); return false; }
             if (!inventory.CanPlace(id, out string error)) { Report(error); return false; }
+            FindAnyObjectByType<TrapPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<BossPlacementManager>()?.CancelPlacement(false);
             selectedMonsterId = id; movingInstanceId = null; roomPlacement?.SetExternalUnitPlacementActive(true); Report($"Selected {database.FindById(id).monsterName}. Tap a Monster Room to place it."); return true;
         }
-        public void BeginMove(string id) { if (roomManager?.FindMonster(id) == null) { Report("Placed monster was not found."); return; } selectedMonsterId = null; movingInstanceId = id; roomPlacement?.SetExternalUnitPlacementActive(true); Report("Tap a Monster Room to move this monster."); }
+        public void BeginMove(string id) { if (roomManager?.FindMonster(id) == null) { Report("Placed monster was not found."); return; } FindAnyObjectByType<TrapPlacementManager>()?.CancelPlacement(false); FindAnyObjectByType<BossPlacementManager>()?.CancelPlacement(false); selectedMonsterId = null; movingInstanceId = id; roomPlacement?.SetExternalUnitPlacementActive(true); Report("Tap a Monster Room to move this monster."); }
+        public void CancelPlacement(bool notify = true)
+        {
+            bool hadPending = HasPendingPlacement;
+            selectedMonsterId = null;
+            movingInstanceId = null;
+            if (hadPending) roomPlacement?.SetExternalUnitPlacementActive(false);
+            if (notify && hadPending) Report("Monster placement cancelled.");
+        }
+        public bool CanPreviewAt(Vector2Int cellPos)
+        {
+            if (!HasPendingPlacement || roomManager == null) return false;
+            DungeonRoomInstanceData room = roomManager.GetRoomAt(cellPos);
+            if (room == null || room.roomType != DungeonRoomType.MonsterRoom) return false;
+            return TryGetFreePosition(room.instanceId, movingInstanceId, out _, out _);
+        }
+        public void ResetPlacement()
+        {
+            CancelPlacement(false);
+            RefreshVisuals();
+        }
         public bool Remove(string id, out string error) { bool result = roomManager.TryRemoveMonster(id, out error); Report(result ? "Monster returned to inventory." : error); return result; }
         public int Capacity(string roomId)
         {
@@ -50,8 +72,18 @@ namespace DreamDungeon
                 return;
             }
             if (inventory == null || !inventory.CanPlace(selectedMonsterId, out error)) { Report("No owned monster is available."); return; }
-            var instance = new MonsterInstanceData { instanceId = Guid.NewGuid().ToString("N"), monsterId = selectedMonsterId, roomInstanceId = room.instanceId, localPosition = local, level = 1 };
-            if (roomManager.TryPlaceMonster(instance, Capacity(room.instanceId), out error)) { roomPlacement?.SetExternalUnitPlacementActive(false); Report($"Placed {database.FindById(selectedMonsterId).monsterName}."); } else Report(error);
+            string placedMonsterId = selectedMonsterId;
+            var instance = new MonsterInstanceData { instanceId = Guid.NewGuid().ToString("N"), monsterId = placedMonsterId, roomInstanceId = room.instanceId, localPosition = local, level = 1 };
+            if (roomManager.TryPlaceMonster(instance, Capacity(room.instanceId), out error))
+            {
+                if (inventory.GetAvailable(placedMonsterId) <= 0)
+                {
+                    selectedMonsterId = null;
+                    roomPlacement?.SetExternalUnitPlacementActive(false);
+                }
+                Report($"Placed {database.FindById(placedMonsterId).monsterName}.");
+            }
+            else Report(error);
         }
         private bool TryGetFreePosition(string roomId, string ignoreId, out Vector2 position, out string error)
         {

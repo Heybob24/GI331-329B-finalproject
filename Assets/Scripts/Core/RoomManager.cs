@@ -41,6 +41,10 @@ namespace DreamDungeon
         public static RoomManager Instance { get; private set; }
         public event Action LayoutChanged;
         public event Action<int> GoldChanged;
+        public event Action<DungeonRoomInstanceData> RoomPlaced;
+        public event Action<MonsterInstanceData> MonsterPlaced;
+        public event Action<TrapInstanceData> TrapPlaced;
+        public event Action<BossInstanceData> BossPlaced;
 
         public void Configure(DungeonGrid dungeonGrid, RoomData[] catalog, int width, int height, int initialGold)
         {
@@ -70,13 +74,14 @@ namespace DreamDungeon
 
         private void Awake()
         {
-            if (Instance == null) Instance = this;
+            Instance = this;
             Initialize();
             if (currencyManager != null) currencyManager.CurrencyChanged += OnCurrencyChanged;
         }
 
         private void OnDestroy()
         {
+            if (Instance == this) Instance = null;
             if (currencyManager != null) currencyManager.CurrencyChanged -= OnCurrencyChanged;
         }
 
@@ -86,6 +91,8 @@ namespace DreamDungeon
             if (grid == null) grid = GetComponent<DungeonGrid>();
             if (currencyManager == null) currencyManager = GetComponent<CurrencyManager>();
             if (inventoryManager == null) inventoryManager = GetComponent<RoomInventoryManager>();
+            if (monsterInventoryManager == null) monsterInventoryManager = GetComponent<MonsterInventoryManager>();
+            if (trapInventoryManager == null) trapInventoryManager = GetComponent<TrapInventoryManager>();
             if (grid == null)
             {
                 Debug.LogError("RoomManager requires a DungeonGrid component.", this);
@@ -102,6 +109,56 @@ namespace DreamDungeon
             CreateInitialLayout();
             RefreshLayout();
             GoldChanged?.Invoke(gold);
+        }
+
+        public void ResetToInitialState()
+        {
+            if (grid == null) grid = GetComponent<DungeonGrid>();
+            if (currencyManager == null) currencyManager = GetComponent<CurrencyManager>();
+            if (inventoryManager == null) inventoryManager = GetComponent<RoomInventoryManager>();
+            if (monsterInventoryManager == null) monsterInventoryManager = GetComponent<MonsterInventoryManager>();
+            if (trapInventoryManager == null) trapInventoryManager = GetComponent<TrapInventoryManager>();
+
+            gridWidth = 9;
+            gridHeight = 9;
+            if (grid != null)
+            {
+                grid.SelectCell(null);
+                grid.ClearPreviews();
+                if (grid.Width != gridWidth || grid.Height != gridHeight)
+                    grid.RebuildGrid(gridWidth, gridHeight);
+                else
+                    grid.Initialize();
+            }
+
+            undoStack.Clear();
+            redoStack.Clear();
+
+            layout = new DungeonLayoutData { gridWidth = gridWidth, gridHeight = gridHeight };
+            pathfinder = new DungeonPathfinder();
+            validator = new DungeonValidator(pathfinder);
+            CreateInitialLayout();
+
+            inventoryManager?.ResetInventory();
+            monsterInventoryManager?.ResetInventory();
+            trapInventoryManager?.ResetInventory();
+
+            gold = Mathf.Max(0, startingGold);
+            if (currencyManager != null)
+                currencyManager.ResetToInitial(gold, 0, 0);
+            else
+                GoldChanged?.Invoke(gold);
+
+            GetComponent<RoomShopManager>()?.ResetShop();
+            GetComponent<MonsterShopManager>()?.ResetShop();
+            GetComponent<TrapShopManager>()?.ResetShop();
+            GetComponent<PlacementPreview>()?.Clear();
+            GetComponent<RoomPlacement>()?.ResetPlacement();
+            GetComponent<MonsterPlacementManager>()?.ResetPlacement();
+            GetComponent<TrapPlacementManager>()?.ResetPlacement();
+            GetComponent<BossPlacementManager>()?.ResetPlacement();
+
+            RefreshLayout();
         }
 
         private void OnCurrencyChanged(int goldValue, int soul, int crystal)
@@ -178,6 +235,7 @@ namespace DreamDungeon
             SaveUndoPoint();
             layout.rooms.Add(instance);
             RefreshLayout();
+            RoomPlaced?.Invoke(instance);
             error = $"Placed {data.roomName}.";
             return true;
         }
@@ -274,7 +332,7 @@ namespace DreamDungeon
             if (!monsterInventoryManager.CanPlace(instance.monsterId, out error)) return false;
             if (CountMonstersInRoom(room.instanceId) >= Mathf.Max(1, capacity)) { error = "This Monster Room is full."; return false; }
             if (HasMonsterAt(room.instanceId, instance.localPosition, null)) { error = "Another monster already occupies that position."; return false; }
-            SaveUndoPoint(); layout.monsters.Add(instance); RefreshLayout(); error = string.Empty; return true;
+            SaveUndoPoint(); layout.monsters.Add(instance); RefreshLayout(); MonsterPlaced?.Invoke(instance); error = string.Empty; return true;
         }
 
         public bool TryRemoveMonster(string instanceId, out string error)
@@ -318,7 +376,7 @@ namespace DreamDungeon
             if (!trapInventoryManager.CanPlace(instance.trapId, out error)) return false;
             if (CountTrapsInRoom(room.instanceId) >= Mathf.Max(1, capacity)) { error = "This Trap Room is full."; return false; }
             if (HasTrapAt(room.instanceId, instance.localPosition, null)) { error = "Another trap already occupies that position."; return false; }
-            SaveUndoPoint(); layout.traps.Add(instance); RefreshLayout(); error = string.Empty; return true;
+            SaveUndoPoint(); layout.traps.Add(instance); RefreshLayout(); TrapPlaced?.Invoke(instance); error = string.Empty; return true;
         }
 
         public bool TryRemoveTrap(string instanceId, out string error)
@@ -404,6 +462,7 @@ namespace DreamDungeon
             if (layout.bosses == null) layout.bosses = new List<BossInstanceData>();
             layout.bosses.Add(instance);
             RefreshLayout();
+            BossPlaced?.Invoke(instance);
             error = string.Empty;
             return true;
         }
@@ -454,6 +513,12 @@ namespace DreamDungeon
             DungeonLayoutData restored;
             try { restored = DungeonLayoutData.FromJson(json); }
             catch (Exception exception) { error = $"Dungeon layout could not be read: {exception.Message}"; return false; }
+            if (restored.gridWidth >= 9 && restored.gridHeight >= 9 && (restored.gridWidth != gridWidth || restored.gridHeight != gridHeight))
+            {
+                gridWidth = restored.gridWidth;
+                gridHeight = restored.gridHeight;
+                if (grid != null) grid.RebuildGrid(gridWidth, gridHeight);
+            }
             if (restored.gridWidth != gridWidth || restored.gridHeight != gridHeight)
             { error = "Saved dungeon dimensions do not match the current grid."; return false; }
 

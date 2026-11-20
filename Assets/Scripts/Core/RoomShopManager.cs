@@ -13,7 +13,7 @@ namespace DreamDungeon
 
         private readonly HashSet<string> completedRequests = new HashSet<string>();
 
-        public int DungeonLevel => dungeonLevel;
+        public int DungeonLevel => DungeonProgressionManager.Instance != null ? Mathf.Max(dungeonLevel, DungeonProgressionManager.Instance.CurrentLevel) : dungeonLevel;
         public RoomDatabase Database => database;
         public CurrencyManager Currency => currency;
         public RoomInventoryManager Inventory => inventory;
@@ -30,20 +30,32 @@ namespace DreamDungeon
 
         public void SetDungeonLevel(int level) => dungeonLevel = Mathf.Max(1, level);
 
-        public bool IsUnlocked(RoomData data) => data != null && dungeonLevel >= data.unlockDungeonLevel;
+        public void ResetShop()
+        {
+            completedRequests.Clear();
+            dungeonLevel = 1;
+        }
+
+        public bool IsUnlocked(RoomData data) => data != null && DungeonLevel >= data.unlockDungeonLevel;
 
         public bool CanPurchase(string roomId, out string error)
         {
             RoomData data = database != null ? database.FindById(roomId) : null;
             if (data == null) { error = $"Room '{roomId}' is missing from the Room Database."; return false; }
             if (!data.IsPurchasable) { error = $"{data.roomName} cannot be purchased."; return false; }
+            if (data.goldCost < 0 || data.soulCost < 0) { error = $"{data.roomName} has an invalid price."; return false; }
             if (!IsUnlocked(data)) { error = $"{data.roomName} unlocks at Dungeon Level {data.unlockDungeonLevel}."; return false; }
             if (inventory == null) { error = "Room Inventory Manager is not configured."; return false; }
             if (!inventory.CanAdd(data, 1, out error)) return false;
             if (currency == null) { error = "Currency Manager is not configured."; return false; }
             if (!currency.CanAfford(data.goldCost, data.soulCost))
             {
-                error = $"Not enough currency. {data.roomName} costs {data.goldCost} Gold and {data.soulCost} Soul.";
+                if (currency.Gold < data.goldCost && data.soulCost == 0)
+                    error = $"Not Enough Gold. {data.roomName} costs {data.goldCost} Gold.";
+                else if (currency.Gold < data.goldCost)
+                    error = $"Not Enough Gold. {data.roomName} costs {data.goldCost} Gold and {data.soulCost} Soul.";
+                else
+                    error = $"Not enough currency. {data.roomName} costs {data.goldCost} Gold and {data.soulCost} Soul.";
                 return false;
             }
             error = string.Empty;

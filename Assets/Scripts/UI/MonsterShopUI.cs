@@ -10,10 +10,26 @@ namespace DreamDungeon
         [SerializeField] private MonsterDatabase database;
         [SerializeField] private CurrencyManager currency;
         private RectTransform overlay; private Transform content; private Text status; private Text balance;
+        private bool isPurchasing;
         public void Configure(RectTransform safe, MonsterShopManager manager, MonsterDatabase db, CurrencyManager money) { safeAreaRoot = safe; shop = manager; database = db; currency = money; }
-        private void Awake() { if (safeAreaRoot == null && GameObject.Find("SafeAreaRoot") != null) safeAreaRoot = GameObject.Find("SafeAreaRoot").GetComponent<RectTransform>(); Build(); if (shop != null) shop.StatusChanged += SetStatus; if (currency != null) currency.CurrencyChanged += UpdateBalance; }
-        private void OnDestroy() { if (shop != null) shop.StatusChanged -= SetStatus; if (currency != null) currency.CurrencyChanged -= UpdateBalance; }
-        public void Open() { if (overlay == null) Build(); if (overlay == null) return; overlay.gameObject.SetActive(true); Refresh(); UpdateBalance(currency.Gold, currency.Soul, currency.Crystal); }
+        private void Awake()
+        {
+            if (shop == null) shop = FindAnyObjectByType<MonsterShopManager>();
+            if (database == null && shop != null) database = shop.Database;
+            if (currency == null && shop != null) currency = shop.Currency;
+            if (safeAreaRoot == null && GameObject.Find("SafeAreaRoot") != null) safeAreaRoot = GameObject.Find("SafeAreaRoot").GetComponent<RectTransform>();
+            Build();
+            if (shop != null) shop.StatusChanged += SetStatus;
+            if (currency != null) currency.CurrencyChanged += UpdateBalance;
+            if (shop != null && shop.Inventory != null) shop.Inventory.InventoryChanged += Refresh;
+        }
+        private void OnDestroy()
+        {
+            if (shop != null) shop.StatusChanged -= SetStatus;
+            if (currency != null) currency.CurrencyChanged -= UpdateBalance;
+            if (shop != null && shop.Inventory != null) shop.Inventory.InventoryChanged -= Refresh;
+        }
+        public void Open() { if (overlay == null) Build(); if (overlay == null) return; overlay.gameObject.SetActive(true); Refresh(); if (currency != null) UpdateBalance(currency.Gold, currency.Soul, currency.Crystal); }
         public void Close() { if (overlay != null) overlay.gameObject.SetActive(false); }
         private void Build()
         {
@@ -38,13 +54,29 @@ namespace DreamDungeon
                 RoomUIFactory.CreateText(t,"RarityRole",$"{data.rarity}  •  {data.role}",17,new Vector2(-220,42),new Vector2(420,36),RarityColor(data.rarity),TextAnchor.MiddleLeft);
                 RoomUIFactory.CreateText(t,"Stats",$"HP {data.maxHP}   ATK {data.attack}   DEF {data.defense}\nRANGE {data.attackRange:0.0}   SPD {data.attackSpeed:0.0}   MOVE {data.moveSpeed:0.0}",15,new Vector2(-210,-25),new Vector2(470,72),new Color(.85f,.86f,.9f),TextAnchor.MiddleLeft);
                 bool unlocked=shop.DungeonLevel>=data.unlockDungeonLevel; bool can=shop.CanPurchase(data.monsterId,out string error);
+                bool affordable=currency!=null&&currency.CanAfford(data.goldCost,0);
                 RoomUIFactory.CreateText(t,"Unlock",unlocked?$"{data.goldCost} GOLD":"LOCKED • DUNGEON LEVEL "+data.unlockDungeonLevel,16,new Vector2(290,38),new Vector2(220,45),unlocked?new Color(.96f,.78f,.43f):new Color(.9f,.45f,.42f));
-                Button buy=RoomUIFactory.CreateButton(t,"BuyMonsterButton",unlocked?(can?"BUY":"UNAVAILABLE"):"LOCKED",new Vector2(335,-55),new Vector2(180,64),new Color(.4f,.27f,.14f),17); buy.interactable=can; buy.onClick.AddListener(()=>Purchase(data.monsterId));
+                string btnText=!unlocked?"LOCKED":!affordable?"NOT ENOUGH GOLD":can?"BUY":"UNAVAILABLE";
+                Button buy=RoomUIFactory.CreateButton(t,"BuyMonsterButton",btnText,new Vector2(335,-55),new Vector2(180,64),new Color(.4f,.27f,.14f),17); buy.interactable=unlocked; buy.onClick.AddListener(()=>Purchase(data.monsterId));
                 if(!unlocked)buy.GetComponentInChildren<Text>().text="LOCKED";
             }
             Canvas.ForceUpdateCanvases();
         }
-        private void Purchase(string id){if(shop.TryPurchase(id,out string message))SetStatus(message);else SetStatus(message);Refresh();}
+        private void Purchase(string id)
+        {
+            if (isPurchasing) return;
+            isPurchasing = true;
+            try
+            {
+                if (shop.TryPurchase(id, out string message)) SetStatus(message);
+                else SetStatus(message);
+                Refresh();
+            }
+            finally
+            {
+                isPurchasing = false;
+            }
+        }
         private void UpdateBalance(int gold,int soul,int crystal){if(balance!=null)balance.text=$"GOLD {gold}   SOUL {soul}";}
         private void SetStatus(string value){if(status!=null)status.text=value;}
         private static Color RarityColor(MonsterRarity rarity)=>rarity switch{MonsterRarity.Common=>new Color(.65f,.85f,.67f),MonsterRarity.Rare=>new Color(.52f,.68f,1f),MonsterRarity.Epic=>new Color(.82f,.55f,1f),_=>new Color(1f,.72f,.3f)};

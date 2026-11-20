@@ -36,8 +36,14 @@ namespace DreamDungeon
         private Camera battleCamera;
         private bool initialized;
         private string statusMessage = "Preparing raid…";
+        private AdventurerFactionData activeFaction;
+        private DifficultyData activeDifficulty;
+        private CampaignStageData activeCampaignStage;
 
         public BattleState State => state;
+        public AdventurerFactionData ActiveFaction => activeFaction;
+        public DifficultyData ActiveDifficulty => activeDifficulty;
+        public CampaignStageData ActiveCampaignStage => activeCampaignStage;
         public int CurrentWave => waveManager != null ? waveManager.CurrentWave : 1;
         public int TotalWaves => waveManager != null ? waveManager.TotalWaves : (configuration != null ? configuration.waves.Count : 0);
         public int LivingAdventurers => waveManager != null ? waveManager.LivingCount : 0;
@@ -107,6 +113,8 @@ namespace DreamDungeon
             if (!configuration.Validate(adventurerDatabase, out error)) { Fail(error); return; }
             if (monsterDatabase == null || !monsterDatabase.ValidateDatabase(out error)) { Fail(monsterDatabase == null ? "Monster Database is missing." : error); return; }
             if (trapDatabase == null || !trapDatabase.ValidateDatabase(out error)) { Fail(trapDatabase == null ? "Trap Database is missing." : error); return; }
+
+            ApplyCampaignRuntimeOverridesIfNeeded();
 
             try
             {
@@ -304,7 +312,69 @@ namespace DreamDungeon
                 waveManager.WaveCleared += wave => { statusMessage = $"Wave {wave} cleared!"; Notify(); };
                 waveManager.AllWavesCleared += OnAllWavesCleared;
                 waveManager.AdventurerDied += _ => Notify();
+                waveManager.AdventurerSpawned += OnAdventurerSpawned;
             }
+        }
+
+        private void OnAdventurerSpawned(AdventurerActor actor)
+        {
+            if (actor != null && activeFaction != null)
+            {
+                actor.ApplyFactionPassive(activeFaction);
+            }
+        }
+
+        private void ApplyCampaignRuntimeOverridesIfNeeded()
+        {
+            if (!BattleSession.IsCampaignBattle) return;
+
+            CampaignManager campaignMgr = CampaignManager.Instance ?? FindAnyObjectByType<CampaignManager>();
+            if (campaignMgr == null)
+            {
+                campaignMgr = gameObject.GetComponent<CampaignManager>() ?? gameObject.AddComponent<CampaignManager>();
+            }
+            campaignMgr.EnsureInitialized();
+
+            DifficultyManager diffMgr = DifficultyManager.Instance ?? FindAnyObjectByType<DifficultyManager>();
+            if (diffMgr == null)
+            {
+                diffMgr = gameObject.GetComponent<DifficultyManager>() ?? gameObject.AddComponent<DifficultyManager>();
+            }
+            diffMgr.EnsureDefaultDifficulties();
+
+            activeCampaignStage = campaignMgr.GetStage(BattleSession.StageId);
+            activeDifficulty = diffMgr.GetDifficultyData(BattleSession.Difficulty);
+            activeFaction = !string.IsNullOrWhiteSpace(BattleSession.FactionId)
+                ? AdventurerFactionData.FindFaction(BattleSession.FactionId)
+                : campaignMgr.GetPrimaryFactionForStage(activeCampaignStage);
+
+            // Build a non-destructive runtime copy of AdventurerDatabase scaled by Difficulty and Faction passive
+            AdventurerDatabase baseAdvDb = Resources.Load<AdventurerDatabase>("DreamDungeon/AdventurerDatabase") ?? adventurerDatabase;
+            if (baseAdvDb != null && activeDifficulty != null)
+            {
+                AdventurerDatabase runtimeAdvDb = ScriptableObject.CreateInstance<AdventurerDatabase>();
+                runtimeAdvDb.name = "RuntimeAdventurerDatabase_" + activeDifficulty.difficultyId;
+                var scaledEntries = new List<AdventurerData>();
+
+                float fHp = activeFaction?.factionPassiveBonus != null ? activeFaction.factionPassiveBonus.healthMultiplier : 1f;
+                float fAtk = activeFaction?.factionPassiveBonus != null ? activeFaction.factionPassiveBonus.attackMultiplier : 1f;
+                float fDef = activeFaction?.factionPassiveBonus != null ? activeFaction.factionPassiveBonus.defenseMultiplier : 1f;
+                float fSpd = activeFaction?.factionPassiveBonus != null ? activeFaction.factionPassiveBonus.attackSpeedMultiplier : 1f;
+                float fMov = activeFaction?.factionPassiveBonus != null ? activeFaction.factionPassiveBonus.moveSpeedMultiplier : 1f;
+
+                foreach (AdventurerData orig in baseAdvDb.Entries)
+                {
+                    if (orig == null) continue;
+                    scaledEntries.Add(activeDifficulty.CreateRuntimeScaledCopy(orig, fHp, fAtk, fDef, fSpd, fMov));
+                }
+                runtimeAdvDb.SetEntries(scaledEntries);
+                adventurerDatabase = runtimeAdvDb;
+            }
+
+            // Build a runtime BattleConfiguration from the stage's WaveConfiguration list
+            BattleConfiguration baseCfg = Resources.Load<BattleConfiguration>("DreamDungeon/BattleConfiguration") ?? configuration;
+            IReadOnlyList<WaveConfiguration> stageWaves = activeCampaignStage != null ? activeCampaignStage.waveConfiguration : null;
+            configuration = WaveConfiguration.BuildRuntimeBattleConfiguration(stageWaves, activeDifficulty, activeFaction, baseCfg);
         }
 
         private void Update()
@@ -375,6 +445,41 @@ namespace DreamDungeon
             state = victory ? BattleState.Victory : BattleState.Defeat;
             speedController.ResetSpeed();
 
+            int completedWaves = victory ? TotalWaves : Mathf.Max(0, CurrentWave - 1);
+
+            if (BattleSession.IsCampaignBattle)
+            {
+                CampaignManager campaignMgr = CampaignManager.Instance ?? FindAnyObjectByType<CampaignManager>() ?? gameObject.AddComponent<CampaignManager>();
+                CampaignRewardBreakdown breakdown = campaignMgr.RecordCampaignBattleOutcome(
+                    BattleSession.CurrentBattleResultId,
+                    BattleSession.StageId,
+                    BattleSession.Difficulty,
+                    victory,
+                    completedWaves,
+                    TotalWaves,
+                    waveManager.DefeatedCount,
+                    bossesDefeatedCount,
+                    CoreHP,
+                    CoreMaxHP,
+                    grantImmediateCurrency: false);
+
+                BattleSession.SetResult(victory, CurrentWave, waveManager.DefeatedCount,
+                    breakdown.TotalGold, breakdown.TotalSoul, breakdown.TotalEXP,
+                    breakdown.IsFirstClear, breakdown.IsPerfectClear);
+
+                int bossDefeatedForProg = (!string.IsNullOrWhiteSpace(BattleSession.StageBossId) && victory)
+                    ? Mathf.Max(1, bossesDefeatedCount)
+                    : bossesDefeatedCount;
+                DungeonProgressionManager.Instance?.RecordRaidResult(victory, CurrentWave, waveManager.DefeatedCount, bossDefeatedForProg);
+
+                statusMessage = victory ? "Campaign Stage Cleared. Victory!" : "Dungeon Core destroyed. Defeat.";
+                Notify();
+
+                hud?.ShowResult(victory, CurrentWave, waveManager.DefeatedCount, CoreHP,
+                    breakdown.TotalGold, breakdown.TotalSoul, breakdown.TotalEXP);
+                return;
+            }
+
             float goldMult = DungeonFacilityManager.Instance != null ? DungeonFacilityManager.Instance.GetGoldMultiplier() : 1.0f;
             float soulMult = DungeonFacilityManager.Instance != null ? DungeonFacilityManager.Instance.GetSoulMultiplier() : 1.0f;
 
@@ -383,6 +488,9 @@ namespace DreamDungeon
 
             DungeonProgressionManager.Instance?.RecordRaidResult(victory, CurrentWave, waveManager.DefeatedCount, bossesDefeatedCount);
             DungeonProgressionManager.Instance?.AddExp(reward.Exp);
+
+            QuestManager.Instance?.NotifyBattleResult(BattleSession.CurrentBattleResultId, victory, completedWaves, waveManager.DefeatedCount, bossesDefeatedCount);
+            AchievementManager.Instance?.NotifyBattleResult(BattleSession.CurrentBattleResultId, victory, completedWaves, waveManager.DefeatedCount, bossesDefeatedCount);
 
             statusMessage = victory ? "All waves defeated. Victory!" : "Dungeon Core destroyed. Defeat.";
             Notify();
@@ -404,15 +512,95 @@ namespace DreamDungeon
         public void Retry()
         {
             if (state != BattleState.Victory && state != BattleState.Defeat) return;
-            BattleSession.Begin(BattleSession.LayoutJson, BattleSession.DungeonScene, BattleSession.Gold, BattleSession.Soul, BattleSession.Crystal);
+            ResetBattleState();
+            if (BattleSession.IsCampaignBattle)
+            {
+                BattleSession.BeginCampaign(
+                    BattleSession.LayoutJson,
+                    BattleSession.DungeonScene,
+                    BattleSession.Gold,
+                    BattleSession.Soul,
+                    BattleSession.Crystal,
+                    BattleSession.RegionId,
+                    BattleSession.CampaignId,
+                    BattleSession.StageId,
+                    BattleSession.Difficulty,
+                    BattleSession.FactionId,
+                    BattleSession.StageBossId);
+            }
+            else
+            {
+                BattleSession.Begin(BattleSession.LayoutJson, BattleSession.DungeonScene, BattleSession.Gold, BattleSession.Soul, BattleSession.Crystal);
+            }
             SceneManager.LoadScene("Battle");
         }
 
         public void ContinueToDungeon()
         {
             if (state != BattleState.Victory && state != BattleState.Defeat) return;
+            ResetBattleState();
             BattleSession.RequestReturn();
             SceneManager.LoadScene(BattleSession.DungeonScene);
+        }
+
+        public void ReturnToWorldMap(string nextStageId = null)
+        {
+            if (state != BattleState.Victory && state != BattleState.Defeat) return;
+            ResetBattleState();
+            BattleSession.RequestReturnToWorldMap(nextStageId);
+            SceneManager.LoadScene(BattleSession.DungeonScene);
+        }
+
+        public void ResetBattleState()
+        {
+            StopAllCoroutines();
+            if (speedController != null) speedController.ResetSpeed();
+            if (waveManager != null)
+            {
+                waveManager.StopAllCoroutines();
+                waveManager.CleanUp();
+            }
+            if (trapController != null)
+            {
+                trapController.StopAllCoroutines();
+                trapController.ClearTraps();
+            }
+            for (int i = 0; i < monsters.Count; i++)
+            {
+                if (monsters[i] != null)
+                {
+                    monsters[i].Died -= OnMonsterDied;
+                    monsters[i].CancelInvoke();
+                    monsters[i].StopAllCoroutines();
+                }
+            }
+            monsters.Clear();
+            for (int i = 0; i < bosses.Count; i++)
+            {
+                if (bosses[i] != null)
+                {
+                    bosses[i].Died -= OnBossDied;
+                    bosses[i].CancelInvoke();
+                    bosses[i].StopAllCoroutines();
+                }
+            }
+            bosses.Clear();
+            monsterCombatTargets.Clear();
+            if (coreActor != null)
+            {
+                coreActor.CancelInvoke();
+                coreActor.StopAllCoroutines();
+            }
+            for (int i = 0; i < worldTiles.Count; i++)
+            {
+                if (worldTiles[i] != null) Destroy(worldTiles[i]);
+            }
+            worldTiles.Clear();
+            dungeonRenderer?.Clear();
+            bossesDefeatedCount = 0;
+            initialized = false;
+            state = BattleState.Preparing;
+            statusMessage = "Idle";
         }
 
         private void SpawnTile(Vector3 pos, Color color, float size, int order, string label = null)

@@ -253,6 +253,9 @@ public static class Milestone1SceneBuilder
         ButtonAt(safe, "ProgressionButton", "PROGRESSION", new Vector2(-280, 505), new Vector2(250, 60), new Color(.20f, .30f, .45f), 15);
         ButtonAt(safe, "BossButton", "BOSSES", new Vector2(0, 505), new Vector2(250, 60), new Color(.45f, .18f, .18f), 15);
         ButtonAt(safe, "UpgradeButton", "UPGRADES", new Vector2(280, 505), new Vector2(250, 60), new Color(.18f, .35f, .25f), 15);
+        ButtonAt(safe, "QuestButton", "QUESTS", new Vector2(-280, 435), new Vector2(210, 56), new Color(.32f, .25f, .14f), 15);
+        ButtonAt(safe, "WorldMapButton", "WORLD MAP", new Vector2(0, 435), new Vector2(210, 56), new Color(.16f, .34f, .42f), 15);
+        ButtonAt(safe, "AchievementButton", "ACHIEVEMENTS", new Vector2(280, 435), new Vector2(220, 56), new Color(.28f, .20f, .36f), 15);
 
         TextLabel(safe, "SelectedCellText", "NO CELL SELECTED", 20, new Vector2(0, -455), new Vector2(930, 55), new Color(.87f, .86f, .79f));
         TextLabel(safe, "BuildStatusText", "Select a room or path tool.", 18, new Vector2(0, -515), new Vector2(990, 70), Color.white);
@@ -345,6 +348,11 @@ public static class Milestone1SceneBuilder
         if (builder.GetComponent<DungeonCoreUpgradeManager>() == null) builder.AddComponent<DungeonCoreUpgradeManager>();
         if (builder.GetComponent<DungeonExpansionManager>() == null) builder.AddComponent<DungeonExpansionManager>();
         if (builder.GetComponent<DungeonFacilityManager>() == null) builder.AddComponent<DungeonFacilityManager>();
+        if (builder.GetComponent<QuestManager>() == null) builder.AddComponent<QuestManager>();
+        if (builder.GetComponent<AchievementManager>() == null) builder.AddComponent<AchievementManager>();
+        if (builder.GetComponent<DifficultyManager>() == null) builder.AddComponent<DifficultyManager>();
+        if (builder.GetComponent<WorldMapManager>() == null) builder.AddComponent<WorldMapManager>();
+        if (builder.GetComponent<CampaignManager>() == null) builder.AddComponent<CampaignManager>();
         if (builder.GetComponent<SaveManager>() == null) builder.AddComponent<SaveManager>();
 
         DungeonCameraController cameraController = builder.AddComponent<DungeonCameraController>();
@@ -393,11 +401,25 @@ public static class Milestone1SceneBuilder
         bossUI.Configure(safe, bossPlacement, bossDatabase);
         DungeonUpgradeUI upgradeUI = editorController.AddComponent<DungeonUpgradeUI>();
         upgradeUI.Configure(safe);
+        QuestUIManager questUI = editorController.AddComponent<QuestUIManager>();
+        questUI.Configure(safe);
+        AchievementUIManager achievementUI = editorController.AddComponent<AchievementUIManager>();
+        achievementUI.Configure(safe);
+        QuestNotificationUI notifUI = editorController.AddComponent<QuestNotificationUI>();
+        notifUI.Configure(safe);
+        StageDetailsUI stageDetailsUI = editorController.AddComponent<StageDetailsUI>();
+        stageDetailsUI.Configure(safe);
+        CampaignSelectionUI campaignUI = editorController.AddComponent<CampaignSelectionUI>();
+        campaignUI.Configure(safe, null, null, null, stageDetailsUI);
+        WorldMapUI worldMapUI = editorController.AddComponent<WorldMapUI>();
+        worldMapUI.Configure(safe, null, campaignUI);
 
         DungeonEditorUI editorUI = editorController.AddComponent<DungeonEditorUI>();
         editorUI.Configure(shopUI, inventoryUI, detailsUI);
         editorUI.ConfigureMilestone4(monsterShopUI, monsterInventoryUI, trapShopUI, trapInventoryUI, monsterPlacement, trapPlacement);
         editorUI.ConfigureMilestone6(progUI, bossUI, upgradeUI, bossPlacement);
+        editorUI.ConfigureMilestone7(questUI, achievementUI, notifUI);
+        editorUI.ConfigureMilestone8(worldMapUI, campaignUI, stageDetailsUI);
         EditorUtility.SetDirty(editorController);
         GameObject eventSystem = new GameObject("EventSystem", typeof(EventSystem), typeof(InputSystemUIInputModule));
         eventSystem.GetComponent<InputSystemUIInputModule>().AssignDefaultActions();

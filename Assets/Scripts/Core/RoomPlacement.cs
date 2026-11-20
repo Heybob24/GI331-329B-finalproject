@@ -57,6 +57,7 @@ namespace DreamDungeon
         {
             if (room == null) { Report("Room data is missing from the catalog."); return; }
             if (room.roomType == DungeonRoomType.Path) { SelectPath(); return; }
+            CancelExternalUnitPlacements();
             selectedRoom = room;
             rotation = 0;
             movingRoomId = null;
@@ -76,6 +77,7 @@ namespace DreamDungeon
 
         public void SetTool(DungeonBuildTool newTool)
         {
+            CancelExternalUnitPlacements();
             tool = newTool;
             ToolChanged?.Invoke(tool);
             movingRoomId = null;
@@ -94,9 +96,39 @@ namespace DreamDungeon
 
         public void SelectMonsterRoom() => SelectRoom(roomManager.GetRoomData(DungeonRoomType.MonsterRoom));
         public void SelectTreasureRoom() => SelectRoom(roomManager.GetRoomData(DungeonRoomType.TreasureRoom));
+        public void SelectTrapRoom() => SelectRoom(roomManager.GetRoomData(DungeonRoomType.TrapRoom));
         public void SelectPath() => SetTool(DungeonBuildTool.Path);
         public void SelectMove() => SetTool(DungeonBuildTool.Move);
         public void SelectRemove() => SetTool(DungeonBuildTool.Remove);
+
+        public void CancelPlacement()
+        {
+            CancelExternalUnitPlacements();
+            movingRoomId = null;
+            rotation = 0;
+            preview?.Clear();
+            grid?.SelectCell(null);
+        }
+
+        public void ResetPlacement()
+        {
+            CancelExternalUnitPlacements();
+            movingRoomId = null;
+            rotation = 0;
+            selectedRoom = roomManager != null ? roomManager.GetRoomData(DungeonRoomType.MonsterRoom) : null;
+            tool = DungeonBuildTool.Room;
+            ToolChanged?.Invoke(tool);
+            preview?.Clear();
+            grid?.SelectCell(null);
+        }
+
+        private void CancelExternalUnitPlacements()
+        {
+            externalUnitPlacementActive = false;
+            FindAnyObjectByType<MonsterPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<TrapPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<BossPlacementManager>()?.CancelPlacement(false);
+        }
 
         public bool BeginMove(string instanceId)
         {
@@ -104,6 +136,7 @@ namespace DreamDungeon
             if (room == null) { Report("Select a placed room first."); return false; }
             if (room.roomType == DungeonRoomType.Entrance || room.roomType == DungeonRoomType.DungeonCore)
             { Report("Entrance and Dungeon Core cannot be moved."); return false; }
+            CancelExternalUnitPlacements();
             movingRoomId = instanceId;
             tool = DungeonBuildTool.Move;
             ToolChanged?.Invoke(tool);
@@ -132,6 +165,20 @@ namespace DreamDungeon
             if (PointerOverUi(position)) { preview.Clear(); return true; }
             if (!grid.TryGetCellAtScreen(position, out DungeonCell cell)) { preview.Clear(); return true; }
 
+            if (externalUnitPlacementActive || HasPendingUnitPlacement())
+            {
+                if (TryGetUnitPlacementPreview(cell.Position, out DungeonRoomInstanceData targetRoom, out bool validUnit))
+                {
+                    if (targetRoom != null) preview.Show(targetRoom, targetRoom.position, validUnit);
+                    else preview.ShowCell(cell.Position, validUnit);
+                }
+                else
+                {
+                    preview.Clear();
+                }
+                return true;
+            }
+
             if (tool == DungeonBuildTool.Move && !string.IsNullOrEmpty(movingRoomId))
             {
                 DungeonRoomInstanceData moving = roomManager.FindRoom(movingRoomId);
@@ -155,11 +202,11 @@ namespace DreamDungeon
         private void OnCellSelected(DungeonCell cell)
         {
             if (cell == null) return;
+            if (externalUnitPlacementActive || HasPendingUnitPlacement()) return;
             DungeonRoomInstanceData room = roomManager.GetRoomAt(cell.Position);
 
             if (tool == DungeonBuildTool.Room && room != null)
             {
-                if (externalUnitPlacementActive || HasPendingUnitPlacement()) return;
                 RoomFocused?.Invoke(room);
                 Report($"Selected {room.roomType} at ({room.position.x + 1}, {room.position.y + 1}).");
                 return;
@@ -189,7 +236,35 @@ namespace DreamDungeon
         {
             MonsterPlacementManager monsters = FindAnyObjectByType<MonsterPlacementManager>();
             TrapPlacementManager traps = FindAnyObjectByType<TrapPlacementManager>();
-            return (monsters != null && monsters.HasPendingPlacement) || (traps != null && traps.HasPendingPlacement);
+            BossPlacementManager bosses = FindAnyObjectByType<BossPlacementManager>();
+            return (monsters != null && monsters.HasPendingPlacement) ||
+                   (traps != null && traps.HasPendingPlacement) ||
+                   (bosses != null && bosses.HasPendingPlacement);
+        }
+
+        private bool TryGetUnitPlacementPreview(Vector2Int cellPos, out DungeonRoomInstanceData targetRoom, out bool valid)
+        {
+            targetRoom = roomManager != null ? roomManager.GetRoomAt(cellPos) : null;
+            valid = false;
+            MonsterPlacementManager monsters = FindAnyObjectByType<MonsterPlacementManager>();
+            if (monsters != null && monsters.HasPendingPlacement)
+            {
+                valid = monsters.CanPreviewAt(cellPos);
+                return true;
+            }
+            TrapPlacementManager traps = FindAnyObjectByType<TrapPlacementManager>();
+            if (traps != null && traps.HasPendingPlacement)
+            {
+                valid = traps.CanPreviewAt(cellPos);
+                return true;
+            }
+            BossPlacementManager bosses = FindAnyObjectByType<BossPlacementManager>();
+            if (bosses != null && bosses.HasPendingPlacement)
+            {
+                valid = bosses.CanPreviewAt(cellPos);
+                return true;
+            }
+            return false;
         }
 
         private void HandleMove(DungeonRoomInstanceData selectedAtCell, Vector2Int destination)

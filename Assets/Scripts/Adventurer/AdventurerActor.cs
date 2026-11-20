@@ -19,6 +19,9 @@ namespace DreamDungeon
         private float attackSpeed;
         private float moveSpeed;
         private int waveIndex;
+        private int passiveHealPerSecond;
+        private float passiveHealTimer;
+        private string factionId = string.Empty;
 
         private AdventurerMovement movement;
         private AdventurerAttack attack;
@@ -45,11 +48,25 @@ namespace DreamDungeon
         public float MoveSpeed => moveSpeed;
         public int WaveIndex => waveIndex;
         public string InstanceId => instanceId;
+        public string FactionId => factionId;
+        public int PassiveHealPerSecond => passiveHealPerSecond;
         public AdventurerMovement Movement => movement;
         public AdventurerAttack Attack => attack;
 
         public event Action<AdventurerActor> Died;
         public event Action<AdventurerState> StateChanged;
+
+        public void ApplyFactionPassive(AdventurerFactionData faction)
+        {
+            if (faction == null || faction.factionPassiveBonus == null) return;
+            factionId = faction.factionId;
+            passiveHealPerSecond = Mathf.Max(0, faction.factionPassiveBonus.healPerSecond);
+            if (attack != null && definition != null)
+            {
+                attack.Configure(attackStat, attackRange, attackSpeed, definition.attackType, definition.targetPriority,
+                    faction.factionPassiveBonus.bonusDamageVsBossMultiplier);
+            }
+        }
 
         public void Initialize(AdventurerData data, int wave, List<Vector2Int> path, Func<Vector2Int, Vector3> worldConverter, Vector3 spawnOffset, Sprite whiteSprite, string id)
         {
@@ -112,6 +129,17 @@ namespace DreamDungeon
         public void Tick(float deltaTime, IReadOnlyList<ICombatTarget> monsterTargets, ICombatTarget coreTarget)
         {
             if (!IsAlive) return;
+
+            if (passiveHealPerSecond > 0 && currentHP < maxHP)
+            {
+                passiveHealTimer += deltaTime;
+                if (passiveHealTimer >= 1f)
+                {
+                    passiveHealTimer -= 1f;
+                    currentHP = Mathf.Min(maxHP, currentHP + passiveHealPerSecond);
+                    RefreshHealthBar();
+                }
+            }
 
             attack.TickCooldown(deltaTime);
 

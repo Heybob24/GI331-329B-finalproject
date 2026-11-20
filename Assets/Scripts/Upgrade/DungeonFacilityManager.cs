@@ -24,11 +24,26 @@ namespace DreamDungeon
         {
             if (Instance != null && Instance != this)
             {
-                Destroy(gameObject);
+                if (transform.parent == null && gameObject.GetComponents<Component>().Length <= 2)
+                {
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Destroy(this);
+                }
                 return;
             }
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (transform.parent == null && gameObject.GetComponents<Component>().Length <= 2)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
         }
 
         public float GetGoldMultiplier() => 1.0f + (_goldFacilityLevel - 1) * 0.10f;

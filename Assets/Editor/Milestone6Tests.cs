@@ -633,6 +633,248 @@ namespace DreamDungeon.Tests
                 UnityEngine.Object.DestroyImmediate(go);
             });
 
+            // ==========================================
+            // GROUP 7: SHOP PURCHASE & NEW GAME RESET (Test Cases 1 - 12)
+            // ==========================================
+            Run("TC_01_Shop_PurchaseMonsterRoomWithEnoughGold", () =>
+            {
+                var go = new GameObject("TC_01");
+                var grid = go.AddComponent<DungeonGrid>();
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(1000, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                rm.Configure(grid, null, 9, 9, 1000);
+                var inv = go.AddComponent<RoomInventoryManager>();
+                inv.Configure(roomDb, rm);
+                rm.ConfigureRoomSystems(roomDb, curr, inv);
+                var shop = go.AddComponent<RoomShopManager>();
+                shop.Configure(roomDb, curr, inv, 1);
+
+                bool ok = shop.TryPurchase("monster_room", out string msg);
+                Assert(ok, $"Expected purchase monster_room to succeed: {msg}");
+                Assert(inv.GetOwned("monster_room") == 1 && inv.GetAvailable("monster_room") == 1, "Monster Room should be added to inventory");
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
+            Run("TC_02_Shop_PurchaseTrapAndTrapRoomIncreasesInventory", () =>
+            {
+                var go = new GameObject("TC_02");
+                var grid = go.AddComponent<DungeonGrid>();
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(1000, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var trapDb = AssetDatabase.LoadAssetAtPath<TrapDatabase>("Assets/Data/TrapDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                rm.Configure(grid, null, 9, 9, 1000);
+                var roomInv = go.AddComponent<RoomInventoryManager>();
+                roomInv.Configure(roomDb, rm);
+                var trapInv = go.AddComponent<TrapInventoryManager>();
+                trapInv.Configure(trapDb, rm);
+                rm.ConfigureRoomSystems(roomDb, curr, roomInv);
+                rm.ConfigureUnitInventories(null, trapInv);
+                rm.ConfigureUnitDefinitions(null, trapDb);
+                var roomShop = go.AddComponent<RoomShopManager>();
+                roomShop.Configure(roomDb, curr, roomInv, 1);
+                var trapShop = go.AddComponent<TrapShopManager>();
+                trapShop.Configure(trapDb, trapInv, curr, 1);
+
+                Assert(roomShop.TryPurchase("trap_room", out string rMsg), $"Trap Room purchase failed: {rMsg}");
+                Assert(roomInv.GetOwned("trap_room") == 1, "Trap Room inventory should increase to 1");
+                Assert(trapShop.TryPurchase("spike_trap", out string tMsg), $"Spike Trap purchase failed: {tMsg}");
+                Assert(trapInv.GetOwned("spike_trap") == 1, "Spike Trap inventory should increase to 1");
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
+            Run("TC_03_Shop_GoldDeductedCorrectlyAfterPurchase", () =>
+            {
+                var go = new GameObject("TC_03");
+                var grid = go.AddComponent<DungeonGrid>();
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(1000, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var monsterDb = AssetDatabase.LoadAssetAtPath<MonsterDatabase>("Assets/Data/MonsterDatabase.asset");
+                var trapDb = AssetDatabase.LoadAssetAtPath<TrapDatabase>("Assets/Data/TrapDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                rm.Configure(grid, null, 9, 9, 1000);
+                var roomInv = go.AddComponent<RoomInventoryManager>();
+                roomInv.Configure(roomDb, rm);
+                var monsterInv = go.AddComponent<MonsterInventoryManager>();
+                monsterInv.Configure(monsterDb, rm);
+                var trapInv = go.AddComponent<TrapInventoryManager>();
+                trapInv.Configure(trapDb, rm);
+                var roomShop = go.AddComponent<RoomShopManager>();
+                roomShop.Configure(roomDb, curr, roomInv, 1);
+                var monsterShop = go.AddComponent<MonsterShopManager>();
+                monsterShop.Configure(monsterDb, monsterInv, curr, 1);
+                var trapShop = go.AddComponent<TrapShopManager>();
+                trapShop.Configure(trapDb, trapInv, curr, 1);
+
+                roomShop.TryPurchase("monster_room", out _); // 200G
+                Assert(curr.Gold == 800, $"Expected 800 Gold after Monster Room, got {curr.Gold}");
+                roomShop.TryPurchase("trap_room", out _); // 250G
+                Assert(curr.Gold == 550, $"Expected 550 Gold after Trap Room, got {curr.Gold}");
+                monsterShop.TryPurchase("slime", out _); // 100G
+                Assert(curr.Gold == 450, $"Expected 450 Gold after Slime, got {curr.Gold}");
+                trapShop.TryPurchase("spike_trap", out _); // 100G
+                Assert(curr.Gold == 350, $"Expected 350 Gold after Spike Trap, got {curr.Gold}");
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
+            Run("TC_04_Shop_CannotPurchaseWithInsufficientGold", () =>
+            {
+                var go = new GameObject("TC_04");
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(50, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var monsterDb = AssetDatabase.LoadAssetAtPath<MonsterDatabase>("Assets/Data/MonsterDatabase.asset");
+                var trapDb = AssetDatabase.LoadAssetAtPath<TrapDatabase>("Assets/Data/TrapDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                var roomInv = go.AddComponent<RoomInventoryManager>();
+                roomInv.Configure(roomDb, rm);
+                var monsterInv = go.AddComponent<MonsterInventoryManager>();
+                monsterInv.Configure(monsterDb, rm);
+                var trapInv = go.AddComponent<TrapInventoryManager>();
+                trapInv.Configure(trapDb, rm);
+                var roomShop = go.AddComponent<RoomShopManager>();
+                roomShop.Configure(roomDb, curr, roomInv, 1);
+                var monsterShop = go.AddComponent<MonsterShopManager>();
+                monsterShop.Configure(monsterDb, monsterInv, curr, 1);
+                var trapShop = go.AddComponent<TrapShopManager>();
+                trapShop.Configure(trapDb, trapInv, curr, 1);
+
+                Assert(!roomShop.TryPurchase("monster_room", out string rErr) && rErr.Contains("Not Enough Gold"), $"Expected Not Enough Gold error, got {rErr}");
+                Assert(!monsterShop.TryPurchase("slime", out string mErr) && mErr.Contains("Not Enough Gold"), $"Expected Not Enough Gold error, got {mErr}");
+                Assert(!trapShop.TryPurchase("spike_trap", out string tErr) && tErr.Contains("Not Enough Gold"), $"Expected Not Enough Gold error, got {tErr}");
+                Assert(curr.Gold == 50, "Gold must not be deducted when insufficient");
+                Assert(roomInv.GetOwned("monster_room") == 0 && monsterInv.GetOwned("slime") == 0 && trapInv.GetOwned("spike_trap") == 0, "Inventory must not change when insufficient gold");
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
+            Run("TC_05_06_07_Placement_PlaceCancelAndDeductInventory", () =>
+            {
+                var go = new GameObject("TC_05_06_07");
+                var grid = go.AddComponent<DungeonGrid>();
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(2000, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var monsterDb = AssetDatabase.LoadAssetAtPath<MonsterDatabase>("Assets/Data/MonsterDatabase.asset");
+                var trapDb = AssetDatabase.LoadAssetAtPath<TrapDatabase>("Assets/Data/TrapDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                rm.Configure(grid, null, 9, 9, 2000);
+                var roomInv = go.AddComponent<RoomInventoryManager>();
+                roomInv.Configure(roomDb, rm);
+                var monsterInv = go.AddComponent<MonsterInventoryManager>();
+                monsterInv.Configure(monsterDb, rm);
+                var trapInv = go.AddComponent<TrapInventoryManager>();
+                trapInv.Configure(trapDb, rm);
+                rm.ConfigureRoomSystems(roomDb, curr, roomInv);
+                rm.ConfigureUnitInventories(monsterInv, trapInv);
+                rm.ConfigureUnitDefinitions(monsterDb, trapDb);
+                rm.Initialize();
+                var preview = go.AddComponent<PlacementPreview>();
+                preview.Configure(grid);
+                var placement = go.AddComponent<RoomPlacement>();
+                placement.Configure(grid, rm, preview);
+                var mPlace = go.AddComponent<MonsterPlacementManager>();
+                mPlace.Configure(grid, rm, monsterDb, monsterInv, placement);
+                var tPlace = go.AddComponent<TrapPlacementManager>();
+                tPlace.Configure(grid, rm, trapDb, trapInv, placement);
+
+                var mRoomData = roomDb.FindById("monster_room");
+                var tRoomData = roomDb.FindById("trap_room");
+                var slimeData = monsterDb.FindById("slime");
+                var spikeData = trapDb.FindById("spike_trap");
+
+                roomInv.TryAddOwned(mRoomData, 1, out _);
+                roomInv.TryAddOwned(tRoomData, 1, out _);
+                monsterInv.TryAddOwned(slimeData, 1, out _);
+                trapInv.TryAddOwned(spikeData, 1, out _);
+
+                // TC 6: Select and cancel placement -> inventory does not disappear
+                placement.SelectRoom(mRoomData);
+                placement.CancelPlacement();
+                Assert(roomInv.GetAvailable("monster_room") == 1, "Cancelling room placement must not consume inventory");
+                mPlace.SelectMonster("slime");
+                mPlace.CancelPlacement();
+                Assert(monsterInv.GetAvailable("slime") == 1, "Cancelling monster placement must not consume inventory");
+
+                // TC 5 & 7: Place Monster Room & Trap Room on Grid -> Available decreases by 1
+                Assert(rm.TryPlace(mRoomData, new Vector2Int(3, 5), 0, out string pErr1), $"Place monster_room failed: {pErr1}");
+                Assert(roomInv.GetAvailable("monster_room") == 0 && roomInv.GetPlaced("monster_room") == 1, "Monster Room available should decrease by 1");
+                Assert(rm.TryPlace(tRoomData, new Vector2Int(4, 5), 0, out string pErr2), $"Place trap_room failed: {pErr2}");
+                Assert(roomInv.GetAvailable("trap_room") == 0 && roomInv.GetPlaced("trap_room") == 1, "Trap Room available should decrease by 1");
+
+                // Place Monster inside Monster Room and Trap inside Trap Room
+                Assert(mPlace.SelectMonster("slime"), "Should select slime");
+                Assert(grid.TryGetCell(new Vector2Int(3, 5), out DungeonCell mCell), "Cell 3,5 should exist");
+                grid.SelectCell(mCell);
+                Assert(monsterInv.GetAvailable("slime") == 0 && monsterInv.GetPlaced("slime") == 1, "Slime available should decrease by 1 after placement");
+
+                Assert(tPlace.SelectTrap("spike_trap"), "Should select spike_trap");
+                Assert(grid.TryGetCell(new Vector2Int(4, 5), out DungeonCell tCell), "Cell 4,5 should exist");
+                grid.SelectCell(tCell);
+                Assert(trapInv.GetAvailable("spike_trap") == 0 && trapInv.GetPlaced("spike_trap") == 1, "Spike trap available should decrease by 1 after placement");
+
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
+            Run("TC_08_09_10_11_12_NewGameReset_ClearsAllRunStateAndAllowsStartRaid", () =>
+            {
+                var go = new GameObject("TC_NewGameReset");
+                var grid = go.AddComponent<DungeonGrid>();
+                var curr = go.AddComponent<CurrencyManager>();
+                curr.Configure(1000, 0, 0);
+                var roomDb = AssetDatabase.LoadAssetAtPath<RoomDatabase>("Assets/Data/RoomDatabase.asset");
+                var monsterDb = AssetDatabase.LoadAssetAtPath<MonsterDatabase>("Assets/Data/MonsterDatabase.asset");
+                var trapDb = AssetDatabase.LoadAssetAtPath<TrapDatabase>("Assets/Data/TrapDatabase.asset");
+                var rm = go.AddComponent<RoomManager>();
+                rm.Configure(grid, null, 9, 9, 1000);
+                var roomInv = go.AddComponent<RoomInventoryManager>();
+                roomInv.Configure(roomDb, rm);
+                var monsterInv = go.AddComponent<MonsterInventoryManager>();
+                monsterInv.Configure(monsterDb, rm);
+                var trapInv = go.AddComponent<TrapInventoryManager>();
+                trapInv.Configure(trapDb, rm);
+                rm.ConfigureRoomSystems(roomDb, curr, roomInv);
+                rm.ConfigureUnitInventories(monsterInv, trapInv);
+                rm.ConfigureUnitDefinitions(monsterDb, trapDb);
+                rm.Initialize();
+
+                // Simulate dirty state from a previous run
+                curr.SetGold(250);
+                curr.SetSoul(75);
+                var mRoomData = roomDb.FindById("monster_room");
+                var slimeData = monsterDb.FindById("slime");
+                roomInv.TryAddOwned(mRoomData, 2, out _);
+                monsterInv.TryAddOwned(slimeData, 2, out _);
+                rm.TryPlace(mRoomData, new Vector2Int(3, 5), 0, out _);
+                var placedRoom = rm.GetRoomAt(new Vector2Int(3, 5));
+                rm.TryPlaceMonster(new MonsterInstanceData { instanceId = "m_old", monsterId = "slime", roomInstanceId = placedRoom.instanceId, localPosition = Vector2.zero, level = 1 }, 3, out _);
+                BattleSession.Begin(rm.LayoutToJson(), "DungeonEditor", 250, 75, 0);
+
+                // Perform New Game Reset multiple times (TC 8, 9, 10, 11)
+                for (int i = 0; i < 3; i++)
+                {
+                    BattleSession.Reset();
+                    rm.ResetToInitialState();
+                }
+
+                // TC 8: Gold back to initial 1000
+                Assert(curr.Gold == 1000 && curr.Soul == 0 && curr.Crystal == 0, $"Expected Gold 1000, Soul 0, Crystal 0 after reset, got {curr.Gold}/{curr.Soul}/{curr.Crystal}");
+                // TC 9: Grid cleared back to initial 7 rooms (Entrance, Core, 5 Paths)
+                Assert(rm.Layout.rooms.Count == 7, $"Expected 7 initial tiles on grid, got {rm.Layout.rooms.Count}");
+                Assert(rm.GetRoomAt(new Vector2Int(3, 5)) == null, "Previously placed Monster Room at (3,5) should be cleared");
+                // TC 10: Monsters, Traps, Bosses and BattleSession cleared
+                Assert(rm.Layout.monsters.Count == 0 && rm.Layout.traps.Count == 0 && rm.Layout.bosses.Count == 0, "Units from previous run must be cleared");
+                Assert(roomInv.GetOwned("monster_room") == 0 && monsterInv.GetOwned("slime") == 0, "Inventories from previous run must be cleared");
+                Assert(!BattleSession.IsReady && !BattleSession.ReturnPending, "BattleSession must be reset");
+                // TC 12: Start Raid validation passes on fresh reset layout
+                Assert(rm.Pathfinder.TryFindRoute(rm.Layout, out var route) && route != null && route.Count >= 2, "Freshly reset dungeon must have a valid raid path from Entrance to Core");
+
+                UnityEngine.Object.DestroyImmediate(go);
+            });
+
             Debug.Log($"========== TEST RESULTS: {passed} / {total} PASSED ==========");
         }
 

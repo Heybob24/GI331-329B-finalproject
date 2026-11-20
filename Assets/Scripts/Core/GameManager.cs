@@ -8,6 +8,16 @@ namespace DreamDungeon
         public static GameManager Instance { get; private set; }
         private readonly HashSet<string> grantedExperienceRewards = new HashSet<string>();
         public int Experience { get; private set; }
+        public static bool IsNewGameRequested { get; private set; }
+
+        public static void RequestNewGame() => IsNewGameRequested = true;
+        public static void ClearNewGameRequest() => IsNewGameRequested = false;
+
+        public void ResetExperience()
+        {
+            grantedExperienceRewards.Clear();
+            Experience = 0;
+        }
 
         public bool GrantExperience(string rewardId, int amount)
         {

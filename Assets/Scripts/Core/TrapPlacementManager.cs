@@ -29,9 +29,31 @@ namespace DreamDungeon
         {
             if (inventory == null) { Report("Trap Inventory Manager is not configured."); return false; }
             if (!inventory.CanPlace(id, out string error)) { Report(error); return false; }
+            FindAnyObjectByType<MonsterPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<BossPlacementManager>()?.CancelPlacement(false);
             selectedTrapId = id; movingInstanceId = null; roomPlacement?.SetExternalUnitPlacementActive(true); Report($"Selected {database.FindById(id).trapName}. Tap a Trap Room to place it."); return true;
         }
-        public void BeginMove(string id) { if (roomManager?.FindTrap(id) == null) { Report("Placed trap was not found."); return; } selectedTrapId = null; movingInstanceId = id; roomPlacement?.SetExternalUnitPlacementActive(true); Report("Tap a Trap Room to move this trap."); }
+        public void BeginMove(string id) { if (roomManager?.FindTrap(id) == null) { Report("Placed trap was not found."); return; } FindAnyObjectByType<MonsterPlacementManager>()?.CancelPlacement(false); FindAnyObjectByType<BossPlacementManager>()?.CancelPlacement(false); selectedTrapId = null; movingInstanceId = id; roomPlacement?.SetExternalUnitPlacementActive(true); Report("Tap a Trap Room to move this trap."); }
+        public void CancelPlacement(bool notify = true)
+        {
+            bool hadPending = HasPendingPlacement;
+            selectedTrapId = null;
+            movingInstanceId = null;
+            if (hadPending) roomPlacement?.SetExternalUnitPlacementActive(false);
+            if (notify && hadPending) Report("Trap placement cancelled.");
+        }
+        public bool CanPreviewAt(Vector2Int cellPos)
+        {
+            if (!HasPendingPlacement || roomManager == null) return false;
+            DungeonRoomInstanceData room = roomManager.GetRoomAt(cellPos);
+            if (room == null || room.roomType != DungeonRoomType.TrapRoom) return false;
+            return TryGetFreePosition(room.instanceId, movingInstanceId, out _, out _);
+        }
+        public void ResetPlacement()
+        {
+            CancelPlacement(false);
+            RefreshVisuals();
+        }
         public bool Remove(string id, out string error) { bool result = roomManager.TryRemoveTrap(id, out error); Report(result ? "Trap returned to inventory." : error); return result; }
         public int Capacity(string roomId)
         {
@@ -50,8 +72,18 @@ namespace DreamDungeon
                 return;
             }
             if (inventory == null || !inventory.CanPlace(selectedTrapId, out error)) { Report("No owned trap is available."); return; }
-            var instance = new TrapInstanceData { instanceId = Guid.NewGuid().ToString("N"), trapId = selectedTrapId, roomInstanceId = room.instanceId, localPosition = local, level = 1 };
-            if (roomManager.TryPlaceTrap(instance, Capacity(room.instanceId), out error)) { roomPlacement?.SetExternalUnitPlacementActive(false); Report($"Placed {database.FindById(selectedTrapId).trapName}."); } else Report(error);
+            string placedTrapId = selectedTrapId;
+            var instance = new TrapInstanceData { instanceId = Guid.NewGuid().ToString("N"), trapId = placedTrapId, roomInstanceId = room.instanceId, localPosition = local, level = 1 };
+            if (roomManager.TryPlaceTrap(instance, Capacity(room.instanceId), out error))
+            {
+                if (inventory.GetAvailable(placedTrapId) <= 0)
+                {
+                    selectedTrapId = null;
+                    roomPlacement?.SetExternalUnitPlacementActive(false);
+                }
+                Report($"Placed {database.FindById(placedTrapId).trapName}.");
+            }
+            else Report(error);
         }
         private bool TryGetFreePosition(string roomId, string ignoreId, out Vector2 position, out string error)
         {

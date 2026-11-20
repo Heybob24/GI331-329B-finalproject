@@ -80,6 +80,8 @@ namespace DreamDungeon
                 return false;
             }
 
+            FindAnyObjectByType<MonsterPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<TrapPlacementManager>()?.CancelPlacement(false);
             selectedBossId = id;
             movingInstanceId = null;
             roomPlacement?.SetExternalUnitPlacementActive(true);
@@ -94,10 +96,41 @@ namespace DreamDungeon
                 Report("Placed boss was not found.");
                 return;
             }
+            FindAnyObjectByType<MonsterPlacementManager>()?.CancelPlacement(false);
+            FindAnyObjectByType<TrapPlacementManager>()?.CancelPlacement(false);
             selectedBossId = null;
             movingInstanceId = id;
             roomPlacement?.SetExternalUnitPlacementActive(true);
             Report("Tap a Boss Room to move this boss.");
+        }
+
+        public void CancelPlacement(bool notify = true)
+        {
+            bool hadPending = HasPendingPlacement;
+            selectedBossId = null;
+            movingInstanceId = null;
+            if (hadPending) roomPlacement?.SetExternalUnitPlacementActive(false);
+            if (notify && hadPending) Report("Boss placement cancelled.");
+        }
+
+        public bool CanPreviewAt(Vector2Int cellPos)
+        {
+            if (!HasPendingPlacement || roomManager == null) return false;
+            DungeonRoomInstanceData room = roomManager.GetRoomAt(cellPos);
+            if (room == null || room.roomType != DungeonRoomType.BossRoom) return false;
+            int count = roomManager.CountBossesInRoom(room.instanceId);
+            if (!string.IsNullOrEmpty(movingInstanceId))
+            {
+                BossInstanceData moving = roomManager.FindBoss(movingInstanceId);
+                return moving != null && (moving.roomInstanceId == room.instanceId || count < 1);
+            }
+            return count < 1;
+        }
+
+        public void ResetPlacement()
+        {
+            CancelPlacement(false);
+            RefreshVisuals();
         }
 
         public bool Remove(string id, out string error)

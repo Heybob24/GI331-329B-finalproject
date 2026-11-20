@@ -12,23 +12,26 @@ namespace DreamDungeon
         private AdventurerAttackType attackType;
         private AdventurerTargetPriority targetPriority;
         private float attackCooldown;
+        private float bonusDamageVsBossMultiplier = 1f;
         private ICombatTarget currentTarget;
 
         public ICombatTarget CurrentTarget => currentTarget;
         public float AttackRange => attackRange;
         public float AttackSpeed => attackSpeed;
         public int AttackDamage => attackDamage;
+        public float BonusDamageVsBossMultiplier => bonusDamageVsBossMultiplier;
         public bool IsOnCooldown => attackCooldown > 0f;
 
         public event Action<ICombatTarget, int> Attacked;
 
-        public void Configure(int damage, float range, float speed, AdventurerAttackType type, AdventurerTargetPriority priority)
+        public void Configure(int damage, float range, float speed, AdventurerAttackType type, AdventurerTargetPriority priority, float bossDamageMult = 1f)
         {
             attackDamage = Mathf.Max(1, damage);
             attackRange = Mathf.Max(0.1f, range);
             attackSpeed = Mathf.Max(0.01f, speed);
             attackType = type;
             targetPriority = priority;
+            bonusDamageVsBossMultiplier = Mathf.Max(1f, bossDamageMult);
             attackCooldown = 0f;
             currentTarget = null;
         }
@@ -77,7 +80,8 @@ namespace DreamDungeon
             if (attackCooldown > 0f || target == null || !target.IsAlive) return false;
 
             attackCooldown = 1f / Mathf.Max(0.01f, attackSpeed);
-            int damage = DamageCalculator.Calculate(attackDamage, target.Defense);
+            float mult = target is BossBattleActor ? bonusDamageVsBossMultiplier : 1f;
+            int damage = DamageCalculator.Calculate(attackDamage, target.Defense, mult);
             var info = new DamageInfo(damage, attacker, CombatTeam.Adventurer, attackType);
             target.TakeDamage(info);
             Attacked?.Invoke(target, damage);

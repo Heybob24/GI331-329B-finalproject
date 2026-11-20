@@ -107,20 +107,33 @@ namespace DreamDungeon
             RoomUIFactory.CreateText(t, "RoomFacts", $"{data.width}×{data.height}  •  Max Level {data.maxLevel}  •  Capacity {data.maxCapacity}", 16, new Vector2(-125, -28), new Vector2(440, 38), new Color(.77f, .74f, .64f), TextAnchor.MiddleLeft);
             bool unlocked = shopManager != null && shopManager.IsUnlocked(data);
             bool affordable = currency != null && currency.CanAfford(data.goldCost, data.soulCost);
-            string state = !data.IsPurchasable ? "NOT FOR SALE" : !unlocked ? unlock : !affordable ? "INSUFFICIENT CURRENCY" : unlock;
+            string purchaseError = string.Empty;
+            bool canPurchase = shopManager != null ? shopManager.CanPurchase(data.roomId, out purchaseError) : (data.IsPurchasable && unlocked && affordable);
+            string state = !data.IsPurchasable ? "NOT FOR SALE" : !unlocked ? unlock : !affordable ? "NOT ENOUGH GOLD" : !canPurchase ? purchaseError : unlock;
             RoomUIFactory.CreateText(t, "RoomUnlock", state, 15, new Vector2(-125, -78), new Vector2(440, 35), !data.IsPurchasable || unlocked ? new Color(.66f, .8f, .66f) : new Color(1f, .46f, .36f), TextAnchor.MiddleLeft);
-            string buttonText = !data.IsPurchasable ? "—" : !unlocked ? "LOCKED" : !affordable ? "NEED GOLD" : "BUY";
+            string buttonText = !data.IsPurchasable ? "—" : !unlocked ? "LOCKED" : !affordable ? "NOT ENOUGH GOLD" : !canPurchase ? "MAX OWNED" : "BUY";
             Button buy = RoomUIFactory.CreateButton(t, "BuyRoomButton", buttonText, new Vector2(350, -58), new Vector2(175, 70), new Color(.40f, .27f, .14f), 19);
-            buy.interactable = data.IsPurchasable && unlocked && affordable;
+            buy.interactable = data.IsPurchasable && unlocked;
             buy.onClick.AddListener(() => Purchase(data.roomId));
         }
 
+        private bool isPurchasing;
+
         private void Purchase(string roomId)
         {
-            if (shopManager == null) { SetStatus("Room Shop Manager is not configured."); return; }
-            if (shopManager.TryPurchase(roomId, out string message)) SetStatus(message);
-            else SetStatus(message);
-            RefreshCards();
+            if (isPurchasing) return;
+            isPurchasing = true;
+            try
+            {
+                if (shopManager == null) { SetStatus("Room Shop Manager is not configured."); return; }
+                if (shopManager.TryPurchase(roomId, out string message)) SetStatus(message);
+                else SetStatus(message);
+                RefreshCards();
+            }
+            finally
+            {
+                isPurchasing = false;
+            }
         }
 
         private void UpdateBalance(int gold, int soul, int crystal)

@@ -120,6 +120,12 @@ namespace DreamDungeon
             return true;
         }
 
+        public void ResetInventory()
+        {
+            owned.Clear();
+            InventoryChanged?.Invoke();
+        }
+
         private void OnLayoutChanged() => InventoryChanged?.Invoke();
     }
 

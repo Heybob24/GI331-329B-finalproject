@@ -15,6 +15,7 @@ namespace DreamDungeon
         public int Soul => soul;
         public int Crystal => crystal;
         public event Action<int, int, int> CurrencyChanged;
+        public event Action<int, int, int> CurrencyAdded;
 
         public void Configure(int startingGold, int startingSoul, int startingCrystal)
         {
@@ -25,17 +26,31 @@ namespace DreamDungeon
 
         private void Awake()
         {
-            if (Instance == null) Instance = this;
+            Instance = this;
             CurrencyChanged?.Invoke(gold, soul, crystal);
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this) Instance = null;
         }
 
         public void AddGold(int amount) => TryAdd(amount, 0, 0, out _);
         public void AddSoul(int amount) => TryAdd(0, amount, 0, out _);
+        public void AddCrystal(int amount) => TryAdd(0, 0, amount, out _);
         public bool TrySpendGold(int amount) => TrySpend(amount, 0, 0, out _);
         public bool TrySpendSoul(int amount) => TrySpend(0, amount, 0, out _);
         public void SetGold(int val) { gold = Mathf.Max(0, val); CurrencyChanged?.Invoke(gold, soul, crystal); }
         public void SetSoul(int val) { soul = Mathf.Max(0, val); CurrencyChanged?.Invoke(gold, soul, crystal); }
+        public void SetCrystal(int val) { crystal = Mathf.Max(0, val); CurrencyChanged?.Invoke(gold, soul, crystal); }
         public void ResetCurrencies() { gold = 1000; soul = 200; crystal = 0; CurrencyChanged?.Invoke(gold, soul, crystal); }
+        public void ResetToInitial(int initialGold = 1000, int initialSoul = 0, int initialCrystal = 0)
+        {
+            gold = Mathf.Max(0, initialGold);
+            soul = Mathf.Max(0, initialSoul);
+            crystal = Mathf.Max(0, initialCrystal);
+            CurrencyChanged?.Invoke(gold, soul, crystal);
+        }
 
         public bool CanAfford(int goldCost, int soulCost, int crystalCost = 0)
         {
@@ -75,6 +90,10 @@ namespace DreamDungeon
             soul = (int)Math.Min(int.MaxValue, (long)soul + soulAmount);
             crystal = (int)Math.Min(int.MaxValue, (long)crystal + crystalAmount);
             CurrencyChanged?.Invoke(gold, soul, crystal);
+            if (goldAmount > 0 || soulAmount > 0 || crystalAmount > 0)
+            {
+                CurrencyAdded?.Invoke(goldAmount, soulAmount, crystalAmount);
+            }
             error = string.Empty;
             return true;
         }

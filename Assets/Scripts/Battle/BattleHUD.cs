@@ -27,6 +27,7 @@ namespace DreamDungeon
         private Text bossNameText;
         private Text bossHpText;
         private Image bossHpFill;
+        private CampaignResultUI campaignResultUI;
 
         private bool paused;
 
@@ -105,6 +106,16 @@ namespace DreamDungeon
         {
             if (resultPanel != null) resultPanel.SetActive(true);
 
+            if (campaignResultUI == null)
+            {
+                campaignResultUI = gameObject.GetComponent<CampaignResultUI>() ?? gameObject.AddComponent<CampaignResultUI>();
+            }
+            if (resultPanel != null)
+            {
+                campaignResultUI.AttachToResultPanel(manager, resultPanel.transform);
+                campaignResultUI.RefreshButtonStates(victory);
+            }
+
             if (resultTitleText != null)
             {
                 resultTitleText.text = victory ? "VICTORY!" : "DEFEAT";
@@ -113,9 +124,11 @@ namespace DreamDungeon
 
             if (resultDetailsText != null)
             {
-                resultDetailsText.text = victory
-                    ? $"All {wave} Waves Cleared!\nAdventurers Defeated: {defeated}\nCore Integrity: {coreHp} HP"
-                    : $"Defeated on Wave {wave}\nAdventurers Defeated: {defeated}\nCore Destroyed";
+                resultDetailsText.text = campaignResultUI != null
+                    ? campaignResultUI.FormatCampaignResultDetails(victory, wave, defeated, coreHp)
+                    : (victory
+                        ? $"All {wave} Waves Cleared!\nAdventurers Defeated: {defeated}\nCore Integrity: {coreHp} HP"
+                        : $"Defeated on Wave {wave}\nAdventurers Defeated: {defeated}\nCore Destroyed");
             }
 
             if (resultRewardText != null)
