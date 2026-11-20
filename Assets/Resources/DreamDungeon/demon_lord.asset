@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63c573f992c0c742b878a29cc18d8cf, type: 3}
+  m_Name: demon_lord
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
+  bossId: demon_lord
+  bossName: Demon Lord
+  bossIcon: {fileID: 0}
+  description: A fearsome dragon residing in deep caverns.
+  bossColor: {r: 0.75, g: 0.15, b: 0.35, a: 1}
+  maxHP: 3500
+  attack: 120
+  defense: 60
+  attackRange: 3
+  attackSpeed: 1.2
+  moveSpeed: 1.8
+  unlockDungeonLevel: 10
+  skills:
+  - skillName: Dark Explosion
+    skillType: 2
+    damageMultiplier: 2.5
+    cooldown: 12
+    radius: 4.5
+    telegraphDuration: 1.8
+    description: Unleashes apocalyptic dark energy.
+    telegraphColor: {r: 0.6, g: 0.1, b: 0.8, a: 0.5}
+  defeatExpReward: 300
+  defeatGoldReward: 1500
+  defeatSoulReward: 500

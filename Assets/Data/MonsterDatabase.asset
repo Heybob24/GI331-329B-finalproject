@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c55b6030f02e514db9fbdcee50ea9e4, type: 3}
+  m_Name: MonsterDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.MonsterDatabase
+  monsters:
+  - {fileID: 11400000, guid: e80b14a8fce0d574aadcbdfbf7491ccf, type: 2}
+  - {fileID: 11400000, guid: 8b347aa250f208646979f18394cd2d6c, type: 2}
+  - {fileID: 11400000, guid: ae3e453214202a149ad1db5a4d9c5beb, type: 2}
+  - {fileID: 11400000, guid: b146133762199da44b4444c29d1ac9b9, type: 2}
+  - {fileID: 11400000, guid: f0ede3c37bdb5dd4d8c1d5f6d9f8e91b, type: 2}
+  - {fileID: 11400000, guid: df305422db33b484f93373c7d37cc432, type: 2}

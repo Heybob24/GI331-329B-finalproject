@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b714922fc3df24cab9c2c1998b0c82, type: 3}
+  m_Name: monster-room
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.RoomData
+  roomId: monster_room
+  roomName: Monster Room
+  description: A room for defending monsters.
+  roomIcon: {fileID: 0}
+  roomPrefab: {fileID: 0}
+  roomType: 2
+  width: 1
+  height: 1
+  goldCost: 200
+  soulCost: 0
+  unlockDungeonLevel: 1
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0
+  maxCapacity: 10

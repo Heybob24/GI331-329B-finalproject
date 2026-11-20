@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ba5dc9a42938244b8708366f6e87bd, type: 3}
+  m_Name: spike_trap
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.TrapData
+  trapId: spike_trap
+  trapName: Spike Trap
+  description: Spike trap for defending your dungeon.
+  icon: {fileID: 0}
+  trapPrefab: {fileID: 0}
+  trapType: 0
+  damage: 20
+  damagePerSecond: 0
+  duration: 0
+  cooldown: 0
+  triggerRadius: 1
+  slowPercentage: 0
+  goldCost: 100
+  unlockDungeonLevel: 1
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0

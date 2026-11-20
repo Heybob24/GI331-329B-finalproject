@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b714922fc3df24cab9c2c1998b0c82, type: 3}
+  m_Name: trap-room
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.RoomData
+  roomId: trap_room
+  roomName: Trap Room
+  description: A room prepared for traps.
+  roomIcon: {fileID: 0}
+  roomPrefab: {fileID: 0}
+  roomType: 4
+  width: 1
+  height: 1
+  goldCost: 250
+  soulCost: 0
+  unlockDungeonLevel: 1
+  maxLevel: 5
+  baseUpgradeGoldCost: 125
+  baseUpgradeSoulCost: 0
+  maxCapacity: 5
