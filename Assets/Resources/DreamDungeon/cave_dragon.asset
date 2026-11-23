@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
   bossId: cave_dragon
   bossName: Cave Dragon
-  bossIcon: {fileID: 0}
-  description: A fearsome dragon residing in deep caverns.
+  bossIcon: {fileID: 21300000, guid: ab7e1b13a710d3b57dfe0dbe51e0bee9, type: 3}
+  bossPrefab: {fileID: 100000, guid: d19872fe113fa854ebdf3b589ccb12e9, type: 3}
+  description: A fearsome fire-breathing dragon residing in deep caverns.
   bossColor: {r: 0.9, g: 0.25, b: 0.15, a: 1}
   maxHP: 1500
   attack: 60

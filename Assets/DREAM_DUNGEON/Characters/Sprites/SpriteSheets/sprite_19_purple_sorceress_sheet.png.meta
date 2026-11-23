@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: c85b496a398c0f6d5562bc57cda0ee42
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_19_purple_sorceress_idle_01
+  - first:
+      213: 21300004
+    second: sprite_19_purple_sorceress_idle_02
+  - first:
+      213: 21300006
+    second: sprite_19_purple_sorceress_idle_03
+  - first:
+      213: 21300008
+    second: sprite_19_purple_sorceress_idle_04
+  - first:
+      213: 21300010
+    second: sprite_19_purple_sorceress_idle_05
+  - first:
+      213: 21300012
+    second: sprite_19_purple_sorceress_idle_06
+  - first:
+      213: 21300014
+    second: sprite_19_purple_sorceress_walk_01
+  - first:
+      213: 21300016
+    second: sprite_19_purple_sorceress_walk_02
+  - first:
+      213: 21300018
+    second: sprite_19_purple_sorceress_walk_03
+  - first:
+      213: 21300020
+    second: sprite_19_purple_sorceress_walk_04
+  - first:
+      213: 21300022
+    second: sprite_19_purple_sorceress_walk_05
+  - first:
+      213: 21300024
+    second: sprite_19_purple_sorceress_walk_06
+  - first:
+      213: 21300026
+    second: sprite_19_purple_sorceress_walk_07
+  - first:
+      213: 21300028
+    second: sprite_19_purple_sorceress_walk_08
+  - first:
+      213: 21300030
+    second: sprite_19_purple_sorceress_attack_01
+  - first:
+      213: 21300032
+    second: sprite_19_purple_sorceress_attack_02
+  - first:
+      213: 21300034
+    second: sprite_19_purple_sorceress_attack_03
+  - first:
+      213: 21300036
+    second: sprite_19_purple_sorceress_attack_04
+  - first:
+      213: 21300038
+    second: sprite_19_purple_sorceress_attack_05
+  - first:
+      213: 21300040
+    second: sprite_19_purple_sorceress_attack_06
+  - first:
+      213: 21300042
+    second: sprite_19_purple_sorceress_attack_07
+  - first:
+      213: 21300044
+    second: sprite_19_purple_sorceress_attack_08
+  - first:
+      213: 21300046
+    second: sprite_19_purple_sorceress_hit_01
+  - first:
+      213: 21300048
+    second: sprite_19_purple_sorceress_hit_02
+  - first:
+      213: 21300050
+    second: sprite_19_purple_sorceress_hit_03
+  - first:
+      213: 21300052
+    second: sprite_19_purple_sorceress_hit_04
+  - first:
+      213: 21300054
+    second: sprite_19_purple_sorceress_death_01
+  - first:
+      213: 21300056
+    second: sprite_19_purple_sorceress_death_02
+  - first:
+      213: 21300058
+    second: sprite_19_purple_sorceress_death_03
+  - first:
+      213: 21300060
+    second: sprite_19_purple_sorceress_death_04
+  - first:
+      213: 21300062
+    second: sprite_19_purple_sorceress_death_05
+  - first:
+      213: 21300064
+    second: sprite_19_purple_sorceress_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bd693cce59da3d494d330b1e54520d
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_02
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e47463a2d51544be0cc91ecdfcc1b5
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def7ebe881304dc3429bb58631898030
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_04
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265233aa398856f399abfbb3967940eb
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_05
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b076c154b5afb9fb04b6b0b8c63dae4
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_idle_06
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 896
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38db323ba687236a13c45184a0e55c21
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16c9b66914bf439b89d70fce8298771
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_02
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2810fd39552161f2be24b125a43fa7
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c04ea7eda1ffe6ea5f2fa67120cbb2
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_04
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecc6ea5078db581d3a242217646defb
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_05
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6589bbc40799565294c602f9e7b3107
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_06
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989df598b7ff97a6a4568152144ee6c8
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c53fcdbdd959e1a98fce6cff7285f04
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 672
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9073dbd51bd041e2713dcdc9c4176fb
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb924e2a751f7449d64e64388e480615
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_02
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb71c728a5ff10ff95dc641f92a199f7
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8762e97e434ced7d462d8ce1c25373a8
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_04
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7102e66b6022c21272f0d391741fb5
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_05
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3651095111015e84eaf29277ba0628b
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_06
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345bcbd5fcb0843204e96dc2ac6d3d44
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7e618717b7d02f1bbe47977190b55c
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 448
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b56074cfae592cb4a6c8d6885e9c65
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd0107692b7403bdafa4d779649ce7f
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_hit_02
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500d6b983557ca2ddec260bbf6a34a7c
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_hit_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729c398b8b655a5b54d9e4812cf44173
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_hit_04
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49da541991c0e176dab71b63b7b2fe6b
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c0b92b056fe54f0e4c2b15abbf0678
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_02
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ac63fa6569f4fac37cffd4f701974a
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_03
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906da4ee18db258f9a6b0fdbef902d32
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_04
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d84c95b0491b01e56a70205e46c93f9
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_05
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b6dac3e28bf2cd5765f0877b93131a
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_19_purple_sorceress_death_06
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d150ea77e2187c98a47d4a7c2f62c7bd
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_19_purple_sorceress_idle_01: 21300002
+      sprite_19_purple_sorceress_idle_02: 21300004
+      sprite_19_purple_sorceress_idle_03: 21300006
+      sprite_19_purple_sorceress_idle_04: 21300008
+      sprite_19_purple_sorceress_idle_05: 21300010
+      sprite_19_purple_sorceress_idle_06: 21300012
+      sprite_19_purple_sorceress_walk_01: 21300014
+      sprite_19_purple_sorceress_walk_02: 21300016
+      sprite_19_purple_sorceress_walk_03: 21300018
+      sprite_19_purple_sorceress_walk_04: 21300020
+      sprite_19_purple_sorceress_walk_05: 21300022
+      sprite_19_purple_sorceress_walk_06: 21300024
+      sprite_19_purple_sorceress_walk_07: 21300026
+      sprite_19_purple_sorceress_walk_08: 21300028
+      sprite_19_purple_sorceress_attack_01: 21300030
+      sprite_19_purple_sorceress_attack_02: 21300032
+      sprite_19_purple_sorceress_attack_03: 21300034
+      sprite_19_purple_sorceress_attack_04: 21300036
+      sprite_19_purple_sorceress_attack_05: 21300038
+      sprite_19_purple_sorceress_attack_06: 21300040
+      sprite_19_purple_sorceress_attack_07: 21300042
+      sprite_19_purple_sorceress_attack_08: 21300044
+      sprite_19_purple_sorceress_hit_01: 21300046
+      sprite_19_purple_sorceress_hit_02: 21300048
+      sprite_19_purple_sorceress_hit_03: 21300050
+      sprite_19_purple_sorceress_hit_04: 21300052
+      sprite_19_purple_sorceress_death_01: 21300054
+      sprite_19_purple_sorceress_death_02: 21300056
+      sprite_19_purple_sorceress_death_03: 21300058
+      sprite_19_purple_sorceress_death_04: 21300060
+      sprite_19_purple_sorceress_death_05: 21300062
+      sprite_19_purple_sorceress_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

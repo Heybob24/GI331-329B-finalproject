@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63c573f992c0c742b878a29cc18d8cf, type: 3}
+  m_Name: ancient_guardian
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
+  bossId: ancient_guardian
+  bossName: Ancient Guardian
+  bossIcon: {fileID: 21300000, guid: ef33abd45164579ccec3b441accd6f0a, type: 3}
+  bossPrefab: {fileID: 100000, guid: 3fde5170d04313546b8345f346485b96, type: 3}
+  description: An indestructible monolith infused with primordial arcane energy.
+  bossColor: {r: 0.45, g: 0.5, b: 0.6, a: 1}
+  maxHP: 2600
+  attack: 90
+  defense: 50
+  attackRange: 2
+  attackSpeed: 0.85
+  moveSpeed: 1.8
+  unlockDungeonLevel: 7
+  skills:
+  - skillName: Heavy Smash
+    skillType: 1
+    damageMultiplier: 2
+    cooldown: 10
+    radius: 2.5
+    telegraphDuration: 1.5
+    description: Slams the ground with crushing force.
+    telegraphColor: {r: 0.8, g: 0.5, b: 0.2, a: 0.45}
+  defeatExpReward: 300
+  defeatGoldReward: 900
+  defeatSoulReward: 280

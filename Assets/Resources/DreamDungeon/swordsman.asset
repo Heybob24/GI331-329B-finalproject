@@ -15,8 +15,8 @@ MonoBehaviour:
   adventurerId: swordsman
   adventurerName: Swordsman
   description: Melee raider.
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 356616abe1d3fc2fdaeb482de4d07d5f, type: 3}
+  prefab: {fileID: 100000, guid: 5eae59d580abf2d4f9d4a0bd33342955, type: 3}
   maxHP: 150
   attack: 20
   defense: 10

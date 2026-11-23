@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837a92614e19484e931dcafdc85e236, type: 3}
+  m_Name: ghost
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.MonsterData
+  monsterId: ghost
+  monsterName: Ghost
+  description: Rare Magic defender for your dungeon.
+  icon: {fileID: 21300000, guid: 47d15a2f0ec36f7980e3b92556bbb3de, type: 3}
+  monsterPrefab: {fileID: 100000, guid: 393ab161846978e4aa156a54bddcd26a, type: 3}
+  rarity: 1
+  role: 3
+  maxHP: 80
+  attack: 28
+  defense: 4
+  attackRange: 3
+  attackSpeed: 1
+  moveSpeed: 1
+  goldCost: 320
+  unlockDungeonLevel: 3
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0

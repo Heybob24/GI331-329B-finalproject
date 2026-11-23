@@ -103,11 +103,43 @@ namespace DreamDungeon
                 int width = room.rotation % 180 == 0 ? room.width : room.height; int height = room.rotation % 180 == 0 ? room.height : room.width;
                 Vector3 center = grid.CellToWorld(room.position) + new Vector3((width - 1) * grid.CellSize * .5f, (height - 1) * grid.CellSize * .5f, -.25f);
                 Vector3 world = center + new Vector3(unit.localPosition.x * width * grid.CellSize, unit.localPosition.y * height * grid.CellSize, 0);
-                GameObject visual = data.monsterPrefab != null ? Instantiate(data.monsterPrefab, world, Quaternion.identity, transform) : GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                visual.name = $"Monster_{unit.monsterId}_{unit.instanceId}"; visual.transform.SetParent(transform, true); visual.transform.position = world; visual.transform.localScale = Vector3.one * grid.CellSize * .25f;
+                GameObject visual;
+                if (data.monsterPrefab != null)
+                {
+                    visual = Instantiate(data.monsterPrefab, world, Quaternion.identity, transform);
+                    visual.transform.localScale = Vector3.one * grid.CellSize * .35f;
+                }
+                else if (data.icon != null)
+                {
+                    visual = new GameObject($"Monster_{unit.monsterId}");
+                    visual.transform.SetParent(transform, true);
+                    SpriteRenderer sr = visual.AddComponent<SpriteRenderer>();
+                    sr.sprite = data.icon;
+                    sr.color = Color.white;
+                    sr.sortingOrder = 5;
+                    visual.transform.localScale = Vector3.one * grid.CellSize * .35f;
+                }
+                else
+                {
+                    visual = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    visual.transform.SetParent(transform, true);
+                    visual.transform.localScale = Vector3.one * grid.CellSize * .25f;
+                }
+                visual.name = $"Monster_{unit.monsterId}_{unit.instanceId}";
+                visual.transform.position = world;
                 foreach (Collider col in visual.GetComponentsInChildren<Collider>()) col.enabled = false;
                 foreach (Collider2D col in visual.GetComponentsInChildren<Collider2D>()) col.enabled = false;
-                if (visual.GetComponentInChildren<Renderer>() is Renderer renderer) renderer.material.color = data.rarity switch { MonsterRarity.Common => new Color(.35f, .8f, .42f), MonsterRarity.Rare => new Color(.3f, .55f, .95f), MonsterRarity.Epic => new Color(.7f, .35f, .9f), _ => new Color(1f, .65f, .18f) };
+                SpriteRenderer spriteRenderer = visual.GetComponentInChildren<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    if (data.icon != null && spriteRenderer.sprite == null) spriteRenderer.sprite = data.icon;
+                    spriteRenderer.color = Color.white;
+                    spriteRenderer.sortingOrder = 5;
+                }
+                else if (visual.GetComponentInChildren<Renderer>() is Renderer renderer)
+                {
+                    renderer.material.color = data.rarity switch { MonsterRarity.Common => new Color(.35f, .8f, .42f), MonsterRarity.Rare => new Color(.3f, .55f, .95f), MonsterRarity.Epic => new Color(.7f, .35f, .9f), _ => new Color(1f, .65f, .18f) };
+                }
                 visuals.Add(visual);
             }
         }

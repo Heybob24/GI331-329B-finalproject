@@ -15,8 +15,8 @@ MonoBehaviour:
   monsterId: goblin
   monsterName: Goblin
   description: Common Melee defender for your dungeon.
-  icon: {fileID: 0}
-  monsterPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 50c59fd5c51fb605c71fb788e0102911, type: 3}
+  monsterPrefab: {fileID: 100000, guid: 94d27aa91330343488a2f31e04562d25, type: 3}
   rarity: 0
   role: 1
   maxHP: 80

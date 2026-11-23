@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: e80babf6a78cdbe84262790b67bd417b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_22_mimic_chest_idle_01
+  - first:
+      213: 21300004
+    second: sprite_22_mimic_chest_idle_02
+  - first:
+      213: 21300006
+    second: sprite_22_mimic_chest_idle_03
+  - first:
+      213: 21300008
+    second: sprite_22_mimic_chest_idle_04
+  - first:
+      213: 21300010
+    second: sprite_22_mimic_chest_idle_05
+  - first:
+      213: 21300012
+    second: sprite_22_mimic_chest_idle_06
+  - first:
+      213: 21300014
+    second: sprite_22_mimic_chest_walk_01
+  - first:
+      213: 21300016
+    second: sprite_22_mimic_chest_walk_02
+  - first:
+      213: 21300018
+    second: sprite_22_mimic_chest_walk_03
+  - first:
+      213: 21300020
+    second: sprite_22_mimic_chest_walk_04
+  - first:
+      213: 21300022
+    second: sprite_22_mimic_chest_walk_05
+  - first:
+      213: 21300024
+    second: sprite_22_mimic_chest_walk_06
+  - first:
+      213: 21300026
+    second: sprite_22_mimic_chest_walk_07
+  - first:
+      213: 21300028
+    second: sprite_22_mimic_chest_walk_08
+  - first:
+      213: 21300030
+    second: sprite_22_mimic_chest_attack_01
+  - first:
+      213: 21300032
+    second: sprite_22_mimic_chest_attack_02
+  - first:
+      213: 21300034
+    second: sprite_22_mimic_chest_attack_03
+  - first:
+      213: 21300036
+    second: sprite_22_mimic_chest_attack_04
+  - first:
+      213: 21300038
+    second: sprite_22_mimic_chest_attack_05
+  - first:
+      213: 21300040
+    second: sprite_22_mimic_chest_attack_06
+  - first:
+      213: 21300042
+    second: sprite_22_mimic_chest_attack_07
+  - first:
+      213: 21300044
+    second: sprite_22_mimic_chest_attack_08
+  - first:
+      213: 21300046
+    second: sprite_22_mimic_chest_hit_01
+  - first:
+      213: 21300048
+    second: sprite_22_mimic_chest_hit_02
+  - first:
+      213: 21300050
+    second: sprite_22_mimic_chest_hit_03
+  - first:
+      213: 21300052
+    second: sprite_22_mimic_chest_hit_04
+  - first:
+      213: 21300054
+    second: sprite_22_mimic_chest_death_01
+  - first:
+      213: 21300056
+    second: sprite_22_mimic_chest_death_02
+  - first:
+      213: 21300058
+    second: sprite_22_mimic_chest_death_03
+  - first:
+      213: 21300060
+    second: sprite_22_mimic_chest_death_04
+  - first:
+      213: 21300062
+    second: sprite_22_mimic_chest_death_05
+  - first:
+      213: 21300064
+    second: sprite_22_mimic_chest_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc749c94d8469cd083602bbc82fcdb1
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea54f363d3e299e08cdde7f2b5ffdcf6
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f0cc9be14fc676dc56402f59f653a6f
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e2f4141308ce96daa6dd76310a951b
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2ddcf28de49a429621ff2b4c5eaaf0
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 832
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da29e981a6c4e2f2d372cbcdf3f8d332
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665616dbf1761dc55a085de1f1661267
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205e7232cd77f42ac14f691d93bd617a
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba422b7d56f26231087260174ece23d6
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e24901abb944e718347d579d08ea55
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68145bf18a6faeebc6dd6f5c6b4e4640
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8360e9c9cbfe477ccb60b4fe37212232
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2956134d1681231881c0017acd452de8
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 624
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1dd5192003e1a8398f298f2c2d3ed47
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c8a86fee4c08900acb0c3f2a5d90b4
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc4f995b07dfcc57f553703c6540d8
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a661b7b8c0ac9a56b4cf803d6c60a3
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: debc5f9d50dfde47f6c7084c816c18c5
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6674e126d71104b2ddc04c73e805370
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657435790e359662c0b25762c91c91a7
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e0d8e8c366cac13169dc58c16018d7
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 416
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d508bac20789d0b31e35aa2df9d896
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2db9a52e1c2ba0252c68002e9ac6c1
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_hit_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae106e58789b1948cddd12a87f93ffe
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_hit_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 208
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f929ab9944a3dfbe112d3fb55d6ba27
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_hit_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 208
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c75579bd3dfa8a49d60f1143876139
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453d6893396f2cfcff6b69aa0a027dcd
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a7e5e3b619deee8e14ee2b71d82fbe8
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d7ecee7bc7da8a8e9da62001060c14
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8a955e77f972feaddcad4f9e5df0fa
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a3eb8a00ef3d92d885f66f9aacdcab
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_22_mimic_chest_death_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 224
+        height: 208
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c85f01fab07e70117e9d77a4431d231
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_22_mimic_chest_idle_01: 21300002
+      sprite_22_mimic_chest_idle_02: 21300004
+      sprite_22_mimic_chest_idle_03: 21300006
+      sprite_22_mimic_chest_idle_04: 21300008
+      sprite_22_mimic_chest_idle_05: 21300010
+      sprite_22_mimic_chest_idle_06: 21300012
+      sprite_22_mimic_chest_walk_01: 21300014
+      sprite_22_mimic_chest_walk_02: 21300016
+      sprite_22_mimic_chest_walk_03: 21300018
+      sprite_22_mimic_chest_walk_04: 21300020
+      sprite_22_mimic_chest_walk_05: 21300022
+      sprite_22_mimic_chest_walk_06: 21300024
+      sprite_22_mimic_chest_walk_07: 21300026
+      sprite_22_mimic_chest_walk_08: 21300028
+      sprite_22_mimic_chest_attack_01: 21300030
+      sprite_22_mimic_chest_attack_02: 21300032
+      sprite_22_mimic_chest_attack_03: 21300034
+      sprite_22_mimic_chest_attack_04: 21300036
+      sprite_22_mimic_chest_attack_05: 21300038
+      sprite_22_mimic_chest_attack_06: 21300040
+      sprite_22_mimic_chest_attack_07: 21300042
+      sprite_22_mimic_chest_attack_08: 21300044
+      sprite_22_mimic_chest_hit_01: 21300046
+      sprite_22_mimic_chest_hit_02: 21300048
+      sprite_22_mimic_chest_hit_03: 21300050
+      sprite_22_mimic_chest_hit_04: 21300052
+      sprite_22_mimic_chest_death_01: 21300054
+      sprite_22_mimic_chest_death_02: 21300056
+      sprite_22_mimic_chest_death_03: 21300058
+      sprite_22_mimic_chest_death_04: 21300060
+      sprite_22_mimic_chest_death_05: 21300062
+      sprite_22_mimic_chest_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

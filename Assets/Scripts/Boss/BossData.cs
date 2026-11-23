@@ -11,6 +11,7 @@ namespace DreamDungeon
         public string bossId = "cave_dragon";
         public string bossName = "Cave Dragon";
         public Sprite bossIcon;
+        public GameObject bossPrefab;
         [TextArea(2, 4)]
         public string description = "A fearsome dragon residing in deep caverns.";
         public Color bossColor = new Color(0.85f, 0.2f, 0.2f, 1f);

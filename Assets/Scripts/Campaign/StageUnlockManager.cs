@@ -78,8 +78,11 @@ namespace DreamDungeon
         public void EvaluateAllStages(bool notifyNewUnlocks = true)
         {
             if (campaignManager == null) return;
-            foreach (CampaignStageData stage in campaignManager.AllStages)
+            var stageList = campaignManager.AllStages;
+            if (stageList == null) return;
+            for (int i = 0; i < stageList.Count; i++)
             {
+                CampaignStageData stage = stageList[i];
                 if (stage == null) continue;
                 bool alreadyUnlocked = campaignManager.IsStageUnlocked(stage.stageId);
                 if (!alreadyUnlocked && CheckStageUnlockRequirements(stage, out _))

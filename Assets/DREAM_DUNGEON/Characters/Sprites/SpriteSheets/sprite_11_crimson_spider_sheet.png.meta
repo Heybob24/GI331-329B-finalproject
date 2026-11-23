@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 27acfbe653341a2ae2eb3d8f5243a04c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_11_crimson_spider_idle_01
+  - first:
+      213: 21300004
+    second: sprite_11_crimson_spider_idle_02
+  - first:
+      213: 21300006
+    second: sprite_11_crimson_spider_idle_03
+  - first:
+      213: 21300008
+    second: sprite_11_crimson_spider_idle_04
+  - first:
+      213: 21300010
+    second: sprite_11_crimson_spider_idle_05
+  - first:
+      213: 21300012
+    second: sprite_11_crimson_spider_idle_06
+  - first:
+      213: 21300014
+    second: sprite_11_crimson_spider_walk_01
+  - first:
+      213: 21300016
+    second: sprite_11_crimson_spider_walk_02
+  - first:
+      213: 21300018
+    second: sprite_11_crimson_spider_walk_03
+  - first:
+      213: 21300020
+    second: sprite_11_crimson_spider_walk_04
+  - first:
+      213: 21300022
+    second: sprite_11_crimson_spider_walk_05
+  - first:
+      213: 21300024
+    second: sprite_11_crimson_spider_walk_06
+  - first:
+      213: 21300026
+    second: sprite_11_crimson_spider_walk_07
+  - first:
+      213: 21300028
+    second: sprite_11_crimson_spider_walk_08
+  - first:
+      213: 21300030
+    second: sprite_11_crimson_spider_attack_01
+  - first:
+      213: 21300032
+    second: sprite_11_crimson_spider_attack_02
+  - first:
+      213: 21300034
+    second: sprite_11_crimson_spider_attack_03
+  - first:
+      213: 21300036
+    second: sprite_11_crimson_spider_attack_04
+  - first:
+      213: 21300038
+    second: sprite_11_crimson_spider_attack_05
+  - first:
+      213: 21300040
+    second: sprite_11_crimson_spider_attack_06
+  - first:
+      213: 21300042
+    second: sprite_11_crimson_spider_attack_07
+  - first:
+      213: 21300044
+    second: sprite_11_crimson_spider_attack_08
+  - first:
+      213: 21300046
+    second: sprite_11_crimson_spider_hit_01
+  - first:
+      213: 21300048
+    second: sprite_11_crimson_spider_hit_02
+  - first:
+      213: 21300050
+    second: sprite_11_crimson_spider_hit_03
+  - first:
+      213: 21300052
+    second: sprite_11_crimson_spider_hit_04
+  - first:
+      213: 21300054
+    second: sprite_11_crimson_spider_death_01
+  - first:
+      213: 21300056
+    second: sprite_11_crimson_spider_death_02
+  - first:
+      213: 21300058
+    second: sprite_11_crimson_spider_death_03
+  - first:
+      213: 21300060
+    second: sprite_11_crimson_spider_death_04
+  - first:
+      213: 21300062
+    second: sprite_11_crimson_spider_death_05
+  - first:
+      213: 21300064
+    second: sprite_11_crimson_spider_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d3882cc0d5b624c817254c10d333d5
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a43135db8a7fd12dc07913bb91e175ea
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7909b6d11650f2d77f15e98a82696ef4
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897b7ab8b9f701f521c3e5715ac92f7b
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2b506f8a92049a7316f7ddc8093a11
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 576
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfda6a20f051cd669b2c79a49bfd15a7
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a382a2b9dc4641bbc349a8080eccb1bc
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc03f9a9a718a57bc7fa80997be3aa2
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fe7dd7402a67effe70d569cccc278b
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1fe34c7481c3f8927360660fcd0e55
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90e75bbbd0c934180d13bd2dd568c2c
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e97e0914b812c4c35f69edbf1a315a
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01d3a19a8e999f6fe6dd4be40f402da
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 432
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d673ca89c09535c89eb618c64dad4c
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5ae85ef9cc16d9d3ede5d8815340d9
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d943d3f413e1fbd9073a71e2adad47e
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390a8cd24143eaef2e67441a841b545b
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3465a4e93ba4971dc77d82965eb9ec8
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e94cd55e60a3fc25620379c9e813759
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df110edb5da622cd655ce1e6a98167a
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b4d589a147462c3d11020967d2967c
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 288
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5ae3f6589fe5b8aafb29d01705a508
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c34c8de4fd8566232b7ac0f49dfd626
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_hit_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eefb722dfe98feb99dc606328a6956c7
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_hit_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 144
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6aeeb4d272fc7ac24af560fb577d10
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_hit_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 144
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e30fe65ac81788b47c67d250848a25
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d96e51529b968d5c4a58c2abc01cfa
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8c1d785b50540c7f353df67861dade
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e33a165b96765d1895e22d822ba294
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2477e25a10ac010e05648fd1fb7dd563
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1af276cea0b7e6d05628b11d632da5
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_11_crimson_spider_death_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477add0ade8bfadc4ffcb2c0c51dbe4f
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_11_crimson_spider_idle_01: 21300002
+      sprite_11_crimson_spider_idle_02: 21300004
+      sprite_11_crimson_spider_idle_03: 21300006
+      sprite_11_crimson_spider_idle_04: 21300008
+      sprite_11_crimson_spider_idle_05: 21300010
+      sprite_11_crimson_spider_idle_06: 21300012
+      sprite_11_crimson_spider_walk_01: 21300014
+      sprite_11_crimson_spider_walk_02: 21300016
+      sprite_11_crimson_spider_walk_03: 21300018
+      sprite_11_crimson_spider_walk_04: 21300020
+      sprite_11_crimson_spider_walk_05: 21300022
+      sprite_11_crimson_spider_walk_06: 21300024
+      sprite_11_crimson_spider_walk_07: 21300026
+      sprite_11_crimson_spider_walk_08: 21300028
+      sprite_11_crimson_spider_attack_01: 21300030
+      sprite_11_crimson_spider_attack_02: 21300032
+      sprite_11_crimson_spider_attack_03: 21300034
+      sprite_11_crimson_spider_attack_04: 21300036
+      sprite_11_crimson_spider_attack_05: 21300038
+      sprite_11_crimson_spider_attack_06: 21300040
+      sprite_11_crimson_spider_attack_07: 21300042
+      sprite_11_crimson_spider_attack_08: 21300044
+      sprite_11_crimson_spider_hit_01: 21300046
+      sprite_11_crimson_spider_hit_02: 21300048
+      sprite_11_crimson_spider_hit_03: 21300050
+      sprite_11_crimson_spider_hit_04: 21300052
+      sprite_11_crimson_spider_death_01: 21300054
+      sprite_11_crimson_spider_death_02: 21300056
+      sprite_11_crimson_spider_death_03: 21300058
+      sprite_11_crimson_spider_death_04: 21300060
+      sprite_11_crimson_spider_death_05: 21300062
+      sprite_11_crimson_spider_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

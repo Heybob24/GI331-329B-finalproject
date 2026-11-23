@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
   bossId: dark_golem
   bossName: Dark Golem
-  bossIcon: {fileID: 0}
-  description: A fearsome dragon residing in deep caverns.
+  bossIcon: {fileID: 21300000, guid: ef33abd45164579ccec3b441accd6f0a, type: 3}
+  bossPrefab: {fileID: 100000, guid: 8b1679b797afbb74283b5ecb3e26b4d0, type: 3}
+  description: A colossal rune-carved stone guardian awakened from slumber.
   bossColor: {r: 0.35, g: 0.35, b: 0.45, a: 1}
   maxHP: 2200
   attack: 85

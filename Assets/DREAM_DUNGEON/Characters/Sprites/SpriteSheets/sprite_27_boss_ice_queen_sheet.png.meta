@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: b9de5ddeb8f3e9f28bb8ecdd489649f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_27_boss_ice_queen_idle_01
+  - first:
+      213: 21300004
+    second: sprite_27_boss_ice_queen_idle_02
+  - first:
+      213: 21300006
+    second: sprite_27_boss_ice_queen_idle_03
+  - first:
+      213: 21300008
+    second: sprite_27_boss_ice_queen_idle_04
+  - first:
+      213: 21300010
+    second: sprite_27_boss_ice_queen_idle_05
+  - first:
+      213: 21300012
+    second: sprite_27_boss_ice_queen_idle_06
+  - first:
+      213: 21300014
+    second: sprite_27_boss_ice_queen_walk_01
+  - first:
+      213: 21300016
+    second: sprite_27_boss_ice_queen_walk_02
+  - first:
+      213: 21300018
+    second: sprite_27_boss_ice_queen_walk_03
+  - first:
+      213: 21300020
+    second: sprite_27_boss_ice_queen_walk_04
+  - first:
+      213: 21300022
+    second: sprite_27_boss_ice_queen_walk_05
+  - first:
+      213: 21300024
+    second: sprite_27_boss_ice_queen_walk_06
+  - first:
+      213: 21300026
+    second: sprite_27_boss_ice_queen_walk_07
+  - first:
+      213: 21300028
+    second: sprite_27_boss_ice_queen_walk_08
+  - first:
+      213: 21300030
+    second: sprite_27_boss_ice_queen_attack_01
+  - first:
+      213: 21300032
+    second: sprite_27_boss_ice_queen_attack_02
+  - first:
+      213: 21300034
+    second: sprite_27_boss_ice_queen_attack_03
+  - first:
+      213: 21300036
+    second: sprite_27_boss_ice_queen_attack_04
+  - first:
+      213: 21300038
+    second: sprite_27_boss_ice_queen_attack_05
+  - first:
+      213: 21300040
+    second: sprite_27_boss_ice_queen_attack_06
+  - first:
+      213: 21300042
+    second: sprite_27_boss_ice_queen_attack_07
+  - first:
+      213: 21300044
+    second: sprite_27_boss_ice_queen_attack_08
+  - first:
+      213: 21300046
+    second: sprite_27_boss_ice_queen_hit_01
+  - first:
+      213: 21300048
+    second: sprite_27_boss_ice_queen_hit_02
+  - first:
+      213: 21300050
+    second: sprite_27_boss_ice_queen_hit_03
+  - first:
+      213: 21300052
+    second: sprite_27_boss_ice_queen_hit_04
+  - first:
+      213: 21300054
+    second: sprite_27_boss_ice_queen_death_01
+  - first:
+      213: 21300056
+    second: sprite_27_boss_ice_queen_death_02
+  - first:
+      213: 21300058
+    second: sprite_27_boss_ice_queen_death_03
+  - first:
+      213: 21300060
+    second: sprite_27_boss_ice_queen_death_04
+  - first:
+      213: 21300062
+    second: sprite_27_boss_ice_queen_death_05
+  - first:
+      213: 21300064
+    second: sprite_27_boss_ice_queen_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.35}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d947da7c9e4f07c81758872fd94e2f
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_02
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50352d18c2de9ffd2c5d2abceebf3427
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_03
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06adf669fbedfda43a845891f3a1417e
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_04
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dc94e327c2a59c7f52b1f75eecf1d9
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_05
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e520c64646cff9b26c64116a32991e
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_idle_06
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1856
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ef98e4fe582a9a7c7dbb3bdcbd1606
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f18e256c41ce2548800f79d43da2a96
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_02
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede895e173aafd962f9bc503ecd2703c
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_03
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3228da27878b641d44b6562058b22bc1
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_04
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32acaaec08ac70b8b1e5c9fa3bd45a1
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_05
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af87910b06aeea6b70d95fcfc2dd1afc
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_06
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59de4c2914e3893eb068510268600e8b
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_07
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684c1f1ab772dabceca6af8a00913b61
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_walk_08
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 1392
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc22e5c67e75bb5e3261b0d569521288
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c321be3eaebb3e29393fb67fb6472cac
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_02
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9a1d8544ea086144b7dbd8e6a4343d
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_03
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c7ad1e2118766a483e023635cdc120
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_04
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24775b6f378ac5d165b3900dbce64528
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_05
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f2abe5cf32cb1bf1f0f72a54d87580
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_06
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46febc06edfa931a0a9899ae215bcfea
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_07
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a51c535e813315be866528c9aa86a7
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_attack_08
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 928
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e077039bc6bdfcb58a79e1bfbb42154
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3021998be29c2da867c317b0ad6a209b
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_hit_02
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 464
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be26e360d2d48c0e681ba70db990a865
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_hit_03
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 464
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f800738ecaf958407c12c42690fc250
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_hit_04
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 464
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0fc71f8e8b62fde760d13c7013f84e
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f483b32094fd537dd29e9a5acf6be330
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_02
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b7a785f4ac414b47b8f48e876e6440
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_03
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7aea727706ff0372b166c1f67b98618
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_04
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc58f5d4a58fdeeb5afa5f1967d4fce
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_05
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9afb3b0953373a725b1cc7fe7741a9e
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_27_boss_ice_queen_death_06
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 0
+        width: 592
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4edf5c849bafb45e3716a71141b652
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_27_boss_ice_queen_idle_01: 21300002
+      sprite_27_boss_ice_queen_idle_02: 21300004
+      sprite_27_boss_ice_queen_idle_03: 21300006
+      sprite_27_boss_ice_queen_idle_04: 21300008
+      sprite_27_boss_ice_queen_idle_05: 21300010
+      sprite_27_boss_ice_queen_idle_06: 21300012
+      sprite_27_boss_ice_queen_walk_01: 21300014
+      sprite_27_boss_ice_queen_walk_02: 21300016
+      sprite_27_boss_ice_queen_walk_03: 21300018
+      sprite_27_boss_ice_queen_walk_04: 21300020
+      sprite_27_boss_ice_queen_walk_05: 21300022
+      sprite_27_boss_ice_queen_walk_06: 21300024
+      sprite_27_boss_ice_queen_walk_07: 21300026
+      sprite_27_boss_ice_queen_walk_08: 21300028
+      sprite_27_boss_ice_queen_attack_01: 21300030
+      sprite_27_boss_ice_queen_attack_02: 21300032
+      sprite_27_boss_ice_queen_attack_03: 21300034
+      sprite_27_boss_ice_queen_attack_04: 21300036
+      sprite_27_boss_ice_queen_attack_05: 21300038
+      sprite_27_boss_ice_queen_attack_06: 21300040
+      sprite_27_boss_ice_queen_attack_07: 21300042
+      sprite_27_boss_ice_queen_attack_08: 21300044
+      sprite_27_boss_ice_queen_hit_01: 21300046
+      sprite_27_boss_ice_queen_hit_02: 21300048
+      sprite_27_boss_ice_queen_hit_03: 21300050
+      sprite_27_boss_ice_queen_hit_04: 21300052
+      sprite_27_boss_ice_queen_death_01: 21300054
+      sprite_27_boss_ice_queen_death_02: 21300056
+      sprite_27_boss_ice_queen_death_03: 21300058
+      sprite_27_boss_ice_queen_death_04: 21300060
+      sprite_27_boss_ice_queen_death_05: 21300062
+      sprite_27_boss_ice_queen_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63c573f992c0c742b878a29cc18d8cf, type: 3}
+  m_Name: lich_king
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
+  bossId: lich_king
+  bossName: Lich King
+  bossIcon: {fileID: 21300000, guid: 4f151b9818fd46fb11dd52bcb3953d19, type: 3}
+  bossPrefab: {fileID: 100000, guid: e7faeb902510b0043b616df6709242be, type: 3}
+  description: Undying monarch of necromancy commanding soulfire and bone.
+  bossColor: {r: 0.3, g: 0.4, b: 0.9, a: 1}
+  maxHP: 3000
+  attack: 105
+  defense: 45
+  attackRange: 3
+  attackSpeed: 1.1
+  moveSpeed: 1.8
+  unlockDungeonLevel: 8
+  skills:
+  - skillName: Dark Explosion
+    skillType: 2
+    damageMultiplier: 2.4
+    cooldown: 11
+    radius: 4.2
+    telegraphDuration: 1.6
+    description: Unleashes apocalyptic soulfire energy.
+    telegraphColor: {r: 0.3, g: 0.5, b: 1, a: 0.5}
+  defeatExpReward: 300
+  defeatGoldReward: 1200
+  defeatSoulReward: 380

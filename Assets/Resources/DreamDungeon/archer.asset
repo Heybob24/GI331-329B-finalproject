@@ -15,8 +15,8 @@ MonoBehaviour:
   adventurerId: archer
   adventurerName: Archer
   description: Ranged raider.
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: e8b6de13e915f684bec87f55384eee88, type: 3}
+  prefab: {fileID: 100000, guid: 3704424b7be982147bd56fa7bebdb06e, type: 3}
   maxHP: 90
   attack: 25
   defense: 3

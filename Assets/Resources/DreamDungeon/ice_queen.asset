@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63c573f992c0c742b878a29cc18d8cf, type: 3}
+  m_Name: ice_queen
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
+  bossId: ice_queen
+  bossName: Ice Queen
+  bossIcon: {fileID: 21300000, guid: 9e85ec09aaed8c4b7e796c080178c66f, type: 3}
+  bossPrefab: {fileID: 100000, guid: a90214d977971c94f8cc9be4cec2ff00, type: 3}
+  description: Sovereign of eternal frost who freezes invaders in their tracks.
+  bossColor: {r: 0.25, g: 0.65, b: 0.95, a: 1}
+  maxHP: 2000
+  attack: 80
+  defense: 35
+  attackRange: 2.8
+  attackSpeed: 1.1
+  moveSpeed: 1.8
+  unlockDungeonLevel: 6
+  skills:
+  - skillName: Dark Explosion
+    skillType: 2
+    damageMultiplier: 2.2
+    cooldown: 10
+    radius: 4.0
+    telegraphDuration: 1.5
+    description: Unleashes a freezing blizzard nova.
+    telegraphColor: {r: 0.3, g: 0.75, b: 1, a: 0.5}
+  defeatExpReward: 300
+  defeatGoldReward: 700
+  defeatSoulReward: 210

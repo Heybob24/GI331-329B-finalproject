@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 24a286b0610ebdbe3d30d89f978a0ca0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_13_holy_paladin_idle_01
+  - first:
+      213: 21300004
+    second: sprite_13_holy_paladin_idle_02
+  - first:
+      213: 21300006
+    second: sprite_13_holy_paladin_idle_03
+  - first:
+      213: 21300008
+    second: sprite_13_holy_paladin_idle_04
+  - first:
+      213: 21300010
+    second: sprite_13_holy_paladin_idle_05
+  - first:
+      213: 21300012
+    second: sprite_13_holy_paladin_idle_06
+  - first:
+      213: 21300014
+    second: sprite_13_holy_paladin_walk_01
+  - first:
+      213: 21300016
+    second: sprite_13_holy_paladin_walk_02
+  - first:
+      213: 21300018
+    second: sprite_13_holy_paladin_walk_03
+  - first:
+      213: 21300020
+    second: sprite_13_holy_paladin_walk_04
+  - first:
+      213: 21300022
+    second: sprite_13_holy_paladin_walk_05
+  - first:
+      213: 21300024
+    second: sprite_13_holy_paladin_walk_06
+  - first:
+      213: 21300026
+    second: sprite_13_holy_paladin_walk_07
+  - first:
+      213: 21300028
+    second: sprite_13_holy_paladin_walk_08
+  - first:
+      213: 21300030
+    second: sprite_13_holy_paladin_attack_01
+  - first:
+      213: 21300032
+    second: sprite_13_holy_paladin_attack_02
+  - first:
+      213: 21300034
+    second: sprite_13_holy_paladin_attack_03
+  - first:
+      213: 21300036
+    second: sprite_13_holy_paladin_attack_04
+  - first:
+      213: 21300038
+    second: sprite_13_holy_paladin_attack_05
+  - first:
+      213: 21300040
+    second: sprite_13_holy_paladin_attack_06
+  - first:
+      213: 21300042
+    second: sprite_13_holy_paladin_attack_07
+  - first:
+      213: 21300044
+    second: sprite_13_holy_paladin_attack_08
+  - first:
+      213: 21300046
+    second: sprite_13_holy_paladin_hit_01
+  - first:
+      213: 21300048
+    second: sprite_13_holy_paladin_hit_02
+  - first:
+      213: 21300050
+    second: sprite_13_holy_paladin_hit_03
+  - first:
+      213: 21300052
+    second: sprite_13_holy_paladin_hit_04
+  - first:
+      213: 21300054
+    second: sprite_13_holy_paladin_death_01
+  - first:
+      213: 21300056
+    second: sprite_13_holy_paladin_death_02
+  - first:
+      213: 21300058
+    second: sprite_13_holy_paladin_death_03
+  - first:
+      213: 21300060
+    second: sprite_13_holy_paladin_death_04
+  - first:
+      213: 21300062
+    second: sprite_13_holy_paladin_death_05
+  - first:
+      213: 21300064
+    second: sprite_13_holy_paladin_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc8fe41c9bdac195a13b4f6d617ed4f
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab545180fd40f677d92ac05ae145892
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035784a7ae910ef14385cf81c05e0068
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fe3d783ea5f750a19455d856539a2e
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7619c8a621f843bcfd0261ea1469f1fa
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1088
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0420eec76b27c429540004af93eef6
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feadd04df09116f5b0749adaf7d5ae5e
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390d9af7a3c1fe07264cf1f79c292fe8
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c1c96378197304ba50b0722bf17998
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f912484638d1b8d1747799b7484cdde
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfc736fa80f68a1b48787d238f5c494
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b48ceae8ecd301375f29037e76b7ec
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8259d53280ae2546bb58b09e408db71
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 816
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174fdf58a65d3b983b928e9d601c8b23
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 235277551d24d211e6d4b6d3f1185798
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07622775f205e79d7643267d607e9249
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c488f72395869c5d8391da49ceca907
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996b90709589ed8b302978519e7ccd9f
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db45e0f27111b1a8b7056d45c2622a88
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dae74f0432143f72c747a000bb545b1
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b98e3e2e8ea85f96ced60aadf6dc56
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 544
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbd6892004e73e49d8c914b65982600
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e782c7606b816bce5882f4d28441b4c1
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_hit_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 272
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6d856090f3ce737c171ffdad29bd20
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_hit_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 272
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13994e7153593492f0448023d45344a2
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_hit_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 272
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f11843afb641544b7c9d876975b81e
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fdf643302fb01c69a3c9163221e8bb
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ccaf88d0ca0302443b9a57f585d9c9
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b85991625433e62e502229c8511e69
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f04f60a83b6f5f622044e98c5249a1
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bdd5770989bfcf2e788044dc8343be5
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_13_holy_paladin_death_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 240
+        height: 272
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657203d4103d3101d7be93e089b1a0fb
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_13_holy_paladin_idle_01: 21300002
+      sprite_13_holy_paladin_idle_02: 21300004
+      sprite_13_holy_paladin_idle_03: 21300006
+      sprite_13_holy_paladin_idle_04: 21300008
+      sprite_13_holy_paladin_idle_05: 21300010
+      sprite_13_holy_paladin_idle_06: 21300012
+      sprite_13_holy_paladin_walk_01: 21300014
+      sprite_13_holy_paladin_walk_02: 21300016
+      sprite_13_holy_paladin_walk_03: 21300018
+      sprite_13_holy_paladin_walk_04: 21300020
+      sprite_13_holy_paladin_walk_05: 21300022
+      sprite_13_holy_paladin_walk_06: 21300024
+      sprite_13_holy_paladin_walk_07: 21300026
+      sprite_13_holy_paladin_walk_08: 21300028
+      sprite_13_holy_paladin_attack_01: 21300030
+      sprite_13_holy_paladin_attack_02: 21300032
+      sprite_13_holy_paladin_attack_03: 21300034
+      sprite_13_holy_paladin_attack_04: 21300036
+      sprite_13_holy_paladin_attack_05: 21300038
+      sprite_13_holy_paladin_attack_06: 21300040
+      sprite_13_holy_paladin_attack_07: 21300042
+      sprite_13_holy_paladin_attack_08: 21300044
+      sprite_13_holy_paladin_hit_01: 21300046
+      sprite_13_holy_paladin_hit_02: 21300048
+      sprite_13_holy_paladin_hit_03: 21300050
+      sprite_13_holy_paladin_hit_04: 21300052
+      sprite_13_holy_paladin_death_01: 21300054
+      sprite_13_holy_paladin_death_02: 21300056
+      sprite_13_holy_paladin_death_03: 21300058
+      sprite_13_holy_paladin_death_04: 21300060
+      sprite_13_holy_paladin_death_05: 21300062
+      sprite_13_holy_paladin_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,8 +15,8 @@ MonoBehaviour:
   monsterId: skeleton_archer
   monsterName: Skeleton Archer
   description: Rare Ranged defender for your dungeon.
-  icon: {fileID: 0}
-  monsterPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: c8a8d64c9fa0b7f3079baff1f28b90b9, type: 3}
+  monsterPrefab: {fileID: 100000, guid: 7b97a7c3bf4adf248b433d72e6edb4cc, type: 3}
   rarity: 1
   role: 2
   maxHP: 70

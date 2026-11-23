@@ -29,6 +29,35 @@ namespace DreamDungeon
 
         public string FormatCampaignResultDetails(bool victory, int wave, int defeated, int coreHp)
         {
+            if (BattleSession.IsEndlessBattle)
+            {
+                string recBadge = BattleSession.IsNewRecordResult ? "\n<color=#FFD966>★ NEW HIGH RECORD! ★</color>" : "";
+                int highestWave = EndlessChallengeManager.Instance != null ? EndlessChallengeManager.Instance.HighestEndlessWave : wave;
+                int highestScore = EndlessChallengeManager.Instance != null ? EndlessChallengeManager.Instance.HighestEndlessScore : BattleSession.LastRunScore;
+                return $"Final Wave Reached: {wave}   (Best: {highestWave})\n" +
+                       $"Total Score: {BattleSession.LastRunScore}   (Best: {highestScore})\n" +
+                       $"Enemies Defeated: {defeated}   •   Elites: {BattleSession.LastRunElitesDefeated}   •   Bosses: {BattleSession.LastRunBossesDefeated}\n" +
+                       $"Run Duration: {BattleSession.LastRunDurationSeconds:0.0}s   •   Core HP: {coreHp}{recBadge}";
+            }
+
+            if (BattleSession.IsChallengeBattle)
+            {
+                ChallengeData ch = EndlessChallengeManager.Instance?.GetChallenge(BattleSession.ChallengeId);
+                ChallengeRecordEntry rec = EndlessChallengeManager.Instance?.GetOrCreateChallengeRecord(BattleSession.ChallengeId);
+                string chName = ch != null ? ch.challengeName : BattleSession.ChallengeId;
+                string objStr = ch != null ? ch.GetObjectivesText() : "Complete challenge waves";
+                string badge = victory
+                    ? (BattleSession.IsFirstClearResult ? "[FIRST CLEAR BONUS!] " : "[REPLAY CLEAR] ")
+                    : "[OBJECTIVE FAILED]";
+                if (BattleSession.IsNewRecordResult) badge += " [NEW BEST RECORD ★]";
+                int bestScore = rec != null ? rec.bestScore : BattleSession.LastRunScore;
+
+                return $"{chName}   •   {badge}\n" +
+                       $"Objective: {objStr}\n" +
+                       $"Final Score: {BattleSession.LastRunScore}   (Best Record: {bestScore})\n" +
+                       $"Enemies: {defeated}   •   Elites: {BattleSession.LastRunElitesDefeated}   •   Bosses: {BattleSession.LastRunBossesDefeated}   •   Time: {BattleSession.LastRunDurationSeconds:0.0}s";
+            }
+
             if (!BattleSession.IsCampaignBattle)
             {
                 return victory
@@ -59,9 +88,17 @@ namespace DreamDungeon
         public void RefreshButtonStates(bool victory)
         {
             bool isCampaign = BattleSession.IsCampaignBattle;
+            bool isEndless = BattleSession.IsEndlessBattle;
+            bool isChallenge = BattleSession.IsChallengeBattle;
+
             if (worldMapButton != null)
             {
-                worldMapButton.gameObject.SetActive(isCampaign);
+                worldMapButton.gameObject.SetActive(isCampaign || isEndless || isChallenge);
+                Text label = worldMapButton.GetComponentInChildren<Text>();
+                if (label != null)
+                {
+                    label.text = isEndless ? "ENDLESS MENU" : (isChallenge ? "CHALLENGES MENU" : "RETURN TO WORLD MAP");
+                }
             }
             if (nextStageButton != null)
             {
@@ -80,6 +117,16 @@ namespace DreamDungeon
 
         private void OnReturnToWorldMap()
         {
+            if (BattleSession.IsEndlessBattle)
+            {
+                battleManager?.ReturnToEndlessMenu();
+                return;
+            }
+            if (BattleSession.IsChallengeBattle)
+            {
+                battleManager?.ReturnToChallengeMenu();
+                return;
+            }
             battleManager?.ReturnToWorldMap(null);
         }
 

@@ -15,8 +15,8 @@ MonoBehaviour:
   monsterId: orc
   monsterName: Orc
   description: Epic Tank defender for your dungeon.
-  icon: {fileID: 0}
-  monsterPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: f95e8d0c24e04b723244824916969b46, type: 3}
+  monsterPrefab: {fileID: 100000, guid: f6dc29090524d554f839172659682ed5, type: 3}
   rarity: 2
   role: 0
   maxHP: 250

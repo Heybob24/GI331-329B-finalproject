@@ -1,0 +1,599 @@
+{
+  "project": "DREAM DUNGEON",
+  "total_characters": 40,
+  "frames_per_character": 32,
+  "total_frames": 1280,
+  "grid_layout": {
+    "columns": 8,
+    "rows": 5,
+    "row_mapping": {
+      "0": {
+        "animation": "idle",
+        "frames": 6,
+        "recommended_fps": 8
+      },
+      "1": {
+        "animation": "walk",
+        "frames": 8,
+        "recommended_fps": 10
+      },
+      "2": {
+        "animation": "attack",
+        "frames": 8,
+        "recommended_fps": 12
+      },
+      "3": {
+        "animation": "hit",
+        "frames": 4,
+        "recommended_fps": 12
+      },
+      "4": {
+        "animation": "death",
+        "frames": 6,
+        "recommended_fps": 8
+      }
+    }
+  },
+  "characters": [
+    {
+      "id": "sprite_01_blue_knight",
+      "source_file": "sprite_01.png",
+      "move_type": "grounded",
+      "attack_type": "slash",
+      "cell_size": [
+        240,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_01_blue_knight_sheet.png",
+      "metadata": "spritesheets/sprite_01_blue_knight_sheet.json",
+      "preview_gif": "gifs/sprite_01_blue_knight_preview.gif",
+      "frames_dir": "frames/sprite_01_blue_knight/"
+    },
+    {
+      "id": "sprite_02_dark_mage",
+      "source_file": "sprite_02.png",
+      "move_type": "grounded",
+      "attack_type": "magic",
+      "cell_size": [
+        224,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_02_dark_mage_sheet.png",
+      "metadata": "spritesheets/sprite_02_dark_mage_sheet.json",
+      "preview_gif": "gifs/sprite_02_dark_mage_preview.gif",
+      "frames_dir": "frames/sprite_02_dark_mage/"
+    },
+    {
+      "id": "sprite_03_green_ranger",
+      "source_file": "sprite_03.png",
+      "move_type": "grounded",
+      "attack_type": "ranged",
+      "cell_size": [
+        256,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_03_green_ranger_sheet.png",
+      "metadata": "spritesheets/sprite_03_green_ranger_sheet.json",
+      "preview_gif": "gifs/sprite_03_green_ranger_preview.gif",
+      "frames_dir": "frames/sprite_03_green_ranger/"
+    },
+    {
+      "id": "sprite_04_skeleton_warrior",
+      "source_file": "sprite_04.png",
+      "move_type": "grounded",
+      "attack_type": "slash",
+      "cell_size": [
+        224,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_04_skeleton_warrior_sheet.png",
+      "metadata": "spritesheets/sprite_04_skeleton_warrior_sheet.json",
+      "preview_gif": "gifs/sprite_04_skeleton_warrior_preview.gif",
+      "frames_dir": "frames/sprite_04_skeleton_warrior/"
+    },
+    {
+      "id": "sprite_05_red_imp",
+      "source_file": "sprite_05.png",
+      "move_type": "grounded",
+      "attack_type": "claw",
+      "cell_size": [
+        208,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_05_red_imp_sheet.png",
+      "metadata": "spritesheets/sprite_05_red_imp_sheet.json",
+      "preview_gif": "gifs/sprite_05_red_imp_preview.gif",
+      "frames_dir": "frames/sprite_05_red_imp/"
+    },
+    {
+      "id": "sprite_06_horned_berserker",
+      "source_file": "sprite_06.png",
+      "move_type": "heavy",
+      "attack_type": "slash",
+      "cell_size": [
+        272,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_06_horned_berserker_sheet.png",
+      "metadata": "spritesheets/sprite_06_horned_berserker_sheet.json",
+      "preview_gif": "gifs/sprite_06_horned_berserker_preview.gif",
+      "frames_dir": "frames/sprite_06_horned_berserker/"
+    },
+    {
+      "id": "sprite_07_rogue_adventurer",
+      "source_file": "sprite_07.png",
+      "move_type": "grounded",
+      "attack_type": "slash",
+      "cell_size": [
+        256,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_07_rogue_adventurer_sheet.png",
+      "metadata": "spritesheets/sprite_07_rogue_adventurer_sheet.json",
+      "preview_gif": "gifs/sprite_07_rogue_adventurer_preview.gif",
+      "frames_dir": "frames/sprite_07_rogue_adventurer/"
+    },
+    {
+      "id": "sprite_08_zombie",
+      "source_file": "sprite_08.png",
+      "move_type": "grounded",
+      "attack_type": "claw",
+      "cell_size": [
+        224,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_08_zombie_sheet.png",
+      "metadata": "spritesheets/sprite_08_zombie_sheet.json",
+      "preview_gif": "gifs/sprite_08_zombie_preview.gif",
+      "frames_dir": "frames/sprite_08_zombie/"
+    },
+    {
+      "id": "sprite_09_blue_ghost",
+      "source_file": "sprite_09.png",
+      "move_type": "floating",
+      "attack_type": "magic",
+      "cell_size": [
+        256,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_09_blue_ghost_sheet.png",
+      "metadata": "spritesheets/sprite_09_blue_ghost_sheet.json",
+      "preview_gif": "gifs/sprite_09_blue_ghost_preview.gif",
+      "frames_dir": "frames/sprite_09_blue_ghost/"
+    },
+    {
+      "id": "sprite_10a_dire_wolf",
+      "source_file": "sprite_10.png",
+      "move_type": "crawler",
+      "attack_type": "claw",
+      "cell_size": [
+        272,
+        192
+      ],
+      "sprite_sheet": "spritesheets/sprite_10a_dire_wolf_sheet.png",
+      "metadata": "spritesheets/sprite_10a_dire_wolf_sheet.json",
+      "preview_gif": "gifs/sprite_10a_dire_wolf_preview.gif",
+      "frames_dir": "frames/sprite_10a_dire_wolf/"
+    },
+    {
+      "id": "sprite_10b_goblin",
+      "source_file": "sprite_10.png",
+      "move_type": "grounded",
+      "attack_type": "slash",
+      "cell_size": [
+        176,
+        192
+      ],
+      "sprite_sheet": "spritesheets/sprite_10b_goblin_sheet.png",
+      "metadata": "spritesheets/sprite_10b_goblin_sheet.json",
+      "preview_gif": "gifs/sprite_10b_goblin_preview.gif",
+      "frames_dir": "frames/sprite_10b_goblin/"
+    },
+    {
+      "id": "sprite_11_crimson_spider",
+      "source_file": "sprite_11.png",
+      "move_type": "crawler",
+      "attack_type": "claw",
+      "cell_size": [
+        208,
+        144
+      ],
+      "sprite_sheet": "spritesheets/sprite_11_crimson_spider_sheet.png",
+      "metadata": "spritesheets/sprite_11_crimson_spider_sheet.json",
+      "preview_gif": "gifs/sprite_11_crimson_spider_preview.gif",
+      "frames_dir": "frames/sprite_11_crimson_spider/"
+    },
+    {
+      "id": "sprite_12_dark_archer_knight",
+      "source_file": "sprite_12.png",
+      "move_type": "grounded",
+      "attack_type": "ranged",
+      "cell_size": [
+        288,
+        288
+      ],
+      "sprite_sheet": "spritesheets/sprite_12_dark_archer_knight_sheet.png",
+      "metadata": "spritesheets/sprite_12_dark_archer_knight_sheet.json",
+      "preview_gif": "gifs/sprite_12_dark_archer_knight_preview.gif",
+      "frames_dir": "frames/sprite_12_dark_archer_knight/"
+    },
+    {
+      "id": "sprite_13_holy_paladin",
+      "source_file": "sprite_13.png",
+      "move_type": "grounded",
+      "attack_type": "slash",
+      "cell_size": [
+        240,
+        272
+      ],
+      "sprite_sheet": "spritesheets/sprite_13_holy_paladin_sheet.png",
+      "metadata": "spritesheets/sprite_13_holy_paladin_sheet.json",
+      "preview_gif": "gifs/sprite_13_holy_paladin_preview.gif",
+      "frames_dir": "frames/sprite_13_holy_paladin/"
+    },
+    {
+      "id": "sprite_14_stone_golem",
+      "source_file": "sprite_14.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        320,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_14_stone_golem_sheet.png",
+      "metadata": "spritesheets/sprite_14_stone_golem_sheet.json",
+      "preview_gif": "gifs/sprite_14_stone_golem_preview.gif",
+      "frames_dir": "frames/sprite_14_stone_golem/"
+    },
+    {
+      "id": "sprite_15_harpy",
+      "source_file": "sprite_15.png",
+      "move_type": "floating",
+      "attack_type": "claw",
+      "cell_size": [
+        256,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_15_harpy_sheet.png",
+      "metadata": "spritesheets/sprite_15_harpy_sheet.json",
+      "preview_gif": "gifs/sprite_15_harpy_preview.gif",
+      "frames_dir": "frames/sprite_15_harpy/"
+    },
+    {
+      "id": "sprite_16_shadow_ranger",
+      "source_file": "sprite_16.png",
+      "move_type": "grounded",
+      "attack_type": "ranged",
+      "cell_size": [
+        224,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_16_shadow_ranger_sheet.png",
+      "metadata": "spritesheets/sprite_16_shadow_ranger_sheet.json",
+      "preview_gif": "gifs/sprite_16_shadow_ranger_preview.gif",
+      "frames_dir": "frames/sprite_16_shadow_ranger/"
+    },
+    {
+      "id": "sprite_17_gargoyle",
+      "source_file": "sprite_17.png",
+      "move_type": "floating",
+      "attack_type": "claw",
+      "cell_size": [
+        272,
+        256
+      ],
+      "sprite_sheet": "spritesheets/sprite_17_gargoyle_sheet.png",
+      "metadata": "spritesheets/sprite_17_gargoyle_sheet.json",
+      "preview_gif": "gifs/sprite_17_gargoyle_preview.gif",
+      "frames_dir": "frames/sprite_17_gargoyle/"
+    },
+    {
+      "id": "sprite_18_skull_cultist",
+      "source_file": "sprite_18.png",
+      "move_type": "grounded",
+      "attack_type": "magic",
+      "cell_size": [
+        208,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_18_skull_cultist_sheet.png",
+      "metadata": "spritesheets/sprite_18_skull_cultist_sheet.json",
+      "preview_gif": "gifs/sprite_18_skull_cultist_preview.gif",
+      "frames_dir": "frames/sprite_18_skull_cultist/"
+    },
+    {
+      "id": "sprite_19_purple_sorceress",
+      "source_file": "sprite_19.png",
+      "move_type": "grounded",
+      "attack_type": "magic",
+      "cell_size": [
+        192,
+        224
+      ],
+      "sprite_sheet": "spritesheets/sprite_19_purple_sorceress_sheet.png",
+      "metadata": "spritesheets/sprite_19_purple_sorceress_sheet.json",
+      "preview_gif": "gifs/sprite_19_purple_sorceress_preview.gif",
+      "frames_dir": "frames/sprite_19_purple_sorceress/"
+    },
+    {
+      "id": "sprite_20_crystal_golem",
+      "source_file": "sprite_20.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        208,
+        208
+      ],
+      "sprite_sheet": "spritesheets/sprite_20_crystal_golem_sheet.png",
+      "metadata": "spritesheets/sprite_20_crystal_golem_sheet.json",
+      "preview_gif": "gifs/sprite_20_crystal_golem_preview.gif",
+      "frames_dir": "frames/sprite_20_crystal_golem/"
+    },
+    {
+      "id": "sprite_21_shadow_bat",
+      "source_file": "sprite_21.png",
+      "move_type": "floating",
+      "attack_type": "claw",
+      "cell_size": [
+        336,
+        192
+      ],
+      "sprite_sheet": "spritesheets/sprite_21_shadow_bat_sheet.png",
+      "metadata": "spritesheets/sprite_21_shadow_bat_sheet.json",
+      "preview_gif": "gifs/sprite_21_shadow_bat_preview.gif",
+      "frames_dir": "frames/sprite_21_shadow_bat/"
+    },
+    {
+      "id": "sprite_22_mimic_chest",
+      "source_file": "sprite_22.png",
+      "move_type": "bouncy",
+      "attack_type": "claw",
+      "cell_size": [
+        224,
+        208
+      ],
+      "sprite_sheet": "spritesheets/sprite_22_mimic_chest_sheet.png",
+      "metadata": "spritesheets/sprite_22_mimic_chest_sheet.json",
+      "preview_gif": "gifs/sprite_22_mimic_chest_preview.gif",
+      "frames_dir": "frames/sprite_22_mimic_chest/"
+    },
+    {
+      "id": "sprite_23_green_slime",
+      "source_file": "sprite_23.png",
+      "move_type": "bouncy",
+      "attack_type": "slam",
+      "cell_size": [
+        272,
+        160
+      ],
+      "sprite_sheet": "spritesheets/sprite_23_green_slime_sheet.png",
+      "metadata": "spritesheets/sprite_23_green_slime_sheet.json",
+      "preview_gif": "gifs/sprite_23_green_slime_preview.gif",
+      "frames_dir": "frames/sprite_23_green_slime/"
+    },
+    {
+      "id": "sprite_24_boss_demon_lord",
+      "source_file": "sprite_24.png",
+      "move_type": "heavy",
+      "attack_type": "fire",
+      "cell_size": [
+        640,
+        512
+      ],
+      "sprite_sheet": "spritesheets/sprite_24_boss_demon_lord_sheet.png",
+      "metadata": "spritesheets/sprite_24_boss_demon_lord_sheet.json",
+      "preview_gif": "gifs/sprite_24_boss_demon_lord_preview.gif",
+      "frames_dir": "frames/sprite_24_boss_demon_lord/"
+    },
+    {
+      "id": "sprite_25_boss_lich_king",
+      "source_file": "sprite_25.png",
+      "move_type": "heavy",
+      "attack_type": "magic",
+      "cell_size": [
+        496,
+        496
+      ],
+      "sprite_sheet": "spritesheets/sprite_25_boss_lich_king_sheet.png",
+      "metadata": "spritesheets/sprite_25_boss_lich_king_sheet.json",
+      "preview_gif": "gifs/sprite_25_boss_lich_king_preview.gif",
+      "frames_dir": "frames/sprite_25_boss_lich_king/"
+    },
+    {
+      "id": "sprite_26_boss_red_dragon",
+      "source_file": "sprite_26.png",
+      "move_type": "heavy",
+      "attack_type": "fire",
+      "cell_size": [
+        912,
+        544
+      ],
+      "sprite_sheet": "spritesheets/sprite_26_boss_red_dragon_sheet.png",
+      "metadata": "spritesheets/sprite_26_boss_red_dragon_sheet.json",
+      "preview_gif": "gifs/sprite_26_boss_red_dragon_preview.gif",
+      "frames_dir": "frames/sprite_26_boss_red_dragon/"
+    },
+    {
+      "id": "sprite_27_boss_ice_queen",
+      "source_file": "sprite_27.png",
+      "move_type": "floating",
+      "attack_type": "magic",
+      "cell_size": [
+        592,
+        464
+      ],
+      "sprite_sheet": "spritesheets/sprite_27_boss_ice_queen_sheet.png",
+      "metadata": "spritesheets/sprite_27_boss_ice_queen_sheet.json",
+      "preview_gif": "gifs/sprite_27_boss_ice_queen_preview.gif",
+      "frames_dir": "frames/sprite_27_boss_ice_queen/"
+    },
+    {
+      "id": "sprite_28_boss_rune_golem",
+      "source_file": "sprite_28.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        512,
+        464
+      ],
+      "sprite_sheet": "spritesheets/sprite_28_boss_rune_golem_sheet.png",
+      "metadata": "spritesheets/sprite_28_boss_rune_golem_sheet.json",
+      "preview_gif": "gifs/sprite_28_boss_rune_golem_preview.gif",
+      "frames_dir": "frames/sprite_28_boss_rune_golem/"
+    },
+    {
+      "id": "sprite_29_forest_treant",
+      "source_file": "sprite_29.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        272,
+        320
+      ],
+      "sprite_sheet": "spritesheets/sprite_29_forest_treant_sheet.png",
+      "metadata": "spritesheets/sprite_29_forest_treant_sheet.json",
+      "preview_gif": "gifs/sprite_29_forest_treant_preview.gif",
+      "frames_dir": "frames/sprite_29_forest_treant/"
+    },
+    {
+      "id": "sprite_30_void_warlock",
+      "source_file": "sprite_30.png",
+      "move_type": "floating",
+      "attack_type": "magic",
+      "cell_size": [
+        288,
+        304
+      ],
+      "sprite_sheet": "spritesheets/sprite_30_void_warlock_sheet.png",
+      "metadata": "spritesheets/sprite_30_void_warlock_sheet.json",
+      "preview_gif": "gifs/sprite_30_void_warlock_preview.gif",
+      "frames_dir": "frames/sprite_30_void_warlock/"
+    },
+    {
+      "id": "sprite_31_fire_elemental",
+      "source_file": "sprite_31.png",
+      "move_type": "floating",
+      "attack_type": "fire",
+      "cell_size": [
+        256,
+        288
+      ],
+      "sprite_sheet": "spritesheets/sprite_31_fire_elemental_sheet.png",
+      "metadata": "spritesheets/sprite_31_fire_elemental_sheet.json",
+      "preview_gif": "gifs/sprite_31_fire_elemental_preview.gif",
+      "frames_dir": "frames/sprite_31_fire_elemental/"
+    },
+    {
+      "id": "sprite_32_shadow_wraith",
+      "source_file": "sprite_32.png",
+      "move_type": "floating",
+      "attack_type": "magic",
+      "cell_size": [
+        288,
+        320
+      ],
+      "sprite_sheet": "spritesheets/sprite_32_shadow_wraith_sheet.png",
+      "metadata": "spritesheets/sprite_32_shadow_wraith_sheet.json",
+      "preview_gif": "gifs/sprite_32_shadow_wraith_preview.gif",
+      "frames_dir": "frames/sprite_32_shadow_wraith/"
+    },
+    {
+      "id": "sprite_33_frost_golem",
+      "source_file": "sprite_33.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        304,
+        272
+      ],
+      "sprite_sheet": "spritesheets/sprite_33_frost_golem_sheet.png",
+      "metadata": "spritesheets/sprite_33_frost_golem_sheet.json",
+      "preview_gif": "gifs/sprite_33_frost_golem_preview.gif",
+      "frames_dir": "frames/sprite_33_frost_golem/"
+    },
+    {
+      "id": "sprite_34_crimson_specter",
+      "source_file": "sprite_34.png",
+      "move_type": "floating",
+      "attack_type": "fire",
+      "cell_size": [
+        256,
+        304
+      ],
+      "sprite_sheet": "spritesheets/sprite_34_crimson_specter_sheet.png",
+      "metadata": "spritesheets/sprite_34_crimson_specter_sheet.json",
+      "preview_gif": "gifs/sprite_34_crimson_specter_preview.gif",
+      "frames_dir": "frames/sprite_34_crimson_specter/"
+    },
+    {
+      "id": "sprite_35_eye_beholder",
+      "source_file": "sprite_35.png",
+      "move_type": "floating",
+      "attack_type": "magic",
+      "cell_size": [
+        256,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_35_eye_beholder_sheet.png",
+      "metadata": "spritesheets/sprite_35_eye_beholder_sheet.json",
+      "preview_gif": "gifs/sprite_35_eye_beholder_preview.gif",
+      "frames_dir": "frames/sprite_35_eye_beholder/"
+    },
+    {
+      "id": "sprite_36_amethyst_crystal",
+      "source_file": "sprite_36.png",
+      "move_type": "heavy",
+      "attack_type": "slam",
+      "cell_size": [
+        224,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_36_amethyst_crystal_sheet.png",
+      "metadata": "spritesheets/sprite_36_amethyst_crystal_sheet.json",
+      "preview_gif": "gifs/sprite_36_amethyst_crystal_preview.gif",
+      "frames_dir": "frames/sprite_36_amethyst_crystal/"
+    },
+    {
+      "id": "sprite_37_shadow_spider",
+      "source_file": "sprite_37.png",
+      "move_type": "crawler",
+      "attack_type": "claw",
+      "cell_size": [
+        320,
+        240
+      ],
+      "sprite_sheet": "spritesheets/sprite_37_shadow_spider_sheet.png",
+      "metadata": "spritesheets/sprite_37_shadow_spider_sheet.json",
+      "preview_gif": "gifs/sprite_37_shadow_spider_preview.gif",
+      "frames_dir": "frames/sprite_37_shadow_spider/"
+    },
+    {
+      "id": "sprite_38a_venom_spider",
+      "source_file": "sprite_38.png",
+      "move_type": "crawler",
+      "attack_type": "claw",
+      "cell_size": [
+        288,
+        224
+      ],
+      "sprite_sheet": "spritesheets/sprite_38a_venom_spider_sheet.png",
+      "metadata": "spritesheets/sprite_38a_venom_spider_sheet.json",
+      "preview_gif": "gifs/sprite_38a_venom_spider_preview.gif",
+      "frames_dir": "frames/sprite_38a_venom_spider/"
+    },
+    {
+      "id": "sprite_38b_frost_spider",
+      "source_file": "sprite_38.png",
+      "move_type": "crawler",
+      "attack_type": "claw",
+      "cell_size": [
+        288,
+        224
+      ],
+      "sprite_sheet": "spritesheets/sprite_38b_frost_spider_sheet.png",
+      "metadata": "spritesheets/sprite_38b_frost_spider_sheet.json",
+      "preview_gif": "gifs/sprite_38b_frost_spider_preview.gif",
+      "frames_dir": "frames/sprite_38b_frost_spider/"
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 45cfece0c4e7eed409bd9dee7297d307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_24_boss_demon_lord_idle_01
+  - first:
+      213: 21300004
+    second: sprite_24_boss_demon_lord_idle_02
+  - first:
+      213: 21300006
+    second: sprite_24_boss_demon_lord_idle_03
+  - first:
+      213: 21300008
+    second: sprite_24_boss_demon_lord_idle_04
+  - first:
+      213: 21300010
+    second: sprite_24_boss_demon_lord_idle_05
+  - first:
+      213: 21300012
+    second: sprite_24_boss_demon_lord_idle_06
+  - first:
+      213: 21300014
+    second: sprite_24_boss_demon_lord_walk_01
+  - first:
+      213: 21300016
+    second: sprite_24_boss_demon_lord_walk_02
+  - first:
+      213: 21300018
+    second: sprite_24_boss_demon_lord_walk_03
+  - first:
+      213: 21300020
+    second: sprite_24_boss_demon_lord_walk_04
+  - first:
+      213: 21300022
+    second: sprite_24_boss_demon_lord_walk_05
+  - first:
+      213: 21300024
+    second: sprite_24_boss_demon_lord_walk_06
+  - first:
+      213: 21300026
+    second: sprite_24_boss_demon_lord_walk_07
+  - first:
+      213: 21300028
+    second: sprite_24_boss_demon_lord_walk_08
+  - first:
+      213: 21300030
+    second: sprite_24_boss_demon_lord_attack_01
+  - first:
+      213: 21300032
+    second: sprite_24_boss_demon_lord_attack_02
+  - first:
+      213: 21300034
+    second: sprite_24_boss_demon_lord_attack_03
+  - first:
+      213: 21300036
+    second: sprite_24_boss_demon_lord_attack_04
+  - first:
+      213: 21300038
+    second: sprite_24_boss_demon_lord_attack_05
+  - first:
+      213: 21300040
+    second: sprite_24_boss_demon_lord_attack_06
+  - first:
+      213: 21300042
+    second: sprite_24_boss_demon_lord_attack_07
+  - first:
+      213: 21300044
+    second: sprite_24_boss_demon_lord_attack_08
+  - first:
+      213: 21300046
+    second: sprite_24_boss_demon_lord_hit_01
+  - first:
+      213: 21300048
+    second: sprite_24_boss_demon_lord_hit_02
+  - first:
+      213: 21300050
+    second: sprite_24_boss_demon_lord_hit_03
+  - first:
+      213: 21300052
+    second: sprite_24_boss_demon_lord_hit_04
+  - first:
+      213: 21300054
+    second: sprite_24_boss_demon_lord_death_01
+  - first:
+      213: 21300056
+    second: sprite_24_boss_demon_lord_death_02
+  - first:
+      213: 21300058
+    second: sprite_24_boss_demon_lord_death_03
+  - first:
+      213: 21300060
+    second: sprite_24_boss_demon_lord_death_04
+  - first:
+      213: 21300062
+    second: sprite_24_boss_demon_lord_death_05
+  - first:
+      213: 21300064
+    second: sprite_24_boss_demon_lord_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca9b945f51677720d0b62711f1cefff
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_02
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b664f10a13ba1fa4d75fd7cd7a5c11de
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_03
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a4a67e0fb333049626ed176d4e5a66
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_04
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1a2a7c1657744ade161aaa53905db3
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_05
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbd885e54b1d33771e684bacac20ba1
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_idle_06
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2048
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b156da19951928974e0f60e539e3106
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d0967a862c69436cac7402b73e156b
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_02
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56a3d1b03848c129f5436f6c49c5571
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_03
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e173b15aaf4751e245c4672cf296d79
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_04
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f684923bdccd83c327c83aa6d76a44ec
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_05
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e45270274460be4ec4c313db6e7311
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_06
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7181e1dcd4da5f53c6f14f11366a6f
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_07
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d0bed35dd354835de1d30f7ddb647b
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_walk_08
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 1536
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08913d00fc2c30d5b4a81a265dc26baa
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b279d5ff1a659723959a78e7fdfff70
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_02
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e3c96ce1f20c45dfc5ecebacf1bd43
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_03
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3de55a13223a06b7b786d5871bb07ee
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_04
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58bbb0219fb13e118cefb5023da5153a
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_05
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0843454f6f9aeea7c79503f9770764
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_06
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d90f08158f6fe5dc8ed93a0bbb1f85b
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_07
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c9aaaecab0dc5e73c0cc529cd68219
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_attack_08
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 1024
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6656ac2fb43a119a32d29de0ae5b3b
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f684d2268b79cd35d323f1842b5a6a09
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_hit_02
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b698ce39f41cbde3fd3ea711b3c481
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_hit_03
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1111eecb70f63dc6c8fedbd8955cec46
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_hit_04
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 512
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d57d26e3d54eb197b022d557a06452f
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c976f70bf2f0a7b7a58fb527254eb3e5
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_02
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f15fc5a20df45c6f578d5fdd18384f5
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_03
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6312c50b5310f4a14aff23a253b56c
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_04
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2351f7517066b635bf256bc0519476
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_05
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edaa60d266ce3bb87bfe5a08b2ac7ed2
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_24_boss_demon_lord_death_06
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d901a4873ec7d6ae1735a40e58dfee7
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_24_boss_demon_lord_idle_01: 21300002
+      sprite_24_boss_demon_lord_idle_02: 21300004
+      sprite_24_boss_demon_lord_idle_03: 21300006
+      sprite_24_boss_demon_lord_idle_04: 21300008
+      sprite_24_boss_demon_lord_idle_05: 21300010
+      sprite_24_boss_demon_lord_idle_06: 21300012
+      sprite_24_boss_demon_lord_walk_01: 21300014
+      sprite_24_boss_demon_lord_walk_02: 21300016
+      sprite_24_boss_demon_lord_walk_03: 21300018
+      sprite_24_boss_demon_lord_walk_04: 21300020
+      sprite_24_boss_demon_lord_walk_05: 21300022
+      sprite_24_boss_demon_lord_walk_06: 21300024
+      sprite_24_boss_demon_lord_walk_07: 21300026
+      sprite_24_boss_demon_lord_walk_08: 21300028
+      sprite_24_boss_demon_lord_attack_01: 21300030
+      sprite_24_boss_demon_lord_attack_02: 21300032
+      sprite_24_boss_demon_lord_attack_03: 21300034
+      sprite_24_boss_demon_lord_attack_04: 21300036
+      sprite_24_boss_demon_lord_attack_05: 21300038
+      sprite_24_boss_demon_lord_attack_06: 21300040
+      sprite_24_boss_demon_lord_attack_07: 21300042
+      sprite_24_boss_demon_lord_attack_08: 21300044
+      sprite_24_boss_demon_lord_hit_01: 21300046
+      sprite_24_boss_demon_lord_hit_02: 21300048
+      sprite_24_boss_demon_lord_hit_03: 21300050
+      sprite_24_boss_demon_lord_hit_04: 21300052
+      sprite_24_boss_demon_lord_death_01: 21300054
+      sprite_24_boss_demon_lord_death_02: 21300056
+      sprite_24_boss_demon_lord_death_03: 21300058
+      sprite_24_boss_demon_lord_death_04: 21300060
+      sprite_24_boss_demon_lord_death_05: 21300062
+      sprite_24_boss_demon_lord_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

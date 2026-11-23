@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: d1f89bad11723206ed6eff8c773f4e3a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_17_gargoyle_idle_01
+  - first:
+      213: 21300004
+    second: sprite_17_gargoyle_idle_02
+  - first:
+      213: 21300006
+    second: sprite_17_gargoyle_idle_03
+  - first:
+      213: 21300008
+    second: sprite_17_gargoyle_idle_04
+  - first:
+      213: 21300010
+    second: sprite_17_gargoyle_idle_05
+  - first:
+      213: 21300012
+    second: sprite_17_gargoyle_idle_06
+  - first:
+      213: 21300014
+    second: sprite_17_gargoyle_walk_01
+  - first:
+      213: 21300016
+    second: sprite_17_gargoyle_walk_02
+  - first:
+      213: 21300018
+    second: sprite_17_gargoyle_walk_03
+  - first:
+      213: 21300020
+    second: sprite_17_gargoyle_walk_04
+  - first:
+      213: 21300022
+    second: sprite_17_gargoyle_walk_05
+  - first:
+      213: 21300024
+    second: sprite_17_gargoyle_walk_06
+  - first:
+      213: 21300026
+    second: sprite_17_gargoyle_walk_07
+  - first:
+      213: 21300028
+    second: sprite_17_gargoyle_walk_08
+  - first:
+      213: 21300030
+    second: sprite_17_gargoyle_attack_01
+  - first:
+      213: 21300032
+    second: sprite_17_gargoyle_attack_02
+  - first:
+      213: 21300034
+    second: sprite_17_gargoyle_attack_03
+  - first:
+      213: 21300036
+    second: sprite_17_gargoyle_attack_04
+  - first:
+      213: 21300038
+    second: sprite_17_gargoyle_attack_05
+  - first:
+      213: 21300040
+    second: sprite_17_gargoyle_attack_06
+  - first:
+      213: 21300042
+    second: sprite_17_gargoyle_attack_07
+  - first:
+      213: 21300044
+    second: sprite_17_gargoyle_attack_08
+  - first:
+      213: 21300046
+    second: sprite_17_gargoyle_hit_01
+  - first:
+      213: 21300048
+    second: sprite_17_gargoyle_hit_02
+  - first:
+      213: 21300050
+    second: sprite_17_gargoyle_hit_03
+  - first:
+      213: 21300052
+    second: sprite_17_gargoyle_hit_04
+  - first:
+      213: 21300054
+    second: sprite_17_gargoyle_death_01
+  - first:
+      213: 21300056
+    second: sprite_17_gargoyle_death_02
+  - first:
+      213: 21300058
+    second: sprite_17_gargoyle_death_03
+  - first:
+      213: 21300060
+    second: sprite_17_gargoyle_death_04
+  - first:
+      213: 21300062
+    second: sprite_17_gargoyle_death_05
+  - first:
+      213: 21300064
+    second: sprite_17_gargoyle_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.35}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099dd06ed1710ae960372f8e6d844a9b
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d3cec4e2d9e2e051108bdc44e51e62
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30bb84cd3f70f6bfcc9c81adaf16873
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f9f367d794b34b00ec3a2a6342013f
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a673fc15259363197b791e3b10c2df
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1024
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86502ab43fd98f51bf8e8c5a87e5fcd
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5b81e86098e5bf20a484b43623d932
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b6e5f6f07a15455d702109b7b6c8af
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c29984b996f658059353a90b7d6960
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c5611a72a7e5c8e2823f26c2771a2e
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d460c8439e2b2bfdfe598268b0f418c2
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7be5269a80b81d7588e1d23decbc36
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723d3149f3e154633fed5f07c0bfb4c5
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 768
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab180a2f095062e38b6b9d80d83a76c
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd664d84ef0fee4e4c5815726baef83
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598bd5522ce84951952fb58a8947cf16
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e013f5caafcce48088633e8c797c2e5e
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4854236f0f21ed9ad3e819261dbda16
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dec5637ccb498f54cda01f013d70a27
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ca0d7ce3169e3632ede87947644167
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398e52c4cdea59e6a9a3584dfb124d82
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 512
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e76295e3db431d944836791d824261
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52634d6879fbff8f78d6361ab45a7011
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_hit_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 256
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d323369dee56a9a4c09ca1bbad470b
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_hit_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 256
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ce2f7d909c1f533b3a367af9167dda
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_hit_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 256
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565dd32bad1ea3672fdb79b104ee5735
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8303b0926dc943a10daa361f51db77
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce82d3397998c049db24d6040bd48c78
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690840f11d23005f44593b9643d552c9
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8684ff7ef1d8614bdeb9fd082c03f3ee
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c59551b4157678e5aa86d559db50c98
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_17_gargoyle_death_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 272
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9100cb41592abad7634bb9cb299e3952
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_17_gargoyle_idle_01: 21300002
+      sprite_17_gargoyle_idle_02: 21300004
+      sprite_17_gargoyle_idle_03: 21300006
+      sprite_17_gargoyle_idle_04: 21300008
+      sprite_17_gargoyle_idle_05: 21300010
+      sprite_17_gargoyle_idle_06: 21300012
+      sprite_17_gargoyle_walk_01: 21300014
+      sprite_17_gargoyle_walk_02: 21300016
+      sprite_17_gargoyle_walk_03: 21300018
+      sprite_17_gargoyle_walk_04: 21300020
+      sprite_17_gargoyle_walk_05: 21300022
+      sprite_17_gargoyle_walk_06: 21300024
+      sprite_17_gargoyle_walk_07: 21300026
+      sprite_17_gargoyle_walk_08: 21300028
+      sprite_17_gargoyle_attack_01: 21300030
+      sprite_17_gargoyle_attack_02: 21300032
+      sprite_17_gargoyle_attack_03: 21300034
+      sprite_17_gargoyle_attack_04: 21300036
+      sprite_17_gargoyle_attack_05: 21300038
+      sprite_17_gargoyle_attack_06: 21300040
+      sprite_17_gargoyle_attack_07: 21300042
+      sprite_17_gargoyle_attack_08: 21300044
+      sprite_17_gargoyle_hit_01: 21300046
+      sprite_17_gargoyle_hit_02: 21300048
+      sprite_17_gargoyle_hit_03: 21300050
+      sprite_17_gargoyle_hit_04: 21300052
+      sprite_17_gargoyle_death_01: 21300054
+      sprite_17_gargoyle_death_02: 21300056
+      sprite_17_gargoyle_death_03: 21300058
+      sprite_17_gargoyle_death_04: 21300060
+      sprite_17_gargoyle_death_05: 21300062
+      sprite_17_gargoyle_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

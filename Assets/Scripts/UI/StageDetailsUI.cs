@@ -23,6 +23,8 @@ namespace DreamDungeon
         private Text rewardPreviewText;
         private Text statusText;
         private Button startRaidButton;
+        private Transform adventurerPreviewContainer;
+        private Image bossPreviewImage;
 
         private readonly Dictionary<StageDifficulty, Button> difficultyButtons = new Dictionary<StageDifficulty, Button>();
         private CampaignStageData currentStage;
@@ -131,14 +133,23 @@ namespace DreamDungeon
             RoomUIFactory.CreateText(intelBox, "IntelHeader", "ENEMY FACTION & WAVE INTEL", 23,
                 new Vector2(0f, 168f), new Vector2(880f, 38f), new Color(0.98f, 0.80f, 0.38f));
 
-            factionInfoText = RoomUIFactory.CreateText(intelBox, "FactionInfoText", "", 19,
-                new Vector2(0f, 95f), new Vector2(860f, 95f), Color.white, TextAnchor.MiddleLeft);
+            factionInfoText = RoomUIFactory.CreateText(intelBox, "FactionInfoText", "", 18,
+                new Vector2(-90f, 100f), new Vector2(680f, 95f), Color.white, TextAnchor.MiddleLeft);
 
-            enemyPreviewText = RoomUIFactory.CreateText(intelBox, "EnemyPreviewText", "", 18,
-                new Vector2(0f, -15f), new Vector2(860f, 110f), new Color(0.78f, 0.88f, 0.96f), TextAnchor.MiddleLeft);
+            enemyPreviewText = RoomUIFactory.CreateText(intelBox, "EnemyPreviewText", "", 17,
+                new Vector2(-90f, 10f), new Vector2(680f, 75f), new Color(0.78f, 0.88f, 0.96f), TextAnchor.MiddleLeft);
 
-            bossInfoText = RoomUIFactory.CreateText(intelBox, "BossInfoText", "", 19,
-                new Vector2(0f, -135f), new Vector2(860f, 80f), new Color(1.0f, 0.60f, 0.55f), TextAnchor.MiddleLeft);
+            RectTransform advIconsPanel = RoomUIFactory.CreatePanel(intelBox, "AdventurerPreviewIcons",
+                Color.clear, new Vector2(-90f, -65f), new Vector2(680f, 70f));
+            adventurerPreviewContainer = advIconsPanel;
+
+            bossInfoText = RoomUIFactory.CreateText(intelBox, "BossInfoText", "", 18,
+                new Vector2(-90f, -145f), new Vector2(680f, 65f), new Color(1.0f, 0.60f, 0.55f), TextAnchor.MiddleLeft);
+
+            RectTransform bossPreviewPanel = RoomUIFactory.CreatePanel(intelBox, "BossPreviewIcon",
+                new Color(1f, 1f, 1f, 0.1f), new Vector2(345f, -20f), new Vector2(140f, 140f));
+            bossPreviewImage = bossPreviewPanel.GetComponent<Image>();
+            bossPreviewImage.preserveAspect = true;
 
             // Difficulty Selection Box
             RectTransform diffBox = RoomUIFactory.CreatePanel(window, "DifficultyBox",
@@ -261,6 +272,8 @@ namespace DreamDungeon
                 }
             }
 
+            RefreshCharacterPreviews(faction);
+
             // Refresh Difficulty Buttons
             foreach (var kvp in difficultyButtons)
             {
@@ -304,6 +317,83 @@ namespace DreamDungeon
                     $"{fcLine}\n" +
                     $"{bossLine}\n\n" +
                     $"TOTAL EXPECTED REWARD: +{preview.TotalGold} GOLD   +{preview.TotalSoul} SOUL   +{preview.TotalEXP} EXP";
+            }
+        }
+
+        private void RefreshCharacterPreviews(AdventurerFactionData faction)
+        {
+            if (adventurerPreviewContainer != null)
+            {
+                for (int i = adventurerPreviewContainer.childCount - 1; i >= 0; i--)
+                {
+                    Destroy(adventurerPreviewContainer.GetChild(i).gameObject);
+                }
+
+                AdventurerDatabase advDb = Resources.Load<AdventurerDatabase>("DreamDungeon/AdventurerDatabase");
+                if (advDb != null)
+                {
+                    var ids = new List<string>();
+                    if (faction?.adventurerTypes != null)
+                    {
+                        foreach (string id in faction.adventurerTypes)
+                        {
+                            if (!string.IsNullOrWhiteSpace(id) && !ids.Contains(id)) ids.Add(id);
+                        }
+                    }
+                    if (currentStage?.waveConfiguration != null)
+                    {
+                        foreach (WaveConfiguration w in currentStage.waveConfiguration)
+                        {
+                            if (w?.spawnGroups == null) continue;
+                            foreach (WaveSpawnGroup g in w.spawnGroups)
+                            {
+                                if (g != null && !string.IsNullOrWhiteSpace(g.adventurerType) && !ids.Contains(g.adventurerType))
+                                    ids.Add(g.adventurerType);
+                            }
+                        }
+                    }
+
+                    int idx = 0;
+                    foreach (string advId in ids)
+                    {
+                        AdventurerData adv = advDb.Find(advId);
+                        if (adv == null || adv.icon == null) continue;
+                        var iconRt = RoomUIFactory.CreatePanel(adventurerPreviewContainer, "AdvIcon_" + advId,
+                            Color.white, new Vector2(-280f + idx * 80f, 0f), new Vector2(64f, 64f));
+                        Image img = iconRt.GetComponent<Image>();
+                        img.sprite = adv.icon;
+                        img.preserveAspect = true;
+                        idx++;
+                        if (idx >= 8) break;
+                    }
+                }
+            }
+
+            if (bossPreviewImage != null)
+            {
+                BossData boss = null;
+                if (!string.IsNullOrWhiteSpace(currentStage?.bossId))
+                {
+                    BossDatabase bossDb = Resources.Load<BossDatabase>("DreamDungeon/BossDatabase");
+                    if (bossDb != null) boss = bossDb.GetBoss(currentStage.bossId);
+                }
+                if (boss != null && boss.bossIcon != null)
+                {
+                    bossPreviewImage.sprite = boss.bossIcon;
+                    bossPreviewImage.color = Color.white;
+                    bossPreviewImage.preserveAspect = true;
+                }
+                else if (faction?.factionIcon != null)
+                {
+                    bossPreviewImage.sprite = faction.factionIcon;
+                    bossPreviewImage.color = Color.white;
+                    bossPreviewImage.preserveAspect = true;
+                }
+                else
+                {
+                    bossPreviewImage.sprite = null;
+                    bossPreviewImage.color = new Color(1f, 1f, 1f, 0.05f);
+                }
             }
         }
 

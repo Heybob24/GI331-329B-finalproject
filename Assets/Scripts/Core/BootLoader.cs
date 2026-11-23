@@ -10,6 +10,12 @@ namespace DreamDungeon
             if (GameManager.Instance == null)
                 new GameObject("GameManager").AddComponent<GameManager>();
 
+            if (UGSInitializationManager.Instance == null)
+                new GameObject("UGSInitializationManager").AddComponent<UGSInitializationManager>();
+
+            if (AuthenticationManager.Instance == null)
+                new GameObject("AuthenticationManager").AddComponent<AuthenticationManager>();
+
             yield return null;
             SceneLoader.Load("MainMenu");
         }

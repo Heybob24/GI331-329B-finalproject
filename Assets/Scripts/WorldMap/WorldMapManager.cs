@@ -16,6 +16,8 @@ namespace DreamDungeon
         private readonly HashSet<string> claimedRegionRewardIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
         private string selectedRegionId = "forgotten_forest";
+        private bool isInitialized;
+        private bool isInitializing;
 
         public WorldRegionDatabase Database => database;
         public RegionUnlockManager UnlockManager => unlockManager;
@@ -32,6 +34,7 @@ namespace DreamDungeon
         {
             database = regionDb;
             if (unlockMgr != null) unlockManager = unlockMgr;
+            isInitialized = false;
         }
 
         private void Awake()
@@ -60,28 +63,41 @@ namespace DreamDungeon
 
         public void EnsureInitialized()
         {
-            if (database == null)
+            if (isInitializing) return;
+            if (isInitialized && database != null && unlockManager != null) return;
+
+            isInitializing = true;
+            try
             {
-                database = Resources.Load<WorldRegionDatabase>("DreamDungeon/WorldRegionDatabase");
                 if (database == null)
                 {
-                    database = WorldRegionDatabase.CreateRuntimeDefaultDatabase();
+                    database = Resources.Load<WorldRegionDatabase>("DreamDungeon/WorldRegionDatabase");
+                    if (database == null)
+                    {
+                        database = WorldRegionDatabase.CreateRuntimeDefaultDatabase();
+                    }
                 }
-            }
 
-            if (unlockManager == null)
-            {
-                unlockManager = GetComponent<RegionUnlockManager>() ?? gameObject.AddComponent<RegionUnlockManager>();
-            }
-
-            foreach (WorldRegionData region in database.AllRegions)
-            {
-                if (region != null && region.isStartingRegion)
+                if (unlockManager == null)
                 {
-                    unlockedRegionIds.Add(region.regionId.Trim());
-                    if (string.IsNullOrEmpty(selectedRegionId))
-                        selectedRegionId = region.regionId.Trim();
+                    unlockManager = GetComponent<RegionUnlockManager>() ?? gameObject.AddComponent<RegionUnlockManager>();
                 }
+
+                foreach (WorldRegionData region in database.AllRegions)
+                {
+                    if (region != null && region.isStartingRegion)
+                    {
+                        unlockedRegionIds.Add(region.regionId.Trim());
+                        if (string.IsNullOrEmpty(selectedRegionId))
+                            selectedRegionId = region.regionId.Trim();
+                    }
+                }
+
+                isInitialized = true;
+            }
+            finally
+            {
+                isInitializing = false;
             }
         }
 

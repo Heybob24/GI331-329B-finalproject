@@ -39,6 +39,9 @@ namespace DreamDungeon
         private WorldMapUI worldMapUI;
         private CampaignSelectionUI campaignSelectionUI;
         private StageDetailsUI stageDetailsUI;
+        private EndlessModeUI endlessModeUI;
+        private ChallengeSelectionUI challengeSelectionUI;
+        private GameModeSelectionUI gameModeSelectionUI;
         private Text headerText;
         private Text levelValueText;
         private Button startRaidButton;
@@ -149,6 +152,12 @@ namespace DreamDungeon
             Wire("OpenAchievementButton", () => achievementUI?.Open());
             Wire("WorldMapButton", () => worldMapUI?.Open());
             Wire("OpenWorldMapButton", () => worldMapUI?.Open());
+            Wire("EndlessButton", () => endlessModeUI?.Open());
+            Wire("OpenEndlessButton", () => endlessModeUI?.Open());
+            Wire("ChallengeButton", () => challengeSelectionUI?.Open());
+            Wire("OpenChallengeButton", () => challengeSelectionUI?.Open());
+            Wire("GameModeButton", () => gameModeSelectionUI?.Open());
+            Wire("OpenGameModeButton", () => gameModeSelectionUI?.Open());
 
             if (placement != null)
             {
@@ -199,7 +208,17 @@ namespace DreamDungeon
             if (startRaidButton != null) startRaidButton.interactable = true;
             SetStatus("Select a room or path tool, then tap a green preview cell.");
 
-            if (BattleSession.ReturnToWorldMapPending)
+            if (BattleSession.ReturnToEndlessMenuPending)
+            {
+                BattleSession.ClearWorldMapNavigationRequests();
+                endlessModeUI?.Open();
+            }
+            else if (BattleSession.ReturnToChallengeMenuPending)
+            {
+                BattleSession.ClearWorldMapNavigationRequests();
+                challengeSelectionUI?.Open();
+            }
+            else if (BattleSession.ReturnToWorldMapPending)
             {
                 string nextStageId = BattleSession.NextStageToOpenPending;
                 BattleSession.ClearWorldMapNavigationRequests();
@@ -298,22 +317,185 @@ namespace DreamDungeon
             worldMapUI?.Close();
             campaignSelectionUI?.Close();
             stageDetailsUI?.Close();
+            endlessModeUI?.Close();
+            challengeSelectionUI?.Close();
+            gameModeSelectionUI?.Close();
         }
 
         private void EnsureMilestone7Systems()
         {
             GameObject builderObj = roomManager != null ? roomManager.gameObject : GameObject.Find("DungeonBuilder");
+            GameObject safeObj = GameObject.Find("SafeAreaRoot");
+            RectTransform safe = safeObj != null ? safeObj.GetComponent<RectTransform>() : null;
+
             if (builderObj != null)
             {
+                MonsterDatabase monsterDb = roomManager != null && roomManager.Monsters != null
+                    ? roomManager.Monsters
+                    : Resources.Load<MonsterDatabase>("DreamDungeon/MonsterDatabase") ?? Resources.Load<MonsterDatabase>("MonsterDatabase");
+                TrapDatabase trapDb = roomManager != null && roomManager.Traps != null
+                    ? roomManager.Traps
+                    : Resources.Load<TrapDatabase>("DreamDungeon/TrapDatabase") ?? Resources.Load<TrapDatabase>("TrapDatabase");
+                CurrencyManager currency = builderObj.GetComponent<CurrencyManager>() ?? (roomManager != null ? roomManager.Currency : null);
+
+                if (monsterDb != null && trapDb != null)
+                {
+                    MonsterInventoryManager monsterInv = builderObj.GetComponent<MonsterInventoryManager>();
+                    if (monsterInv == null)
+                    {
+                        monsterInv = builderObj.AddComponent<MonsterInventoryManager>();
+                        monsterInv.Configure(monsterDb, roomManager);
+                    }
+                    else if (monsterInv.Database == null)
+                    {
+                        monsterInv.Configure(monsterDb, roomManager);
+                    }
+
+                    TrapInventoryManager trapInv = builderObj.GetComponent<TrapInventoryManager>();
+                    if (trapInv == null)
+                    {
+                        trapInv = builderObj.AddComponent<TrapInventoryManager>();
+                        trapInv.Configure(trapDb, roomManager);
+                    }
+                    else if (trapInv.Database == null)
+                    {
+                        trapInv.Configure(trapDb, roomManager);
+                    }
+
+                    if (roomManager != null)
+                    {
+                        roomManager.ConfigureUnitInventories(monsterInv, trapInv);
+                        roomManager.ConfigureUnitDefinitions(monsterDb, trapDb);
+                    }
+
+                    MonsterShopManager mShop = builderObj.GetComponent<MonsterShopManager>();
+                    if (mShop == null)
+                    {
+                        mShop = builderObj.AddComponent<MonsterShopManager>();
+                        mShop.Configure(monsterDb, monsterInv, currency, 1);
+                    }
+                    else if (mShop.Database == null)
+                    {
+                        mShop.Configure(monsterDb, monsterInv, currency, 1);
+                    }
+
+                    TrapShopManager tShop = builderObj.GetComponent<TrapShopManager>();
+                    if (tShop == null)
+                    {
+                        tShop = builderObj.AddComponent<TrapShopManager>();
+                        tShop.Configure(trapDb, trapInv, currency, 1);
+                    }
+                    else if (tShop.Database == null)
+                    {
+                        tShop.Configure(trapDb, trapInv, currency, 1);
+                    }
+
+                    if (monsterPlacement == null) monsterPlacement = builderObj.GetComponent<MonsterPlacementManager>();
+                    if (monsterPlacement == null)
+                    {
+                        monsterPlacement = builderObj.AddComponent<MonsterPlacementManager>();
+                        monsterPlacement.Configure(grid, roomManager, monsterDb, monsterInv, placement);
+                    }
+
+                    if (trapPlacement == null) trapPlacement = builderObj.GetComponent<TrapPlacementManager>();
+                    if (trapPlacement == null)
+                    {
+                        trapPlacement = builderObj.AddComponent<TrapPlacementManager>();
+                        trapPlacement.Configure(grid, roomManager, trapDb, trapInv, placement);
+                    }
+
+                    MonsterUpgradeManager mUpgrades = builderObj.GetComponent<MonsterUpgradeManager>();
+                    if (mUpgrades == null)
+                    {
+                        mUpgrades = builderObj.AddComponent<MonsterUpgradeManager>();
+                        mUpgrades.Configure(monsterDb, currency, roomManager);
+                    }
+
+                    TrapUpgradeManager tUpgrades = builderObj.GetComponent<TrapUpgradeManager>();
+                    if (tUpgrades == null)
+                    {
+                        tUpgrades = builderObj.AddComponent<TrapUpgradeManager>();
+                        tUpgrades.Configure(trapDb, currency, roomManager);
+                    }
+
+                    if (monsterShopUI == null) monsterShopUI = FindAnyObjectByType<MonsterShopUI>();
+                    if (monsterShopUI == null && safe != null)
+                    {
+                        monsterShopUI = gameObject.AddComponent<MonsterShopUI>();
+                        monsterShopUI.Configure(safe, mShop, monsterDb, currency);
+                    }
+
+                    if (monsterDetailsUI == null) monsterDetailsUI = FindAnyObjectByType<MonsterDetailsUI>();
+                    if (monsterDetailsUI == null && safe != null)
+                    {
+                        monsterDetailsUI = gameObject.AddComponent<MonsterDetailsUI>();
+                        monsterDetailsUI.Configure(safe, monsterDb, roomManager, mUpgrades, monsterPlacement);
+                    }
+
+                    if (monsterInventoryUI == null) monsterInventoryUI = FindAnyObjectByType<MonsterInventoryUI>();
+                    if (monsterInventoryUI == null && safe != null)
+                    {
+                        monsterInventoryUI = gameObject.AddComponent<MonsterInventoryUI>();
+                        monsterInventoryUI.Configure(safe, monsterInv, monsterDb, monsterPlacement, roomManager, monsterDetailsUI);
+                    }
+
+                    if (trapShopUI == null) trapShopUI = FindAnyObjectByType<TrapShopUI>();
+                    if (trapShopUI == null && safe != null)
+                    {
+                        trapShopUI = gameObject.AddComponent<TrapShopUI>();
+                        trapShopUI.Configure(safe, tShop, trapDb, currency);
+                    }
+
+                    if (trapDetailsUI == null) trapDetailsUI = FindAnyObjectByType<TrapDetailsUI>();
+                    if (trapDetailsUI == null && safe != null)
+                    {
+                        trapDetailsUI = gameObject.AddComponent<TrapDetailsUI>();
+                        trapDetailsUI.Configure(safe, trapDb, roomManager, tUpgrades, trapPlacement);
+                    }
+
+                    if (trapInventoryUI == null) trapInventoryUI = FindAnyObjectByType<TrapInventoryUI>();
+                    if (trapInventoryUI == null && safe != null)
+                    {
+                        trapInventoryUI = gameObject.AddComponent<TrapInventoryUI>();
+                        trapInventoryUI.Configure(safe, trapInv, trapDb, trapPlacement, roomManager, trapDetailsUI);
+                    }
+                }
+
                 if (builderObj.GetComponent<QuestManager>() == null) builderObj.AddComponent<QuestManager>();
                 if (builderObj.GetComponent<AchievementManager>() == null) builderObj.AddComponent<AchievementManager>();
                 if (builderObj.GetComponent<DifficultyManager>() == null) builderObj.AddComponent<DifficultyManager>();
                 if (builderObj.GetComponent<WorldMapManager>() == null) builderObj.AddComponent<WorldMapManager>();
                 if (builderObj.GetComponent<CampaignManager>() == null) builderObj.AddComponent<CampaignManager>();
+                if (builderObj.GetComponent<EndlessChallengeManager>() == null) builderObj.AddComponent<EndlessChallengeManager>();
             }
 
-            GameObject safeObj = GameObject.Find("SafeAreaRoot");
-            RectTransform safe = safeObj != null ? safeObj.GetComponent<RectTransform>() : null;
+            if (safe != null)
+            {
+                if (GameObject.Find("OpenMonsterShopButton") == null)
+                {
+                    // Reposition 2-button layout into 6-button Milestone 4+ layout
+                    GameObject roomShopBtn = GameObject.Find("OpenRoomShopButton");
+                    if (roomShopBtn != null && roomShopBtn.TryGetComponent<RectTransform>(out var rsRt))
+                    {
+                        rsRt.anchoredPosition = new Vector2(-390f, 680f);
+                        rsRt.sizeDelta = new Vector2(205f, 68f);
+                        Text rsTxt = roomShopBtn.GetComponentInChildren<Text>();
+                        if (rsTxt != null) { rsTxt.fontSize = 15; rsTxt.GetComponent<RectTransform>().sizeDelta = new Vector2(181f, 56f); }
+                    }
+                    GameObject roomInvBtn = GameObject.Find("OpenRoomInventoryButton");
+                    if (roomInvBtn != null && roomInvBtn.TryGetComponent<RectTransform>(out var riRt))
+                    {
+                        riRt.anchoredPosition = new Vector2(390f, 680f);
+                        riRt.sizeDelta = new Vector2(155f, 68f);
+                        Text riTxt = roomInvBtn.GetComponentInChildren<Text>();
+                        if (riTxt != null) { riTxt.text = "ROOMS"; riTxt.fontSize = 15; riTxt.GetComponent<RectTransform>().sizeDelta = new Vector2(131f, 56f); }
+                    }
+                    RoomUIFactory.CreateButton(safe, "OpenMonsterShopButton", "MONSTER SHOP", new Vector2(-130f, 680f), new Vector2(235f, 68f), new Color(0.30f, 0.20f, 0.18f), 15);
+                    RoomUIFactory.CreateButton(safe, "OpenTrapShopButton", "TRAP SHOP", new Vector2(130f, 680f), new Vector2(205f, 68f), new Color(0.21f, 0.30f, 0.23f), 15);
+                    RoomUIFactory.CreateButton(safe, "OpenMonsterInventoryButton", "MONSTERS", new Vector2(-260f, 590f), new Vector2(235f, 64f), new Color(0.24f, 0.19f, 0.28f), 15);
+                    RoomUIFactory.CreateButton(safe, "OpenTrapInventoryButton", "TRAPS", new Vector2(260f, 590f), new Vector2(235f, 64f), new Color(0.18f, 0.29f, 0.24f), 15);
+                }
+            }
 
             if (questUI == null) questUI = FindAnyObjectByType<QuestUIManager>();
             if (questUI == null)
@@ -357,6 +539,27 @@ namespace DreamDungeon
                 if (safe != null) worldMapUI.Configure(safe, null, campaignSelectionUI);
             }
 
+            if (endlessModeUI == null) endlessModeUI = FindAnyObjectByType<EndlessModeUI>();
+            if (endlessModeUI == null)
+            {
+                endlessModeUI = gameObject.AddComponent<EndlessModeUI>();
+                if (safe != null) endlessModeUI.Configure(safe, null, roomManager);
+            }
+
+            if (challengeSelectionUI == null) challengeSelectionUI = FindAnyObjectByType<ChallengeSelectionUI>();
+            if (challengeSelectionUI == null)
+            {
+                challengeSelectionUI = gameObject.AddComponent<ChallengeSelectionUI>();
+                if (safe != null) challengeSelectionUI.Configure(safe, null, roomManager);
+            }
+
+            if (gameModeSelectionUI == null) gameModeSelectionUI = FindAnyObjectByType<GameModeSelectionUI>();
+            if (gameModeSelectionUI == null)
+            {
+                gameModeSelectionUI = gameObject.AddComponent<GameModeSelectionUI>();
+                if (safe != null) gameModeSelectionUI.Configure(safe, worldMapUI, endlessModeUI, challengeSelectionUI);
+            }
+
             if (safe != null)
             {
                 if (GameObject.Find("QuestButton") == null && GameObject.Find("OpenQuestButton") == null)
@@ -370,6 +573,18 @@ namespace DreamDungeon
                 if (GameObject.Find("AchievementButton") == null && GameObject.Find("OpenAchievementButton") == null)
                 {
                     RoomUIFactory.CreateButton(safe, "AchievementButton", "ACHIEVEMENTS", new Vector2(280f, 435f), new Vector2(220f, 56f), new Color(0.28f, 0.20f, 0.36f), 15);
+                }
+                if (GameObject.Find("EndlessButton") == null && GameObject.Find("OpenEndlessButton") == null)
+                {
+                    RoomUIFactory.CreateButton(safe, "EndlessButton", "ENDLESS", new Vector2(-280f, 368f), new Vector2(210f, 54f), new Color(0.46f, 0.18f, 0.16f), 15);
+                }
+                if (GameObject.Find("ChallengeButton") == null && GameObject.Find("OpenChallengeButton") == null)
+                {
+                    RoomUIFactory.CreateButton(safe, "ChallengeButton", "CHALLENGES", new Vector2(0f, 368f), new Vector2(210f, 54f), new Color(0.34f, 0.18f, 0.42f), 15);
+                }
+                if (GameObject.Find("GameModeButton") == null && GameObject.Find("OpenGameModeButton") == null)
+                {
+                    RoomUIFactory.CreateButton(safe, "GameModeButton", "GAME MODES", new Vector2(280f, 368f), new Vector2(220f, 54f), new Color(0.18f, 0.36f, 0.30f), 15);
                 }
             }
         }

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 4a8fa5ac64ac913fe304e0715893fcec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_34_crimson_specter_idle_01
+  - first:
+      213: 21300004
+    second: sprite_34_crimson_specter_idle_02
+  - first:
+      213: 21300006
+    second: sprite_34_crimson_specter_idle_03
+  - first:
+      213: 21300008
+    second: sprite_34_crimson_specter_idle_04
+  - first:
+      213: 21300010
+    second: sprite_34_crimson_specter_idle_05
+  - first:
+      213: 21300012
+    second: sprite_34_crimson_specter_idle_06
+  - first:
+      213: 21300014
+    second: sprite_34_crimson_specter_walk_01
+  - first:
+      213: 21300016
+    second: sprite_34_crimson_specter_walk_02
+  - first:
+      213: 21300018
+    second: sprite_34_crimson_specter_walk_03
+  - first:
+      213: 21300020
+    second: sprite_34_crimson_specter_walk_04
+  - first:
+      213: 21300022
+    second: sprite_34_crimson_specter_walk_05
+  - first:
+      213: 21300024
+    second: sprite_34_crimson_specter_walk_06
+  - first:
+      213: 21300026
+    second: sprite_34_crimson_specter_walk_07
+  - first:
+      213: 21300028
+    second: sprite_34_crimson_specter_walk_08
+  - first:
+      213: 21300030
+    second: sprite_34_crimson_specter_attack_01
+  - first:
+      213: 21300032
+    second: sprite_34_crimson_specter_attack_02
+  - first:
+      213: 21300034
+    second: sprite_34_crimson_specter_attack_03
+  - first:
+      213: 21300036
+    second: sprite_34_crimson_specter_attack_04
+  - first:
+      213: 21300038
+    second: sprite_34_crimson_specter_attack_05
+  - first:
+      213: 21300040
+    second: sprite_34_crimson_specter_attack_06
+  - first:
+      213: 21300042
+    second: sprite_34_crimson_specter_attack_07
+  - first:
+      213: 21300044
+    second: sprite_34_crimson_specter_attack_08
+  - first:
+      213: 21300046
+    second: sprite_34_crimson_specter_hit_01
+  - first:
+      213: 21300048
+    second: sprite_34_crimson_specter_hit_02
+  - first:
+      213: 21300050
+    second: sprite_34_crimson_specter_hit_03
+  - first:
+      213: 21300052
+    second: sprite_34_crimson_specter_hit_04
+  - first:
+      213: 21300054
+    second: sprite_34_crimson_specter_death_01
+  - first:
+      213: 21300056
+    second: sprite_34_crimson_specter_death_02
+  - first:
+      213: 21300058
+    second: sprite_34_crimson_specter_death_03
+  - first:
+      213: 21300060
+    second: sprite_34_crimson_specter_death_04
+  - first:
+      213: 21300062
+    second: sprite_34_crimson_specter_death_05
+  - first:
+      213: 21300064
+    second: sprite_34_crimson_specter_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.35}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc0fdafd36167b79d7fec59363f5c67
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a98e88dd25f09543b80defdfa657deca
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_03
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8436bc61940411d47174def7e3c617b2
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_04
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 586326e5993f480f9caf8b0ff8d573d7
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a51da454869b515c3ee5382ce7c412
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1216
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb231c82de13881432c41667052a3c8
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d48841c7d4102953b9363110c22921
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9a2c4b1c37b5fd10cbfe2931befc56
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_03
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac00f8cf2908f6b631d1146846b5559
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_04
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13268d77cd2c8a566e3c0b50b7f87df8
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deecae2a36c70aed32427a3c57b5f92a
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f16e39bebd9c7a795ac766c91c87ee
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ab5c2ed12c12b341da8e017a89dc70
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 912
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a10f95e6084718ea902cbd999f8916
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fbf9ca849ce801e674404c14069f57
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6d7f0156359074a961788135af38a5
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_03
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6c93972284268c8f5b309d979fddae
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_04
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c03d2a817de4f262ed3a49965b768846
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f81a3e805e07332f5cf1a7e9b6e47ed
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401cbcd6304e88b5095fb6bdb6b719cc
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ddde690e3551dad2ac0e33d109dc03
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 608
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3065868aadb0321e458fac895c4c9c
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa1a2fec01f882346ea2b83cceb0ff1
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_hit_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 304
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b75ffe7c187af23a6870c399576c9aa
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_hit_03
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 304
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b90e9b053f1903e4dfd50e14ca31f5
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_hit_04
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 304
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1923d955874792b19b8b15aa096b0e
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91cde3545fe7582974dbce1f7690a4f5
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0692242714ebcabad14f484903185a0c
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_03
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75cf7dfe6abdb6001d1c6de2d8023b4
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_04
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305e0a4133286ff6562c36919c8239b8
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_05
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00bc2e36c5158ce165991f78deb4364
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_34_crimson_specter_death_06
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a8cd73c8a4ebcea1bde0f7d046c5994
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_34_crimson_specter_idle_01: 21300002
+      sprite_34_crimson_specter_idle_02: 21300004
+      sprite_34_crimson_specter_idle_03: 21300006
+      sprite_34_crimson_specter_idle_04: 21300008
+      sprite_34_crimson_specter_idle_05: 21300010
+      sprite_34_crimson_specter_idle_06: 21300012
+      sprite_34_crimson_specter_walk_01: 21300014
+      sprite_34_crimson_specter_walk_02: 21300016
+      sprite_34_crimson_specter_walk_03: 21300018
+      sprite_34_crimson_specter_walk_04: 21300020
+      sprite_34_crimson_specter_walk_05: 21300022
+      sprite_34_crimson_specter_walk_06: 21300024
+      sprite_34_crimson_specter_walk_07: 21300026
+      sprite_34_crimson_specter_walk_08: 21300028
+      sprite_34_crimson_specter_attack_01: 21300030
+      sprite_34_crimson_specter_attack_02: 21300032
+      sprite_34_crimson_specter_attack_03: 21300034
+      sprite_34_crimson_specter_attack_04: 21300036
+      sprite_34_crimson_specter_attack_05: 21300038
+      sprite_34_crimson_specter_attack_06: 21300040
+      sprite_34_crimson_specter_attack_07: 21300042
+      sprite_34_crimson_specter_attack_08: 21300044
+      sprite_34_crimson_specter_hit_01: 21300046
+      sprite_34_crimson_specter_hit_02: 21300048
+      sprite_34_crimson_specter_hit_03: 21300050
+      sprite_34_crimson_specter_hit_04: 21300052
+      sprite_34_crimson_specter_death_01: 21300054
+      sprite_34_crimson_specter_death_02: 21300056
+      sprite_34_crimson_specter_death_03: 21300058
+      sprite_34_crimson_specter_death_04: 21300060
+      sprite_34_crimson_specter_death_05: 21300062
+      sprite_34_crimson_specter_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

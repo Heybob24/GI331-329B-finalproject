@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 8f711f0b881687942a17a596eb048202
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_38a_venom_spider_idle_01
+  - first:
+      213: 21300004
+    second: sprite_38a_venom_spider_idle_02
+  - first:
+      213: 21300006
+    second: sprite_38a_venom_spider_idle_03
+  - first:
+      213: 21300008
+    second: sprite_38a_venom_spider_idle_04
+  - first:
+      213: 21300010
+    second: sprite_38a_venom_spider_idle_05
+  - first:
+      213: 21300012
+    second: sprite_38a_venom_spider_idle_06
+  - first:
+      213: 21300014
+    second: sprite_38a_venom_spider_walk_01
+  - first:
+      213: 21300016
+    second: sprite_38a_venom_spider_walk_02
+  - first:
+      213: 21300018
+    second: sprite_38a_venom_spider_walk_03
+  - first:
+      213: 21300020
+    second: sprite_38a_venom_spider_walk_04
+  - first:
+      213: 21300022
+    second: sprite_38a_venom_spider_walk_05
+  - first:
+      213: 21300024
+    second: sprite_38a_venom_spider_walk_06
+  - first:
+      213: 21300026
+    second: sprite_38a_venom_spider_walk_07
+  - first:
+      213: 21300028
+    second: sprite_38a_venom_spider_walk_08
+  - first:
+      213: 21300030
+    second: sprite_38a_venom_spider_attack_01
+  - first:
+      213: 21300032
+    second: sprite_38a_venom_spider_attack_02
+  - first:
+      213: 21300034
+    second: sprite_38a_venom_spider_attack_03
+  - first:
+      213: 21300036
+    second: sprite_38a_venom_spider_attack_04
+  - first:
+      213: 21300038
+    second: sprite_38a_venom_spider_attack_05
+  - first:
+      213: 21300040
+    second: sprite_38a_venom_spider_attack_06
+  - first:
+      213: 21300042
+    second: sprite_38a_venom_spider_attack_07
+  - first:
+      213: 21300044
+    second: sprite_38a_venom_spider_attack_08
+  - first:
+      213: 21300046
+    second: sprite_38a_venom_spider_hit_01
+  - first:
+      213: 21300048
+    second: sprite_38a_venom_spider_hit_02
+  - first:
+      213: 21300050
+    second: sprite_38a_venom_spider_hit_03
+  - first:
+      213: 21300052
+    second: sprite_38a_venom_spider_hit_04
+  - first:
+      213: 21300054
+    second: sprite_38a_venom_spider_death_01
+  - first:
+      213: 21300056
+    second: sprite_38a_venom_spider_death_02
+  - first:
+      213: 21300058
+    second: sprite_38a_venom_spider_death_03
+  - first:
+      213: 21300060
+    second: sprite_38a_venom_spider_death_04
+  - first:
+      213: 21300062
+    second: sprite_38a_venom_spider_death_05
+  - first:
+      213: 21300064
+    second: sprite_38a_venom_spider_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff01c5f10675ee24fb5751c0b3179865
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 193d6fc54c59a466d192207449e548bc
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9be8b06a4219975d8ad299c9ab7a557
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cd4ff9ab574b84a2cdc1f5ff69d9ed
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b64b01bd5d930bf0fcb642fd7758005
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f70aa3e0a848335c5bdb43d39a4fc68
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacdc0dad7f8df76bac4f594d359905d
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ba3d0f75b4278a8b87e87b5c437e7d
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48999bb808014fd0029729c9bb7549c5
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd28d329a27f24ea37e789fd7c92d64
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 543146f41426cc71a165977f728154ae
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd8bbc901a5c87cbe2df39cec4ed119
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f21cd903d7ca2c2615150df81aa3d8c
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_walk_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e4399c760d0d702886af225369722b
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677d8be0bb42ceb8a3e1ac57f9b65f8f
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffcfd9cc2062e2e398f06c91e008882a
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c85c6adee3f7aabfb21431c573af6a6
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bca8dcee0f8f5d625448e6d7c3895a
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689a9d0a090204f6a9d970b5215ac729
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7901fdd54343e1034761f8410689a397
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c55143617b7084b5217c4518498bce
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_attack_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 425a95d431a01fb5ac2da9e84dfc0066
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c824d20556cf8b80f7172761f38799e
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_hit_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af884da46446fb34843d6065d0e2fa1
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_hit_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f8b3dd16d6c354e734b11d9f9df4e4
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_hit_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23166dcd107b94ae02a15bec1c355d3
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89a40950f8814b142205878fc5dca110
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c26eabea82736955dac55cf9fcff00
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ca1bad7b349654189be7bee4229ed3
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c229d49bcb88067d97ac9f5936e32c4
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92e02181b1f873fb4693ea861cc5ee9
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38a_venom_spider_death_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8478547464efd12ff4d903e26fca211
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_38a_venom_spider_idle_01: 21300002
+      sprite_38a_venom_spider_idle_02: 21300004
+      sprite_38a_venom_spider_idle_03: 21300006
+      sprite_38a_venom_spider_idle_04: 21300008
+      sprite_38a_venom_spider_idle_05: 21300010
+      sprite_38a_venom_spider_idle_06: 21300012
+      sprite_38a_venom_spider_walk_01: 21300014
+      sprite_38a_venom_spider_walk_02: 21300016
+      sprite_38a_venom_spider_walk_03: 21300018
+      sprite_38a_venom_spider_walk_04: 21300020
+      sprite_38a_venom_spider_walk_05: 21300022
+      sprite_38a_venom_spider_walk_06: 21300024
+      sprite_38a_venom_spider_walk_07: 21300026
+      sprite_38a_venom_spider_walk_08: 21300028
+      sprite_38a_venom_spider_attack_01: 21300030
+      sprite_38a_venom_spider_attack_02: 21300032
+      sprite_38a_venom_spider_attack_03: 21300034
+      sprite_38a_venom_spider_attack_04: 21300036
+      sprite_38a_venom_spider_attack_05: 21300038
+      sprite_38a_venom_spider_attack_06: 21300040
+      sprite_38a_venom_spider_attack_07: 21300042
+      sprite_38a_venom_spider_attack_08: 21300044
+      sprite_38a_venom_spider_hit_01: 21300046
+      sprite_38a_venom_spider_hit_02: 21300048
+      sprite_38a_venom_spider_hit_03: 21300050
+      sprite_38a_venom_spider_hit_04: 21300052
+      sprite_38a_venom_spider_death_01: 21300054
+      sprite_38a_venom_spider_death_02: 21300056
+      sprite_38a_venom_spider_death_03: 21300058
+      sprite_38a_venom_spider_death_04: 21300060
+      sprite_38a_venom_spider_death_05: 21300062
+      sprite_38a_venom_spider_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 87733ae7f329f414eba91f16ecc7730a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_26_boss_red_dragon_idle_01
+  - first:
+      213: 21300004
+    second: sprite_26_boss_red_dragon_idle_02
+  - first:
+      213: 21300006
+    second: sprite_26_boss_red_dragon_idle_03
+  - first:
+      213: 21300008
+    second: sprite_26_boss_red_dragon_idle_04
+  - first:
+      213: 21300010
+    second: sprite_26_boss_red_dragon_idle_05
+  - first:
+      213: 21300012
+    second: sprite_26_boss_red_dragon_idle_06
+  - first:
+      213: 21300014
+    second: sprite_26_boss_red_dragon_walk_01
+  - first:
+      213: 21300016
+    second: sprite_26_boss_red_dragon_walk_02
+  - first:
+      213: 21300018
+    second: sprite_26_boss_red_dragon_walk_03
+  - first:
+      213: 21300020
+    second: sprite_26_boss_red_dragon_walk_04
+  - first:
+      213: 21300022
+    second: sprite_26_boss_red_dragon_walk_05
+  - first:
+      213: 21300024
+    second: sprite_26_boss_red_dragon_walk_06
+  - first:
+      213: 21300026
+    second: sprite_26_boss_red_dragon_walk_07
+  - first:
+      213: 21300028
+    second: sprite_26_boss_red_dragon_walk_08
+  - first:
+      213: 21300030
+    second: sprite_26_boss_red_dragon_attack_01
+  - first:
+      213: 21300032
+    second: sprite_26_boss_red_dragon_attack_02
+  - first:
+      213: 21300034
+    second: sprite_26_boss_red_dragon_attack_03
+  - first:
+      213: 21300036
+    second: sprite_26_boss_red_dragon_attack_04
+  - first:
+      213: 21300038
+    second: sprite_26_boss_red_dragon_attack_05
+  - first:
+      213: 21300040
+    second: sprite_26_boss_red_dragon_attack_06
+  - first:
+      213: 21300042
+    second: sprite_26_boss_red_dragon_attack_07
+  - first:
+      213: 21300044
+    second: sprite_26_boss_red_dragon_attack_08
+  - first:
+      213: 21300046
+    second: sprite_26_boss_red_dragon_hit_01
+  - first:
+      213: 21300048
+    second: sprite_26_boss_red_dragon_hit_02
+  - first:
+      213: 21300050
+    second: sprite_26_boss_red_dragon_hit_03
+  - first:
+      213: 21300052
+    second: sprite_26_boss_red_dragon_hit_04
+  - first:
+      213: 21300054
+    second: sprite_26_boss_red_dragon_death_01
+  - first:
+      213: 21300056
+    second: sprite_26_boss_red_dragon_death_02
+  - first:
+      213: 21300058
+    second: sprite_26_boss_red_dragon_death_03
+  - first:
+      213: 21300060
+    second: sprite_26_boss_red_dragon_death_04
+  - first:
+      213: 21300062
+    second: sprite_26_boss_red_dragon_death_05
+  - first:
+      213: 21300064
+    second: sprite_26_boss_red_dragon_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28543657159b61453c67fc970f27c632
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_02
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafcfb32466b101939a395834b9ce5b6
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_03
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd7dbb51d6a509b314708a81c4dbb66
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_04
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc53b4a8b22a2ebd1e6b7cbba1ebd3e
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_05
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a53183dac61cdbab7292b660b95ffc
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_idle_06
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 2176
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233c0b49b638fd6179d5bd0e5a768a16
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb54b4e60f262229d5c94c2ba18bd54
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_02
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39eb80afd3d8bcdc3b68ca912a7573a7
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_03
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d8514b3ea89194a606557cb005d4d4
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_04
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba22e870738c1af24ad5a6b839e5e1c
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_05
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7985137188cc0fadbed29c71ee1077e8
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_06
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb14df7d91ede17335d6850c09c474aa
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_07
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107e7acc06d8020c5425ec672b148d32
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_walk_08
+      rect:
+        serializedVersion: 2
+        x: 6384
+        y: 1632
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c63e3fb9d391053cef1285e15ca410
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fa80b28122cc73dad9cd4ac97794ed
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_02
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a195e7d842d5a1266231a0a2ac1046
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_03
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c963616accc5418279b6cb6734509ec4
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_04
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89600922a580d6739f6293070e2d4a87
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_05
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bdda83265ab7fd28ab95c09cb204937
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_06
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7518f2fb78f9559bc71b28f0ebaede45
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_07
+      rect:
+        serializedVersion: 2
+        x: 5472
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c899a33bc91e1f0469b91cef739fe7
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_attack_08
+      rect:
+        serializedVersion: 2
+        x: 6384
+        y: 1088
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c16d2f20b8b8fb7e23310224bb3316a
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41f62dadbcdcba35662fa8b25311e362
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_hit_02
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 544
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc5f9df67e9077e079f5660fcb60051
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_hit_03
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 544
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74e6e49156ce42bae098ac40de597ff
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_hit_04
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 544
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f227b4854c193723ef35b317fb644996
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675b65eef6e700583716c112ac284eb9
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_02
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dab317a3a8f328ed25ef74134de0ffe
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_03
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a91d1fb47e27f4bde199396bc055b1
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_04
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add0727b6643cbd67bd62a05596f1bc5
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_05
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386ac238afbef3171a1a091ee44c537d
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_26_boss_red_dragon_death_06
+      rect:
+        serializedVersion: 2
+        x: 4560
+        y: 0
+        width: 912
+        height: 544
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db05305f43ac85838d3d888fbe76b4e
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_26_boss_red_dragon_idle_01: 21300002
+      sprite_26_boss_red_dragon_idle_02: 21300004
+      sprite_26_boss_red_dragon_idle_03: 21300006
+      sprite_26_boss_red_dragon_idle_04: 21300008
+      sprite_26_boss_red_dragon_idle_05: 21300010
+      sprite_26_boss_red_dragon_idle_06: 21300012
+      sprite_26_boss_red_dragon_walk_01: 21300014
+      sprite_26_boss_red_dragon_walk_02: 21300016
+      sprite_26_boss_red_dragon_walk_03: 21300018
+      sprite_26_boss_red_dragon_walk_04: 21300020
+      sprite_26_boss_red_dragon_walk_05: 21300022
+      sprite_26_boss_red_dragon_walk_06: 21300024
+      sprite_26_boss_red_dragon_walk_07: 21300026
+      sprite_26_boss_red_dragon_walk_08: 21300028
+      sprite_26_boss_red_dragon_attack_01: 21300030
+      sprite_26_boss_red_dragon_attack_02: 21300032
+      sprite_26_boss_red_dragon_attack_03: 21300034
+      sprite_26_boss_red_dragon_attack_04: 21300036
+      sprite_26_boss_red_dragon_attack_05: 21300038
+      sprite_26_boss_red_dragon_attack_06: 21300040
+      sprite_26_boss_red_dragon_attack_07: 21300042
+      sprite_26_boss_red_dragon_attack_08: 21300044
+      sprite_26_boss_red_dragon_hit_01: 21300046
+      sprite_26_boss_red_dragon_hit_02: 21300048
+      sprite_26_boss_red_dragon_hit_03: 21300050
+      sprite_26_boss_red_dragon_hit_04: 21300052
+      sprite_26_boss_red_dragon_death_01: 21300054
+      sprite_26_boss_red_dragon_death_02: 21300056
+      sprite_26_boss_red_dragon_death_03: 21300058
+      sprite_26_boss_red_dragon_death_04: 21300060
+      sprite_26_boss_red_dragon_death_05: 21300062
+      sprite_26_boss_red_dragon_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

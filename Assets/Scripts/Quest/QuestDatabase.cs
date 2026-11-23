@@ -223,7 +223,31 @@ namespace DreamDungeon
                     QuestType.Special, QuestObjectiveType.UnlockTrap, 3, 400, 100, 120),
 
                 MakeQuest("special_soul_harvester", "Soul Harvester", "Collect 300 Soul from raids and rewards.",
-                    QuestType.Special, QuestObjectiveType.EarnSoul, 300, 600, 150, 200)
+                    QuestType.Special, QuestObjectiveType.EarnSoul, 300, 600, 150, 200),
+
+                // ==========================================
+                // MILESTONE 9: ENDLESS & CHALLENGE QUESTS
+                // ==========================================
+                MakeQuest("special_endless_initiate", "Endless Explorer", "Complete 1 Endless Dungeon Run.",
+                    QuestType.Special, QuestObjectiveType.CompleteEndlessRun, 1, 300, 75, 120),
+
+                MakeQuest("special_endless_wave_10", "Endless Survivor", "Reach Wave 10 in Endless Dungeon Mode.",
+                    QuestType.Special, QuestObjectiveType.ReachEndlessWave, 10, 600, 150, 250),
+
+                MakeQuest("special_endless_elites", "Elite Vanquisher", "Defeat 5 Elite enemies in Endless or Challenge Mode.",
+                    QuestType.Special, QuestObjectiveType.DefeatEndlessElite, 5, 500, 120, 200),
+
+                MakeQuest("special_endless_boss", "Endless Boss Slayer", "Defeat 1 Endless Boss wave.",
+                    QuestType.Special, QuestObjectiveType.DefeatEndlessBoss, 1, 700, 180, 300),
+
+                MakeQuest("special_challenge_victor", "Challenge Conqueror", "Complete any Challenge in Challenge Mode.",
+                    QuestType.Special, QuestObjectiveType.CompleteChallenge, 1, 550, 140, 220),
+
+                MakeQuest("special_endless_score_1000", "High Scorer", "Earn a score of 1,000 or more in Endless Mode.",
+                    QuestType.Special, QuestObjectiveType.EarnEndlessScore, 1000, 650, 160, 260),
+
+                MakeQuest("special_boss_rush", "Boss Rush Champion", "Complete the Boss Rush challenge.",
+                    QuestType.Special, QuestObjectiveType.CompleteBossRush, 1, 1000, 250, 400)
             };
 
             db.SetQuests(list);

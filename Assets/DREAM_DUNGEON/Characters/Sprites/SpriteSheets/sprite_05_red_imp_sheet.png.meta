@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: b79acbc314181b3283f82b7f04609e14
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_05_red_imp_idle_01
+  - first:
+      213: 21300004
+    second: sprite_05_red_imp_idle_02
+  - first:
+      213: 21300006
+    second: sprite_05_red_imp_idle_03
+  - first:
+      213: 21300008
+    second: sprite_05_red_imp_idle_04
+  - first:
+      213: 21300010
+    second: sprite_05_red_imp_idle_05
+  - first:
+      213: 21300012
+    second: sprite_05_red_imp_idle_06
+  - first:
+      213: 21300014
+    second: sprite_05_red_imp_walk_01
+  - first:
+      213: 21300016
+    second: sprite_05_red_imp_walk_02
+  - first:
+      213: 21300018
+    second: sprite_05_red_imp_walk_03
+  - first:
+      213: 21300020
+    second: sprite_05_red_imp_walk_04
+  - first:
+      213: 21300022
+    second: sprite_05_red_imp_walk_05
+  - first:
+      213: 21300024
+    second: sprite_05_red_imp_walk_06
+  - first:
+      213: 21300026
+    second: sprite_05_red_imp_walk_07
+  - first:
+      213: 21300028
+    second: sprite_05_red_imp_walk_08
+  - first:
+      213: 21300030
+    second: sprite_05_red_imp_attack_01
+  - first:
+      213: 21300032
+    second: sprite_05_red_imp_attack_02
+  - first:
+      213: 21300034
+    second: sprite_05_red_imp_attack_03
+  - first:
+      213: 21300036
+    second: sprite_05_red_imp_attack_04
+  - first:
+      213: 21300038
+    second: sprite_05_red_imp_attack_05
+  - first:
+      213: 21300040
+    second: sprite_05_red_imp_attack_06
+  - first:
+      213: 21300042
+    second: sprite_05_red_imp_attack_07
+  - first:
+      213: 21300044
+    second: sprite_05_red_imp_attack_08
+  - first:
+      213: 21300046
+    second: sprite_05_red_imp_hit_01
+  - first:
+      213: 21300048
+    second: sprite_05_red_imp_hit_02
+  - first:
+      213: 21300050
+    second: sprite_05_red_imp_hit_03
+  - first:
+      213: 21300052
+    second: sprite_05_red_imp_hit_04
+  - first:
+      213: 21300054
+    second: sprite_05_red_imp_death_01
+  - first:
+      213: 21300056
+    second: sprite_05_red_imp_death_02
+  - first:
+      213: 21300058
+    second: sprite_05_red_imp_death_03
+  - first:
+      213: 21300060
+    second: sprite_05_red_imp_death_04
+  - first:
+      213: 21300062
+    second: sprite_05_red_imp_death_05
+  - first:
+      213: 21300064
+    second: sprite_05_red_imp_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f220e246f7908b9f60d7a08b26a13e7
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc4bcd7654f9b4832e7397fe3accaa8
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b84b387c89ab2a0a894b67e72fb6d6c
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2360722a7736d7561c54aec73737f67b
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96077af272ee932db24504ccaeebf32f
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50af509df8d99266f83903bea80a536
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ef61d0a2addadd218e9b899dcf62853
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb492221ee841999efb31fb98f9e007b
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6774ada65d76b8cc17d2433dd86ae6db
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459bf1986c008b323a4e765db630b507
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9cc544a61b200700424b3dbb340509
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae811b6c8abeb11e8431574956b32e8
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d976dc56a81b21b38ac5ceeaa94eb318
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3517d6727399be91ddc4763257bb197f
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7833e28e3dec7dc2a7c409e3d424f793
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4689cb403b6cac9065ae2cd91b53f3c5
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99aa1c0633b313a17a3213ba7f288d5
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dabd338a8f5338a6789573a9e5226e2
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 804cea93595fc7016e66a9a4dc2bec24
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34fc31398aa81fdebb74371c3f149786
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 066d9b425f7cb5567a667f30508ecd37
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ceee7de4fbd08c66adea8e9170e624
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccd66e62bb8a08353b232ddff6ff84c
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_hit_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ae0c49dc8b963272b442dff37eb61c
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_hit_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48819b5bea41c5299c5835b9bf0fa404
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_hit_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e8364fe130bdc4c5f799c3c4b844d1
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df35d124f405597bf3f6703ca2f1da5
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb00c0101c8b02eab1a358143c0c76ac
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20bb1a14e524a673ac45fd492a4a5a02
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affbea6687cda7bcc802a0059af733ab
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e6a8a385bc2afe5f959b50443ec4b2
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_05_red_imp_death_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a029840db3fa89900d776103b083b0d1
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_05_red_imp_idle_01: 21300002
+      sprite_05_red_imp_idle_02: 21300004
+      sprite_05_red_imp_idle_03: 21300006
+      sprite_05_red_imp_idle_04: 21300008
+      sprite_05_red_imp_idle_05: 21300010
+      sprite_05_red_imp_idle_06: 21300012
+      sprite_05_red_imp_walk_01: 21300014
+      sprite_05_red_imp_walk_02: 21300016
+      sprite_05_red_imp_walk_03: 21300018
+      sprite_05_red_imp_walk_04: 21300020
+      sprite_05_red_imp_walk_05: 21300022
+      sprite_05_red_imp_walk_06: 21300024
+      sprite_05_red_imp_walk_07: 21300026
+      sprite_05_red_imp_walk_08: 21300028
+      sprite_05_red_imp_attack_01: 21300030
+      sprite_05_red_imp_attack_02: 21300032
+      sprite_05_red_imp_attack_03: 21300034
+      sprite_05_red_imp_attack_04: 21300036
+      sprite_05_red_imp_attack_05: 21300038
+      sprite_05_red_imp_attack_06: 21300040
+      sprite_05_red_imp_attack_07: 21300042
+      sprite_05_red_imp_attack_08: 21300044
+      sprite_05_red_imp_hit_01: 21300046
+      sprite_05_red_imp_hit_02: 21300048
+      sprite_05_red_imp_hit_03: 21300050
+      sprite_05_red_imp_hit_04: 21300052
+      sprite_05_red_imp_death_01: 21300054
+      sprite_05_red_imp_death_02: 21300056
+      sprite_05_red_imp_death_03: 21300058
+      sprite_05_red_imp_death_04: 21300060
+      sprite_05_red_imp_death_05: 21300062
+      sprite_05_red_imp_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

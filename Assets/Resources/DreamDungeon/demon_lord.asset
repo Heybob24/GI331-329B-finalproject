@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.BossData
   bossId: demon_lord
   bossName: Demon Lord
-  bossIcon: {fileID: 0}
-  description: A fearsome dragon residing in deep caverns.
+  bossIcon: {fileID: 21300000, guid: e68cd66a292231e2375f5437870d49c7, type: 3}
+  bossPrefab: {fileID: 100000, guid: cc79d4e57e527304f851b50dc40a141b, type: 3}
+  description: The supreme lord of the abyssal legion wielding a blazing hellblade.
   bossColor: {r: 0.75, g: 0.15, b: 0.35, a: 1}
   maxHP: 3500
   attack: 120

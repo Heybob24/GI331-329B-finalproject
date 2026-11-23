@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: a6bed6782044798468355e9fc6f418ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_28_boss_rune_golem_idle_01
+  - first:
+      213: 21300004
+    second: sprite_28_boss_rune_golem_idle_02
+  - first:
+      213: 21300006
+    second: sprite_28_boss_rune_golem_idle_03
+  - first:
+      213: 21300008
+    second: sprite_28_boss_rune_golem_idle_04
+  - first:
+      213: 21300010
+    second: sprite_28_boss_rune_golem_idle_05
+  - first:
+      213: 21300012
+    second: sprite_28_boss_rune_golem_idle_06
+  - first:
+      213: 21300014
+    second: sprite_28_boss_rune_golem_walk_01
+  - first:
+      213: 21300016
+    second: sprite_28_boss_rune_golem_walk_02
+  - first:
+      213: 21300018
+    second: sprite_28_boss_rune_golem_walk_03
+  - first:
+      213: 21300020
+    second: sprite_28_boss_rune_golem_walk_04
+  - first:
+      213: 21300022
+    second: sprite_28_boss_rune_golem_walk_05
+  - first:
+      213: 21300024
+    second: sprite_28_boss_rune_golem_walk_06
+  - first:
+      213: 21300026
+    second: sprite_28_boss_rune_golem_walk_07
+  - first:
+      213: 21300028
+    second: sprite_28_boss_rune_golem_walk_08
+  - first:
+      213: 21300030
+    second: sprite_28_boss_rune_golem_attack_01
+  - first:
+      213: 21300032
+    second: sprite_28_boss_rune_golem_attack_02
+  - first:
+      213: 21300034
+    second: sprite_28_boss_rune_golem_attack_03
+  - first:
+      213: 21300036
+    second: sprite_28_boss_rune_golem_attack_04
+  - first:
+      213: 21300038
+    second: sprite_28_boss_rune_golem_attack_05
+  - first:
+      213: 21300040
+    second: sprite_28_boss_rune_golem_attack_06
+  - first:
+      213: 21300042
+    second: sprite_28_boss_rune_golem_attack_07
+  - first:
+      213: 21300044
+    second: sprite_28_boss_rune_golem_attack_08
+  - first:
+      213: 21300046
+    second: sprite_28_boss_rune_golem_hit_01
+  - first:
+      213: 21300048
+    second: sprite_28_boss_rune_golem_hit_02
+  - first:
+      213: 21300050
+    second: sprite_28_boss_rune_golem_hit_03
+  - first:
+      213: 21300052
+    second: sprite_28_boss_rune_golem_hit_04
+  - first:
+      213: 21300054
+    second: sprite_28_boss_rune_golem_death_01
+  - first:
+      213: 21300056
+    second: sprite_28_boss_rune_golem_death_02
+  - first:
+      213: 21300058
+    second: sprite_28_boss_rune_golem_death_03
+  - first:
+      213: 21300060
+    second: sprite_28_boss_rune_golem_death_04
+  - first:
+      213: 21300062
+    second: sprite_28_boss_rune_golem_death_05
+  - first:
+      213: 21300064
+    second: sprite_28_boss_rune_golem_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8633f7c41ff51c594b20a64408ee7e
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_02
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18af3529e4edab1abb61d699f51e12a
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_03
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474095d9324f90be2cbfe8d5ce243095
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_04
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a6f233035fd630e29bec055dc8bec5
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_05
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c139b161e057bd4162421e82b218f93a
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_idle_06
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1856
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fabff7813dbb67f09966f7aa9c06ae
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c11c5adffa31c5dd2d7a07e2590456
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_02
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a29c6df49bfec88a36d241df559556
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_03
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f8b11aea6225749a3b5cfcfab7b6a0
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_04
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea778bb4cd5b90ec8fa78f7fb547e80f
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_05
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65a36bef63f0415203fee2159966993
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_06
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47168052bfacabfe93a0c7c6a400d6b
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_07
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5767ef78fdf2a2a1fb2b3cdf97eee818
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_walk_08
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1392
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83a45f1c198d9510d701998198400a2
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a1920d4679889233a65286ff3bf279
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_02
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4705256ae734c6a8248b70bb80c4f2
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_03
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967021c481efc431dd1da623614d1cc1
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_04
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e6382e5870ccda4d590627ba5684a8
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_05
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9105e9017cc4774e898914166b2984
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_06
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a7750a1eac635665af18300e0d42a5a
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_07
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a6d2c7ab09b858b6e98aa1df19de1f
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_attack_08
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 928
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c130e4cb4501385e9575df2d2d309b
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ace04d3cb37fd6053e4d7262e4bf28
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_hit_02
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 464
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b10cde6ed1c257d74926e2fb219762
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_hit_03
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 464
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d63d1d9a5762aa791374c49a9c917ef
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_hit_04
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 464
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4978d46c22d856417afbbe3c8ad9fcc
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edde94dd86a2d65808587d1003b21d4e
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_02
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48601560eec586053eb995c134ec43b
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_03
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77a7e5b8081906fc16edaf791b2cc94
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_04
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565da6a4abe22ec6820308da085ba122
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_05
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9165dfbe9067d6a6314b505f04b7c488
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_28_boss_rune_golem_death_06
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e58e7416206b8ea9f2eabb21dadd318
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_28_boss_rune_golem_idle_01: 21300002
+      sprite_28_boss_rune_golem_idle_02: 21300004
+      sprite_28_boss_rune_golem_idle_03: 21300006
+      sprite_28_boss_rune_golem_idle_04: 21300008
+      sprite_28_boss_rune_golem_idle_05: 21300010
+      sprite_28_boss_rune_golem_idle_06: 21300012
+      sprite_28_boss_rune_golem_walk_01: 21300014
+      sprite_28_boss_rune_golem_walk_02: 21300016
+      sprite_28_boss_rune_golem_walk_03: 21300018
+      sprite_28_boss_rune_golem_walk_04: 21300020
+      sprite_28_boss_rune_golem_walk_05: 21300022
+      sprite_28_boss_rune_golem_walk_06: 21300024
+      sprite_28_boss_rune_golem_walk_07: 21300026
+      sprite_28_boss_rune_golem_walk_08: 21300028
+      sprite_28_boss_rune_golem_attack_01: 21300030
+      sprite_28_boss_rune_golem_attack_02: 21300032
+      sprite_28_boss_rune_golem_attack_03: 21300034
+      sprite_28_boss_rune_golem_attack_04: 21300036
+      sprite_28_boss_rune_golem_attack_05: 21300038
+      sprite_28_boss_rune_golem_attack_06: 21300040
+      sprite_28_boss_rune_golem_attack_07: 21300042
+      sprite_28_boss_rune_golem_attack_08: 21300044
+      sprite_28_boss_rune_golem_hit_01: 21300046
+      sprite_28_boss_rune_golem_hit_02: 21300048
+      sprite_28_boss_rune_golem_hit_03: 21300050
+      sprite_28_boss_rune_golem_hit_04: 21300052
+      sprite_28_boss_rune_golem_death_01: 21300054
+      sprite_28_boss_rune_golem_death_02: 21300056
+      sprite_28_boss_rune_golem_death_03: 21300058
+      sprite_28_boss_rune_golem_death_04: 21300060
+      sprite_28_boss_rune_golem_death_05: 21300062
+      sprite_28_boss_rune_golem_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

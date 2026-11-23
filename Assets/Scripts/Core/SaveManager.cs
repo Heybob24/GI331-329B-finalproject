@@ -40,9 +40,12 @@ namespace DreamDungeon
         [Header("Milestone 8: World Map & Campaign")]
         public CampaignSaveState campaignSaveState;
 
+        [Header("Milestone 9: Endless Dungeon & Challenge Mode")]
+        public EndlessChallengeSaveState endlessChallengeSaveState;
+
         public DungeonSaveData()
         {
-            saveVersion = 3;
+            saveVersion = 4;
             saveTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             gold = 1000;
             soul = 200;
@@ -60,6 +63,7 @@ namespace DreamDungeon
             questSaveState = new QuestSaveState();
             achievementSaveState = new AchievementSaveState();
             campaignSaveState = new CampaignSaveState();
+            endlessChallengeSaveState = new EndlessChallengeSaveState();
         }
     }
 
@@ -72,9 +76,12 @@ namespace DreamDungeon
         private const string PermanentAchievementSaveKey = "DreamDungeon_AchievementData";
         private const string PermanentQuestSaveKey = "DreamDungeon_QuestData";
         private const string PermanentCampaignSaveKey = "DreamDungeon_CampaignData";
+        private const string PermanentEndlessChallengeSaveKey = "DreamDungeon_EndlessChallengeData";
 
         public event Action OnGameSaved;
         public event Action OnGameLoaded;
+        private bool isSaving;
+        private bool isLoading;
 
         private void Awake()
         {
@@ -124,6 +131,8 @@ namespace DreamDungeon
 
         public void SaveAchievements()
         {
+            if (isSaving || isLoading) return;
+            isSaving = true;
             try
             {
                 if (AchievementManager.Instance != null)
@@ -141,16 +150,27 @@ namespace DreamDungeon
                     var cState = CampaignManager.Instance.ExportSaveState();
                     PlayerPrefs.SetString(PermanentCampaignSaveKey, JsonUtility.ToJson(cState, false));
                 }
+                if (EndlessChallengeManager.Instance != null)
+                {
+                    var ecState = EndlessChallengeManager.Instance.ExportSaveState();
+                    PlayerPrefs.SetString(PermanentEndlessChallengeSaveKey, JsonUtility.ToJson(ecState, false));
+                }
                 PlayerPrefs.Save();
             }
             catch (Exception ex)
             {
                 Debug.LogError($"[SaveManager] Failed to save permanent state: {ex.Message}");
             }
+            finally
+            {
+                isSaving = false;
+            }
         }
 
         public bool LoadPermanentState()
         {
+            if (isLoading) return false;
+            isLoading = true;
             bool loadedAny = false;
             try
             {
@@ -193,16 +213,35 @@ namespace DreamDungeon
                         }
                     }
                 }
+                if (PlayerPrefs.HasKey(PermanentEndlessChallengeSaveKey) && EndlessChallengeManager.Instance != null)
+                {
+                    string ecJson = PlayerPrefs.GetString(PermanentEndlessChallengeSaveKey, string.Empty);
+                    if (!string.IsNullOrEmpty(ecJson))
+                    {
+                        var ecState = JsonUtility.FromJson<EndlessChallengeSaveState>(ecJson);
+                        if (ecState != null)
+                        {
+                            EndlessChallengeManager.Instance.ImportSaveState(ecState);
+                            loadedAny = true;
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
                 Debug.LogError($"[SaveManager] Failed to load permanent state: {ex.Message}");
+            }
+            finally
+            {
+                isLoading = false;
             }
             return loadedAny;
         }
 
         public void SaveGame()
         {
+            if (isSaving || isLoading) return;
+            isSaving = true;
             try
             {
                 var saveData = new DungeonSaveData
@@ -270,15 +309,32 @@ namespace DreamDungeon
                     PlayerPrefs.SetString(PermanentCampaignSaveKey, JsonUtility.ToJson(saveData.campaignSaveState, false));
                 }
 
+                if (EndlessChallengeManager.Instance != null)
+                {
+                    saveData.endlessChallengeSaveState = EndlessChallengeManager.Instance.ExportSaveState();
+                    PlayerPrefs.SetString(PermanentEndlessChallengeSaveKey, JsonUtility.ToJson(saveData.endlessChallengeSaveState, false));
+                }
+
                 string json = JsonUtility.ToJson(saveData, false);
                 PlayerPrefs.SetString(SaveKey, json);
                 PlayerPrefs.Save();
+
+                // Sync to UGS / Player Database if signed in
+                if (AuthenticationManager.Instance != null && AuthenticationManager.Instance.IsSignedIn &&
+                    PlayerDatabaseManager.Instance != null && !PlayerDatabaseManager.Instance.IsBusy)
+                {
+                    _ = PlayerDatabaseManager.Instance.SaveCurrentPlayerDataAsync(captureFromGameSystems: true);
+                }
 
                 OnGameSaved?.Invoke();
             }
             catch (Exception ex)
             {
                 Debug.LogError($"[SaveManager] Failed to save game: {ex.Message}");
+            }
+            finally
+            {
+                isSaving = false;
             }
         }
 
@@ -299,7 +355,11 @@ namespace DreamDungeon
                 {
                     CurrencyManager.Instance.SetGold(saveData.gold);
                     CurrencyManager.Instance.SetSoul(saveData.soul);
-                    CurrencyManager.Instance.SetCrystal(saveData.crystal);
+                    // Crystal Balance is authoritative from CrystalManager / PlayerDatabaseManager, never PlayerPrefs alone
+                    int authCrystal = CrystalManager.Instance != null && AuthenticationManager.Instance != null && AuthenticationManager.Instance.IsSignedIn
+                        ? CrystalManager.Instance.CrystalBalance
+                        : saveData.crystal;
+                    CurrencyManager.Instance.SetCrystal(authCrystal);
                 }
 
                 if (DungeonProgressionManager.Instance != null && saveData.progression != null)
@@ -355,6 +415,11 @@ namespace DreamDungeon
                     (saveData.campaignSaveState.unlockedRegionIds.Count > 0 || saveData.campaignSaveState.stageRecords.Count > 0))
                 {
                     CampaignManager.Instance.ImportSaveState(saveData.campaignSaveState);
+                }
+
+                if (EndlessChallengeManager.Instance != null && saveData.endlessChallengeSaveState != null)
+                {
+                    EndlessChallengeManager.Instance.ImportSaveState(saveData.endlessChallengeSaveState);
                 }
 
                 OnGameLoaded?.Invoke();

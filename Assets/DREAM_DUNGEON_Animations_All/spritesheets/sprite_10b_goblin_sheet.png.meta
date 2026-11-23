@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 0b5945e3d7e1f0a4da52cc96a560ba53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_10b_goblin_idle_01
+  - first:
+      213: 21300004
+    second: sprite_10b_goblin_idle_02
+  - first:
+      213: 21300006
+    second: sprite_10b_goblin_idle_03
+  - first:
+      213: 21300008
+    second: sprite_10b_goblin_idle_04
+  - first:
+      213: 21300010
+    second: sprite_10b_goblin_idle_05
+  - first:
+      213: 21300012
+    second: sprite_10b_goblin_idle_06
+  - first:
+      213: 21300014
+    second: sprite_10b_goblin_walk_01
+  - first:
+      213: 21300016
+    second: sprite_10b_goblin_walk_02
+  - first:
+      213: 21300018
+    second: sprite_10b_goblin_walk_03
+  - first:
+      213: 21300020
+    second: sprite_10b_goblin_walk_04
+  - first:
+      213: 21300022
+    second: sprite_10b_goblin_walk_05
+  - first:
+      213: 21300024
+    second: sprite_10b_goblin_walk_06
+  - first:
+      213: 21300026
+    second: sprite_10b_goblin_walk_07
+  - first:
+      213: 21300028
+    second: sprite_10b_goblin_walk_08
+  - first:
+      213: 21300030
+    second: sprite_10b_goblin_attack_01
+  - first:
+      213: 21300032
+    second: sprite_10b_goblin_attack_02
+  - first:
+      213: 21300034
+    second: sprite_10b_goblin_attack_03
+  - first:
+      213: 21300036
+    second: sprite_10b_goblin_attack_04
+  - first:
+      213: 21300038
+    second: sprite_10b_goblin_attack_05
+  - first:
+      213: 21300040
+    second: sprite_10b_goblin_attack_06
+  - first:
+      213: 21300042
+    second: sprite_10b_goblin_attack_07
+  - first:
+      213: 21300044
+    second: sprite_10b_goblin_attack_08
+  - first:
+      213: 21300046
+    second: sprite_10b_goblin_hit_01
+  - first:
+      213: 21300048
+    second: sprite_10b_goblin_hit_02
+  - first:
+      213: 21300050
+    second: sprite_10b_goblin_hit_03
+  - first:
+      213: 21300052
+    second: sprite_10b_goblin_hit_04
+  - first:
+      213: 21300054
+    second: sprite_10b_goblin_death_01
+  - first:
+      213: 21300056
+    second: sprite_10b_goblin_death_02
+  - first:
+      213: 21300058
+    second: sprite_10b_goblin_death_03
+  - first:
+      213: 21300060
+    second: sprite_10b_goblin_death_04
+  - first:
+      213: 21300062
+    second: sprite_10b_goblin_death_05
+  - first:
+      213: 21300064
+    second: sprite_10b_goblin_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088cae35b85df8a99c481f21a9913b0e
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_02
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e1bfb883e6f49b5f7b4307940b798f
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05745a5649e437c109b4cd940542e22
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_04
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49c861f1602cd8e64e8ee3998644156
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_05
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9d29d1c624844cbb160840bceb4b76
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_idle_06
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 768
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ed8bcf709f83a94068ecc509438865
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32ed91469e3e9f4478f9845911450817
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_02
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ba1102ffbf85565d41e8ce92d3c32b
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9507e0d83da174a74ca2fb636eeef2d8
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_04
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3d1e92a6e2e3a313c0c4f52ec89589
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_05
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03cfbdc792c90654ac6b39a5ff52d23
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_06
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efea35f9c84766fd2d609e7ef92a394a
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2206621f106160f7198bf5103b7f13d
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 576
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbd24c5b7eead7671edeba1297ef823
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349f8189b202ec2f5d8428adf88e4050
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_02
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f49753266fc604c39a692f95de2fa95
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b5fa822619983ec8341d54fab3002e
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_04
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df30e9ad56b370c0e79a55ee363898ac
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_05
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf80be4aaab54824cc6249179076a2d
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_06
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b49d3afa495b8ec8f3fb753344467a5
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a1104eca7a7615f761f328121d44fb
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 384
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba2199aacc3b626302b7443188d0a298
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444cebd65595a49d19af7835a9d0c741
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_hit_02
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bca963282f3c3411a3f23f54343a49
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_hit_03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48bd2d57b6e70da331b4f12be17af355
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_hit_04
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 192
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30b4afa5ec298d626a03d36558bdc3b
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ff2c1a78b100fd9d4c18f0c83fce24
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_02
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1173a543b3f64d04cf53d2f1156891ca
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_03
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d40a8e087030f139b2c6b46231ae5a
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_04
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b85490a836cf28f60937adfeb28660
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_05
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ead06044f3e4f85cd5e7d450826d7ed
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_10b_goblin_death_06
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 176
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165005ebee19a8f4732b41754880444e
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_10b_goblin_idle_01: 21300002
+      sprite_10b_goblin_idle_02: 21300004
+      sprite_10b_goblin_idle_03: 21300006
+      sprite_10b_goblin_idle_04: 21300008
+      sprite_10b_goblin_idle_05: 21300010
+      sprite_10b_goblin_idle_06: 21300012
+      sprite_10b_goblin_walk_01: 21300014
+      sprite_10b_goblin_walk_02: 21300016
+      sprite_10b_goblin_walk_03: 21300018
+      sprite_10b_goblin_walk_04: 21300020
+      sprite_10b_goblin_walk_05: 21300022
+      sprite_10b_goblin_walk_06: 21300024
+      sprite_10b_goblin_walk_07: 21300026
+      sprite_10b_goblin_walk_08: 21300028
+      sprite_10b_goblin_attack_01: 21300030
+      sprite_10b_goblin_attack_02: 21300032
+      sprite_10b_goblin_attack_03: 21300034
+      sprite_10b_goblin_attack_04: 21300036
+      sprite_10b_goblin_attack_05: 21300038
+      sprite_10b_goblin_attack_06: 21300040
+      sprite_10b_goblin_attack_07: 21300042
+      sprite_10b_goblin_attack_08: 21300044
+      sprite_10b_goblin_hit_01: 21300046
+      sprite_10b_goblin_hit_02: 21300048
+      sprite_10b_goblin_hit_03: 21300050
+      sprite_10b_goblin_hit_04: 21300052
+      sprite_10b_goblin_death_01: 21300054
+      sprite_10b_goblin_death_02: 21300056
+      sprite_10b_goblin_death_03: 21300058
+      sprite_10b_goblin_death_04: 21300060
+      sprite_10b_goblin_death_05: 21300062
+      sprite_10b_goblin_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

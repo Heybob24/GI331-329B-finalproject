@@ -170,9 +170,12 @@ public static class Milestone1SceneBuilder
 
     private static void CopyAssetIfMissing(string source, string destination)
     {
-        if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(destination) == null &&
-            AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(source) != null)
+        if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(source) != null)
         {
+            if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(destination) != null)
+            {
+                AssetDatabase.DeleteAsset(destination);
+            }
             AssetDatabase.CopyAsset(source, destination);
         }
     }
@@ -213,12 +216,21 @@ public static class Milestone1SceneBuilder
     private static void BuildEditor()
     {
         RoomData[] catalog = CreateDefaultRoomData();
-        BuildEditor(catalog, CreateDefaultRoomDatabase(catalog));
+        RoomDatabase rooms = CreateDefaultRoomDatabase(catalog);
+        MonsterDatabase monsters = CreateDefaultMonsterDatabase(CreateDefaultMonsterData());
+        TrapDatabase traps = CreateDefaultTrapDatabase(CreateDefaultTrapData());
+        CopyAssetIfMissing("Assets/Data/MonsterDatabase.asset", "Assets/Resources/DreamDungeon/MonsterDatabase.asset");
+        CopyAssetIfMissing("Assets/Data/TrapDatabase.asset", "Assets/Resources/DreamDungeon/TrapDatabase.asset");
+        BuildEditor(catalog, rooms, monsters, traps);
     }
 
     private static void BuildEditor(RoomData[] catalog, RoomDatabase database)
     {
-        BuildEditor(catalog, database, null, null);
+        MonsterDatabase monsters = CreateDefaultMonsterDatabase(CreateDefaultMonsterData());
+        TrapDatabase traps = CreateDefaultTrapDatabase(CreateDefaultTrapData());
+        CopyAssetIfMissing("Assets/Data/MonsterDatabase.asset", "Assets/Resources/DreamDungeon/MonsterDatabase.asset");
+        CopyAssetIfMissing("Assets/Data/TrapDatabase.asset", "Assets/Resources/DreamDungeon/TrapDatabase.asset");
+        BuildEditor(catalog, database, monsters, traps);
     }
 
     private static void BuildEditor(RoomData[] catalog, RoomDatabase database, MonsterDatabase monsterDatabase, TrapDatabase trapDatabase)
@@ -256,6 +268,9 @@ public static class Milestone1SceneBuilder
         ButtonAt(safe, "QuestButton", "QUESTS", new Vector2(-280, 435), new Vector2(210, 56), new Color(.32f, .25f, .14f), 15);
         ButtonAt(safe, "WorldMapButton", "WORLD MAP", new Vector2(0, 435), new Vector2(210, 56), new Color(.16f, .34f, .42f), 15);
         ButtonAt(safe, "AchievementButton", "ACHIEVEMENTS", new Vector2(280, 435), new Vector2(220, 56), new Color(.28f, .20f, .36f), 15);
+        ButtonAt(safe, "EndlessButton", "ENDLESS", new Vector2(-280, 368), new Vector2(210, 54), new Color(.46f, .18f, .16f), 15);
+        ButtonAt(safe, "ChallengeButton", "CHALLENGES", new Vector2(0, 368), new Vector2(210, 54), new Color(.34f, .18f, .42f), 15);
+        ButtonAt(safe, "GameModeButton", "GAME MODES", new Vector2(280, 368), new Vector2(220, 54), new Color(.18f, .36f, .30f), 15);
 
         TextLabel(safe, "SelectedCellText", "NO CELL SELECTED", 20, new Vector2(0, -455), new Vector2(930, 55), new Color(.87f, .86f, .79f));
         TextLabel(safe, "BuildStatusText", "Select a room or path tool.", 18, new Vector2(0, -515), new Vector2(990, 70), Color.white);
@@ -471,12 +486,18 @@ public static class Milestone1SceneBuilder
         const string folder = "Assets/Resources/DreamDungeon";
         if (!AssetDatabase.IsValidFolder("Assets/Resources")) AssetDatabase.CreateFolder("Assets", "Resources");
         if (!AssetDatabase.IsValidFolder(folder)) AssetDatabase.CreateFolder("Assets/Resources", "DreamDungeon");
-        var specs = new (string id, string title, int hp, int attack, int defense, AdventurerAttackType type, float range, float speed, float move)[]
+        var specs = new (string id, string title, int hp, int attack, int defense, AdventurerAttackType type, float range, float speed, float move, string spriteRel, string prefabName)[]
         {
-            ("swordsman", "Swordsman", 150, 20, 10, AdventurerAttackType.Melee, .72f, 1f, 1.05f),
-            ("archer", "Archer", 90, 25, 3, AdventurerAttackType.Ranged, 2.4f, 1.1f, .95f),
-            ("mage", "Mage", 80, 35, 2, AdventurerAttackType.Magic, 2.8f, .8f, .9f),
-            ("knight", "Knight", 250, 15, 25, AdventurerAttackType.Melee, .8f, .8f, .8f)
+            ("swordsman", "Swordsman", 150, 20, 10, AdventurerAttackType.Melee, .72f, 1f, 1.05f, "Adventurers/Footman.png", "Swordsman"),
+            ("archer", "Archer", 90, 25, 3, AdventurerAttackType.Ranged, 2.4f, 1.1f, .95f, "Adventurers/Archer.png", "Archer"),
+            ("mage", "Mage", 80, 35, 2, AdventurerAttackType.Magic, 2.8f, .8f, .9f, "Adventurers/Mage.png", "Mage"),
+            ("knight", "Knight", 250, 15, 25, AdventurerAttackType.Melee, .8f, .8f, .8f, "Adventurers/EliteKnight.png", "Knight"),
+            ("bandit", "Bandit", 120, 24, 6, AdventurerAttackType.Melee, .7f, 1.25f, 1.2f, "Adventurers/Bandit.png", "Bandit"),
+            ("footman", "Footman", 160, 18, 12, AdventurerAttackType.Melee, .75f, 1f, 1f, "Adventurers/Footman.png", "Footman"),
+            ("elite_knight", "Elite Knight", 280, 22, 28, AdventurerAttackType.Melee, .85f, .85f, .85f, "Adventurers/EliteKnight.png", "EliteKnight"),
+            ("dark_archer", "Dark Archer", 105, 30, 5, AdventurerAttackType.Ranged, 2.6f, 1.15f, 1f, "Adventurers/DarkArcher.png", "DarkArcher"),
+            ("paladin", "Paladin", 240, 20, 22, AdventurerAttackType.Melee, .8f, .9f, .9f, "Adventurers/Paladin.png", "Paladin"),
+            ("necromancer", "Necromancer", 95, 38, 4, AdventurerAttackType.Magic, 2.8f, .85f, .9f, "Adventurers/Necromancer.png", "Necromancer")
         };
         var entries = new System.Collections.Generic.List<AdventurerData>();
         foreach (var spec in specs)
@@ -487,6 +508,10 @@ public static class Milestone1SceneBuilder
             data.adventurerId = spec.id; data.adventurerName = spec.title; data.description = $"{spec.type} raider.";
             data.maxHP = spec.hp; data.attack = spec.attack; data.defense = spec.defense; data.attackType = spec.type;
             data.attackRange = spec.range; data.attackSpeed = spec.speed; data.moveSpeed = spec.move; data.targetPriority = AdventurerTargetPriority.Nearest;
+            Sprite sp = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/Art/Characters/{spec.spriteRel}");
+            if (data.icon == null && sp != null) data.icon = sp;
+            GameObject pf = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/Prefabs/Adventurers/{spec.prefabName}.prefab");
+            if (pf != null) data.prefab = pf;
             EditorUtility.SetDirty(data); entries.Add(data);
         }
         string dbPath = $"{folder}/AdventurerDatabase.asset";
@@ -635,14 +660,38 @@ public static class Milestone1SceneBuilder
     private static MonsterData[] CreateDefaultMonsterData()
     {
         EnsureDataFolder("Monsters");
-        var definitions = new (string id, string title, MonsterRarity rarity, MonsterRole role, int hp, int attack, int defense, int gold, int unlock)[]
+        var definitions = new (string id, string title, MonsterRarity rarity, MonsterRole role, int hp, int attack, int defense, int gold, int unlock, string spriteRel, string prefabName)[]
         {
-            ("slime", "Slime", MonsterRarity.Common, MonsterRole.Tank, 100, 10, 5, 100, 1),
-            ("goblin", "Goblin", MonsterRarity.Common, MonsterRole.Melee, 80, 20, 5, 200, 1),
-            ("skeleton_archer", "Skeleton Archer", MonsterRarity.Rare, MonsterRole.Ranged, 70, 25, 3, 300, 2),
-            ("dark_mage", "Dark Mage", MonsterRarity.Rare, MonsterRole.Magic, 60, 35, 2, 450, 3),
-            ("orc", "Orc", MonsterRarity.Epic, MonsterRole.Tank, 250, 30, 20, 700, 4),
-            ("baby_dragon", "Baby Dragon", MonsterRarity.Epic, MonsterRole.Boss, 300, 50, 15, 1200, 5)
+            ("slime", "Slime", MonsterRarity.Common, MonsterRole.Tank, 100, 10, 5, 100, 1, "Special/Slime.png", "Slime"),
+            ("goblin", "Goblin", MonsterRarity.Common, MonsterRole.Melee, 80, 20, 5, 200, 1, "Special/Goblin.png", "Goblin"),
+            ("skeleton_archer", "Skeleton Archer", MonsterRarity.Rare, MonsterRole.Ranged, 70, 25, 3, 300, 2, "Undead/Skeleton.png", "SkeletonArcher"),
+            ("dark_mage", "Dark Mage", MonsterRarity.Rare, MonsterRole.Magic, 60, 35, 2, 450, 3, "Magic/DarkSorcerer.png", "DarkMage"),
+            ("orc", "Orc", MonsterRarity.Epic, MonsterRole.Tank, 250, 30, 20, 700, 4, "Demons/Demon.png", "Orc"),
+            ("baby_dragon", "Baby Dragon", MonsterRarity.Epic, MonsterRole.Boss, 300, 50, 15, 1200, 5, "Flying/Gargoyle.png", "BabyDragon"),
+            ("skeleton", "Skeleton", MonsterRarity.Common, MonsterRole.Melee, 90, 18, 6, 150, 1, "Undead/Skeleton.png", "Skeleton"),
+            ("bat", "Bat", MonsterRarity.Common, MonsterRole.Melee, 65, 16, 3, 120, 1, "Flying/Bat.png", "Bat"),
+            ("zombie", "Zombie", MonsterRarity.Common, MonsterRole.Tank, 140, 15, 8, 180, 2, "Undead/Zombie.png", "Zombie"),
+            ("imp", "Imp", MonsterRarity.Common, MonsterRole.Melee, 75, 22, 4, 220, 2, "Demons/Imp.png", "Imp"),
+            ("wolf", "Wolf", MonsterRarity.Common, MonsterRole.Melee, 85, 24, 5, 240, 2, "Beasts/Wolf.png", "Wolf"),
+            ("spider", "Spider", MonsterRarity.Common, MonsterRole.Ranged, 70, 22, 4, 250, 2, "Beasts/Spider.png", "Spider"),
+            ("ghost", "Ghost", MonsterRarity.Rare, MonsterRole.Magic, 80, 28, 4, 320, 3, "Undead/Ghost.png", "Ghost"),
+            ("mimic", "Mimic", MonsterRarity.Rare, MonsterRole.Melee, 160, 32, 12, 400, 3, "Special/Mimic.png", "Mimic"),
+            ("harpy", "Harpy", MonsterRarity.Rare, MonsterRole.Melee, 95, 30, 6, 380, 3, "Flying/Harpy.png", "Harpy"),
+            ("demon", "Demon", MonsterRarity.Epic, MonsterRole.Melee, 220, 38, 16, 650, 4, "Demons/Demon.png", "Demon"),
+            ("golem", "Golem", MonsterRarity.Epic, MonsterRole.Tank, 280, 28, 24, 750, 4, "Elite/Golem.png", "Golem"),
+            ("gargoyle", "Gargoyle", MonsterRarity.Rare, MonsterRole.Tank, 190, 26, 18, 520, 4, "Flying/Gargoyle.png", "Gargoyle"),
+            ("crystal_golem", "Crystal Golem", MonsterRarity.Epic, MonsterRole.Tank, 320, 34, 28, 900, 5, "Elite/CrystalGolem.png", "CrystalGolem"),
+            ("fire_elemental", "Fire Elemental", MonsterRarity.Epic, MonsterRole.Magic, 150, 45, 10, 800, 5, "Magic/FireElemental.png", "FireElemental"),
+            ("ice_elemental", "Ice Elemental", MonsterRarity.Epic, MonsterRole.Magic, 170, 40, 14, 820, 5, "Magic/IceElemental.png", "IceElemental"),
+            ("shadow_creature", "Shadow Creature", MonsterRarity.Epic, MonsterRole.Magic, 160, 48, 8, 950, 6, "Magic/ShadowCreature.png", "ShadowCreature"),
+            ("treant", "Treant", MonsterRarity.Epic, MonsterRole.Tank, 360, 32, 26, 1000, 6, "Elite/Treant.png", "Treant"),
+            ("beholder", "Beholder", MonsterRarity.Legendary, MonsterRole.Magic, 240, 55, 15, 1300, 7, "Magic/Beholder.png", "Beholder"),
+            ("skull_cultist", "Skull Cultist", MonsterRarity.Rare, MonsterRole.Magic, 75, 32, 4, 350, 3, "Undead/SkeletonMage.png", "SkullCultist"),
+            ("crimson_specter", "Crimson Specter", MonsterRarity.Epic, MonsterRole.Magic, 155, 44, 10, 850, 5, "Demons/BloodWraith.png", "CrimsonSpecter"),
+            ("amethyst_crystal", "Amethyst Crystal", MonsterRarity.Epic, MonsterRole.Tank, 300, 30, 26, 880, 5, "Demons/AmethystGolem.png", "AmethystCrystal"),
+            ("shadow_spider", "Shadow Spider", MonsterRarity.Rare, MonsterRole.Melee, 110, 28, 7, 360, 3, "Beasts/GiantSpider.png", "ShadowSpider"),
+            ("venom_spider", "Venom Spider", MonsterRarity.Rare, MonsterRole.Ranged, 95, 30, 5, 340, 3, "Beasts/VenomSpider.png", "VenomSpider"),
+            ("frost_spider", "Frost Spider", MonsterRarity.Rare, MonsterRole.Ranged, 105, 27, 8, 350, 3, "Beasts/CrystalSpider.png", "FrostSpider")
         };
         var result = new MonsterData[definitions.Length];
         for (int i = 0; i < definitions.Length; i++)
@@ -655,6 +704,10 @@ public static class Milestone1SceneBuilder
             data.attackRange = d.role == MonsterRole.Ranged || d.role == MonsterRole.Magic ? 3f : 1f;
             data.attackSpeed = d.role == MonsterRole.Melee ? 1.2f : 1f; data.moveSpeed = 1f;
             data.goldCost = d.gold; data.unlockDungeonLevel = d.unlock; data.maxLevel = 5; data.baseUpgradeGoldCost = 100; data.baseUpgradeSoulCost = 0;
+            Sprite sp = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/Art/Characters/{d.spriteRel}");
+            if (data.icon == null && sp != null) data.icon = sp;
+            GameObject pf = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/Prefabs/Monsters/{d.prefabName}.prefab");
+            if (pf != null) data.monsterPrefab = pf;
             EditorUtility.SetDirty(data); result[i] = data;
         }
         return result;
@@ -754,11 +807,15 @@ public static class Milestone1SceneBuilder
             telegraphColor = new Color(0.6f, 0.1f, 0.8f, 0.50f)
         };
 
-        var definitions = new (string id, string name, int hp, int atk, int def, float range, float speed, int unlock, BossSkillData skill, Color color, int exp, int gold, int soul)[]
+        var definitions = new (string id, string name, int hp, int atk, int def, float range, float speed, int unlock, BossSkillData skill, Color color, int exp, int gold, int soul, string spriteRel, string prefabName)[]
         {
-            ("cave_dragon", "Cave Dragon", 1500, 60, 25, 2.5f, 1.0f, 5, dragonSkill, new Color(0.9f, 0.25f, 0.15f), 300, 500, 150),
-            ("dark_golem", "Dark Golem", 2200, 85, 45, 1.8f, 0.8f, 7, golemSkill, new Color(0.35f, 0.35f, 0.45f), 300, 800, 250),
-            ("demon_lord", "Demon Lord", 3500, 120, 60, 3.0f, 1.2f, 10, lordSkill, new Color(0.75f, 0.15f, 0.35f), 300, 1500, 500)
+            ("cave_dragon", "Cave Dragon", 1500, 60, 25, 2.5f, 1.0f, 5, dragonSkill, new Color(0.9f, 0.25f, 0.15f), 300, 500, 150, "Bosses/Dragon.png", "CaveDragon"),
+            ("dark_golem", "Dark Golem", 2200, 85, 45, 1.8f, 0.8f, 7, golemSkill, new Color(0.35f, 0.35f, 0.45f), 300, 800, 250, "Bosses/AncientGuardian.png", "DarkGolem"),
+            ("demon_lord", "Demon Lord", 3500, 120, 60, 3.0f, 1.2f, 10, lordSkill, new Color(0.75f, 0.15f, 0.35f), 300, 1500, 500, "Bosses/DemonLord.png", "DemonLord"),
+            ("dragon", "Dragon", 1800, 70, 30, 2.6f, 1.0f, 5, dragonSkill, new Color(0.95f, 0.3f, 0.15f), 300, 600, 180, "Bosses/Dragon.png", "Dragon"),
+            ("ice_queen", "Ice Queen", 2000, 80, 35, 2.8f, 1.1f, 6, lordSkill, new Color(0.25f, 0.65f, 0.95f), 300, 700, 210, "Bosses/IceQueen.png", "IceQueen"),
+            ("ancient_guardian", "Ancient Guardian", 2600, 90, 50, 2.0f, 0.85f, 7, golemSkill, new Color(0.45f, 0.5f, 0.6f), 300, 900, 280, "Bosses/AncientGuardian.png", "AncientGuardian"),
+            ("lich_king", "Lich King", 3000, 105, 45, 3.0f, 1.1f, 8, lordSkill, new Color(0.3f, 0.4f, 0.9f), 300, 1200, 380, "Bosses/LichKing.png", "LichKing")
         };
 
         var result = new BossData[definitions.Length];
@@ -785,6 +842,10 @@ public static class Milestone1SceneBuilder
             data.defeatGoldReward = d.gold;
             data.defeatSoulReward = d.soul;
             data.skills = new System.Collections.Generic.List<BossSkillData> { d.skill };
+            Sprite sp = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/Art/Characters/{d.spriteRel}");
+            if (data.bossIcon == null && sp != null) data.bossIcon = sp;
+            GameObject pf = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/Prefabs/Bosses/{d.prefabName}.prefab");
+            if (pf != null) data.bossPrefab = pf;
             EditorUtility.SetDirty(data);
             result[i] = data;
         }

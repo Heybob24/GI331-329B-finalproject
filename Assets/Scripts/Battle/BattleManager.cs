@@ -39,11 +39,18 @@ namespace DreamDungeon
         private AdventurerFactionData activeFaction;
         private DifficultyData activeDifficulty;
         private CampaignStageData activeCampaignStage;
+        private ChallengeData activeChallenge;
+        private float runElapsedTime;
+        private int liveScore;
 
         public BattleState State => state;
         public AdventurerFactionData ActiveFaction => activeFaction;
         public DifficultyData ActiveDifficulty => activeDifficulty;
         public CampaignStageData ActiveCampaignStage => activeCampaignStage;
+        public ChallengeData ActiveChallenge => activeChallenge;
+        public float RunElapsedTime => runElapsedTime;
+        public int LiveScore => liveScore;
+        public AdventurerActor ActiveWaveBoss => waveManager != null ? waveManager.ActiveBossWaveActor : null;
         public int CurrentWave => waveManager != null ? waveManager.CurrentWave : 1;
         public int TotalWaves => waveManager != null ? waveManager.TotalWaves : (configuration != null ? configuration.waves.Count : 0);
         public int LivingAdventurers => waveManager != null ? waveManager.LivingCount : 0;
@@ -115,6 +122,7 @@ namespace DreamDungeon
             if (trapDatabase == null || !trapDatabase.ValidateDatabase(out error)) { Fail(trapDatabase == null ? "Trap Database is missing." : error); return; }
 
             ApplyCampaignRuntimeOverridesIfNeeded();
+            ApplyEndlessOrChallengeRuntimeOverridesIfNeeded();
 
             try
             {
@@ -218,16 +226,28 @@ namespace DreamDungeon
                 coreHP = DungeonCoreUpgradeManager.Instance.MaxHP;
                 coreDef = DungeonCoreUpgradeManager.Instance.Defense;
             }
+            if (BattleSession.IsChallengeBattle && EndlessChallengeManager.Instance != null &&
+                EndlessChallengeManager.Instance.ActiveModifiers.IsActive)
+            {
+                coreHP = Mathf.Max(20, Mathf.RoundToInt(coreHP * EndlessChallengeManager.Instance.ActiveModifiers.CoreHpMultiplier));
+            }
             coreActor.Initialize(coreHP, coreDef, coreRoom.upgradeLevel, whiteSprite, cellSize);
             worldTiles.Add(coreObj);
 
             // 4. Spawn Monster Defenders
             monsters.Clear();
             monsterCombatTargets.Clear();
+            int maxMonstersCap = -1;
+            if (BattleSession.IsChallengeBattle && EndlessChallengeManager.Instance != null &&
+                EndlessChallengeManager.Instance.ActiveModifiers.IsActive)
+            {
+                maxMonstersCap = EndlessChallengeManager.Instance.ActiveModifiers.MaxAllowedMonsters;
+            }
             if (layout.monsters != null)
             {
                 foreach (MonsterInstanceData data in layout.monsters)
                 {
+                    if (maxMonstersCap >= 0 && monsters.Count >= maxMonstersCap) break;
                     MonsterData def = monsterDatabase.FindById(data.monsterId);
                     DungeonRoomInstanceData room = layout.rooms.Find(r => r.instanceId == data.roomInstanceId);
                     if (def == null || room == null) continue;
@@ -261,11 +281,13 @@ namespace DreamDungeon
                     if (room == null) continue;
 
                     Vector3 pos = UnitWorld(room, data.localPosition, -0.2f);
-                    GameObject go = new GameObject($"Boss_{data.bossId}");
+                    GameObject go = def != null && def.bossPrefab != null
+                        ? Instantiate(def.bossPrefab, pos, Quaternion.identity)
+                        : new GameObject($"Boss_{data.bossId}");
                     go.transform.position = pos;
                     go.transform.localScale = Vector3.one * (cellSize * 0.7f);
 
-                    BossBattleActor actor = go.AddComponent<BossBattleActor>();
+                    BossBattleActor actor = go.GetComponent<BossBattleActor>() ?? go.AddComponent<BossBattleActor>();
                     actor.Initialize(def, data.level, data.instanceId, whiteSprite);
                     actor.Died += OnBossDied;
 
@@ -277,10 +299,18 @@ namespace DreamDungeon
 
             // 5. Register Traps
             trapController.ClearTraps();
+            int maxTrapsCap = -1;
+            if (BattleSession.IsChallengeBattle && EndlessChallengeManager.Instance != null &&
+                EndlessChallengeManager.Instance.ActiveModifiers.IsActive)
+            {
+                maxTrapsCap = EndlessChallengeManager.Instance.ActiveModifiers.MaxAllowedTraps;
+            }
+            int trapsRegistered = 0;
             if (layout.traps != null)
             {
                 foreach (TrapInstanceData data in layout.traps)
                 {
+                    if (maxTrapsCap >= 0 && trapsRegistered >= maxTrapsCap) break;
                     TrapData def = trapDatabase.FindById(data.trapId);
                     DungeonRoomInstanceData room = layout.rooms.Find(r => r.instanceId == data.roomInstanceId);
                     if (def == null || room == null) continue;
@@ -289,6 +319,7 @@ namespace DreamDungeon
 
                     SpawnTile(pos, TrapBattleController.GetTrapColor(def.trapType), cellSize * 0.22f, 2, def.trapName);
                     trapController.RegisterTrap(data, def, pos);
+                    trapsRegistered++;
                 }
             }
 
@@ -296,6 +327,13 @@ namespace DreamDungeon
             DungeonRoomInstanceData entrance = layout.rooms.Find(r => r.roomType == DungeonRoomType.Entrance);
             Vector3 entranceWorld = CellWorld(entrance.position);
             waveManager.Configure(configuration, adventurerDatabase, route, CellWorld, entranceWorld, cellSize, whiteSprite);
+            if (BattleSession.IsEndlessBattle)
+            {
+                EndlessChallengeManager ecMgr = EndlessChallengeManager.Instance ?? FindAnyObjectByType<EndlessChallengeManager>() ?? gameObject.AddComponent<EndlessChallengeManager>();
+                waveManager.EnableEndlessMode(ecMgr.EndlessConfig);
+            }
+            runElapsedTime = 0f;
+            liveScore = 0;
         }
 
         private void HookEvents()
@@ -308,10 +346,11 @@ namespace DreamDungeon
 
             if (waveManager != null)
             {
-                waveManager.WaveStarted += wave => { statusMessage = $"Wave {wave} incoming!"; Notify(); };
-                waveManager.WaveCleared += wave => { statusMessage = $"Wave {wave} cleared!"; Notify(); };
+                waveManager.WaveStarted += wave => { statusMessage = $"Wave {wave} incoming!"; RefreshLiveScore(); Notify(); };
+                waveManager.WaveCleared += wave => { statusMessage = $"Wave {wave} cleared!"; RefreshLiveScore(); Notify(); };
+                waveManager.BossWaveTriggered += (wave, bossTitle) => { statusMessage = $"WARNING! BOSS WAVE {wave}: {bossTitle}!"; Notify(); };
                 waveManager.AllWavesCleared += OnAllWavesCleared;
-                waveManager.AdventurerDied += _ => Notify();
+                waveManager.AdventurerDied += _ => { RefreshLiveScore(); Notify(); };
                 waveManager.AdventurerSpawned += OnAdventurerSpawned;
             }
         }
@@ -377,11 +416,112 @@ namespace DreamDungeon
             configuration = WaveConfiguration.BuildRuntimeBattleConfiguration(stageWaves, activeDifficulty, activeFaction, baseCfg);
         }
 
+        private void ApplyEndlessOrChallengeRuntimeOverridesIfNeeded()
+        {
+            if (!BattleSession.IsEndlessBattle && !BattleSession.IsChallengeBattle) return;
+
+            EndlessChallengeManager ecMgr = EndlessChallengeManager.Instance ?? FindAnyObjectByType<EndlessChallengeManager>();
+            if (ecMgr == null)
+            {
+                ecMgr = gameObject.GetComponent<EndlessChallengeManager>() ?? gameObject.AddComponent<EndlessChallengeManager>();
+            }
+            ecMgr.EnsureInitialized();
+
+            // Always start from clean base AdventurerDatabase so retries never stack multipliers
+            AdventurerDatabase baseAdvDb = Resources.Load<AdventurerDatabase>("DreamDungeon/AdventurerDatabase") ?? adventurerDatabase;
+            if (baseAdvDb != null)
+            {
+                AdventurerDatabase runtimeAdvDb = ScriptableObject.CreateInstance<AdventurerDatabase>();
+                runtimeAdvDb.name = "RuntimeAdventurerDatabase_M9";
+                var cleanEntries = new List<AdventurerData>();
+                foreach (AdventurerData orig in baseAdvDb.Entries)
+                {
+                    if (orig != null) cleanEntries.Add(orig);
+                }
+                runtimeAdvDb.SetEntries(cleanEntries);
+                adventurerDatabase = runtimeAdvDb;
+            }
+
+            BattleConfiguration baseCfg = Resources.Load<BattleConfiguration>("DreamDungeon/BattleConfiguration") ?? configuration;
+
+            if (BattleSession.IsEndlessBattle)
+            {
+                activeChallenge = null;
+                ecMgr.CleanUpTemporaryRunState();
+                BattleConfiguration runtimeCfg = ScriptableObject.CreateInstance<BattleConfiguration>();
+                runtimeCfg.name = "RuntimeEndlessBattleConfiguration";
+                runtimeCfg.spawnInterval = ecMgr.EndlessConfig.baseSpawnInterval;
+                runtimeCfg.coreMaxHP = baseCfg != null ? baseCfg.coreMaxHP : 500;
+                runtimeCfg.coreDefense = baseCfg != null ? baseCfg.coreDefense : 1;
+                runtimeCfg.waves = new List<AdventurerWave>();
+                configuration = runtimeCfg;
+                return;
+            }
+
+            if (BattleSession.IsChallengeBattle)
+            {
+                activeChallenge = ecMgr.GetChallenge(BattleSession.ChallengeId);
+                if (activeChallenge != null)
+                {
+                    ecMgr.ActiveModifiers.ApplyModifiers(activeChallenge.modifiers);
+                    DifficultyManager diffMgr = DifficultyManager.Instance ?? FindAnyObjectByType<DifficultyManager>() ?? gameObject.AddComponent<DifficultyManager>();
+                    diffMgr.EnsureDefaultDifficulties();
+                    activeDifficulty = diffMgr.GetDifficultyData(activeChallenge.difficulty);
+
+                    BattleConfiguration runtimeCfg = WaveConfiguration.BuildRuntimeBattleConfiguration(
+                        activeChallenge.waveConfiguration, activeDifficulty, null, baseCfg);
+
+                    // Apply Challenge EnemyCountMultiplier if > 1
+                    float countMult = ecMgr.ActiveModifiers.EnemyCountMultiplier;
+                    if (countMult > 1.01f && runtimeCfg.waves != null)
+                    {
+                        foreach (AdventurerWave w in runtimeCfg.waves)
+                        {
+                            if (w?.entries == null) continue;
+                            foreach (AdventurerWaveEntry e in w.entries)
+                            {
+                                if (e != null)
+                                {
+                                    e.count = Mathf.Clamp(Mathf.RoundToInt(e.count * countMult), 1, 40);
+                                }
+                            }
+                        }
+                    }
+
+                    configuration = runtimeCfg;
+                }
+            }
+        }
+
+        private void RefreshLiveScore()
+        {
+            if (waveManager == null) return;
+            EndlessChallengeManager ecMgr = EndlessChallengeManager.Instance;
+            ScoreCalculationConfig sCfg = ecMgr != null ? ecMgr.ScoreConfig : null;
+            int completedWaves = Mathf.Max(0, CurrentWave - 1);
+            int elites = waveManager.EliteDefeatedCount;
+            int normals = Mathf.Max(0, waveManager.DefeatedCount - elites);
+            int totalBosses = bossesDefeatedCount + waveManager.BossUnitDefeatedCount;
+            var breakdown = ScoreCalculator.Calculate(sCfg, completedWaves, CurrentWave, normals, elites, totalBosses, CoreHP, CoreMaxHP, runElapsedTime, false);
+            liveScore = breakdown.TotalScore;
+        }
+
         private void Update()
         {
             if (!initialized || state != BattleState.InProgress || Time.timeScale <= 0f) return;
 
             float dt = Time.deltaTime;
+            runElapsedTime += dt;
+
+            // Optional Challenge Time Limit check
+            if (BattleSession.IsChallengeBattle && activeChallenge != null &&
+                activeChallenge.optionalTimeLimitSeconds > 0f &&
+                runElapsedTime >= activeChallenge.optionalTimeLimitSeconds)
+            {
+                statusMessage = "Time limit expired!";
+                Finish(false);
+                return;
+            }
 
             // Tick wave manager (spawning and adventurer update loops)
             waveManager.Tick(dt, monsterCombatTargets, coreActor);
@@ -446,6 +586,92 @@ namespace DreamDungeon
             speedController.ResetSpeed();
 
             int completedWaves = victory ? TotalWaves : Mathf.Max(0, CurrentWave - 1);
+            int totalBossesKilled = bossesDefeatedCount + (waveManager != null ? waveManager.BossUnitDefeatedCount : 0);
+            int elitesKilled = waveManager != null ? waveManager.EliteDefeatedCount : 0;
+            int normalsKilled = waveManager != null ? Mathf.Max(0, waveManager.DefeatedCount - elitesKilled) : 0;
+
+            if (BattleSession.IsEndlessBattle)
+            {
+                EndlessChallengeManager ecMgr = EndlessChallengeManager.Instance ?? FindAnyObjectByType<EndlessChallengeManager>() ?? gameObject.AddComponent<EndlessChallengeManager>();
+                int endlessWavesCleared = Mathf.Max(0, CurrentWave - 1);
+                EndlessRunOutcome outcome = ecMgr.RecordEndlessRunOutcome(
+                    BattleSession.CurrentBattleResultId,
+                    CurrentWave,
+                    endlessWavesCleared,
+                    normalsKilled,
+                    elitesKilled,
+                    totalBossesKilled,
+                    CoreHP,
+                    CoreMaxHP,
+                    runElapsedTime,
+                    grantImmediateCurrency: false);
+
+                liveScore = outcome.ScoreBreakdown.TotalScore;
+                BattleSession.SetResult(
+                    endlessWavesCleared > 0,
+                    CurrentWave,
+                    waveManager.DefeatedCount,
+                    outcome.RewardGold,
+                    outcome.RewardSoul,
+                    outcome.RewardExp,
+                    isFirstClear: false,
+                    isPerfectClear: false,
+                    score: outcome.ScoreBreakdown.TotalScore,
+                    elitesDefeated: elitesKilled,
+                    bossesDefeated: totalBossesKilled,
+                    durationSeconds: runElapsedTime,
+                    isNewRecord: outcome.IsNewWaveRecord || outcome.IsNewScoreRecord);
+
+                DungeonProgressionManager.Instance?.RecordRaidResult(endlessWavesCleared > 0, CurrentWave, waveManager.DefeatedCount, totalBossesKilled);
+                statusMessage = $"Endless Run Ended on Wave {CurrentWave}! Score: {outcome.ScoreBreakdown.TotalScore}";
+                Notify();
+
+                hud?.ShowResult(false, CurrentWave, waveManager.DefeatedCount, CoreHP,
+                    outcome.RewardGold, outcome.RewardSoul, outcome.RewardExp);
+                return;
+            }
+
+            if (BattleSession.IsChallengeBattle)
+            {
+                EndlessChallengeManager ecMgr = EndlessChallengeManager.Instance ?? FindAnyObjectByType<EndlessChallengeManager>() ?? gameObject.AddComponent<EndlessChallengeManager>();
+                ChallengeRunOutcome outcome = ecMgr.RecordChallengeRunOutcome(
+                    BattleSession.CurrentBattleResultId,
+                    BattleSession.ChallengeId,
+                    victory,
+                    completedWaves,
+                    TotalWaves,
+                    normalsKilled,
+                    elitesKilled,
+                    totalBossesKilled,
+                    CoreHP,
+                    CoreMaxHP,
+                    runElapsedTime,
+                    grantImmediateCurrency: false);
+
+                liveScore = outcome.ScoreBreakdown.TotalScore;
+                BattleSession.SetResult(
+                    outcome.Completed,
+                    CurrentWave,
+                    waveManager.DefeatedCount,
+                    outcome.RewardGold,
+                    outcome.RewardSoul,
+                    outcome.RewardExp,
+                    isFirstClear: outcome.IsFirstClear,
+                    isPerfectClear: false,
+                    score: outcome.ScoreBreakdown.TotalScore,
+                    elitesDefeated: elitesKilled,
+                    bossesDefeated: totalBossesKilled,
+                    durationSeconds: runElapsedTime,
+                    isNewRecord: outcome.IsNewScoreRecord || outcome.IsNewTimeRecord);
+
+                DungeonProgressionManager.Instance?.RecordRaidResult(outcome.Completed, CurrentWave, waveManager.DefeatedCount, totalBossesKilled);
+                statusMessage = outcome.Completed ? "Challenge Completed!" : "Challenge Failed.";
+                Notify();
+
+                hud?.ShowResult(outcome.Completed, CurrentWave, waveManager.DefeatedCount, CoreHP,
+                    outcome.RewardGold, outcome.RewardSoul, outcome.RewardExp);
+                return;
+            }
 
             if (BattleSession.IsCampaignBattle)
             {
@@ -513,7 +739,15 @@ namespace DreamDungeon
         {
             if (state != BattleState.Victory && state != BattleState.Defeat) return;
             ResetBattleState();
-            if (BattleSession.IsCampaignBattle)
+            if (BattleSession.IsEndlessBattle)
+            {
+                BattleSession.BeginEndless(BattleSession.LayoutJson, BattleSession.DungeonScene, BattleSession.Gold, BattleSession.Soul, BattleSession.Crystal);
+            }
+            else if (BattleSession.IsChallengeBattle)
+            {
+                BattleSession.BeginChallenge(BattleSession.LayoutJson, BattleSession.DungeonScene, BattleSession.Gold, BattleSession.Soul, BattleSession.Crystal, BattleSession.ChallengeId);
+            }
+            else if (BattleSession.IsCampaignBattle)
             {
                 BattleSession.BeginCampaign(
                     BattleSession.LayoutJson,
@@ -533,6 +767,22 @@ namespace DreamDungeon
                 BattleSession.Begin(BattleSession.LayoutJson, BattleSession.DungeonScene, BattleSession.Gold, BattleSession.Soul, BattleSession.Crystal);
             }
             SceneManager.LoadScene("Battle");
+        }
+
+        public void ReturnToEndlessMenu()
+        {
+            if (state != BattleState.Victory && state != BattleState.Defeat) return;
+            ResetBattleState();
+            BattleSession.RequestReturnToEndlessMenu();
+            SceneManager.LoadScene(BattleSession.DungeonScene);
+        }
+
+        public void ReturnToChallengeMenu()
+        {
+            if (state != BattleState.Victory && state != BattleState.Defeat) return;
+            ResetBattleState();
+            BattleSession.RequestReturnToChallengeMenu();
+            SceneManager.LoadScene(BattleSession.DungeonScene);
         }
 
         public void ContinueToDungeon()

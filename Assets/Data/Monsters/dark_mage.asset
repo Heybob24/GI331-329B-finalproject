@@ -15,8 +15,8 @@ MonoBehaviour:
   monsterId: dark_mage
   monsterName: Dark Mage
   description: Rare Magic defender for your dungeon.
-  icon: {fileID: 0}
-  monsterPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6870980666dbdaaa834576318b5d3953, type: 3}
+  monsterPrefab: {fileID: 100000, guid: e70e5da42133c334d87b18de84080c88, type: 3}
   rarity: 1
   role: 3
   maxHP: 60

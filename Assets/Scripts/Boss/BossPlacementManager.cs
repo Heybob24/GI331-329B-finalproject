@@ -215,17 +215,45 @@ namespace DreamDungeon
                 Vector3 center = grid.CellToWorld(room.position) + new Vector3((width - 1) * grid.CellSize * 0.5f, (height - 1) * grid.CellSize * 0.5f, -0.3f);
                 Vector3 world = center + new Vector3(unit.localPosition.x * width * grid.CellSize, unit.localPosition.y * height * grid.CellSize, 0f);
 
-                GameObject visual = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                GameObject visual;
+                if (data != null && data.bossPrefab != null)
+                {
+                    visual = Instantiate(data.bossPrefab, world, Quaternion.identity, transform);
+                    visual.transform.localScale = Vector3.one * (grid.CellSize * 0.65f);
+                }
+                else if (data != null && data.bossIcon != null)
+                {
+                    visual = new GameObject($"Boss_{unit.bossId}");
+                    visual.transform.SetParent(transform, true);
+                    SpriteRenderer sr = visual.AddComponent<SpriteRenderer>();
+                    sr.sprite = data.bossIcon;
+                    sr.color = Color.white;
+                    sr.sortingOrder = 6;
+                    visual.transform.localScale = Vector3.one * (grid.CellSize * 0.65f);
+                }
+                else
+                {
+                    visual = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+                    visual.transform.SetParent(transform, true);
+                    visual.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+                    visual.transform.localScale = new Vector3(grid.CellSize * 0.55f, 0.05f, grid.CellSize * 0.55f);
+                }
+
                 visual.name = $"Boss_{unit.bossId}_{unit.instanceId}";
-                visual.transform.SetParent(transform, true);
                 visual.transform.position = world;
-                visual.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
-                visual.transform.localScale = new Vector3(grid.CellSize * 0.55f, 0.05f, grid.CellSize * 0.55f);
 
                 foreach (Collider col in visual.GetComponentsInChildren<Collider>()) col.enabled = false;
                 foreach (Collider2D col in visual.GetComponentsInChildren<Collider2D>()) col.enabled = false;
 
-                if (visual.GetComponentInChildren<Renderer>() is Renderer renderer)
+                SpriteRenderer spriteRenderer = visual.GetComponentInChildren<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    if (data != null && data.bossIcon != null && spriteRenderer.sprite == null)
+                        spriteRenderer.sprite = data.bossIcon;
+                    spriteRenderer.color = Color.white;
+                    spriteRenderer.sortingOrder = 6;
+                }
+                else if (visual.GetComponentInChildren<Renderer>() is Renderer renderer)
                 {
                     renderer.material.color = data != null ? data.bossColor : new Color(0.85f, 0.2f, 0.2f);
                 }

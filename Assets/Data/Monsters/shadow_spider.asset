@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837a92614e19484e931dcafdc85e236, type: 3}
+  m_Name: shadow_spider
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.MonsterData
+  monsterId: shadow_spider
+  monsterName: Shadow Spider
+  description: Rare Melee defender for your dungeon.
+  icon: {fileID: 21300000, guid: 784483abdd7c40cdf33ff88ae796513c, type: 3}
+  monsterPrefab: {fileID: 100000, guid: fbf6da6e04dea1b1578c334db3f25946, type: 3}
+  rarity: 1
+  role: 1
+  maxHP: 110
+  attack: 28
+  defense: 7
+  attackRange: 1
+  attackSpeed: 1.2
+  moveSpeed: 1
+  goldCost: 360
+  unlockDungeonLevel: 3
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 09ba195a28d937341a07a1f79655e454
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_18_skull_cultist_idle_01
+  - first:
+      213: 21300004
+    second: sprite_18_skull_cultist_idle_02
+  - first:
+      213: 21300006
+    second: sprite_18_skull_cultist_idle_03
+  - first:
+      213: 21300008
+    second: sprite_18_skull_cultist_idle_04
+  - first:
+      213: 21300010
+    second: sprite_18_skull_cultist_idle_05
+  - first:
+      213: 21300012
+    second: sprite_18_skull_cultist_idle_06
+  - first:
+      213: 21300014
+    second: sprite_18_skull_cultist_walk_01
+  - first:
+      213: 21300016
+    second: sprite_18_skull_cultist_walk_02
+  - first:
+      213: 21300018
+    second: sprite_18_skull_cultist_walk_03
+  - first:
+      213: 21300020
+    second: sprite_18_skull_cultist_walk_04
+  - first:
+      213: 21300022
+    second: sprite_18_skull_cultist_walk_05
+  - first:
+      213: 21300024
+    second: sprite_18_skull_cultist_walk_06
+  - first:
+      213: 21300026
+    second: sprite_18_skull_cultist_walk_07
+  - first:
+      213: 21300028
+    second: sprite_18_skull_cultist_walk_08
+  - first:
+      213: 21300030
+    second: sprite_18_skull_cultist_attack_01
+  - first:
+      213: 21300032
+    second: sprite_18_skull_cultist_attack_02
+  - first:
+      213: 21300034
+    second: sprite_18_skull_cultist_attack_03
+  - first:
+      213: 21300036
+    second: sprite_18_skull_cultist_attack_04
+  - first:
+      213: 21300038
+    second: sprite_18_skull_cultist_attack_05
+  - first:
+      213: 21300040
+    second: sprite_18_skull_cultist_attack_06
+  - first:
+      213: 21300042
+    second: sprite_18_skull_cultist_attack_07
+  - first:
+      213: 21300044
+    second: sprite_18_skull_cultist_attack_08
+  - first:
+      213: 21300046
+    second: sprite_18_skull_cultist_hit_01
+  - first:
+      213: 21300048
+    second: sprite_18_skull_cultist_hit_02
+  - first:
+      213: 21300050
+    second: sprite_18_skull_cultist_hit_03
+  - first:
+      213: 21300052
+    second: sprite_18_skull_cultist_hit_04
+  - first:
+      213: 21300054
+    second: sprite_18_skull_cultist_death_01
+  - first:
+      213: 21300056
+    second: sprite_18_skull_cultist_death_02
+  - first:
+      213: 21300058
+    second: sprite_18_skull_cultist_death_03
+  - first:
+      213: 21300060
+    second: sprite_18_skull_cultist_death_04
+  - first:
+      213: 21300062
+    second: sprite_18_skull_cultist_death_05
+  - first:
+      213: 21300064
+    second: sprite_18_skull_cultist_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e1a60e6f14934919a5a6fb8c7c6c15
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2947d2799f0c1407e76c6c69c77020
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cff514dbecfb975f0705bd8bbedbe19
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a252d3f495da88f198291854a262a7
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dbdb89e70aa7f7e903d88a2ee045a9
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 960
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7de4af22491a7292a51ad4d29f81c9
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574b491ebb4576af60be126c1965f572
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c33f0d4bdeb2a6b11eace22b31ed7b
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc60dc2b99075784c975f2d8c955c4ed
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a8af361600e3393f466e12668515ab
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6299fbc6e715cb02730cd89bf16d5f4
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141b3d9bf3ef47e6c5335a93e364ea5b
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcb25b4b83b944d70806cb3785db861
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 720
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c532e498680e5925f2f68a87de188b2f
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2ecc71c5aab91260d3295d0a8c3373
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b57c5b1e0b69e4a253baf8340977e4
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225f18c21665fda19a5103c14ba84b09
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b383a3d914b369d4d280c8167e9431dd
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15eb648af111f842d287ae0e65522fc
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2c0d817ada3150aff57704b98ca0d3
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e727bb9d71ad10365c54aa202c52a37
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 480
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1452fa49f824e0be685684e0b1850e7
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8f2d64b74349f6e0bc073049261793
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_hit_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05f40f0fffaa76cef671601774c725d
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_hit_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aeafa4bf173e92cfd4ad6db94412cff
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_hit_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 240
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d1b094c5bdbb3162d4dbe7b29bb79e
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd5e39c228a9993c5e3da4ef639a930
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735c36e5b64d48916ba154320f810c7c
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_03
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540de0a1c1da3f6ee18e6bec1aa2cb32
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_04
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879bd78d499cb5f700f64cd7d5b94f7c
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_05
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25906c102a038b805fd237eeeaee98b
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_18_skull_cultist_death_06
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 208
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51f2894c967732cbcb85f9c7aa0314b
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_18_skull_cultist_idle_01: 21300002
+      sprite_18_skull_cultist_idle_02: 21300004
+      sprite_18_skull_cultist_idle_03: 21300006
+      sprite_18_skull_cultist_idle_04: 21300008
+      sprite_18_skull_cultist_idle_05: 21300010
+      sprite_18_skull_cultist_idle_06: 21300012
+      sprite_18_skull_cultist_walk_01: 21300014
+      sprite_18_skull_cultist_walk_02: 21300016
+      sprite_18_skull_cultist_walk_03: 21300018
+      sprite_18_skull_cultist_walk_04: 21300020
+      sprite_18_skull_cultist_walk_05: 21300022
+      sprite_18_skull_cultist_walk_06: 21300024
+      sprite_18_skull_cultist_walk_07: 21300026
+      sprite_18_skull_cultist_walk_08: 21300028
+      sprite_18_skull_cultist_attack_01: 21300030
+      sprite_18_skull_cultist_attack_02: 21300032
+      sprite_18_skull_cultist_attack_03: 21300034
+      sprite_18_skull_cultist_attack_04: 21300036
+      sprite_18_skull_cultist_attack_05: 21300038
+      sprite_18_skull_cultist_attack_06: 21300040
+      sprite_18_skull_cultist_attack_07: 21300042
+      sprite_18_skull_cultist_attack_08: 21300044
+      sprite_18_skull_cultist_hit_01: 21300046
+      sprite_18_skull_cultist_hit_02: 21300048
+      sprite_18_skull_cultist_hit_03: 21300050
+      sprite_18_skull_cultist_hit_04: 21300052
+      sprite_18_skull_cultist_death_01: 21300054
+      sprite_18_skull_cultist_death_02: 21300056
+      sprite_18_skull_cultist_death_03: 21300058
+      sprite_18_skull_cultist_death_04: 21300060
+      sprite_18_skull_cultist_death_05: 21300062
+      sprite_18_skull_cultist_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

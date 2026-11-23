@@ -25,10 +25,29 @@ namespace DreamDungeon
         private readonly Dictionary<string, int> _monsterUnlockLevels = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
         {
             { "slime", 1 },
-            { "skeleton", 2 },
-            { "goblin", 4 },
-            { "orc", 6 },
-            { "golem", 8 }
+            { "goblin", 1 },
+            { "skeleton", 1 },
+            { "bat", 1 },
+            { "skeleton_archer", 2 },
+            { "zombie", 2 },
+            { "imp", 2 },
+            { "wolf", 2 },
+            { "spider", 2 },
+            { "dark_mage", 3 },
+            { "ghost", 3 },
+            { "mimic", 3 },
+            { "harpy", 3 },
+            { "orc", 4 },
+            { "demon", 4 },
+            { "golem", 4 },
+            { "gargoyle", 4 },
+            { "baby_dragon", 5 },
+            { "crystal_golem", 5 },
+            { "fire_elemental", 5 },
+            { "ice_elemental", 5 },
+            { "shadow_creature", 6 },
+            { "treant", 6 },
+            { "beholder", 7 }
         };
 
         private readonly Dictionary<string, int> _trapUnlockLevels = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
@@ -42,7 +61,11 @@ namespace DreamDungeon
         private readonly Dictionary<string, int> _bossUnlockLevels = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase)
         {
             { "cave_dragon", 5 },
+            { "dragon", 5 },
+            { "ice_queen", 6 },
             { "dark_golem", 7 },
+            { "ancient_guardian", 7 },
+            { "lich_king", 8 },
             { "demon_lord", 10 }
         };
 

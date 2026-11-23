@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837a92614e19484e931dcafdc85e236, type: 3}
+  m_Name: crystal_golem
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.MonsterData
+  monsterId: crystal_golem
+  monsterName: Crystal Golem
+  description: Epic Tank defender for your dungeon.
+  icon: {fileID: 21300000, guid: ee6595210082ef796de203db711e7866, type: 3}
+  monsterPrefab: {fileID: 100000, guid: 80521f881df1ff54d884e818ae08532c, type: 3}
+  rarity: 2
+  role: 0
+  maxHP: 320
+  attack: 34
+  defense: 28
+  attackRange: 1
+  attackSpeed: 1
+  moveSpeed: 1
+  goldCost: 900
+  unlockDungeonLevel: 5
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0

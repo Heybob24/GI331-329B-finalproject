@@ -20,6 +20,7 @@ namespace DreamDungeon
         private float attackCooldown;
 
         private SpriteRenderer spriteRenderer;
+        private Animator animator;
         private Color originalColor;
         private SpriteRenderer healthBarFill;
         private Vector3 initialScale;
@@ -82,10 +83,15 @@ namespace DreamDungeon
             {
                 spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
             }
+            animator = GetComponentInChildren<Animator>();
 
             if (data != null && data.bossIcon != null)
             {
                 spriteRenderer.sprite = data.bossIcon;
+                originalColor = Color.white;
+            }
+            else if (spriteRenderer.sprite != null && spriteRenderer.sprite != whiteSprite)
+            {
                 originalColor = Color.white;
             }
             else
@@ -140,6 +146,10 @@ namespace DreamDungeon
             // Check if skill can be cast
             if (skillController != null && skillController.CanCastSkill(out var readySkill))
             {
+                if (animator != null && animator.runtimeAnimatorController != null)
+                {
+                    animator.SetTrigger("Attack");
+                }
                 skillController.CastSkill(readySkill, currentTarget.Position);
                 return;
             }
@@ -185,6 +195,10 @@ namespace DreamDungeon
             int damage = DamageCalculator.Calculate(CurrentAttack, target.Defense);
             target.TakeDamage(new DamageInfo(damage, this, CombatTeam.Monster));
 
+            if (animator != null && animator.runtimeAnimatorController != null)
+            {
+                animator.SetTrigger("Attack");
+            }
             PulseVisual();
         }
 
@@ -205,6 +219,10 @@ namespace DreamDungeon
             }
             else
             {
+                if (animator != null && animator.runtimeAnimatorController != null)
+                {
+                    animator.SetTrigger("Hit");
+                }
                 FlashHit();
             }
         }
@@ -212,11 +230,30 @@ namespace DreamDungeon
         private void Die()
         {
             Died?.Invoke(this);
-            if (spriteRenderer != null)
+            if (animator != null && animator.runtimeAnimatorController != null && gameObject.activeInHierarchy)
             {
-                spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 0.4f);
+                animator.ResetTrigger("Attack");
+                animator.ResetTrigger("Hit");
+                animator.SetBool("IsMoving", false);
+                animator.SetTrigger("Die");
+                Invoke(nameof(DeactivateAfterDeath), 0.75f);
             }
-            gameObject.SetActive(false);
+            else
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 0.4f);
+                }
+                gameObject.SetActive(false);
+            }
+        }
+
+        private void DeactivateAfterDeath()
+        {
+            if (gameObject != null)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void FlashHit()
@@ -255,7 +292,10 @@ namespace DreamDungeon
 
             var barRoot = new GameObject("BossHealthBar");
             barRoot.transform.SetParent(transform, false);
-            barRoot.transform.localPosition = new Vector3(0f, 1.4f, 0f);
+            float barY = spriteRenderer != null && spriteRenderer.sprite != null && spriteRenderer.sprite != whiteSprite
+                ? Mathf.Max(1.4f, spriteRenderer.sprite.bounds.max.y + 0.16f)
+                : 1.4f;
+            barRoot.transform.localPosition = new Vector3(0f, barY, 0f);
 
             var bgObj = new GameObject("BG");
             bgObj.transform.SetParent(barRoot.transform, false);

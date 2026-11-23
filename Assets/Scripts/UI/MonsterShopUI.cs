@@ -14,14 +14,23 @@ namespace DreamDungeon
         public void Configure(RectTransform safe, MonsterShopManager manager, MonsterDatabase db, CurrencyManager money) { safeAreaRoot = safe; shop = manager; database = db; currency = money; }
         private void Awake()
         {
+            EnsureConfigured();
+        }
+        private void EnsureConfigured()
+        {
             if (shop == null) shop = FindAnyObjectByType<MonsterShopManager>();
             if (database == null && shop != null) database = shop.Database;
+            if (database == null) database = Resources.Load<MonsterDatabase>("DreamDungeon/MonsterDatabase") ?? Resources.Load<MonsterDatabase>("MonsterDatabase");
             if (currency == null && shop != null) currency = shop.Currency;
+            if (currency == null) currency = FindAnyObjectByType<CurrencyManager>();
             if (safeAreaRoot == null && GameObject.Find("SafeAreaRoot") != null) safeAreaRoot = GameObject.Find("SafeAreaRoot").GetComponent<RectTransform>();
-            Build();
-            if (shop != null) shop.StatusChanged += SetStatus;
-            if (currency != null) currency.CurrencyChanged += UpdateBalance;
-            if (shop != null && shop.Inventory != null) shop.Inventory.InventoryChanged += Refresh;
+            if (overlay == null && safeAreaRoot != null)
+            {
+                Build();
+                if (shop != null) shop.StatusChanged += SetStatus;
+                if (currency != null) currency.CurrencyChanged += UpdateBalance;
+                if (shop != null && shop.Inventory != null) shop.Inventory.InventoryChanged += Refresh;
+            }
         }
         private void OnDestroy()
         {
@@ -29,7 +38,7 @@ namespace DreamDungeon
             if (currency != null) currency.CurrencyChanged -= UpdateBalance;
             if (shop != null && shop.Inventory != null) shop.Inventory.InventoryChanged -= Refresh;
         }
-        public void Open() { if (overlay == null) Build(); if (overlay == null) return; overlay.gameObject.SetActive(true); Refresh(); if (currency != null) UpdateBalance(currency.Gold, currency.Soul, currency.Crystal); }
+        public void Open() { EnsureConfigured(); if (overlay == null) return; overlay.gameObject.SetActive(true); Refresh(); if (currency != null) UpdateBalance(currency.Gold, currency.Soul, currency.Crystal); }
         public void Close() { if (overlay != null) overlay.gameObject.SetActive(false); }
         private void Build()
         {

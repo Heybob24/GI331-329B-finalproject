@@ -96,6 +96,14 @@ namespace DreamDungeon
                 GameObject card = RoomUIFactory.CreateCard(content, $"BossCard_{boss.bossId}", 320);
                 card.GetComponent<Image>().color = isUnlocked ? new Color(0.18f, 0.15f, 0.20f) : new Color(0.12f, 0.11f, 0.14f);
 
+                var iconPanel = RoomUIFactory.CreatePanel(card.transform, "Icon", boss.bossIcon != null ? Color.white : boss.bossColor, new Vector2(-345f, 0f), new Vector2(125f, 125f));
+                if (boss.bossIcon != null)
+                {
+                    Image iconImg = iconPanel.GetComponent<Image>();
+                    iconImg.sprite = boss.bossIcon;
+                    iconImg.preserveAspect = true;
+                }
+
                 string statusColor = isUnlocked ? "#55dd66" : "#ff7744";
                 string statusTextStr = isUnlocked ? "UNLOCKED" : $"UNLOCKS AT LV {boss.unlockDungeonLevel}";
 
@@ -109,7 +117,7 @@ namespace DreamDungeon
                               $"HP: <color=#ff6666>{boss.maxHP}</color>   ATK: <color=#ffaa44>{boss.attack}</color>   DEF: <color=#66aaff>{boss.defense}</color>   SPD: {boss.attackSpeed:0.0}/s\n" +
                               $"<color=#aaaaaa>{boss.description}{skillsDesc}</color>";
 
-                RoomUIFactory.CreateText(card.transform, "Details", info, 21, new Vector2(-120, 20), new Vector2(580, 260), Color.white, TextAnchor.MiddleLeft);
+                RoomUIFactory.CreateText(card.transform, "Details", info, 20, new Vector2(-45, 10), new Vector2(450, 260), Color.white, TextAnchor.MiddleLeft);
 
                 string bossIdCopy = boss.bossId;
                 Color btnColor = isUnlocked ? new Color(0.25f, 0.65f, 0.35f) : new Color(0.35f, 0.35f, 0.35f);

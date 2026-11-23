@@ -29,7 +29,14 @@ namespace DreamDungeon
         EarnSoul,
         PlaceRoom,
         UnlockRoom,
-        MaximizeFacility
+        MaximizeFacility,
+        CompleteEndlessRun,
+        ReachEndlessWave,
+        DefeatEndlessElite,
+        DefeatEndlessBoss,
+        CompleteChallenge,
+        EarnEndlessScore,
+        CompleteBossRush
     }
 
     public enum QuestStatus

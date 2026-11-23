@@ -158,7 +158,31 @@ namespace DreamDungeon
                     AchievementCategory.Economy, QuestObjectiveType.EarnGold, 10000, 1000, 250, 350),
 
                 MakeAchievement("ach_soul_collector", "Soul Collector", "Earn 1,000 Soul.",
-                    AchievementCategory.Economy, QuestObjectiveType.EarnSoul, 1000, 1200, 300, 400)
+                    AchievementCategory.Economy, QuestObjectiveType.EarnSoul, 1000, 1200, 300, 400),
+
+                // ==========================================
+                // MILESTONE 9: ENDLESS & CHALLENGE ACHIEVEMENTS
+                // ==========================================
+                MakeAchievement("ach_endless_veteran", "Endless Veteran", "Complete 3 Endless Dungeon Runs.",
+                    AchievementCategory.Combat, QuestObjectiveType.CompleteEndlessRun, 3, 500, 120, 200),
+
+                MakeAchievement("ach_endless_wave_20", "Abyssal Endurance", "Reach Wave 20 in Endless Dungeon Mode.",
+                    AchievementCategory.Combat, QuestObjectiveType.ReachEndlessWave, 20, 1200, 300, 500),
+
+                MakeAchievement("ach_elite_hunter", "Elite Hunter", "Defeat 25 Elite Enemies.",
+                    AchievementCategory.Combat, QuestObjectiveType.DefeatEndlessElite, 25, 900, 220, 350),
+
+                MakeAchievement("ach_endless_boss_slayer", "Endless Titan Slayer", "Defeat 5 Endless Bosses.",
+                    AchievementCategory.Combat, QuestObjectiveType.DefeatEndlessBoss, 5, 1400, 350, 550),
+
+                MakeAchievement("ach_challenge_master", "Challenge Master", "Complete 3 Challenges.",
+                    AchievementCategory.Progression, QuestObjectiveType.CompleteChallenge, 3, 1000, 250, 400),
+
+                MakeAchievement("ach_endless_legend", "Endless Legend", "Earn 5,000 Score in a single Endless Run.",
+                    AchievementCategory.Progression, QuestObjectiveType.EarnEndlessScore, 5000, 1500, 400, 600),
+
+                MakeAchievement("ach_boss_rush_victor", "Boss Rush Victor", "Complete the Boss Rush Challenge.",
+                    AchievementCategory.Combat, QuestObjectiveType.CompleteBossRush, 1, 1600, 400, 650)
             };
 
             db.SetAchievements(list);

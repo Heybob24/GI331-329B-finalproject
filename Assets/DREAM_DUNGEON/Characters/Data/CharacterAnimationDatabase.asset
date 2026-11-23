@@ -1,0 +1,375 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d313d81df6cde418a43939d377575b83, type: 3}
+  m_Name: CharacterAnimationDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.CharacterAnimationDatabase
+  entries:
+  - characterId: sprite_01_blue_knight
+    displayName: Blue Knight (Elite Knight)
+    characterType: 0
+    movementType: grounded
+    attackType: slash
+    gameplayEntityId: elite_knight
+    idleSprite: {fileID: 21300000, guid: 191874608096db957966a4fe4f39e642, type: 3}
+    animatorController: {fileID: 9100000, guid: bcd70659a88e22efae42a2c56b6ba317, type: 2}
+    prefab: {fileID: 100000, guid: 20647c299d1213e10ea6c3386a8c7a7d, type: 3}
+  - characterId: sprite_02_dark_mage
+    displayName: Dark Mage (Necromancer)
+    characterType: 0
+    movementType: grounded
+    attackType: magic
+    gameplayEntityId: necromancer
+    idleSprite: {fileID: 21300000, guid: 3677fb9886d05a437cc3fc3a51723c88, type: 3}
+    animatorController: {fileID: 9100000, guid: d564ac7eadea2503e649ecff8ab30560, type: 2}
+    prefab: {fileID: 100000, guid: 9e7aa574ed91492c7a47be7cd7c5c116, type: 3}
+  - characterId: sprite_03_green_ranger
+    displayName: Green Ranger (Archer)
+    characterType: 0
+    movementType: grounded
+    attackType: ranged
+    gameplayEntityId: archer
+    idleSprite: {fileID: 21300000, guid: e8b6de13e915f684bec87f55384eee88, type: 3}
+    animatorController: {fileID: 9100000, guid: bbca791808a40baac84537d1071f959c, type: 2}
+    prefab: {fileID: 100000, guid: 2b3faf90bb6615054191cb71f5c0c731, type: 3}
+  - characterId: sprite_04_skeleton_warrior
+    displayName: Skeleton Warrior
+    characterType: 1
+    movementType: grounded
+    attackType: slash
+    gameplayEntityId: skeleton
+    idleSprite: {fileID: 21300000, guid: c8a8d64c9fa0b7f3079baff1f28b90b9, type: 3}
+    animatorController: {fileID: 9100000, guid: 26252addbf60891d5e55c511b18755f6, type: 2}
+    prefab: {fileID: 100000, guid: 34a8fbeb03d3cd2df82366e7c259e434, type: 3}
+  - characterId: sprite_05_red_imp
+    displayName: Red Imp
+    characterType: 1
+    movementType: grounded
+    attackType: claw
+    gameplayEntityId: imp
+    idleSprite: {fileID: 21300000, guid: c225b884c991859370a5466364445308, type: 3}
+    animatorController: {fileID: 9100000, guid: d4bb7d4a2d32a551ba22f4068fe4ff71, type: 2}
+    prefab: {fileID: 100000, guid: f7bb31b659df0cda8c9249db939bec39, type: 3}
+  - characterId: sprite_06_horned_berserker
+    displayName: Horned Berserker (Demon)
+    characterType: 1
+    movementType: heavy
+    attackType: slash
+    gameplayEntityId: demon
+    idleSprite: {fileID: 21300000, guid: f95e8d0c24e04b723244824916969b46, type: 3}
+    animatorController: {fileID: 9100000, guid: c488327702066c25a21367158eb9dbaa, type: 2}
+    prefab: {fileID: 100000, guid: df1cbcf4c8901ef49fa4566ea6c579b6, type: 3}
+  - characterId: sprite_07_rogue_adventurer
+    displayName: Rogue Adventurer (Bandit)
+    characterType: 0
+    movementType: grounded
+    attackType: slash
+    gameplayEntityId: bandit
+    idleSprite: {fileID: 21300000, guid: e03820cf8471e0c309fee742112cf93e, type: 3}
+    animatorController: {fileID: 9100000, guid: 33b5d28fc3ccb3ddefc384d0130c8619, type: 2}
+    prefab: {fileID: 100000, guid: a30fadcc61d09e071e94d7dcb255ccb3, type: 3}
+  - characterId: sprite_08_zombie
+    displayName: Zombie
+    characterType: 1
+    movementType: grounded
+    attackType: claw
+    gameplayEntityId: zombie
+    idleSprite: {fileID: 21300000, guid: 9740fda025ecac492d440473c6d8d6c0, type: 3}
+    animatorController: {fileID: 9100000, guid: cdd71b1ae4dca5284b0a559031f1e47f, type: 2}
+    prefab: {fileID: 100000, guid: 6c2b528b3827e2a58905045956c693c0, type: 3}
+  - characterId: sprite_09_blue_ghost
+    displayName: Blue Ghost
+    characterType: 1
+    movementType: floating
+    attackType: magic
+    gameplayEntityId: ghost
+    idleSprite: {fileID: 21300000, guid: 47d15a2f0ec36f7980e3b92556bbb3de, type: 3}
+    animatorController: {fileID: 9100000, guid: 796282cf1a44b2f3bb8a3dcfe0f617fd, type: 2}
+    prefab: {fileID: 100000, guid: 48e88c23cfaa659476ced8e25eaa0d7b, type: 3}
+  - characterId: sprite_10a_dire_wolf
+    displayName: Dire Wolf
+    characterType: 1
+    movementType: crawler
+    attackType: claw
+    gameplayEntityId: wolf
+    idleSprite: {fileID: 21300000, guid: d18837caa338d72242fc500f0418a1c1, type: 3}
+    animatorController: {fileID: 9100000, guid: 76b442e980e6c68122d0fcadf1d913e8, type: 2}
+    prefab: {fileID: 100000, guid: 4914ec0dfe0c17ea79b8f3d7d21c34b7, type: 3}
+  - characterId: sprite_10b_goblin
+    displayName: Goblin
+    characterType: 1
+    movementType: grounded
+    attackType: slash
+    gameplayEntityId: goblin
+    idleSprite: {fileID: 21300000, guid: 50c59fd5c51fb605c71fb788e0102911, type: 3}
+    animatorController: {fileID: 9100000, guid: dfadabc89ce8e1879c1e8d57129b3e1e, type: 2}
+    prefab: {fileID: 100000, guid: add75d6a2e1450b1a5de06d197cc595d, type: 3}
+  - characterId: sprite_11_crimson_spider
+    displayName: Crimson Spider
+    characterType: 1
+    movementType: crawler
+    attackType: claw
+    gameplayEntityId: spider
+    idleSprite: {fileID: 21300000, guid: 563f13ac42dd53d5dcdfb015621989ea, type: 3}
+    animatorController: {fileID: 9100000, guid: a01821584cbd9d52b04bd9ea651988c8, type: 2}
+    prefab: {fileID: 100000, guid: b25126698b2bcb6c0a2224cbc33e8e26, type: 3}
+  - characterId: sprite_12_dark_archer_knight
+    displayName: Dark Archer Knight (Footman)
+    characterType: 0
+    movementType: grounded
+    attackType: ranged
+    gameplayEntityId: footman
+    idleSprite: {fileID: 21300000, guid: 356616abe1d3fc2fdaeb482de4d07d5f, type: 3}
+    animatorController: {fileID: 9100000, guid: 6c1ea701f17526e2f547d0864ddbffc7, type: 2}
+    prefab: {fileID: 100000, guid: f3e6c7af0d0ac68d37de09af6565bd1d, type: 3}
+  - characterId: sprite_13_holy_paladin
+    displayName: Holy Paladin
+    characterType: 0
+    movementType: grounded
+    attackType: slash
+    gameplayEntityId: paladin
+    idleSprite: {fileID: 21300000, guid: bece59fc115112ea851d61da23e38efc, type: 3}
+    animatorController: {fileID: 9100000, guid: 2ce81e9241fb96f9b64bd2adbacc516d, type: 2}
+    prefab: {fileID: 100000, guid: 253a1a207c1ae486706684249110511b, type: 3}
+  - characterId: sprite_14_stone_golem
+    displayName: Stone Golem
+    characterType: 1
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: golem
+    idleSprite: {fileID: 21300000, guid: 005829601ef527cd8fda82fa9fd18326, type: 3}
+    animatorController: {fileID: 9100000, guid: dd2282e2c843a428f2452d241d878ce9, type: 2}
+    prefab: {fileID: 100000, guid: 29a71a5d206f6ecae85768c22747870d, type: 3}
+  - characterId: sprite_15_harpy
+    displayName: Harpy
+    characterType: 1
+    movementType: floating
+    attackType: claw
+    gameplayEntityId: harpy
+    idleSprite: {fileID: 21300000, guid: 86f93295ce6d8789d893cd518ac79edb, type: 3}
+    animatorController: {fileID: 9100000, guid: 393469e2fa7a237486ce5a61ec525a11, type: 2}
+    prefab: {fileID: 100000, guid: ffe1a9fa76e3055abb954361c8ea9cc7, type: 3}
+  - characterId: sprite_16_shadow_ranger
+    displayName: Shadow Ranger (Dark Archer)
+    characterType: 0
+    movementType: grounded
+    attackType: ranged
+    gameplayEntityId: dark_archer
+    idleSprite: {fileID: 21300000, guid: afd1f4642dd60fa0de9bfee796041692, type: 3}
+    animatorController: {fileID: 9100000, guid: efa850d6e74962fc15a64d35919196af, type: 2}
+    prefab: {fileID: 100000, guid: 881906ca715e3c8cdd1bf619f9420bc6, type: 3}
+  - characterId: sprite_17_gargoyle
+    displayName: Gargoyle
+    characterType: 1
+    movementType: floating
+    attackType: claw
+    gameplayEntityId: gargoyle
+    idleSprite: {fileID: 21300000, guid: 87870ab12b674cebeaf0f1832518c07b, type: 3}
+    animatorController: {fileID: 9100000, guid: 4b63d69a7e9701ded88428a52335cd02, type: 2}
+    prefab: {fileID: 100000, guid: 4d44d5bd3c021821cbe5f44229328134, type: 3}
+  - characterId: sprite_18_skull_cultist
+    displayName: Skull Cultist (Skeleton Mage)
+    characterType: 1
+    movementType: grounded
+    attackType: magic
+    gameplayEntityId: skull_cultist
+    idleSprite: {fileID: 21300000, guid: 3351fc2d1e02fc866ec1f7929093375e, type: 3}
+    animatorController: {fileID: 9100000, guid: 91b7914363f913e4a64719479693761b, type: 2}
+    prefab: {fileID: 100000, guid: 7d9072e1d2c40c643e7894a3eb3285e4, type: 3}
+  - characterId: sprite_19_purple_sorceress
+    displayName: Purple Sorceress (Mage)
+    characterType: 0
+    movementType: grounded
+    attackType: magic
+    gameplayEntityId: mage
+    idleSprite: {fileID: 21300000, guid: 127b7b5fb6e627c69011d6703a309f23, type: 3}
+    animatorController: {fileID: 9100000, guid: 29968c263415636d8df9129fb2673a8d, type: 2}
+    prefab: {fileID: 100000, guid: be551a0c0e733d32def92bf15a67a49c, type: 3}
+  - characterId: sprite_20_crystal_golem
+    displayName: Crystal Golem
+    characterType: 1
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: crystal_golem
+    idleSprite: {fileID: 21300000, guid: ee6595210082ef796de203db711e7866, type: 3}
+    animatorController: {fileID: 9100000, guid: b6673cab09c95d25cc2f191a6b47a910, type: 2}
+    prefab: {fileID: 100000, guid: 933822d743694c317761c83e71e05229, type: 3}
+  - characterId: sprite_21_shadow_bat
+    displayName: Shadow Bat
+    characterType: 1
+    movementType: floating
+    attackType: claw
+    gameplayEntityId: bat
+    idleSprite: {fileID: 21300000, guid: a9476d7eeb6c3e336b39acc463e7f0b2, type: 3}
+    animatorController: {fileID: 9100000, guid: a00fc7ce1f84c66a0eec30c17dbe6cfb, type: 2}
+    prefab: {fileID: 100000, guid: 009ae0026c8d8c56ad80a13e13275b21, type: 3}
+  - characterId: sprite_22_mimic_chest
+    displayName: Mimic Chest
+    characterType: 1
+    movementType: bouncy
+    attackType: claw
+    gameplayEntityId: mimic
+    idleSprite: {fileID: 21300000, guid: c0a27b60cd135eabd90f2fafbd698448, type: 3}
+    animatorController: {fileID: 9100000, guid: d1bd298c3edba90fc22f38c1a9378fdc, type: 2}
+    prefab: {fileID: 100000, guid: 80e7c442ed7f05c96d625cea73554223, type: 3}
+  - characterId: sprite_23_green_slime
+    displayName: Green Slime
+    characterType: 1
+    movementType: bouncy
+    attackType: slam
+    gameplayEntityId: slime
+    idleSprite: {fileID: 21300000, guid: 4b16b15c3235a6f1c7698926a4971559, type: 3}
+    animatorController: {fileID: 9100000, guid: 4beee08798aef576f94b5b694e3c6266, type: 2}
+    prefab: {fileID: 100000, guid: 8a19534796a2f8ad5417790df1e78464, type: 3}
+  - characterId: sprite_24_boss_demon_lord
+    displayName: Boss Demon Lord
+    characterType: 2
+    movementType: heavy
+    attackType: fire
+    gameplayEntityId: demon_lord
+    idleSprite: {fileID: 21300000, guid: e68cd66a292231e2375f5437870d49c7, type: 3}
+    animatorController: {fileID: 9100000, guid: a1c8fd30909a6fafeadd91d0cd487293, type: 2}
+    prefab: {fileID: 100000, guid: 66089628c3fd828425b441d91bd5e96a, type: 3}
+  - characterId: sprite_25_boss_lich_king
+    displayName: Boss Lich King
+    characterType: 2
+    movementType: heavy
+    attackType: magic
+    gameplayEntityId: lich_king
+    idleSprite: {fileID: 21300000, guid: 4f151b9818fd46fb11dd52bcb3953d19, type: 3}
+    animatorController: {fileID: 9100000, guid: e3b52b7892e6b0a9a36bdab2566b7c63, type: 2}
+    prefab: {fileID: 100000, guid: cc323d00e61ad5c15a6a2ee4f95a7e27, type: 3}
+  - characterId: sprite_26_boss_red_dragon
+    displayName: Boss Red Dragon
+    characterType: 2
+    movementType: heavy
+    attackType: fire
+    gameplayEntityId: dragon
+    idleSprite: {fileID: 21300000, guid: ab7e1b13a710d3b57dfe0dbe51e0bee9, type: 3}
+    animatorController: {fileID: 9100000, guid: be747281f31d25fbad7dc5617404444b, type: 2}
+    prefab: {fileID: 100000, guid: 164518fac30a7c9a48c364a1c4e0141d, type: 3}
+  - characterId: sprite_27_boss_ice_queen
+    displayName: Boss Ice Queen
+    characterType: 2
+    movementType: floating
+    attackType: magic
+    gameplayEntityId: ice_queen
+    idleSprite: {fileID: 21300000, guid: 9e85ec09aaed8c4b7e796c080178c66f, type: 3}
+    animatorController: {fileID: 9100000, guid: 53c6f63490ae13ba730f334ff165e7fa, type: 2}
+    prefab: {fileID: 100000, guid: 7476966f770761287d619a8fbcb2e01b, type: 3}
+  - characterId: sprite_28_boss_rune_golem
+    displayName: Boss Rune Golem (Ancient Guardian)
+    characterType: 2
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: ancient_guardian
+    idleSprite: {fileID: 21300000, guid: ef33abd45164579ccec3b441accd6f0a, type: 3}
+    animatorController: {fileID: 9100000, guid: 28d1cc12e079c70a8e555e2c559380e9, type: 2}
+    prefab: {fileID: 100000, guid: 5f9ba1bfc8a67792d4188fd01b83265c, type: 3}
+  - characterId: sprite_29_forest_treant
+    displayName: Forest Treant
+    characterType: 1
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: treant
+    idleSprite: {fileID: 21300000, guid: f6de8a242dcbe413336d67645e63877a, type: 3}
+    animatorController: {fileID: 9100000, guid: 56d1f242b85610c0331e984ae578603f, type: 2}
+    prefab: {fileID: 100000, guid: 87b68c249fd241c4756c4b9c5b19a3c7, type: 3}
+  - characterId: sprite_30_void_warlock
+    displayName: Void Warlock (Dark Sorcerer)
+    characterType: 1
+    movementType: floating
+    attackType: magic
+    gameplayEntityId: dark_mage
+    idleSprite: {fileID: 21300000, guid: 6870980666dbdaaa834576318b5d3953, type: 3}
+    animatorController: {fileID: 9100000, guid: 202519ec46e90193f5c37e0fadaba117, type: 2}
+    prefab: {fileID: 100000, guid: e6df3516c24631e9febee04009a9dc50, type: 3}
+  - characterId: sprite_31_fire_elemental
+    displayName: Fire Elemental
+    characterType: 1
+    movementType: floating
+    attackType: fire
+    gameplayEntityId: fire_elemental
+    idleSprite: {fileID: 21300000, guid: d94d4f178cf278bddab1e7acbc097772, type: 3}
+    animatorController: {fileID: 9100000, guid: 9534f33b2e78fc755cadbc646291ddc0, type: 2}
+    prefab: {fileID: 100000, guid: 69bcb07f9e1215ceff2a0d81b6ab491c, type: 3}
+  - characterId: sprite_32_shadow_wraith
+    displayName: Shadow Wraith (Shadow Creature)
+    characterType: 1
+    movementType: floating
+    attackType: magic
+    gameplayEntityId: shadow_creature
+    idleSprite: {fileID: 21300000, guid: 6016c1920c615d2cabe40c31d050cfe8, type: 3}
+    animatorController: {fileID: 9100000, guid: dfec675eb7df658c1acbc0c29be2ee1c, type: 2}
+    prefab: {fileID: 100000, guid: 27f2f3602364c252577e9c1a0680d389, type: 3}
+  - characterId: sprite_33_frost_golem
+    displayName: Frost Golem (Ice Elemental)
+    characterType: 1
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: ice_elemental
+    idleSprite: {fileID: 21300000, guid: b6a2172b6ac98db2c6de0ca85a54a17c, type: 3}
+    animatorController: {fileID: 9100000, guid: 0ac90ee045df503c09c445b4f9feb811, type: 2}
+    prefab: {fileID: 100000, guid: e81e16b56bd9f6671897f18ed376bea8, type: 3}
+  - characterId: sprite_34_crimson_specter
+    displayName: Crimson Specter
+    characterType: 1
+    movementType: floating
+    attackType: fire
+    gameplayEntityId: crimson_specter
+    idleSprite: {fileID: 21300000, guid: 08d5d79980bd2afe6e8f6639ba80365d, type: 3}
+    animatorController: {fileID: 9100000, guid: e5d176866f7c8e79e68a4ed8acf6dbec, type: 2}
+    prefab: {fileID: 100000, guid: 5d2c922dbf0a91c119808b57851fa7f7, type: 3}
+  - characterId: sprite_35_eye_beholder
+    displayName: Eye Beholder
+    characterType: 1
+    movementType: floating
+    attackType: magic
+    gameplayEntityId: beholder
+    idleSprite: {fileID: 21300000, guid: b9f0f17176b20e1ad24d0dfb0d39b395, type: 3}
+    animatorController: {fileID: 9100000, guid: bf2a7f8bd5c8b1ba6c31bcf969224294, type: 2}
+    prefab: {fileID: 100000, guid: cc128724da8be60c7dcd8bde00d24bae, type: 3}
+  - characterId: sprite_36_amethyst_crystal
+    displayName: Amethyst Crystal
+    characterType: 1
+    movementType: heavy
+    attackType: slam
+    gameplayEntityId: amethyst_crystal
+    idleSprite: {fileID: 21300000, guid: d7e86f360619db9081e78d99de7cb652, type: 3}
+    animatorController: {fileID: 9100000, guid: 997cb943908375421cd7b34e417e2598, type: 2}
+    prefab: {fileID: 100000, guid: ad8f8fe19cdfe188d887cb1f9ca2e639, type: 3}
+  - characterId: sprite_37_shadow_spider
+    displayName: Shadow Spider
+    characterType: 1
+    movementType: crawler
+    attackType: claw
+    gameplayEntityId: shadow_spider
+    idleSprite: {fileID: 21300000, guid: 784483abdd7c40cdf33ff88ae796513c, type: 3}
+    animatorController: {fileID: 9100000, guid: 73ece66dbd2734bd4788d5f4486c8405, type: 2}
+    prefab: {fileID: 100000, guid: 4564af1a3d37422565ae8c1c022b7047, type: 3}
+  - characterId: sprite_38a_venom_spider
+    displayName: Venom Spider
+    characterType: 1
+    movementType: crawler
+    attackType: claw
+    gameplayEntityId: venom_spider
+    idleSprite: {fileID: 21300000, guid: 7d41ec9ad1e881271814ac35cda16f8b, type: 3}
+    animatorController: {fileID: 9100000, guid: 67290bc8a8dbcbf449cb9fba7a281908, type: 2}
+    prefab: {fileID: 100000, guid: 0f3d7956c7c9e06f41931b2393ab3e9e, type: 3}
+  - characterId: sprite_38b_frost_spider
+    displayName: Frost Spider
+    characterType: 1
+    movementType: crawler
+    attackType: claw
+    gameplayEntityId: frost_spider
+    idleSprite: {fileID: 21300000, guid: b03b2570c99f551b6dc9d1c1b05a4349, type: 3}
+    animatorController: {fileID: 9100000, guid: 8cefbff7000d76d3dc3bfbf85c4a9d04, type: 2}
+    prefab: {fileID: 100000, guid: 3f8984792cf7994172cede49b6988478, type: 3}

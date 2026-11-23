@@ -20,6 +20,7 @@ namespace DreamDungeon
         private float attackCooldown;
 
         private SpriteRenderer spriteRenderer;
+        private Animator animator;
         private Color originalColor;
         private SpriteRenderer healthBarFill;
         private Vector3 initialScale;
@@ -61,13 +62,26 @@ namespace DreamDungeon
             {
                 spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
             }
+            animator = GetComponentInChildren<Animator>();
 
-            if (whiteSprite != null && spriteRenderer.sprite == null)
+            if (data != null && data.icon != null)
             {
-                spriteRenderer.sprite = whiteSprite;
+                spriteRenderer.sprite = data.icon;
+                originalColor = Color.white;
+            }
+            else if (spriteRenderer.sprite != null && spriteRenderer.sprite != whiteSprite)
+            {
+                originalColor = Color.white;
+            }
+            else
+            {
+                if (whiteSprite != null && spriteRenderer.sprite == null)
+                {
+                    spriteRenderer.sprite = whiteSprite;
+                }
+                originalColor = new Color(0.42f, 0.85f, 0.42f);
             }
 
-            originalColor = new Color(0.42f, 0.85f, 0.42f);
             spriteRenderer.color = originalColor;
             spriteRenderer.sortingOrder = 5;
             initialScale = transform.localScale;
@@ -90,9 +104,20 @@ namespace DreamDungeon
                 currentTarget = ScanNearestAdventurer(adventurerTargets);
             }
 
-            if (currentTarget != null && currentTarget.IsAlive && attackCooldown <= 0f)
+            if (currentTarget != null && currentTarget.IsAlive)
             {
-                PerformAttack(currentTarget);
+                if (animator != null && animator.runtimeAnimatorController != null)
+                {
+                    animator.SetBool("IsMoving", false);
+                }
+                if (attackCooldown <= 0f)
+                {
+                    PerformAttack(currentTarget);
+                }
+            }
+            else if (animator != null && animator.runtimeAnimatorController != null)
+            {
+                animator.SetBool("IsMoving", false);
             }
         }
 
@@ -123,6 +148,10 @@ namespace DreamDungeon
             int damage = DamageCalculator.Calculate(attackStat, target.Defense);
             var info = new DamageInfo(damage, this, CombatTeam.Monster);
             target.TakeDamage(info);
+            if (animator != null && animator.runtimeAnimatorController != null)
+            {
+                animator.SetTrigger("Attack");
+            }
             PulseVisual();
         }
 
@@ -140,6 +169,10 @@ namespace DreamDungeon
             }
             else
             {
+                if (animator != null && animator.runtimeAnimatorController != null)
+                {
+                    animator.SetTrigger("Hit");
+                }
                 FlashHit();
             }
         }
@@ -147,11 +180,30 @@ namespace DreamDungeon
         private void Die()
         {
             Died?.Invoke(this);
-            if (spriteRenderer != null)
+            if (animator != null && animator.runtimeAnimatorController != null && gameObject.activeInHierarchy)
             {
-                spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 0.4f);
+                animator.ResetTrigger("Attack");
+                animator.ResetTrigger("Hit");
+                animator.SetBool("IsMoving", false);
+                animator.SetTrigger("Die");
+                Invoke(nameof(DeactivateAfterDeath), 0.75f);
             }
-            gameObject.SetActive(false);
+            else
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f, 0.4f);
+                }
+                gameObject.SetActive(false);
+            }
+        }
+
+        private void DeactivateAfterDeath()
+        {
+            if (gameObject != null)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void FlashHit()
@@ -192,7 +244,10 @@ namespace DreamDungeon
             if (whiteSprite == null) return;
             GameObject bgObj = new GameObject("HealthBar_BG");
             bgObj.transform.SetParent(transform, false);
-            bgObj.transform.localPosition = new Vector3(0f, 0.65f, -0.02f);
+            float barY = spriteRenderer != null && spriteRenderer.sprite != null && spriteRenderer.sprite != whiteSprite
+                ? Mathf.Max(0.65f, spriteRenderer.sprite.bounds.max.y + 0.12f)
+                : 0.65f;
+            bgObj.transform.localPosition = new Vector3(0f, barY, -0.02f);
             bgObj.transform.localScale = new Vector3(1.15f, 0.12f, 1f);
 
             SpriteRenderer bgSr = bgObj.AddComponent<SpriteRenderer>();

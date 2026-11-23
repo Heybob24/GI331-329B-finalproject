@@ -15,8 +15,8 @@ MonoBehaviour:
   monsterId: baby_dragon
   monsterName: Baby Dragon
   description: Epic Boss defender for your dungeon.
-  icon: {fileID: 0}
-  monsterPrefab: {fileID: 0}
+  icon: {fileID: 21300000, guid: 87870ab12b674cebeaf0f1832518c07b, type: 3}
+  monsterPrefab: {fileID: 100000, guid: 99d20609ffe2d36428eae04a651ecabe, type: 3}
   rarity: 2
   role: 4
   maxHP: 300

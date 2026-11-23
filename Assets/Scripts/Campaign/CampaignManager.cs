@@ -30,6 +30,7 @@ namespace DreamDungeon
         private string selectedCampaignId = "campaign_forgotten_forest";
         private string selectedStageId = "forest_stage_1";
         private bool isStartingCampaignRaid;
+        private bool isInitializing;
 
         public IReadOnlyList<CampaignData> AllCampaigns
         {
@@ -79,28 +80,43 @@ namespace DreamDungeon
 
         public void EnsureInitialized()
         {
-            if (campaigns == null || campaigns.Count == 0 || stages == null || stages.Count == 0)
+            if (isInitializing) return;
+            if (campaigns != null && campaigns.Count > 0 && stages != null && stages.Count > 0 &&
+                stageUnlockManager != null && rewardManager != null && campaignsById.Count > 0 && stagesById.Count > 0)
             {
-                BuildDefaultCampaignsAndStages();
+                return;
             }
 
-            if (stageUnlockManager == null)
-                stageUnlockManager = GetComponent<StageUnlockManager>() ?? gameObject.AddComponent<StageUnlockManager>();
-            if (rewardManager == null)
-                rewardManager = GetComponent<CampaignRewardManager>() ?? gameObject.AddComponent<CampaignRewardManager>();
-
-            WorldMapManager worldMap = WorldMapManager.Instance ?? FindAnyObjectByType<WorldMapManager>();
-            if (worldMap == null)
+            isInitializing = true;
+            try
             {
-                worldMap = gameObject.GetComponent<WorldMapManager>() ?? gameObject.AddComponent<WorldMapManager>();
-            }
-            worldMap.EnsureInitialized();
-            worldMap.UnlockManager?.Initialize(worldMap, this);
-            stageUnlockManager.Initialize(this, worldMap);
+                if (campaigns == null || campaigns.Count == 0 || stages == null || stages.Count == 0)
+                {
+                    BuildDefaultCampaignsAndStages();
+                }
 
-            RebuildLookupCaches();
-            stageUnlockManager.EvaluateAllStages(notifyNewUnlocks: false);
-            worldMap.UnlockManager?.EvaluateAllRegions(notifyNewUnlocks: false);
+                if (stageUnlockManager == null)
+                    stageUnlockManager = GetComponent<StageUnlockManager>() ?? gameObject.AddComponent<StageUnlockManager>();
+                if (rewardManager == null)
+                    rewardManager = GetComponent<CampaignRewardManager>() ?? gameObject.AddComponent<CampaignRewardManager>();
+
+                WorldMapManager worldMap = WorldMapManager.Instance ?? FindAnyObjectByType<WorldMapManager>();
+                if (worldMap == null)
+                {
+                    worldMap = gameObject.GetComponent<WorldMapManager>() ?? gameObject.AddComponent<WorldMapManager>();
+                }
+                worldMap.EnsureInitialized();
+                worldMap.UnlockManager?.Initialize(worldMap, this);
+                stageUnlockManager.Initialize(this, worldMap);
+
+                RebuildLookupCaches();
+                stageUnlockManager.EvaluateAllStages(notifyNewUnlocks: false);
+                worldMap.UnlockManager?.EvaluateAllRegions(notifyNewUnlocks: false);
+            }
+            finally
+            {
+                isInitializing = false;
+            }
         }
 
         private void RebuildLookupCaches()

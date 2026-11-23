@@ -27,6 +27,7 @@ namespace DreamDungeon
         private Text bossNameText;
         private Text bossHpText;
         private Image bossHpFill;
+        private Image bossIconImage;
         private CampaignResultUI campaignResultUI;
 
         private bool paused;
@@ -46,8 +47,22 @@ namespace DreamDungeon
         {
             if (manager == null) return;
 
-            if (waveText != null) waveText.text = $"WAVE  {manager.CurrentWave} / {manager.TotalWaves}";
-            if (aliveText != null) aliveText.text = $"RAIDERS  {manager.LivingAdventurers}";
+            if (waveText != null)
+            {
+                if (BattleSession.IsEndlessBattle)
+                    waveText.text = $"ENDLESS WAVE  {manager.CurrentWave}";
+                else if (BattleSession.IsChallengeBattle)
+                    waveText.text = $"CHALLENGE WAVE  {manager.CurrentWave} / {manager.TotalWaves}";
+                else
+                    waveText.text = $"WAVE  {manager.CurrentWave} / {manager.TotalWaves}";
+            }
+            if (aliveText != null)
+            {
+                if (BattleSession.IsEndlessBattle || BattleSession.IsChallengeBattle)
+                    aliveText.text = $"RAIDERS  {manager.LivingAdventurers}   •   SCORE  {manager.LiveScore}";
+                else
+                    aliveText.text = $"RAIDERS  {manager.LivingAdventurers}";
+            }
 
             if (coreText != null) coreText.text = $"CORE HP  {manager.CoreHP} / {manager.CoreMaxHP}";
             if (coreHpFill != null)
@@ -80,6 +95,13 @@ namespace DreamDungeon
                 if (activeBoss != null)
                 {
                     bossBarPanel.SetActive(true);
+                    if (bossIconImage != null)
+                    {
+                        Sprite bSprite = activeBoss.Definition != null ? activeBoss.Definition.bossIcon : null;
+                        bossIconImage.sprite = bSprite;
+                        bossIconImage.color = bSprite != null ? Color.white : (activeBoss.Definition != null ? activeBoss.Definition.bossColor : Color.red);
+                        bossIconImage.preserveAspect = true;
+                    }
                     if (bossNameText != null)
                     {
                         string rageText = activeBoss.PhaseController != null && activeBoss.PhaseController.IsEnraged ? " <color=red>[ENRAGED]</color>" : "";
@@ -92,6 +114,31 @@ namespace DreamDungeon
                     if (bossHpFill != null)
                     {
                         float bRatio = activeBoss.MaxHP > 0 ? (float)activeBoss.CurrentHP / activeBoss.MaxHP : 0f;
+                        bossHpFill.fillAmount = Mathf.Clamp01(bRatio);
+                    }
+                }
+                else if (manager.ActiveWaveBoss != null && manager.ActiveWaveBoss.IsAlive)
+                {
+                    AdventurerActor waveBoss = manager.ActiveWaveBoss;
+                    bossBarPanel.SetActive(true);
+                    if (bossIconImage != null)
+                    {
+                        Sprite bSprite = waveBoss.Definition != null ? waveBoss.Definition.icon : null;
+                        bossIconImage.sprite = bSprite;
+                        bossIconImage.color = Color.white;
+                        bossIconImage.preserveAspect = true;
+                    }
+                    if (bossNameText != null)
+                    {
+                        bossNameText.text = $"BOSS WAVE: {waveBoss.Name}";
+                    }
+                    if (bossHpText != null)
+                    {
+                        bossHpText.text = $"{waveBoss.CurrentHP} / {waveBoss.MaxHP}";
+                    }
+                    if (bossHpFill != null)
+                    {
+                        float bRatio = waveBoss.MaxHP > 0 ? (float)waveBoss.CurrentHP / waveBoss.MaxHP : 0f;
                         bossHpFill.fillAmount = Mathf.Clamp01(bRatio);
                     }
                 }
@@ -118,8 +165,21 @@ namespace DreamDungeon
 
             if (resultTitleText != null)
             {
-                resultTitleText.text = victory ? "VICTORY!" : "DEFEAT";
-                resultTitleText.color = victory ? new Color(0.96f, 0.82f, 0.35f) : new Color(0.95f, 0.35f, 0.35f);
+                if (BattleSession.IsEndlessBattle)
+                {
+                    resultTitleText.text = BattleSession.IsNewRecordResult ? "ENDLESS RUN  •  NEW RECORD!" : "ENDLESS RUN COMPLETE";
+                    resultTitleText.color = new Color(0.96f, 0.82f, 0.35f);
+                }
+                else if (BattleSession.IsChallengeBattle)
+                {
+                    resultTitleText.text = victory ? "CHALLENGE COMPLETED!" : "CHALLENGE FAILED";
+                    resultTitleText.color = victory ? new Color(0.35f, 0.96f, 0.55f) : new Color(0.95f, 0.35f, 0.35f);
+                }
+                else
+                {
+                    resultTitleText.text = victory ? "VICTORY!" : "DEFEAT";
+                    resultTitleText.color = victory ? new Color(0.96f, 0.82f, 0.35f) : new Color(0.95f, 0.35f, 0.35f);
+                }
             }
 
             if (resultDetailsText != null)
@@ -133,13 +193,13 @@ namespace DreamDungeon
 
             if (resultRewardText != null)
             {
-                resultRewardText.text = victory
+                resultRewardText.text = (victory || BattleSession.IsEndlessBattle)
                     ? $"REWARDS\nGold +{gold}   Soul +{soul}   EXP +{exp}"
                     : (gold > 0 || soul > 0 ? $"REWARDS\nGold +{gold}   Soul +{soul}" : "No rewards claimed.");
             }
 
-            if (continueButton != null) continueButton.gameObject.SetActive(victory);
-            if (retryButton != null) retryButton.gameObject.SetActive(!victory);
+            if (continueButton != null) continueButton.gameObject.SetActive(victory && !BattleSession.IsEndlessBattle);
+            if (retryButton != null) retryButton.gameObject.SetActive(!victory || BattleSession.IsEndlessBattle || BattleSession.IsChallengeBattle);
             if (returnButton != null) returnButton.gameObject.SetActive(true);
 
             Refresh();
@@ -236,8 +296,13 @@ namespace DreamDungeon
             bossRt.anchoredPosition = new Vector2(0f, -270f);
             bossBarPanel = bossRt.gameObject;
 
+            RectTransform bossIconRt = Panel(bossRt, "BossIcon", Color.white,
+                                             new Vector2(0.015f, 0.12f), new Vector2(0.085f, 0.88f), new Vector2(0.5f, 0.5f), Vector2.zero);
+            bossIconImage = bossIconRt.GetComponent<Image>();
+            bossIconImage.preserveAspect = true;
+
             bossNameText = Label(bossRt, "BossName", "BOSS: Cave Dragon", 22,
-                                 new Vector2(0.04f, 0.52f), new Vector2(0.60f, 0.95f), Vector2.zero);
+                                 new Vector2(0.10f, 0.52f), new Vector2(0.60f, 0.95f), Vector2.zero);
             bossNameText.alignment = TextAnchor.MiddleLeft;
             bossNameText.color = new Color(1f, 0.85f, 0.4f);
 
@@ -247,7 +312,7 @@ namespace DreamDungeon
             bossHpText.color = new Color(0.9f, 0.9f, 0.9f);
 
             RectTransform bossBarBg = Panel(bossRt, "BossBarBg", new Color(0.2f, 0.05f, 0.05f),
-                                            new Vector2(0.04f, 0.12f), new Vector2(0.96f, 0.44f), new Vector2(0.5f, 0.5f), Vector2.zero);
+                                            new Vector2(0.10f, 0.12f), new Vector2(0.96f, 0.44f), new Vector2(0.5f, 0.5f), Vector2.zero);
             RectTransform bossBarFillRt = Panel(bossBarBg, "BossBarFill", new Color(0.95f, 0.22f, 0.22f),
                                                 Vector2.zero, Vector2.one, new Vector2(0f, 0.5f), Vector2.zero);
             bossHpFill = bossBarFillRt.GetComponent<Image>();

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 0120d5a6e1a3dffce98035fd863afff2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_08_zombie_idle_01
+  - first:
+      213: 21300004
+    second: sprite_08_zombie_idle_02
+  - first:
+      213: 21300006
+    second: sprite_08_zombie_idle_03
+  - first:
+      213: 21300008
+    second: sprite_08_zombie_idle_04
+  - first:
+      213: 21300010
+    second: sprite_08_zombie_idle_05
+  - first:
+      213: 21300012
+    second: sprite_08_zombie_idle_06
+  - first:
+      213: 21300014
+    second: sprite_08_zombie_walk_01
+  - first:
+      213: 21300016
+    second: sprite_08_zombie_walk_02
+  - first:
+      213: 21300018
+    second: sprite_08_zombie_walk_03
+  - first:
+      213: 21300020
+    second: sprite_08_zombie_walk_04
+  - first:
+      213: 21300022
+    second: sprite_08_zombie_walk_05
+  - first:
+      213: 21300024
+    second: sprite_08_zombie_walk_06
+  - first:
+      213: 21300026
+    second: sprite_08_zombie_walk_07
+  - first:
+      213: 21300028
+    second: sprite_08_zombie_walk_08
+  - first:
+      213: 21300030
+    second: sprite_08_zombie_attack_01
+  - first:
+      213: 21300032
+    second: sprite_08_zombie_attack_02
+  - first:
+      213: 21300034
+    second: sprite_08_zombie_attack_03
+  - first:
+      213: 21300036
+    second: sprite_08_zombie_attack_04
+  - first:
+      213: 21300038
+    second: sprite_08_zombie_attack_05
+  - first:
+      213: 21300040
+    second: sprite_08_zombie_attack_06
+  - first:
+      213: 21300042
+    second: sprite_08_zombie_attack_07
+  - first:
+      213: 21300044
+    second: sprite_08_zombie_attack_08
+  - first:
+      213: 21300046
+    second: sprite_08_zombie_hit_01
+  - first:
+      213: 21300048
+    second: sprite_08_zombie_hit_02
+  - first:
+      213: 21300050
+    second: sprite_08_zombie_hit_03
+  - first:
+      213: 21300052
+    second: sprite_08_zombie_hit_04
+  - first:
+      213: 21300054
+    second: sprite_08_zombie_death_01
+  - first:
+      213: 21300056
+    second: sprite_08_zombie_death_02
+  - first:
+      213: 21300058
+    second: sprite_08_zombie_death_03
+  - first:
+      213: 21300060
+    second: sprite_08_zombie_death_04
+  - first:
+      213: 21300062
+    second: sprite_08_zombie_death_05
+  - first:
+      213: 21300064
+    second: sprite_08_zombie_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5e8901a7d7df05e466300e1c783f32
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dc3b881b5cc1ef140d557bf672b5c2
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c366919b24b76d169fab6404259d5bd
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4daf544af03da3d1c675c112ac4273f
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d280dadfa37420b733a75bedbfdf3ec
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 960
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc0a016fdeb6cac6b3abfe4a6fc4e84
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed00ceb4ac9ec854a125978d1eace03
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb71978067217502eee21fbd279ba75
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1597a08564bc7c1c8c0b5486ab42b2
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef13bd935a21c4563899ba6b3cdd7ae3
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4691f6589e5388c11e6ca6c0726c828
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639d2d5c8cbebe11cca5dfadfdddd980
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61f1dcbe2241d1e8ee555e61b2d164d
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 720
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebf7f1ddc2a713e3f6d0be91b57512d4
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63593830d017e414701ae711270383a9
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c602f12a106d5007dedcccac673f48
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed0b02f5d11ef2ddadf6fba182dde1a
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d37df1eeb620224b65d7a5a73ca8f4
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7d9135fa932dd4dcb27e8e256a2178
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b461de6cd164bd1989bc34f9ad4a4ac0
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2e8d707eb9a61c0df82ab171f8f97d
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 480
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a72e7b888dbe388cb2c5e5599649b82
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd430de71a050615ad4a650bbb629bfa
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_hit_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 240
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328c5a71636a94e615834019d1335521
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_hit_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 240
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fef68d872ef823b39a8d7846b18a64
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_hit_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 240
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29d7ad9fdff86d8dac7d13891543d9c
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da189df26c2e399e2cd45a30c7123ab0
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_02
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7815fd05ccd48a4b2246e700e5c43414
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_03
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15393673b1015b2c1e8b692297ecc6f5
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_04
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c2cd108f951adebfe3a3b28da32b20
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_05
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2321b993840e16ab3aa39a4919934d69
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_08_zombie_death_06
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 224
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d4583a0966e23deac541fd2ff6e013
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_08_zombie_idle_01: 21300002
+      sprite_08_zombie_idle_02: 21300004
+      sprite_08_zombie_idle_03: 21300006
+      sprite_08_zombie_idle_04: 21300008
+      sprite_08_zombie_idle_05: 21300010
+      sprite_08_zombie_idle_06: 21300012
+      sprite_08_zombie_walk_01: 21300014
+      sprite_08_zombie_walk_02: 21300016
+      sprite_08_zombie_walk_03: 21300018
+      sprite_08_zombie_walk_04: 21300020
+      sprite_08_zombie_walk_05: 21300022
+      sprite_08_zombie_walk_06: 21300024
+      sprite_08_zombie_walk_07: 21300026
+      sprite_08_zombie_walk_08: 21300028
+      sprite_08_zombie_attack_01: 21300030
+      sprite_08_zombie_attack_02: 21300032
+      sprite_08_zombie_attack_03: 21300034
+      sprite_08_zombie_attack_04: 21300036
+      sprite_08_zombie_attack_05: 21300038
+      sprite_08_zombie_attack_06: 21300040
+      sprite_08_zombie_attack_07: 21300042
+      sprite_08_zombie_attack_08: 21300044
+      sprite_08_zombie_hit_01: 21300046
+      sprite_08_zombie_hit_02: 21300048
+      sprite_08_zombie_hit_03: 21300050
+      sprite_08_zombie_hit_04: 21300052
+      sprite_08_zombie_death_01: 21300054
+      sprite_08_zombie_death_02: 21300056
+      sprite_08_zombie_death_03: 21300058
+      sprite_08_zombie_death_04: 21300060
+      sprite_08_zombie_death_05: 21300062
+      sprite_08_zombie_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 9c647e7dd1872483e67bf12bed61b1a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_23_green_slime_idle_01
+  - first:
+      213: 21300004
+    second: sprite_23_green_slime_idle_02
+  - first:
+      213: 21300006
+    second: sprite_23_green_slime_idle_03
+  - first:
+      213: 21300008
+    second: sprite_23_green_slime_idle_04
+  - first:
+      213: 21300010
+    second: sprite_23_green_slime_idle_05
+  - first:
+      213: 21300012
+    second: sprite_23_green_slime_idle_06
+  - first:
+      213: 21300014
+    second: sprite_23_green_slime_walk_01
+  - first:
+      213: 21300016
+    second: sprite_23_green_slime_walk_02
+  - first:
+      213: 21300018
+    second: sprite_23_green_slime_walk_03
+  - first:
+      213: 21300020
+    second: sprite_23_green_slime_walk_04
+  - first:
+      213: 21300022
+    second: sprite_23_green_slime_walk_05
+  - first:
+      213: 21300024
+    second: sprite_23_green_slime_walk_06
+  - first:
+      213: 21300026
+    second: sprite_23_green_slime_walk_07
+  - first:
+      213: 21300028
+    second: sprite_23_green_slime_walk_08
+  - first:
+      213: 21300030
+    second: sprite_23_green_slime_attack_01
+  - first:
+      213: 21300032
+    second: sprite_23_green_slime_attack_02
+  - first:
+      213: 21300034
+    second: sprite_23_green_slime_attack_03
+  - first:
+      213: 21300036
+    second: sprite_23_green_slime_attack_04
+  - first:
+      213: 21300038
+    second: sprite_23_green_slime_attack_05
+  - first:
+      213: 21300040
+    second: sprite_23_green_slime_attack_06
+  - first:
+      213: 21300042
+    second: sprite_23_green_slime_attack_07
+  - first:
+      213: 21300044
+    second: sprite_23_green_slime_attack_08
+  - first:
+      213: 21300046
+    second: sprite_23_green_slime_hit_01
+  - first:
+      213: 21300048
+    second: sprite_23_green_slime_hit_02
+  - first:
+      213: 21300050
+    second: sprite_23_green_slime_hit_03
+  - first:
+      213: 21300052
+    second: sprite_23_green_slime_hit_04
+  - first:
+      213: 21300054
+    second: sprite_23_green_slime_death_01
+  - first:
+      213: 21300056
+    second: sprite_23_green_slime_death_02
+  - first:
+      213: 21300058
+    second: sprite_23_green_slime_death_03
+  - first:
+      213: 21300060
+    second: sprite_23_green_slime_death_04
+  - first:
+      213: 21300062
+    second: sprite_23_green_slime_death_05
+  - first:
+      213: 21300064
+    second: sprite_23_green_slime_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe05c0d2144833b4102bd02ff0c4defb
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfcbda347f3304aafd3be20551e1c46
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e10e14fce745b9e0e7bd00742e1c8b5
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39871841e77582692b241b2810be751
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b4d5ecae9eadb911687421166e501f
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 640
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787afedbb00c3cb844434e20238033a2
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf838ac2d9fc0335e51f51640f0ceea
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0723191b5893f7788d69e670435587ba
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a41d7c89931a92f35fa43166330d3d
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b491f28f229786f00fedbf39415be9
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73d5bb1d0f484f3bf87f8cb84a032a7
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c117496c96ad0bc9616290f7cfe7e55
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c68beb1b8ec083191ba1f85860c178
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 480
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67365e89f78d26f8550a448c77127eeb
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8d32b5bc5faa9824bbbbc516ad3922
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 864c01f0e705485975422716129f98cf
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50733ca76fcf4853798c9d00fc908eaa
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db7256c97b94fd3c82e136dd853f71a
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ccacad28b626ad0f91d5575bfb6e05
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8dfcd4755103f948f0b43f8e1d56ade
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d77abbbb11a77b2e427f1d7a6cdc9a
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 320
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfade22fa6eaca33d1d56087f9b8489
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b175798bf10660cc2c3b1146a6e9d0
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_hit_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c702452b390e65b1e5a7ba1e4d7d39a
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_hit_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 160
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77207b9e048075d563d49c7c556bc3c7
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_hit_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 160
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba506239c122549f971ecc0ee3e02f1
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e40da4d078bb411cd56daceb760f0c
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_02
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf32d2a2b76f172a5e142e4c3573de6
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_03
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e10991b17fda92defeb8ae658bfdf55
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_04
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8217ed03359d7ae62b59d2e97eae34e8
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_05
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5dbcb4b43b500f7361a3e00f1de0fc
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_23_green_slime_death_06
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 272
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8283e55a20515f69d1debd6603fda006
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_23_green_slime_idle_01: 21300002
+      sprite_23_green_slime_idle_02: 21300004
+      sprite_23_green_slime_idle_03: 21300006
+      sprite_23_green_slime_idle_04: 21300008
+      sprite_23_green_slime_idle_05: 21300010
+      sprite_23_green_slime_idle_06: 21300012
+      sprite_23_green_slime_walk_01: 21300014
+      sprite_23_green_slime_walk_02: 21300016
+      sprite_23_green_slime_walk_03: 21300018
+      sprite_23_green_slime_walk_04: 21300020
+      sprite_23_green_slime_walk_05: 21300022
+      sprite_23_green_slime_walk_06: 21300024
+      sprite_23_green_slime_walk_07: 21300026
+      sprite_23_green_slime_walk_08: 21300028
+      sprite_23_green_slime_attack_01: 21300030
+      sprite_23_green_slime_attack_02: 21300032
+      sprite_23_green_slime_attack_03: 21300034
+      sprite_23_green_slime_attack_04: 21300036
+      sprite_23_green_slime_attack_05: 21300038
+      sprite_23_green_slime_attack_06: 21300040
+      sprite_23_green_slime_attack_07: 21300042
+      sprite_23_green_slime_attack_08: 21300044
+      sprite_23_green_slime_hit_01: 21300046
+      sprite_23_green_slime_hit_02: 21300048
+      sprite_23_green_slime_hit_03: 21300050
+      sprite_23_green_slime_hit_04: 21300052
+      sprite_23_green_slime_death_01: 21300054
+      sprite_23_green_slime_death_02: 21300056
+      sprite_23_green_slime_death_03: 21300058
+      sprite_23_green_slime_death_04: 21300060
+      sprite_23_green_slime_death_05: 21300062
+      sprite_23_green_slime_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

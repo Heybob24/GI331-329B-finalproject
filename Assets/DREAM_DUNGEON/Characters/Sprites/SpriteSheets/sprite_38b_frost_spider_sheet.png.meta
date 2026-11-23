@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 9d5dfff52c9860a11e75a12fa19eb125
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_38b_frost_spider_idle_01
+  - first:
+      213: 21300004
+    second: sprite_38b_frost_spider_idle_02
+  - first:
+      213: 21300006
+    second: sprite_38b_frost_spider_idle_03
+  - first:
+      213: 21300008
+    second: sprite_38b_frost_spider_idle_04
+  - first:
+      213: 21300010
+    second: sprite_38b_frost_spider_idle_05
+  - first:
+      213: 21300012
+    second: sprite_38b_frost_spider_idle_06
+  - first:
+      213: 21300014
+    second: sprite_38b_frost_spider_walk_01
+  - first:
+      213: 21300016
+    second: sprite_38b_frost_spider_walk_02
+  - first:
+      213: 21300018
+    second: sprite_38b_frost_spider_walk_03
+  - first:
+      213: 21300020
+    second: sprite_38b_frost_spider_walk_04
+  - first:
+      213: 21300022
+    second: sprite_38b_frost_spider_walk_05
+  - first:
+      213: 21300024
+    second: sprite_38b_frost_spider_walk_06
+  - first:
+      213: 21300026
+    second: sprite_38b_frost_spider_walk_07
+  - first:
+      213: 21300028
+    second: sprite_38b_frost_spider_walk_08
+  - first:
+      213: 21300030
+    second: sprite_38b_frost_spider_attack_01
+  - first:
+      213: 21300032
+    second: sprite_38b_frost_spider_attack_02
+  - first:
+      213: 21300034
+    second: sprite_38b_frost_spider_attack_03
+  - first:
+      213: 21300036
+    second: sprite_38b_frost_spider_attack_04
+  - first:
+      213: 21300038
+    second: sprite_38b_frost_spider_attack_05
+  - first:
+      213: 21300040
+    second: sprite_38b_frost_spider_attack_06
+  - first:
+      213: 21300042
+    second: sprite_38b_frost_spider_attack_07
+  - first:
+      213: 21300044
+    second: sprite_38b_frost_spider_attack_08
+  - first:
+      213: 21300046
+    second: sprite_38b_frost_spider_hit_01
+  - first:
+      213: 21300048
+    second: sprite_38b_frost_spider_hit_02
+  - first:
+      213: 21300050
+    second: sprite_38b_frost_spider_hit_03
+  - first:
+      213: 21300052
+    second: sprite_38b_frost_spider_hit_04
+  - first:
+      213: 21300054
+    second: sprite_38b_frost_spider_death_01
+  - first:
+      213: 21300056
+    second: sprite_38b_frost_spider_death_02
+  - first:
+      213: 21300058
+    second: sprite_38b_frost_spider_death_03
+  - first:
+      213: 21300060
+    second: sprite_38b_frost_spider_death_04
+  - first:
+      213: 21300062
+    second: sprite_38b_frost_spider_death_05
+  - first:
+      213: 21300064
+    second: sprite_38b_frost_spider_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301f8ced99384182f8535b3ac554e552
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4534b13af8afd4ece3c4e7d54b20248c
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b34fd71914e82c8e46d5532ac1d86b
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cfaae290cb347c2856b6066f58874f
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec32ea758a8ad7a9a035f2de02c3eb1
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 896
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c356232143fd5b108c2d2dc11e6a4ef
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cd8de672f9aafb6c7d86a9eea6be47
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7884ff259231f18cda55af570d4d8e0d
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329f99cf9b96a2acb97a9b2821ebc530
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9e4296ba0117224411daee124e950c
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448fed5f03033eaced66f388af5dc441
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44b8268d90c1f5d8bcc400f4fd8da97
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d672753842f4ac1dd78cb52845d2d0
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_walk_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 672
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b52d92c1255a1e330d2f0ece7999ee
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91c407a017ebd9cb0ced93839c873e8
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992cd0c2bc163e9e4ae6669df93435d1
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab71203bbb17dc9efd4c48acfb6b95d5
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b8a1be0f137421f6912498f2e9964b
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726a8d98dcac6aa125ede737663c93ef
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb80abcabfc0a85041f7509987cff634
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0c2d68442532edb93d3ff1ec57c999
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_attack_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 448
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ce49639b971c0c45a294ccdec7dbc5
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d0c533576c1e8be8f4277dc7533d4e
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_hit_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1975abedc102570b9507480e62dec6ff
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_hit_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b7797792f548cacf1c0de919dc0d9b
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_hit_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 224
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb43aa95a20f8614c3ac9f6a164443bb
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f46cef0eaadac74502003f5e92e79be
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911595225c453954925973f26e0adf15
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6da86113964b31be7070a910c518a3
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3a0697ca95986bb72cbc0684b05156
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6750e1413d4fd10c6686016308944705
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_38b_frost_spider_death_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096f9fad4ad50b33559f6f40a589b6ac
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_38b_frost_spider_idle_01: 21300002
+      sprite_38b_frost_spider_idle_02: 21300004
+      sprite_38b_frost_spider_idle_03: 21300006
+      sprite_38b_frost_spider_idle_04: 21300008
+      sprite_38b_frost_spider_idle_05: 21300010
+      sprite_38b_frost_spider_idle_06: 21300012
+      sprite_38b_frost_spider_walk_01: 21300014
+      sprite_38b_frost_spider_walk_02: 21300016
+      sprite_38b_frost_spider_walk_03: 21300018
+      sprite_38b_frost_spider_walk_04: 21300020
+      sprite_38b_frost_spider_walk_05: 21300022
+      sprite_38b_frost_spider_walk_06: 21300024
+      sprite_38b_frost_spider_walk_07: 21300026
+      sprite_38b_frost_spider_walk_08: 21300028
+      sprite_38b_frost_spider_attack_01: 21300030
+      sprite_38b_frost_spider_attack_02: 21300032
+      sprite_38b_frost_spider_attack_03: 21300034
+      sprite_38b_frost_spider_attack_04: 21300036
+      sprite_38b_frost_spider_attack_05: 21300038
+      sprite_38b_frost_spider_attack_06: 21300040
+      sprite_38b_frost_spider_attack_07: 21300042
+      sprite_38b_frost_spider_attack_08: 21300044
+      sprite_38b_frost_spider_hit_01: 21300046
+      sprite_38b_frost_spider_hit_02: 21300048
+      sprite_38b_frost_spider_hit_03: 21300050
+      sprite_38b_frost_spider_hit_04: 21300052
+      sprite_38b_frost_spider_death_01: 21300054
+      sprite_38b_frost_spider_death_02: 21300056
+      sprite_38b_frost_spider_death_03: 21300058
+      sprite_38b_frost_spider_death_04: 21300060
+      sprite_38b_frost_spider_death_05: 21300062
+      sprite_38b_frost_spider_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

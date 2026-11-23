@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: adb6c0d9370e30648b34a21937d632cc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_01_blue_knight_idle_01
+  - first:
+      213: 21300004
+    second: sprite_01_blue_knight_idle_02
+  - first:
+      213: 21300006
+    second: sprite_01_blue_knight_idle_03
+  - first:
+      213: 21300008
+    second: sprite_01_blue_knight_idle_04
+  - first:
+      213: 21300010
+    second: sprite_01_blue_knight_idle_05
+  - first:
+      213: 21300012
+    second: sprite_01_blue_knight_idle_06
+  - first:
+      213: 21300014
+    second: sprite_01_blue_knight_walk_01
+  - first:
+      213: 21300016
+    second: sprite_01_blue_knight_walk_02
+  - first:
+      213: 21300018
+    second: sprite_01_blue_knight_walk_03
+  - first:
+      213: 21300020
+    second: sprite_01_blue_knight_walk_04
+  - first:
+      213: 21300022
+    second: sprite_01_blue_knight_walk_05
+  - first:
+      213: 21300024
+    second: sprite_01_blue_knight_walk_06
+  - first:
+      213: 21300026
+    second: sprite_01_blue_knight_walk_07
+  - first:
+      213: 21300028
+    second: sprite_01_blue_knight_walk_08
+  - first:
+      213: 21300030
+    second: sprite_01_blue_knight_attack_01
+  - first:
+      213: 21300032
+    second: sprite_01_blue_knight_attack_02
+  - first:
+      213: 21300034
+    second: sprite_01_blue_knight_attack_03
+  - first:
+      213: 21300036
+    second: sprite_01_blue_knight_attack_04
+  - first:
+      213: 21300038
+    second: sprite_01_blue_knight_attack_05
+  - first:
+      213: 21300040
+    second: sprite_01_blue_knight_attack_06
+  - first:
+      213: 21300042
+    second: sprite_01_blue_knight_attack_07
+  - first:
+      213: 21300044
+    second: sprite_01_blue_knight_attack_08
+  - first:
+      213: 21300046
+    second: sprite_01_blue_knight_hit_01
+  - first:
+      213: 21300048
+    second: sprite_01_blue_knight_hit_02
+  - first:
+      213: 21300050
+    second: sprite_01_blue_knight_hit_03
+  - first:
+      213: 21300052
+    second: sprite_01_blue_knight_hit_04
+  - first:
+      213: 21300054
+    second: sprite_01_blue_knight_death_01
+  - first:
+      213: 21300056
+    second: sprite_01_blue_knight_death_02
+  - first:
+      213: 21300058
+    second: sprite_01_blue_knight_death_03
+  - first:
+      213: 21300060
+    second: sprite_01_blue_knight_death_04
+  - first:
+      213: 21300062
+    second: sprite_01_blue_knight_death_05
+  - first:
+      213: 21300064
+    second: sprite_01_blue_knight_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.15}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fee6caa576157c6d28e1d351aeb5ad9f
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf5a77598f91b43c39435dfce480586
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abae0996ed6273da05086c94aca3758a
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ff758bfd22dd7e21cf9b2522c53cc1
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e044b88b357152b3d57a98e15460bd1c
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1024
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0213f75df33703623c17c2af6fe5d1b4
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd0fb06c0e7d9b229362f81591cf819
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6e1df90e53e10cb25fb4367c41372f
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdfda005680c7269b516883098d292ab
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706a08f04f3cf4d9251026c6f9871436
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a66e8afbc300bab92770b5edcf0c2dc
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ee9ecb19ffbcbf955316ec693ed43c
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273c078d20ffa1d624676e88425cb251
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_walk_08
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 768
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30cfc3a328f24594345cb02175a661f
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928eb464ac744c7276b28c3c975b5389
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001358e162181b4797a09ca953fd61a9
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe622ebea637908f0bce63e737f34ff
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e87d1bcc29b774eb43b36fb9d759d70
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca0e90e51d89cb6af254d1d3e4db1df
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c6fd71e0f15285117648803710a1bb
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74dcd7e2f32103229603ad22ebe96c0b
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_attack_08
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 512
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54aa1c3ca35c43101dc192ac1df9e3f9
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43db0a13b5332aad39cb06a711fe8796
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_hit_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff1c2fcf862ac5103bdb1e5e3bbc6f39
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_hit_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32a8e9c7f07adc75045d0d6963ae0ce
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_hit_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 256
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2815e92998cb11456457718df19f67cd
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcf96abbce0367e290742a3dac8ed9b
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_02
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8913441851ee2cc0d7d7f3060bb77e39
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_03
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6649932a050bb0f86da0d0171e9aac96
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_04
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7807071aa5fc2169f4b39ed866a937a0
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_05
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7464752154ddfdb975a12d606e4b2031
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_01_blue_knight_death_06
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 240
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918ff158778f541e0f41268e721bab36
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_01_blue_knight_idle_01: 21300002
+      sprite_01_blue_knight_idle_02: 21300004
+      sprite_01_blue_knight_idle_03: 21300006
+      sprite_01_blue_knight_idle_04: 21300008
+      sprite_01_blue_knight_idle_05: 21300010
+      sprite_01_blue_knight_idle_06: 21300012
+      sprite_01_blue_knight_walk_01: 21300014
+      sprite_01_blue_knight_walk_02: 21300016
+      sprite_01_blue_knight_walk_03: 21300018
+      sprite_01_blue_knight_walk_04: 21300020
+      sprite_01_blue_knight_walk_05: 21300022
+      sprite_01_blue_knight_walk_06: 21300024
+      sprite_01_blue_knight_walk_07: 21300026
+      sprite_01_blue_knight_walk_08: 21300028
+      sprite_01_blue_knight_attack_01: 21300030
+      sprite_01_blue_knight_attack_02: 21300032
+      sprite_01_blue_knight_attack_03: 21300034
+      sprite_01_blue_knight_attack_04: 21300036
+      sprite_01_blue_knight_attack_05: 21300038
+      sprite_01_blue_knight_attack_06: 21300040
+      sprite_01_blue_knight_attack_07: 21300042
+      sprite_01_blue_knight_attack_08: 21300044
+      sprite_01_blue_knight_hit_01: 21300046
+      sprite_01_blue_knight_hit_02: 21300048
+      sprite_01_blue_knight_hit_03: 21300050
+      sprite_01_blue_knight_hit_04: 21300052
+      sprite_01_blue_knight_death_01: 21300054
+      sprite_01_blue_knight_death_02: 21300056
+      sprite_01_blue_knight_death_03: 21300058
+      sprite_01_blue_knight_death_04: 21300060
+      sprite_01_blue_knight_death_05: 21300062
+      sprite_01_blue_knight_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

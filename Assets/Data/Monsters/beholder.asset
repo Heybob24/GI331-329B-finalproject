@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6837a92614e19484e931dcafdc85e236, type: 3}
+  m_Name: beholder
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.MonsterData
+  monsterId: beholder
+  monsterName: Beholder
+  description: Legendary Magic defender for your dungeon.
+  icon: {fileID: 21300000, guid: b9f0f17176b20e1ad24d0dfb0d39b395, type: 3}
+  monsterPrefab: {fileID: 100000, guid: fc606427e8ef95d4890d3fe3fb95fb13, type: 3}
+  rarity: 3
+  role: 3
+  maxHP: 240
+  attack: 55
+  defense: 15
+  attackRange: 3
+  attackSpeed: 1
+  moveSpeed: 1
+  goldCost: 1300
+  unlockDungeonLevel: 7
+  maxLevel: 5
+  baseUpgradeGoldCost: 100
+  baseUpgradeSoulCost: 0

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 1d9a7d51647e1a94691816f2b4603d64
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_21_shadow_bat_idle_01
+  - first:
+      213: 21300004
+    second: sprite_21_shadow_bat_idle_02
+  - first:
+      213: 21300006
+    second: sprite_21_shadow_bat_idle_03
+  - first:
+      213: 21300008
+    second: sprite_21_shadow_bat_idle_04
+  - first:
+      213: 21300010
+    second: sprite_21_shadow_bat_idle_05
+  - first:
+      213: 21300012
+    second: sprite_21_shadow_bat_idle_06
+  - first:
+      213: 21300014
+    second: sprite_21_shadow_bat_walk_01
+  - first:
+      213: 21300016
+    second: sprite_21_shadow_bat_walk_02
+  - first:
+      213: 21300018
+    second: sprite_21_shadow_bat_walk_03
+  - first:
+      213: 21300020
+    second: sprite_21_shadow_bat_walk_04
+  - first:
+      213: 21300022
+    second: sprite_21_shadow_bat_walk_05
+  - first:
+      213: 21300024
+    second: sprite_21_shadow_bat_walk_06
+  - first:
+      213: 21300026
+    second: sprite_21_shadow_bat_walk_07
+  - first:
+      213: 21300028
+    second: sprite_21_shadow_bat_walk_08
+  - first:
+      213: 21300030
+    second: sprite_21_shadow_bat_attack_01
+  - first:
+      213: 21300032
+    second: sprite_21_shadow_bat_attack_02
+  - first:
+      213: 21300034
+    second: sprite_21_shadow_bat_attack_03
+  - first:
+      213: 21300036
+    second: sprite_21_shadow_bat_attack_04
+  - first:
+      213: 21300038
+    second: sprite_21_shadow_bat_attack_05
+  - first:
+      213: 21300040
+    second: sprite_21_shadow_bat_attack_06
+  - first:
+      213: 21300042
+    second: sprite_21_shadow_bat_attack_07
+  - first:
+      213: 21300044
+    second: sprite_21_shadow_bat_attack_08
+  - first:
+      213: 21300046
+    second: sprite_21_shadow_bat_hit_01
+  - first:
+      213: 21300048
+    second: sprite_21_shadow_bat_hit_02
+  - first:
+      213: 21300050
+    second: sprite_21_shadow_bat_hit_03
+  - first:
+      213: 21300052
+    second: sprite_21_shadow_bat_hit_04
+  - first:
+      213: 21300054
+    second: sprite_21_shadow_bat_death_01
+  - first:
+      213: 21300056
+    second: sprite_21_shadow_bat_death_02
+  - first:
+      213: 21300058
+    second: sprite_21_shadow_bat_death_03
+  - first:
+      213: 21300060
+    second: sprite_21_shadow_bat_death_04
+  - first:
+      213: 21300062
+    second: sprite_21_shadow_bat_death_05
+  - first:
+      213: 21300064
+    second: sprite_21_shadow_bat_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.35}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32dbb35a07d6a444d50a1f45b3ed176
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb83e0a4788c141a69ae223e87642668
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985afd2e1a6ae6e17e0abe13454431e1
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a35517bbc69e2413eebff207140112c
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1634fc8ddc48f0b5a568d779b28a1c
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 768
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25072fb05e24a0722980ea2d160953f7
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fbf0235f670fbf5b4696dbe18ceed3
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20364ef6e7ffa2ba95c41fa40b8ff156
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46b86c282d3abd361c3c9a8460d7425
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912e82ef193100d65bcdb1fef7d94149
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc94db0f937c4d66b9a2ea2a1f6f32e8
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6feb41461478b25dbd922065cc2ecd2
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_07
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffeb0c935c8f995a403afcba2005079f
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_walk_08
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 576
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcfb167c6cf83929181d7a9c7418c5a
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a32c3911e9e1c53071973425321792c
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2839fafd3016f0365cebfbb864f15a
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d9e0b41e2efe5bb28830ed4314b48d
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4785eb7694b2d69392840b20f44e8a8
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a3f0c7ab23315e7377033e896f2764
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269e3c1b4469195bcd5c65271f70a918
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_07
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67878ddd9b9c7543c98b74d2d65dfa8f
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_attack_08
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 384
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5154d3fa278780a58b139ff3d0ebf38
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008a8fa54190ae474ec27bb0d5e4c5d1
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_hit_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7cd6d5766424d66e740a7fb68fcf9f9
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_hit_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 192
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c067fc6c6f27c97937bc2c38b9f33f
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_hit_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 192
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e28efd489dfe8a6b96a4e9fc7668e2d
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7806ee13e9d6d4c21c730b947ff10e65
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_02
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91386e86c8238add493fec867200a021
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_03
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 460010ef5eb016027d1ed21ba45abbb7
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_04
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e7151ca4750f91c4625733d81143a8
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_05
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7120b59796f24aa24aec9d9c9c66074b
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_21_shadow_bat_death_06
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 336
+        height: 192
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d9f780b23adf4a144a14676d23d67d
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_21_shadow_bat_idle_01: 21300002
+      sprite_21_shadow_bat_idle_02: 21300004
+      sprite_21_shadow_bat_idle_03: 21300006
+      sprite_21_shadow_bat_idle_04: 21300008
+      sprite_21_shadow_bat_idle_05: 21300010
+      sprite_21_shadow_bat_idle_06: 21300012
+      sprite_21_shadow_bat_walk_01: 21300014
+      sprite_21_shadow_bat_walk_02: 21300016
+      sprite_21_shadow_bat_walk_03: 21300018
+      sprite_21_shadow_bat_walk_04: 21300020
+      sprite_21_shadow_bat_walk_05: 21300022
+      sprite_21_shadow_bat_walk_06: 21300024
+      sprite_21_shadow_bat_walk_07: 21300026
+      sprite_21_shadow_bat_walk_08: 21300028
+      sprite_21_shadow_bat_attack_01: 21300030
+      sprite_21_shadow_bat_attack_02: 21300032
+      sprite_21_shadow_bat_attack_03: 21300034
+      sprite_21_shadow_bat_attack_04: 21300036
+      sprite_21_shadow_bat_attack_05: 21300038
+      sprite_21_shadow_bat_attack_06: 21300040
+      sprite_21_shadow_bat_attack_07: 21300042
+      sprite_21_shadow_bat_attack_08: 21300044
+      sprite_21_shadow_bat_hit_01: 21300046
+      sprite_21_shadow_bat_hit_02: 21300048
+      sprite_21_shadow_bat_hit_03: 21300050
+      sprite_21_shadow_bat_hit_04: 21300052
+      sprite_21_shadow_bat_death_01: 21300054
+      sprite_21_shadow_bat_death_02: 21300056
+      sprite_21_shadow_bat_death_03: 21300058
+      sprite_21_shadow_bat_death_04: 21300060
+      sprite_21_shadow_bat_death_05: 21300062
+      sprite_21_shadow_bat_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

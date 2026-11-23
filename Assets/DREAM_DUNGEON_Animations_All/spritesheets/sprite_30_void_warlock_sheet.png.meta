@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 454072eafa95db743ad6bfdc62892cf8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300002
+    second: sprite_30_void_warlock_idle_01
+  - first:
+      213: 21300004
+    second: sprite_30_void_warlock_idle_02
+  - first:
+      213: 21300006
+    second: sprite_30_void_warlock_idle_03
+  - first:
+      213: 21300008
+    second: sprite_30_void_warlock_idle_04
+  - first:
+      213: 21300010
+    second: sprite_30_void_warlock_idle_05
+  - first:
+      213: 21300012
+    second: sprite_30_void_warlock_idle_06
+  - first:
+      213: 21300014
+    second: sprite_30_void_warlock_walk_01
+  - first:
+      213: 21300016
+    second: sprite_30_void_warlock_walk_02
+  - first:
+      213: 21300018
+    second: sprite_30_void_warlock_walk_03
+  - first:
+      213: 21300020
+    second: sprite_30_void_warlock_walk_04
+  - first:
+      213: 21300022
+    second: sprite_30_void_warlock_walk_05
+  - first:
+      213: 21300024
+    second: sprite_30_void_warlock_walk_06
+  - first:
+      213: 21300026
+    second: sprite_30_void_warlock_walk_07
+  - first:
+      213: 21300028
+    second: sprite_30_void_warlock_walk_08
+  - first:
+      213: 21300030
+    second: sprite_30_void_warlock_attack_01
+  - first:
+      213: 21300032
+    second: sprite_30_void_warlock_attack_02
+  - first:
+      213: 21300034
+    second: sprite_30_void_warlock_attack_03
+  - first:
+      213: 21300036
+    second: sprite_30_void_warlock_attack_04
+  - first:
+      213: 21300038
+    second: sprite_30_void_warlock_attack_05
+  - first:
+      213: 21300040
+    second: sprite_30_void_warlock_attack_06
+  - first:
+      213: 21300042
+    second: sprite_30_void_warlock_attack_07
+  - first:
+      213: 21300044
+    second: sprite_30_void_warlock_attack_08
+  - first:
+      213: 21300046
+    second: sprite_30_void_warlock_hit_01
+  - first:
+      213: 21300048
+    second: sprite_30_void_warlock_hit_02
+  - first:
+      213: 21300050
+    second: sprite_30_void_warlock_hit_03
+  - first:
+      213: 21300052
+    second: sprite_30_void_warlock_hit_04
+  - first:
+      213: 21300054
+    second: sprite_30_void_warlock_death_01
+  - first:
+      213: 21300056
+    second: sprite_30_void_warlock_death_02
+  - first:
+      213: 21300058
+    second: sprite_30_void_warlock_death_03
+  - first:
+      213: 21300060
+    second: sprite_30_void_warlock_death_04
+  - first:
+      213: 21300062
+    second: sprite_30_void_warlock_death_05
+  - first:
+      213: 21300064
+    second: sprite_30_void_warlock_death_06
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 8192
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.35}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32524bb965fdf437d9a4f749282cc869
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ef0d3f3fd8f989edfaaac355c95552
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208270e88c20b1b7feaf216bc3b41ebd
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11bd1243667334d19a46d188288b478
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b302b3fe9bcda978985df721550edbd3
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_idle_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1216
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c3e3d9b97584285f248ef26113a823
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff3bd4db12a94b7e92d4fdbefe6ca8a
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98e22aeb09f7a9e03a5d9c7d78e7fb9
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58ed37859763ac91ebe6b5b9c911f47
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee6e33688fefb4d38f359a2ed70333a
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b69940f25338b74757e440f4033dd5
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d6faa7a115971ab581d406da148ac6
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd961453e10177a9b7486ae387db00cc
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_walk_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 912
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732ce61cdebf20ccfa5e655c8a1abfba
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e41fa5cb00b9833ba45c4c3fb23cbf4
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8c5f61c1d67c39857af214bbf70afb
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22eba6091dcb1dba5b42dbd9247efd52
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8644070ea6f9b28ded4b2a075f0453a
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b209a2090b39d9d3b48bcca7f4bc3985
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147a831d6fa1b48303451564f877330c
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_07
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab1e8825010b05394976f4b913da4c3
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_attack_08
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 608
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0cb3735e9e59f64181dc6f015fc7ac
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_hit_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 304
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c30331cb9cc92d652a2f83aace390c14
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_hit_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 304
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7124d94d4f7dd68a22dde18aeda74d7d
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_hit_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 304
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6df1b5495b83b5f4481595212e7f843
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_hit_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 304
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696e58ff7fb9eeeca18f05978fe290da
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bc8fb391a07745a9e6a7f0a4244624
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_02
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce98e4bc4c3e74b97a9b021f814f9d3
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_03
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9917c381e400683ec56697a3ead751f
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_04
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587b807dfca69a754194afbd3bcb53ee
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_05
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae688284d39c4e6a6bb197fda5bdcaf
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_30_void_warlock_death_06
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 304
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c14a122d9952d5906a8cb7cdf4baee6
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_30_void_warlock_idle_01: 21300002
+      sprite_30_void_warlock_idle_02: 21300004
+      sprite_30_void_warlock_idle_03: 21300006
+      sprite_30_void_warlock_idle_04: 21300008
+      sprite_30_void_warlock_idle_05: 21300010
+      sprite_30_void_warlock_idle_06: 21300012
+      sprite_30_void_warlock_walk_01: 21300014
+      sprite_30_void_warlock_walk_02: 21300016
+      sprite_30_void_warlock_walk_03: 21300018
+      sprite_30_void_warlock_walk_04: 21300020
+      sprite_30_void_warlock_walk_05: 21300022
+      sprite_30_void_warlock_walk_06: 21300024
+      sprite_30_void_warlock_walk_07: 21300026
+      sprite_30_void_warlock_walk_08: 21300028
+      sprite_30_void_warlock_attack_01: 21300030
+      sprite_30_void_warlock_attack_02: 21300032
+      sprite_30_void_warlock_attack_03: 21300034
+      sprite_30_void_warlock_attack_04: 21300036
+      sprite_30_void_warlock_attack_05: 21300038
+      sprite_30_void_warlock_attack_06: 21300040
+      sprite_30_void_warlock_attack_07: 21300042
+      sprite_30_void_warlock_attack_08: 21300044
+      sprite_30_void_warlock_hit_01: 21300046
+      sprite_30_void_warlock_hit_02: 21300048
+      sprite_30_void_warlock_hit_03: 21300050
+      sprite_30_void_warlock_hit_04: 21300052
+      sprite_30_void_warlock_death_01: 21300054
+      sprite_30_void_warlock_death_02: 21300056
+      sprite_30_void_warlock_death_03: 21300058
+      sprite_30_void_warlock_death_04: 21300060
+      sprite_30_void_warlock_death_05: 21300062
+      sprite_30_void_warlock_death_06: 21300064
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
