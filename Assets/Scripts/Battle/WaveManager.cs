@@ -292,6 +292,37 @@ namespace DreamDungeon
             {
                 endlessConfig.EvaluateWaveMultipliers(waveNum, out hpMult, out atkMult, out defMult, out _, out _);
             }
+            else if (BattleSession.IsCampaignBattle)
+            {
+                switch (BattleSession.Difficulty)
+                {
+                    case StageDifficulty.Easy:
+                        hpMult *= 0.65f;
+                        atkMult *= 0.65f;
+                        defMult *= 0.60f;
+                        break;
+                    case StageDifficulty.Normal:
+                        hpMult *= 0.85f;
+                        atkMult *= 0.85f;
+                        defMult *= 0.80f;
+                        break;
+                    case StageDifficulty.Hard:
+                        hpMult *= 1.00f;
+                        atkMult *= 1.00f;
+                        defMult *= 1.00f;
+                        break;
+                    case StageDifficulty.VeryHard:
+                        hpMult *= 1.20f;
+                        atkMult *= 1.15f;
+                        defMult *= 1.10f;
+                        break;
+                    case StageDifficulty.Nightmare:
+                        hpMult *= 1.45f;
+                        atkMult *= 1.30f;
+                        defMult *= 1.25f;
+                        break;
+                }
+            }
 
             if (EndlessChallengeManager.Instance != null && EndlessChallengeManager.Instance.ActiveModifiers.IsActive)
             {

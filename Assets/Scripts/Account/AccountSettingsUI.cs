@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,21 +8,28 @@ namespace DreamDungeon
     {
         public static AccountSettingsUI Instance { get; private set; }
 
+        private const string PrefSoundEnabled = "DD_Setting_Sound";
+        private const string PrefMusicEnabled = "DD_Setting_Music";
+
         private RectTransform safeAreaRoot;
         private GameObject settingsOverlay;
-        private Text profileDetailsText;
-        private Text statusFeedbackText;
+        private TextMeshProUGUI profileDetailsText;
+        private TextMeshProUGUI statusFeedbackText;
         private Button linkGoogleButton;
         private Button syncNowButton;
         private Button logoutButton;
-        private Button deleteAccountButton;
+
+        // Audio & Graphics Settings
+        private TextMeshProUGUI soundToggleLabel;
+        private TextMeshProUGUI musicToggleLabel;
+        private TextMeshProUGUI qualityLabel;
 
         // Account Conflict Dialog (Google already linked to another Player ID)
         private GameObject conflictDialog;
-        private Text conflictMessageText;
+        private TextMeshProUGUI conflictMessageText;
 
-        // Delete Confirmation Dialog
-        private GameObject deleteConfirmDialog;
+        // Logout Confirmation Dialog
+        private GameObject logoutConfirmDialog;
 
         private bool uiBuilt;
 
@@ -56,8 +64,9 @@ namespace DreamDungeon
             if (settingsOverlay != null)
             {
                 settingsOverlay.SetActive(true);
+                settingsOverlay.transform.SetAsLastSibling();
                 if (conflictDialog != null) conflictDialog.SetActive(false);
-                if (deleteConfirmDialog != null) deleteConfirmDialog.SetActive(false);
+                if (logoutConfirmDialog != null) logoutConfirmDialog.SetActive(false);
                 Refresh();
             }
         }
@@ -79,19 +88,18 @@ namespace DreamDungeon
                 else
                 {
                     int crystals = CrystalManager.Instance != null ? CrystalManager.Instance.CrystalBalance : profile.crystalBalance;
+                    string shortId = UIStyleHelper.ShortenPlayerId(profile.playerId);
                     string googleStatus = profile.IsGoogleLinked
-                        ? "<color=#66F088>Google Linked</color>"
-                        : "<color=#FFD966>Not Linked (Guest Only)</color>";
+                        ? "<color=#66F088>Linked to Google</color>"
+                        : "<color=#FFDC6E>Guest Account (Not Linked)</color>";
                     string syncStr = PlayerDatabaseManager.Instance != null ? PlayerDatabaseManager.Instance.SyncState.ToString() : "Idle";
                     long rev = PlayerDatabaseManager.Instance?.CurrentData != null ? PlayerDatabaseManager.Instance.CurrentData.revision : 1;
 
                     profileDetailsText.text =
-                        $"<b>Player Name:</b>  {profile.playerName}\n" +
-                        $"<b>Player ID (UGS):</b>  {profile.playerId}\n" +
-                        $"<b>Login Method:</b>  {profile.GetLoginTypeDisplayName()}\n" +
-                        $"<b>Google Status:</b>  {googleStatus}\n" +
-                        $"<b>Crystal Balance:</b>  <color=#70E8FF>{crystals:N0}</color>\n" +
-                        $"<b>Last Login (UTC):</b>  {profile.lastLoginUtc}\n" +
+                        $"<b>Player ID:</b>  {shortId}\n" +
+                        $"<b>Login Provider:</b>  {profile.GetLoginTypeDisplayName()}\n" +
+                        $"<b>Account Status:</b>  {googleStatus}\n" +
+                        $"<b>Crystal Balance:</b>  <color=#C47CFF>{crystals:N0}</color>\n" +
                         $"<b>Cloud Sync:</b>  {syncStr} (Rev {rev})";
                 }
             }
@@ -100,12 +108,58 @@ namespace DreamDungeon
             {
                 bool alreadyLinked = profile != null && profile.IsGoogleLinked;
                 linkGoogleButton.interactable = profile != null && !alreadyLinked;
-                Text lbl = linkGoogleButton.GetComponentInChildren<Text>();
+                TextMeshProUGUI lbl = linkGoogleButton.GetComponentInChildren<TextMeshProUGUI>();
                 if (lbl != null)
                 {
-                    lbl.text = alreadyLinked ? "✓ GOOGLE LINKED" : "LINK GOOGLE ACCOUNT";
+                    lbl.text = alreadyLinked ? "✓ GOOGLE ACCOUNT LINKED" : "LINK GOOGLE ACCOUNT";
                 }
             }
+
+            RefreshAudioAndQualityLabels();
+        }
+
+        private void RefreshAudioAndQualityLabels()
+        {
+            bool soundOn = PlayerPrefs.GetInt(PrefSoundEnabled, 1) == 1;
+            bool musicOn = PlayerPrefs.GetInt(PrefMusicEnabled, 1) == 1;
+            AudioListener.volume = (soundOn || musicOn) ? 1f : 0f;
+
+            if (soundToggleLabel != null) soundToggleLabel.text = soundOn ? "SOUND: ON" : "SOUND: OFF";
+            if (musicToggleLabel != null) musicToggleLabel.text = musicOn ? "MUSIC: ON" : "MUSIC: OFF";
+            if (qualityLabel != null)
+            {
+                string[] names = QualitySettings.names;
+                int idx = Mathf.Clamp(QualitySettings.GetQualityLevel(), 0, Mathf.Max(0, names.Length - 1));
+                string qName = names != null && names.Length > 0 ? names[idx] : "Default";
+                qualityLabel.text = $"GRAPHICS: {qName.ToUpperInvariant()}";
+            }
+        }
+
+        private void ToggleSound()
+        {
+            int next = PlayerPrefs.GetInt(PrefSoundEnabled, 1) == 1 ? 0 : 1;
+            PlayerPrefs.SetInt(PrefSoundEnabled, next);
+            PlayerPrefs.Save();
+            RefreshAudioAndQualityLabels();
+        }
+
+        private void ToggleMusic()
+        {
+            int next = PlayerPrefs.GetInt(PrefMusicEnabled, 1) == 1 ? 0 : 1;
+            PlayerPrefs.SetInt(PrefMusicEnabled, next);
+            PlayerPrefs.Save();
+            RefreshAudioAndQualityLabels();
+        }
+
+        private void CycleGraphicsQuality()
+        {
+            int count = QualitySettings.names != null ? QualitySettings.names.Length : 1;
+            if (count > 1)
+            {
+                int next = (QualitySettings.GetQualityLevel() + 1) % count;
+                QualitySettings.SetQualityLevel(next, true);
+            }
+            RefreshAudioAndQualityLabels();
         }
 
         private async void OnLinkGoogleClicked()
@@ -131,7 +185,7 @@ namespace DreamDungeon
                     if (conflictMessageText != null) conflictMessageText.text = res.Message;
                     conflictDialog.SetActive(true);
                 }
-                SetFeedback($"<color=#FFD966>⚠ {res.Message}</color>");
+                SetFeedback($"<color=#FFDC6E>⚠ {res.Message}</color>");
             }
             else
             {
@@ -164,46 +218,37 @@ namespace DreamDungeon
         private async void OnSyncNowClicked()
         {
             if (PlayerDatabaseManager.Instance == null) return;
-            SetFeedback("Syncing player data with Cloud Save...");
-            var res = await PlayerDatabaseManager.Instance.SaveCurrentPlayerDataAsync(captureFromGameSystems: true);
+            SetFeedback("Synchronizing Cloud Save...");
+            DatabaseOperationResult res = await PlayerDatabaseManager.Instance.SaveCurrentPlayerDataAsync(captureFromGameSystems: true);
             SetFeedback(res.Success
-                ? $"<color=#66F088>✓ Cloud Sync Complete (Rev {res.Data?.revision})</color>"
+                ? $"<color=#66F088>✓ Synced (Rev {res.Data?.revision})</color>"
                 : $"<color=#FF7777>⚠ {res.Message}</color>");
             Refresh();
         }
 
-        private async void OnLogoutClicked()
+        private void OnLogoutClicked()
         {
-            if (AuthenticationManager.Instance == null) return;
-            SetFeedback("Saving & signing out...");
-            await AuthenticationManager.Instance.LogoutAsync(clearCachedSession: true);
+            if (logoutConfirmDialog != null)
+            {
+                logoutConfirmDialog.SetActive(true);
+                logoutConfirmDialog.transform.SetAsLastSibling();
+            }
+        }
+
+        private async void OnConfirmLogoutClicked()
+        {
+            if (logoutConfirmDialog != null) logoutConfirmDialog.SetActive(false);
+            SetFeedback("Saving progress and signing out...");
+            if (AuthenticationManager.Instance != null)
+            {
+                await AuthenticationManager.Instance.LogoutAsync(clearCachedSession: true);
+            }
             Close();
         }
 
-        private void OnDeleteAccountRequested()
+        private void SetFeedback(string msg)
         {
-            if (deleteConfirmDialog != null) deleteConfirmDialog.SetActive(true);
-        }
-
-        private async void OnConfirmDeleteAccountClicked()
-        {
-            if (deleteConfirmDialog != null) deleteConfirmDialog.SetActive(false);
-            if (AuthenticationManager.Instance == null) return;
-            SetFeedback("Deleting account and cloud data...");
-            AuthOperationResult res = await AuthenticationManager.Instance.DeleteCurrentAccountAsync();
-            if (res.Success)
-            {
-                Close();
-            }
-            else
-            {
-                SetFeedback($"<color=#FF7777>⚠ {res.Message}</color>");
-            }
-        }
-
-        private void SetFeedback(string message)
-        {
-            if (statusFeedbackText != null) statusFeedbackText.text = message;
+            if (statusFeedbackText != null) statusFeedbackText.text = msg;
         }
 
         private void EnsureSafeArea()
@@ -220,83 +265,187 @@ namespace DreamDungeon
             if (safeAreaRoot == null || uiBuilt) return;
             uiBuilt = true;
 
-            RectTransform overlay = RoomUIFactory.CreateOverlay(safeAreaRoot, "AccountSettingsOverlay");
-            settingsOverlay = overlay.gameObject;
+            var theme = UIThemeManager.Theme;
+            var assets = UIThemeManager.Assets;
 
-            RectTransform card = RoomUIFactory.CreatePanel(overlay, "AccountSettingsCard",
-                new Color(0.09f, 0.09f, 0.15f, 0.98f), Vector2.zero, new Vector2(940f, 1340f));
+            GameObject ov = new GameObject("AccountSettingsOverlay", typeof(RectTransform), typeof(Image));
+            ov.transform.SetParent(safeAreaRoot, false);
+            UIStyleHelper.Stretch(ov, 0f, 0f, 0f, 0f);
+            ov.GetComponent<Image>().color = new Color(0.03f, 0.03f, 0.08f, 0.96f);
+            settingsOverlay = ov;
 
-            RoomUIFactory.CreateText(card, "SettingsTitle", "ACCOUNT SETTINGS", 40,
-                new Vector2(0f, 595f), new Vector2(860f, 64f), new Color(0.96f, 0.78f, 0.43f));
+            GameObject card = new GameObject("AccountSettingsCard", typeof(RectTransform), typeof(Image));
+            card.transform.SetParent(ov.transform, false);
+            RectTransform cRt = card.GetComponent<RectTransform>();
+            cRt.anchorMin = new Vector2(0.05f, 0.06f);
+            cRt.anchorMax = new Vector2(0.95f, 0.94f);
+            cRt.offsetMin = Vector2.zero;
+            cRt.offsetMax = Vector2.zero;
+            UIStyleHelper.ApplyGothicPanel(card.GetComponent<Image>());
 
-            RectTransform infoPanel = RoomUIFactory.CreatePanel(card, "AccountDetailsPanel",
-                new Color(0.13f, 0.14f, 0.21f, 1f), new Vector2(0f, 330f), new Vector2(860f, 380f));
-            profileDetailsText = RoomUIFactory.CreateText(infoPanel, "ProfileDetailsText", "", 22,
-                Vector2.zero, new Vector2(810f, 340f), Color.white, TextAnchor.MiddleLeft);
+            GameObject content = new GameObject("SettingsContent", typeof(RectTransform), typeof(VerticalLayoutGroup));
+            content.transform.SetParent(card.transform, false);
+            UIStyleHelper.Stretch(content, 38f, 36f, 38f, 56f);
+            VerticalLayoutGroup vlg = content.GetComponent<VerticalLayoutGroup>();
+            vlg.spacing = 12f;
+            vlg.childAlignment = TextAnchor.UpperCenter;
+            vlg.childControlWidth = true;
+            vlg.childControlHeight = true;
+            vlg.childForceExpandWidth = true;
+            vlg.childForceExpandHeight = false;
 
-            statusFeedbackText = RoomUIFactory.CreateText(card, "SettingsStatusFeedback", "", 20,
-                new Vector2(0f, 80f), new Vector2(860f, 76f), new Color(0.85f, 0.90f, 0.96f));
+            // Title
+            GameObject titleObj = new GameObject("SettingsTitle", typeof(RectTransform), typeof(LayoutElement));
+            titleObj.transform.SetParent(content.transform, false);
+            titleObj.GetComponent<LayoutElement>().preferredHeight = 48f;
+            UIStyleHelper.CreateTmp(titleObj.transform, "Txt", "SETTINGS & ACCOUNT", 32, theme.primaryText);
 
-            linkGoogleButton = RoomUIFactory.CreateButton(card, "LinkGoogleAccountButton", "LINK GOOGLE ACCOUNT",
-                new Vector2(0f, -40f), new Vector2(680f, 92f), new Color(0.16f, 0.38f, 0.56f, 1f), 26);
-            linkGoogleButton.onClick.AddListener(OnLinkGoogleClicked);
+            // Profile Box
+            GameObject profBox = new GameObject("ProfileBox", typeof(RectTransform), typeof(Image), typeof(LayoutElement));
+            profBox.transform.SetParent(content.transform, false);
+            profBox.GetComponent<LayoutElement>().preferredHeight = 190f;
+            profBox.GetComponent<Image>().color = new Color(0.08f, 0.07f, 0.16f, 0.94f);
+            profileDetailsText = UIStyleHelper.CreateTmp(profBox.transform, "Txt", "", 19, theme.normalText, TextAlignmentOptions.Left, FontStyles.Normal);
 
-            syncNowButton = RoomUIFactory.CreateButton(card, "SyncNowButton", "SYNC CLOUD DATA NOW",
-                new Vector2(0f, -160f), new Vector2(680f, 84f), new Color(0.20f, 0.38f, 0.28f, 1f), 24);
-            syncNowButton.onClick.AddListener(OnSyncNowClicked);
+            // Feedback text
+            GameObject fbObj = new GameObject("Feedback", typeof(RectTransform), typeof(LayoutElement));
+            fbObj.transform.SetParent(content.transform, false);
+            fbObj.GetComponent<LayoutElement>().preferredHeight = 46f;
+            statusFeedbackText = UIStyleHelper.CreateTmp(fbObj.transform, "Txt", "", 17, theme.normalText);
 
-            logoutButton = RoomUIFactory.CreateButton(card, "LogoutButton", "LOGOUT",
-                new Vector2(-175f, -285f), new Vector2(325f, 84f), new Color(0.38f, 0.24f, 0.16f, 1f), 24);
-            logoutButton.onClick.AddListener(OnLogoutClicked);
+            // Account Actions
+            linkGoogleButton = UIStyleHelper.CreateThemedButton(content.transform, "LinkGoogleButton", "LINK GOOGLE ACCOUNT",
+                theme.primaryButton, 74f, OnLinkGoogleClicked);
 
-            deleteAccountButton = RoomUIFactory.CreateButton(card, "DeleteAccountButton", "DELETE ACCOUNT",
-                new Vector2(175f, -285f), new Vector2(325f, 84f), new Color(0.48f, 0.14f, 0.16f, 1f), 22);
-            deleteAccountButton.onClick.AddListener(OnDeleteAccountRequested);
+            syncNowButton = UIStyleHelper.CreateThemedButton(content.transform, "SyncCloudButton", "SYNC CLOUD SAVE NOW",
+                theme.secondaryButton, 68f, OnSyncNowClicked);
 
-            Button closeBtn = RoomUIFactory.CreateButton(card, "CloseAccountSettingsButton", "BACK",
-                new Vector2(0f, -525f), new Vector2(360f, 84f), new Color(0.22f, 0.24f, 0.32f, 1f), 24);
-            closeBtn.onClick.AddListener(Close);
+            logoutButton = UIStyleHelper.CreateThemedButton(content.transform, "LogoutButton", "LOGOUT",
+                theme.danger, 68f, OnLogoutClicked);
 
-            // Conflict Dialog
-            RectTransform conflictOv = RoomUIFactory.CreateOverlay(card, "AccountConflictDialog");
-            conflictDialog = conflictOv.gameObject;
-            RectTransform conflictCard = RoomUIFactory.CreatePanel(conflictOv, "ConflictCard",
-                new Color(0.14f, 0.10f, 0.18f, 1f), Vector2.zero, new Vector2(820f, 560f));
-            RoomUIFactory.CreateText(conflictCard, "ConflictTitle", "GOOGLE ACCOUNT ALREADY LINKED", 28,
-                new Vector2(0f, 195f), new Vector2(760f, 56f), new Color(1.0f, 0.78f, 0.35f));
-            conflictMessageText = RoomUIFactory.CreateText(conflictCard, "ConflictMsg", "", 21,
-                new Vector2(0f, 50f), new Vector2(740f, 180f), Color.white);
+            // Audio & Graphics Section
+            GameObject prefRow = new GameObject("AudioGraphicsRow", typeof(RectTransform), typeof(HorizontalLayoutGroup), typeof(LayoutElement));
+            prefRow.transform.SetParent(content.transform, false);
+            prefRow.GetComponent<LayoutElement>().preferredHeight = 64f;
+            HorizontalLayoutGroup pHlg = prefRow.GetComponent<HorizontalLayoutGroup>();
+            pHlg.spacing = 8f;
+            pHlg.childControlWidth = true;
+            pHlg.childControlHeight = true;
+            pHlg.childForceExpandWidth = true;
 
-            Button keepGuestBtn = RoomUIFactory.CreateButton(conflictCard, "KeepGuestButton", "CANCEL (KEEP GUEST)",
-                new Vector2(0f, -105f), new Vector2(620f, 80f), new Color(0.24f, 0.32f, 0.42f, 1f), 22);
-            keepGuestBtn.onClick.AddListener(OnKeepGuestClicked);
+            Button sndBtn = UIStyleHelper.CreateThemedButton(prefRow.transform, "SoundBtn", "SOUND: ON", theme.secondaryButton, 62f, ToggleSound);
+            soundToggleLabel = sndBtn.GetComponentInChildren<TextMeshProUGUI>();
+            Button musBtn = UIStyleHelper.CreateThemedButton(prefRow.transform, "MusicBtn", "MUSIC: ON", theme.secondaryButton, 62f, ToggleMusic);
+            musicToggleLabel = musBtn.GetComponentInChildren<TextMeshProUGUI>();
 
-            Button switchAccBtn = RoomUIFactory.CreateButton(conflictCard, "SwitchGoogleAccountButton", "SWITCH TO EXISTING GOOGLE ACCOUNT",
-                new Vector2(0f, -205f), new Vector2(620f, 80f), new Color(0.48f, 0.24f, 0.16f, 1f), 21);
-            switchAccBtn.onClick.AddListener(OnSwitchToGoogleAccountClicked);
-            conflictDialog.SetActive(false);
+            Button gfxBtn = UIStyleHelper.CreateThemedButton(content.transform, "GraphicsBtn", "GRAPHICS: HIGH", theme.secondaryButton, 62f, CycleGraphicsQuality);
+            qualityLabel = gfxBtn.GetComponentInChildren<TextMeshProUGUI>();
 
-            // Delete Confirmation Dialog
-            RectTransform delOv = RoomUIFactory.CreateOverlay(card, "DeleteAccountConfirmDialog");
-            deleteConfirmDialog = delOv.gameObject;
-            RectTransform delCard = RoomUIFactory.CreatePanel(delOv, "DeleteCard",
-                new Color(0.18f, 0.08f, 0.10f, 1f), Vector2.zero, new Vector2(800f, 480f));
-            RoomUIFactory.CreateText(delCard, "DelTitle", "CONFIRM ACCOUNT DELETION", 28,
-                new Vector2(0f, 160f), new Vector2(740f, 56f), new Color(1f, 0.45f, 0.45f));
-            RoomUIFactory.CreateText(delCard, "DelMsg",
-                "This will permanently delete your account, Dungeon Data, Progression, and Crystal records from the server. This cannot be undone.",
-                21, new Vector2(0f, 35f), new Vector2(720f, 150f), Color.white);
+            // Back Button
+            GameObject backRow = new GameObject("BackRow", typeof(RectTransform), typeof(HorizontalLayoutGroup), typeof(LayoutElement));
+            backRow.transform.SetParent(content.transform, false);
+            backRow.GetComponent<LayoutElement>().preferredHeight = 82f;
+            HorizontalLayoutGroup bHlg = backRow.GetComponent<HorizontalLayoutGroup>();
+            bHlg.childAlignment = TextAnchor.MiddleCenter;
+            bHlg.childControlWidth = false;
+            bHlg.childControlHeight = false;
+            Button closeBtn = UIStyleHelper.CreateThemedButton(backRow.transform, "CloseSettingsBtn", "BACK",
+                theme.secondaryButton, 76f, Close, assets != null ? assets.buttonBack : null);
+            closeBtn.GetComponent<RectTransform>().sizeDelta = new Vector2(210f, 76f);
 
-            Button confirmDelBtn = RoomUIFactory.CreateButton(delCard, "ConfirmDeleteBtn", "PERMANENTLY DELETE",
-                new Vector2(-170f, -135f), new Vector2(320f, 80f), new Color(0.62f, 0.14f, 0.16f, 1f), 21);
-            confirmDelBtn.onClick.AddListener(OnConfirmDeleteAccountClicked);
-
-            Button cancelDelBtn = RoomUIFactory.CreateButton(delCard, "CancelDeleteBtn", "CANCEL",
-                new Vector2(170f, -135f), new Vector2(320f, 80f), new Color(0.24f, 0.26f, 0.34f, 1f), 22);
-            cancelDelBtn.onClick.AddListener(() => deleteConfirmDialog.SetActive(false));
-            deleteConfirmDialog.SetActive(false);
+            BuildConflictDialog(ov.transform, theme);
+            BuildLogoutConfirmDialog(ov.transform, theme);
 
             settingsOverlay.SetActive(false);
+        }
+
+        private void BuildConflictDialog(Transform parent, DreamDungeonUITheme theme)
+        {
+            conflictDialog = new GameObject("AccountConflictDialog", typeof(RectTransform), typeof(Image));
+            conflictDialog.transform.SetParent(parent, false);
+            UIStyleHelper.Stretch(conflictDialog, 0f, 0f, 0f, 0f);
+            conflictDialog.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.80f);
+
+            GameObject box = new GameObject("ConflictBox", typeof(RectTransform), typeof(Image));
+            box.transform.SetParent(conflictDialog.transform, false);
+            RectTransform rt = box.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0.10f, 0.28f);
+            rt.anchorMax = new Vector2(0.90f, 0.72f);
+            rt.offsetMin = Vector2.zero;
+            rt.offsetMax = Vector2.zero;
+            UIStyleHelper.ApplyGothicPanel(box.GetComponent<Image>());
+
+            GameObject content = new GameObject("Content", typeof(RectTransform), typeof(VerticalLayoutGroup));
+            content.transform.SetParent(box.transform, false);
+            UIStyleHelper.Stretch(content, 32f, 28f, 32f, 44f);
+            VerticalLayoutGroup vlg = content.GetComponent<VerticalLayoutGroup>();
+            vlg.spacing = 12f;
+            vlg.childControlWidth = true;
+            vlg.childControlHeight = true;
+            vlg.childForceExpandWidth = true;
+            vlg.childForceExpandHeight = false;
+
+            GameObject tObj = new GameObject("Title", typeof(RectTransform), typeof(LayoutElement));
+            tObj.transform.SetParent(content.transform, false);
+            tObj.GetComponent<LayoutElement>().preferredHeight = 40f;
+            UIStyleHelper.CreateTmp(tObj.transform, "Txt", "GOOGLE ACCOUNT ALREADY LINKED", 24, theme.primaryText);
+
+            GameObject mObj = new GameObject("Msg", typeof(RectTransform), typeof(LayoutElement));
+            mObj.transform.SetParent(content.transform, false);
+            mObj.GetComponent<LayoutElement>().preferredHeight = 110f;
+            conflictMessageText = UIStyleHelper.CreateTmp(mObj.transform, "Txt", "", 18, theme.normalText);
+            conflictMessageText.textWrappingMode = TextWrappingModes.Normal;
+
+            UIStyleHelper.CreateThemedButton(content.transform, "KeepGuestBtn", "CANCEL (KEEP GUEST ACCOUNT)", theme.success, 68f, OnKeepGuestClicked);
+            UIStyleHelper.CreateThemedButton(content.transform, "SwitchGoogleBtn", "SWITCH TO EXISTING GOOGLE ACCOUNT", theme.primaryButton, 68f, OnSwitchToGoogleAccountClicked);
+
+            conflictDialog.SetActive(false);
+        }
+
+        private void BuildLogoutConfirmDialog(Transform parent, DreamDungeonUITheme theme)
+        {
+            logoutConfirmDialog = new GameObject("LogoutConfirmDialog", typeof(RectTransform), typeof(Image));
+            logoutConfirmDialog.transform.SetParent(parent, false);
+            UIStyleHelper.Stretch(logoutConfirmDialog, 0f, 0f, 0f, 0f);
+            logoutConfirmDialog.GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.80f);
+
+            GameObject box = new GameObject("LogoutBox", typeof(RectTransform), typeof(Image));
+            box.transform.SetParent(logoutConfirmDialog.transform, false);
+            RectTransform rt = box.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0.12f, 0.30f);
+            rt.anchorMax = new Vector2(0.88f, 0.70f);
+            rt.offsetMin = Vector2.zero;
+            rt.offsetMax = Vector2.zero;
+            UIStyleHelper.ApplyGothicPanel(box.GetComponent<Image>());
+
+            GameObject content = new GameObject("Content", typeof(RectTransform), typeof(VerticalLayoutGroup));
+            content.transform.SetParent(box.transform, false);
+            UIStyleHelper.Stretch(content, 32f, 28f, 32f, 44f);
+            VerticalLayoutGroup vlg = content.GetComponent<VerticalLayoutGroup>();
+            vlg.spacing = 14f;
+            vlg.childControlWidth = true;
+            vlg.childControlHeight = true;
+            vlg.childForceExpandWidth = true;
+            vlg.childForceExpandHeight = false;
+
+            GameObject tObj = new GameObject("Title", typeof(RectTransform), typeof(LayoutElement));
+            tObj.transform.SetParent(content.transform, false);
+            tObj.GetComponent<LayoutElement>().preferredHeight = 40f;
+            UIStyleHelper.CreateTmp(tObj.transform, "Txt", "CONFIRM LOGOUT", 26, theme.primaryText);
+
+            GameObject mObj = new GameObject("Msg", typeof(RectTransform), typeof(LayoutElement));
+            mObj.transform.SetParent(content.transform, false);
+            mObj.GetComponent<LayoutElement>().preferredHeight = 96f;
+            TextMeshProUGUI msg = UIStyleHelper.CreateTmp(mObj.transform, "Txt",
+                "Sign out of this account?\nYour Cloud Save, Crystals, and Dungeon Data remain safely stored on the server.",
+                18, theme.normalText);
+            msg.textWrappingMode = TextWrappingModes.Normal;
+
+            UIStyleHelper.CreateThemedButton(content.transform, "ConfirmLogoutBtn", "YES, LOGOUT", theme.danger, 68f, OnConfirmLogoutClicked);
+            UIStyleHelper.CreateThemedButton(content.transform, "CancelLogoutBtn", "CANCEL", theme.secondaryButton, 68f,
+                () => logoutConfirmDialog.SetActive(false));
+
+            logoutConfirmDialog.SetActive(false);
         }
     }
 }

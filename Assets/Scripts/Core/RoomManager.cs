@@ -33,6 +33,8 @@ namespace DreamDungeon
         public int Gold => currencyManager != null ? currencyManager.Gold : gold;
         public CurrencyManager Currency => currencyManager;
         public RoomInventoryManager Inventory => inventoryManager;
+        public RoomDatabase RoomsDatabase => roomDatabase;
+        public IReadOnlyList<RoomData> RoomCatalog => roomCatalog;
         public MonsterDatabase Monsters => monsterDatabase;
         public TrapDatabase Traps => trapDatabase;
         public bool CanUndo => undoStack.Count > 0;
@@ -195,6 +197,10 @@ namespace DreamDungeon
             {
                 error = "Entrance and Dungeon Core are placed automatically.";
                 return false;
+            }
+            if (inventoryManager == null)
+            {
+                inventoryManager = GetComponent<RoomInventoryManager>() ?? FindAnyObjectByType<RoomInventoryManager>();
             }
             if (inventoryManager == null)
             {

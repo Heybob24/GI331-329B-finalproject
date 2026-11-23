@@ -83,7 +83,7 @@ namespace DreamDungeon
             IReadOnlyList<RoomData> rooms = database.AllRooms;
             foreach (RoomData data in rooms)
             {
-                if (data == null) continue;
+                if (data == null || data.roomType == DungeonRoomType.TrapRoom) continue;
                 CreateRoomCard(data);
             }
             Canvas.ForceUpdateCanvases();

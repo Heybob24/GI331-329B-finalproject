@@ -27,7 +27,28 @@ namespace DreamDungeon
         public bool TryAddOwned(MonsterData data, int quantity, out string error)
         {
             if (!CanAdd(data, quantity, out error)) return false;
-            owned[data.monsterId] = GetOwned(data.monsterId) + quantity; InventoryChanged?.Invoke(); return true;
+            int baseOwned = Mathf.Max(GetOwned(data.monsterId), GetPlaced(data.monsterId));
+            owned[data.monsterId] = baseOwned + quantity;
+            InventoryChanged?.Invoke();
+            SaveManager.Instance?.SaveGame();
+            return true;
+        }
+
+        public void EnsureOwnedCoversPlaced()
+        {
+            if (roomManager?.Layout?.monsters == null) return;
+            bool changed = false;
+            foreach (MonsterInstanceData m in roomManager.Layout.monsters)
+            {
+                if (m == null || string.IsNullOrWhiteSpace(m.monsterId)) continue;
+                int placed = GetPlaced(m.monsterId);
+                if (GetOwned(m.monsterId) < placed)
+                {
+                    owned[m.monsterId] = placed;
+                    changed = true;
+                }
+            }
+            if (changed) InventoryChanged?.Invoke();
         }
         public bool CanPlace(string id, out string error)
         {

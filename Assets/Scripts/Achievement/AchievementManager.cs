@@ -324,6 +324,30 @@ namespace DreamDungeon
                     ReportProgress(QuestObjectiveType.MaximizeFacility, 1, isAbsoluteValue: true);
                 }
             }
+            if (RoomManager.Instance?.Layout != null)
+            {
+                int builtRooms = 0;
+                if (RoomManager.Instance.Layout.rooms != null)
+                {
+                    foreach (var r in RoomManager.Instance.Layout.rooms)
+                    {
+                        if (r != null && r.isPlaced && r.roomType != DungeonRoomType.Entrance && r.roomType != DungeonRoomType.DungeonCore && r.roomType != DungeonRoomType.Path)
+                            builtRooms++;
+                    }
+                }
+                if (builtRooms > 0) ReportProgress(QuestObjectiveType.PlaceRoom, builtRooms, isAbsoluteValue: true);
+
+                int placedMonsters = RoomManager.Instance.Layout.monsters != null ? RoomManager.Instance.Layout.monsters.Count : 0;
+                if (placedMonsters > 0) ReportProgress(QuestObjectiveType.PlaceMonster, placedMonsters, isAbsoluteValue: true);
+            }
+            if (DungeonProgressionManager.Instance != null && DungeonProgressionManager.Instance.TotalRaids > 0)
+            {
+                ReportProgress(QuestObjectiveType.CompleteRaid, DungeonProgressionManager.Instance.TotalRaids, isAbsoluteValue: true);
+            }
+            if (CampaignManager.Instance != null && CampaignManager.Instance.TotalVictories > 0)
+            {
+                ReportProgress(QuestObjectiveType.CompleteRaid, CampaignManager.Instance.TotalVictories, isAbsoluteValue: true);
+            }
         }
 
         public AchievementSaveState ExportSaveState()

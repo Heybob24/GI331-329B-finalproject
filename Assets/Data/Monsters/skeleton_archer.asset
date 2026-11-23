@@ -22,7 +22,7 @@ MonoBehaviour:
   maxHP: 70
   attack: 25
   defense: 3
-  attackRange: 3
+  attackRange: 1.8
   attackSpeed: 1
   moveSpeed: 1
   goldCost: 300

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f394cd739b2dc774892bddd51a34109a, type: 3}
+  m_Name: DreamDungeonUIAssetDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::DreamDungeon.DreamDungeonUIAssetDatabase
+  logoDreamDungeon: {fileID: 21300000, guid: 6ac5034f044ba99478441036a0b84856, type: 3}
+  modeCardCampaign: {fileID: 21300000, guid: a8409c68ff4e5a842b39c37071b4a257, type: 3}
+  modeCardEndless: {fileID: 21300000, guid: 61419972e1f1afd4cbca6aa353cc1129, type: 3}
+  modeCardChallenge: {fileID: 21300000, guid: 40268fbd56589894bb4d7825fa1a8227, type: 3}
+  modeCardCustom: {fileID: 21300000, guid: 819a4c454445efc4cb633e27cd2549da, type: 3}
+  buttonBack: {fileID: 21300000, guid: 7b8b742b2efafde47a3db6dcbe29e367, type: 3}
+  buttonPlay: {fileID: 21300000, guid: edd1a4f3848e4fb488a9458f30317c73, type: 3}
+  buttonStartDungeon: {fileID: 21300000, guid: 9ec03c341259b29478999422099371b3, type: 3}
+  buttonMove: {fileID: 21300000, guid: 1ec8964da5dcfba4ab7d4e46adc57016, type: 3}
+  buttonRemove: {fileID: 21300000, guid: b998705e72910864db8dd5fe305f6d2d, type: 3}
+  buttonRotate: {fileID: 21300000, guid: 1b5bae1bbaa1cee449e31d83156dd0cf, type: 3}
+  buttonPath: {fileID: 21300000, guid: b400ba5fc39b2ca429ae9e725aed4593, type: 3}
+  buttonTrap: {fileID: 21300000, guid: 7b841d9a8ef33d34bac6645b1672737f, type: 3}
+  buttonUndo: {fileID: 21300000, guid: 2a09baeb1f37c1e49bff121eacce4153, type: 3}
+  buttonRedo: {fileID: 21300000, guid: 6c4ad020b5944f54f89edae2925cbb0b, type: 3}
+  currencyCrystalCounter: {fileID: 21300000, guid: 033045110bc7aed49a18646b48bf2840, type: 3}
+  currencyGoldCounter: {fileID: 21300000, guid: ad24e023d97adc54c96f9a5db72f9054, type: 3}
+  panelDungeonInfo: {fileID: 21300000, guid: 30ff11ce66946b646a820ef9b57ff398, type: 3}
+  panelBuildTools: {fileID: 21300000, guid: 485ee3ba6ad380f4187c90a06a02fbb3, type: 3}
+  panelEmptyFrame: {fileID: 21300000, guid: 9c7d7320770fbc94a8bcbf3b5593f660, type: 3}
+  decorBannerPurple: {fileID: 21300000, guid: 5f95538abe7475747a7e070c28f820e1, type: 3}
+  decorBannerRed: {fileID: 21300000, guid: 2ee6cd23955e3444993f5b730a985c50, type: 3}
+  decorScroll: {fileID: 21300000, guid: fd6bae552dcd51f48acbdc7c06995677, type: 3}
+  decorSkullEmblem: {fileID: 21300000, guid: b0b1ee4e9eb64ea4098ebbdf1784ce74, type: 3}
+  decorTreasureChest: {fileID: 21300000, guid: 3529d6daa4436324da4a869579da722b, type: 3}
+  badgeBestValue: {fileID: 21300000, guid: dc4ee63f6e8776149947114a4e5d9ece, type: 3}
+  badgeHot: {fileID: 21300000, guid: cbc304b6d41994d4bbd872dbb887fc67, type: 3}
+  badgeNew: {fileID: 21300000, guid: b520fd82d935e9a43859126bca4e4d7f, type: 3}
+  badgeSale: {fileID: 21300000, guid: bfa40afed137dfa499c36a47150fdd6b, type: 3}
+  popupPurchaseSuccess: {fileID: 21300000, guid: 67aaa247b40ff0b4698098c576893743, type: 3}
+  popupPurchaseFailed: {fileID: 21300000, guid: 3fc456eb3c3415b408a9adf494c48c0e, type: 3}
+  iconRoomStone: {fileID: -1195242684, guid: c865c921b49210841943723477e3a43e, type: 3}
+  iconRoomWood: {fileID: -1806678387, guid: c865c921b49210841943723477e3a43e, type: 3}
+  iconRoomBrick: {fileID: 1615175370, guid: c865c921b49210841943723477e3a43e, type: 3}
+  iconRoomObsidian: {fileID: -382522240, guid: c865c921b49210841943723477e3a43e, type: 3}
+  iconSpikeTrap: {fileID: 983244720, guid: 9c7cdc867fb7e874b899ef848d5ca8fe, type: 3}
+  iconGoblin: {fileID: 2068809254, guid: 9c7cdc867fb7e874b899ef848d5ca8fe, type: 3}
+  iconSlime: {fileID: -1008586914, guid: 9c7cdc867fb7e874b899ef848d5ca8fe, type: 3}
+  iconSpider: {fileID: -601732629, guid: 9c7cdc867fb7e874b899ef848d5ca8fe, type: 3}
+  iconGemPurple: {fileID: -2061954515, guid: d48ea7dade1ec904aa96b8fc065a5bdd, type: 3}
+  iconGemBlue: {fileID: -1908309106, guid: d48ea7dade1ec904aa96b8fc065a5bdd, type: 3}
+  iconGemGreen: {fileID: 1194350659, guid: d48ea7dade1ec904aa96b8fc065a5bdd, type: 3}
+  iconGemGold: {fileID: 703356468, guid: d48ea7dade1ec904aa96b8fc065a5bdd, type: 3}
+  iconGemAmber: {fileID: -676718916, guid: d48ea7dade1ec904aa96b8fc065a5bdd, type: 3}
+  iconSettings: {fileID: -2082387714, guid: 44c5c55308d6d254688bc06e4d05ce3c, type: 3}
+  iconInfo: {fileID: -1162586735, guid: 44c5c55308d6d254688bc06e4d05ce3c, type: 3}
+  iconStats: {fileID: 1686747847, guid: 44c5c55308d6d254688bc06e4d05ce3c, type: 3}
+  iconCrown: {fileID: 1417895205, guid: 44c5c55308d6d254688bc06e4d05ce3c, type: 3}
+  iconBell: {fileID: 323137832, guid: 44c5c55308d6d254688bc06e4d05ce3c, type: 3}
+  iconArrowLeft: {fileID: 1972892692, guid: d82327ef5a2d08a428993b6e6de1fc45, type: 3}
+  iconArrowRight: {fileID: -919257156, guid: d82327ef5a2d08a428993b6e6de1fc45, type: 3}
+  iconClose: {fileID: -2003370991, guid: d82327ef5a2d08a428993b6e6de1fc45, type: 3}
+  iconCompass: {fileID: 213214695, guid: d82327ef5a2d08a428993b6e6de1fc45, type: 3}
+  iconDot: {fileID: -606579051, guid: d82327ef5a2d08a428993b6e6de1fc45, type: 3}

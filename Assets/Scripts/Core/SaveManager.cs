@@ -118,7 +118,7 @@ namespace DreamDungeon
                 ResetGame();
                 return;
             }
-            if (!BattleSession.ReturnPending)
+            if (!BattleSession.ReturnPending && !BattleSession.ConsumeRestoredThisSceneLoad())
             {
                 LoadGame();
             }
@@ -127,6 +127,47 @@ namespace DreamDungeon
         public bool HasSave()
         {
             return PlayerPrefs.HasKey(SaveKey);
+        }
+
+        /// <summary>
+        /// Restores Dungeon Progression, Core Level, Grid Expansion, Facilities, and Permanent Quest/Achievement/Campaign state
+        /// without overwriting currencies or dungeon layout (used when returning from Battle so nothing resets to Level 1).
+        /// </summary>
+        public void RestoreProgressionAndUpgradesBeforeBattleSave()
+        {
+            LoadPermanentState();
+            if (!HasSave()) return;
+            try
+            {
+                string json = PlayerPrefs.GetString(SaveKey, string.Empty);
+                if (string.IsNullOrEmpty(json)) return;
+                var saveData = JsonUtility.FromJson<DungeonSaveData>(json);
+                if (saveData == null) return;
+
+                if (DungeonProgressionManager.Instance != null && saveData.progression != null)
+                {
+                    DungeonProgressionManager.Instance.ImportData(saveData.progression);
+                }
+                if (DungeonCoreUpgradeManager.Instance != null && saveData.coreLevel > DungeonCoreUpgradeManager.Instance.CoreLevel)
+                {
+                    DungeonCoreUpgradeManager.Instance.SetLevel(saveData.coreLevel);
+                }
+                if (DungeonExpansionManager.Instance != null && saveData.gridDimension > DungeonExpansionManager.Instance.CurrentDimension)
+                {
+                    DungeonExpansionManager.Instance.SetDimension(saveData.gridDimension);
+                }
+                if (DungeonFacilityManager.Instance != null)
+                {
+                    DungeonFacilityManager.Instance.SetLevels(
+                        Mathf.Max(DungeonFacilityManager.Instance.GoldFacilityLevel, saveData.facilityGoldLevel),
+                        Mathf.Max(DungeonFacilityManager.Instance.SoulFacilityLevel, saveData.facilitySoulLevel),
+                        Mathf.Max(DungeonFacilityManager.Instance.CapacityFacilityLevel, saveData.facilityCapacityLevel));
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[SaveManager] Failed to restore progression/upgrades: {ex.Message}");
+            }
         }
 
         public void SaveAchievements()

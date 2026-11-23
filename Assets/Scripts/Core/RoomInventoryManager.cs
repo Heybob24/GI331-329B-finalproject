@@ -68,9 +68,28 @@ namespace DreamDungeon
         public bool TryAddOwned(RoomData data, int quantity, out string error)
         {
             if (!CanAdd(data, quantity, out error)) return false;
-            owned[data.roomId] = GetOwned(data.roomId) + quantity;
+            int baseOwned = Mathf.Max(GetOwned(data.roomId), GetPlaced(data.roomId));
+            owned[data.roomId] = baseOwned + quantity;
             InventoryChanged?.Invoke();
+            SaveManager.Instance?.SaveGame();
             return true;
+        }
+
+        public void EnsureOwnedCoversPlaced()
+        {
+            if (roomManager?.Layout?.rooms == null) return;
+            bool changed = false;
+            foreach (DungeonRoomInstanceData room in roomManager.Layout.rooms)
+            {
+                if (room == null || !room.isPlaced || string.IsNullOrWhiteSpace(room.roomId)) continue;
+                int placed = GetPlaced(room.roomId);
+                if (GetOwned(room.roomId) < placed)
+                {
+                    owned[room.roomId] = placed;
+                    changed = true;
+                }
+            }
+            if (changed) InventoryChanged?.Invoke();
         }
 
         public bool CanPlace(string roomId, out string error)

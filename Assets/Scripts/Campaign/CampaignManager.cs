@@ -110,12 +110,32 @@ namespace DreamDungeon
                 stageUnlockManager.Initialize(this, worldMap);
 
                 RebuildLookupCaches();
+                LoadSavedCampaignStateIfPresent();
                 stageUnlockManager.EvaluateAllStages(notifyNewUnlocks: false);
                 worldMap.UnlockManager?.EvaluateAllRegions(notifyNewUnlocks: false);
             }
             finally
             {
                 isInitializing = false;
+            }
+        }
+
+        private void LoadSavedCampaignStateIfPresent()
+        {
+            if (!PlayerPrefs.HasKey("DreamDungeon_CampaignData")) return;
+            try
+            {
+                string cJson = PlayerPrefs.GetString("DreamDungeon_CampaignData", string.Empty);
+                if (string.IsNullOrEmpty(cJson)) return;
+                var cState = JsonUtility.FromJson<CampaignSaveState>(cJson);
+                if (cState != null)
+                {
+                    ImportSaveState(cState);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"[CampaignManager] Could not auto-load saved campaign progress: {ex.Message}");
             }
         }
 
@@ -514,7 +534,7 @@ namespace DreamDungeon
 
                 OnStageDefeated?.Invoke(stage);
                 OnCampaignUpdated?.Invoke();
-                SaveManager.Instance?.SaveGame();
+                PersistCampaignProgressImmediately();
                 return defeatBreakdown;
             }
 
@@ -589,8 +609,29 @@ namespace DreamDungeon
 
             OnStageCompleted?.Invoke(stage, breakdown);
             OnCampaignUpdated?.Invoke();
-            SaveManager.Instance?.SaveGame();
+            PersistCampaignProgressImmediately();
             return breakdown;
+        }
+
+        private void PersistCampaignProgressImmediately()
+        {
+            try
+            {
+                // Always persist directly to PlayerPrefs even when in Battle scene where SaveManager.Instance may be null
+                var cState = ExportSaveState();
+                PlayerPrefs.SetString("DreamDungeon_CampaignData", JsonUtility.ToJson(cState, false));
+                PlayerPrefs.Save();
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[CampaignManager] Failed to persist campaign progress: {ex.Message}");
+            }
+
+            if (SaveManager.Instance != null)
+            {
+                SaveManager.Instance.SaveAchievements();
+                SaveManager.Instance.SaveGame();
+            }
         }
 
         public CampaignSaveState ExportSaveState()
@@ -722,21 +763,21 @@ namespace DreamDungeon
             campaigns = new List<CampaignData>();
             stages = new List<CampaignStageData>();
 
-            // Region 1: Forgotten Forest (Easy, Adventurer Guild)
+            // Region 1: Forgotten Forest (Easy — tuned to be clearable with 1,000 starting Gold)
             AddRegionCampaign("campaign_forgotten_forest", "Forgotten Forest Campaign",
                 "Repel the Adventurer Guild expeditions probing the woodland dungeon entrance.",
-                "forgotten_forest", 1, "", 400, 80, 150,
+                "forgotten_forest", 1, "", 450, 90, 160,
                 new[]
                 {
                     MakeStage("forest_stage_1", "Forest Border", "Scout party of rookie swordsmen.", "forgotten_forest", 1,
-                        StageDifficulty.Easy, 1, "adventurer_guild", "", "", 180, 35, 70, 120, 25, 50,
-                        MakeWaves("forest_s1", 3, new[] { "swordsman", "archer" }, 2, false, "")),
+                        StageDifficulty.Easy, 1, "adventurer_guild", "", "", 250, 40, 80, 200, 30, 60,
+                        MakeWaves("forest_s1", 2, new[] { "swordsman", "archer" }, 1, false, "")),
                     MakeStage("forest_stage_2", "Mossy Ruins", "Mixed swordsmen and archers advance deeper.", "forgotten_forest", 2,
-                        StageDifficulty.Easy, 1, "adventurer_guild", "forest_stage_1", "", 220, 45, 90, 150, 30, 60,
-                        MakeWaves("forest_s2", 4, new[] { "swordsman", "archer" }, 3, false, "")),
+                        StageDifficulty.Easy, 1, "adventurer_guild", "forest_stage_1", "", 300, 50, 100, 220, 35, 70,
+                        MakeWaves("forest_s2", 3, new[] { "swordsman", "archer" }, 1, false, "")),
                     MakeStage("forest_stage_3", "Ancient Grove Champion", "Guild captain leads a full raid force.", "forgotten_forest", 3,
-                        StageDifficulty.Easy, 2, "adventurer_guild", "forest_stage_2", "cave_dragon", 300, 65, 130, 220, 50, 100,
-                        MakeWaves("forest_s3", 5, new[] { "swordsman", "archer", "knight" }, 3, true, "cave_dragon"))
+                        StageDifficulty.Easy, 2, "adventurer_guild", "forest_stage_2", "cave_dragon", 380, 75, 140, 280, 55, 110,
+                        MakeWaves("forest_s3", 3, new[] { "swordsman", "archer", "knight" }, 2, true, "cave_dragon"))
                 });
 
             // Region 2: Cursed Cave (Normal, Holy Order)
@@ -746,14 +787,14 @@ namespace DreamDungeon
                 new[]
                 {
                     MakeStage("cave_stage_1", "Echoing Tunnel", "Holy Order vanguard with regenerative wards.", "cursed_cave", 1,
-                        StageDifficulty.Normal, 2, "holy_order", "forest_stage_3", "", 320, 70, 140, 200, 45, 90,
-                        MakeWaves("cave_s1", 4, new[] { "knight", "swordsman" }, 3, false, "")),
+                        StageDifficulty.Normal, 2, "holy_order", "forest_stage_3", "", 340, 75, 145, 220, 45, 90,
+                        MakeWaves("cave_s1", 3, new[] { "knight", "swordsman" }, 2, false, "")),
                     MakeStage("cave_stage_2", "Crypt Crossroads", "Paladins and Priests march in formation.", "cursed_cave", 2,
-                        StageDifficulty.Normal, 3, "holy_order", "cave_stage_1", "", 380, 85, 170, 250, 55, 110,
-                        MakeWaves("cave_s2", 4, new[] { "knight", "swordsman", "mage" }, 3, false, "")),
+                        StageDifficulty.Normal, 3, "holy_order", "cave_stage_1", "", 400, 90, 175, 260, 55, 110,
+                        MakeWaves("cave_s2", 3, new[] { "knight", "swordsman", "mage" }, 2, false, "")),
                     MakeStage("cave_stage_3", "Sanctified Cavern", "High Inquisitor assault on the cavern core.", "cursed_cave", 3,
-                        StageDifficulty.Normal, 3, "holy_order", "cave_stage_2", "cave_dragon", 460, 110, 220, 320, 75, 150,
-                        MakeWaves("cave_s3", 5, new[] { "knight", "mage", "swordsman" }, 4, true, "cave_dragon"))
+                        StageDifficulty.Normal, 3, "holy_order", "cave_stage_2", "cave_dragon", 480, 115, 225, 340, 75, 150,
+                        MakeWaves("cave_s3", 4, new[] { "knight", "mage", "swordsman" }, 2, true, "cave_dragon"))
                 });
 
             // Region 3: Volcanic Land (Hard, Shadow Assassins)

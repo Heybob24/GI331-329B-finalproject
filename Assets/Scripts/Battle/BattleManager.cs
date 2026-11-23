@@ -297,31 +297,8 @@ namespace DreamDungeon
                 }
             }
 
-            // 5. Register Traps
+            // 5. Traps disabled (clear any legacy trap entries safely)
             trapController.ClearTraps();
-            int maxTrapsCap = -1;
-            if (BattleSession.IsChallengeBattle && EndlessChallengeManager.Instance != null &&
-                EndlessChallengeManager.Instance.ActiveModifiers.IsActive)
-            {
-                maxTrapsCap = EndlessChallengeManager.Instance.ActiveModifiers.MaxAllowedTraps;
-            }
-            int trapsRegistered = 0;
-            if (layout.traps != null)
-            {
-                foreach (TrapInstanceData data in layout.traps)
-                {
-                    if (maxTrapsCap >= 0 && trapsRegistered >= maxTrapsCap) break;
-                    TrapData def = trapDatabase.FindById(data.trapId);
-                    DungeonRoomInstanceData room = layout.rooms.Find(r => r.instanceId == data.roomInstanceId);
-                    if (def == null || room == null) continue;
-
-                    Vector3 pos = UnitWorld(room, data.localPosition, -0.25f);
-
-                    SpawnTile(pos, TrapBattleController.GetTrapColor(def.trapType), cellSize * 0.22f, 2, def.trapName);
-                    trapController.RegisterTrap(data, def, pos);
-                    trapsRegistered++;
-                }
-            }
 
             // 6. Configure WaveManager
             DungeonRoomInstanceData entrance = layout.rooms.Find(r => r.roomType == DungeonRoomType.Entrance);

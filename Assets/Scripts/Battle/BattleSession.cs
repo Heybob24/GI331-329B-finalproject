@@ -9,6 +9,15 @@ namespace DreamDungeon
     public static class BattleSession
     {
         public static string LayoutJson { get; private set; }
+        public static string RoomInventoryJson { get; private set; }
+        public static string MonsterInventoryJson { get; private set; }
+        public static bool RestoredThisSceneLoad { get; private set; }
+        public static bool ConsumeRestoredThisSceneLoad()
+        {
+            bool val = RestoredThisSceneLoad;
+            RestoredThisSceneLoad = false;
+            return val;
+        }
         public static string DungeonScene { get; private set; } = "DungeonEditor";
         public static int Gold { get; private set; }
         public static int Soul { get; private set; }
@@ -40,6 +49,7 @@ namespace DreamDungeon
 
         // Milestone 9: Endless Dungeon & Challenge Mode Context
         public static GameModeType ActiveGameMode { get; private set; } = GameModeType.StandardRaid;
+        public static void SetActiveGameMode(GameModeType mode) => ActiveGameMode = mode;
         public static bool IsEndlessBattle => ActiveGameMode == GameModeType.Endless;
         public static bool IsChallengeBattle => ActiveGameMode == GameModeType.Challenge;
         public static string ChallengeId { get; private set; }
@@ -54,6 +64,9 @@ namespace DreamDungeon
         public static void Begin(string layoutJson, string scene, int gold, int soul, int crystal)
         {
             LayoutJson = layoutJson; DungeonScene = scene; Gold = gold; Soul = soul; Crystal = crystal;
+            RoomInventoryJson = UnityEngine.Object.FindAnyObjectByType<RoomInventoryManager>()?.ToJson();
+            MonsterInventoryJson = UnityEngine.Object.FindAnyObjectByType<MonsterInventoryManager>()?.ToJson();
+            RestoredThisSceneLoad = false;
             WaveReached = 0; DefeatedCount = 0; Won = false; RewardGold = RewardSoul = RewardExp = 0;
             RewardClaimed = false; ReturnPending = false;
             IsCampaignBattle = false; RegionId = null; CampaignId = null; StageId = null;
@@ -182,7 +195,27 @@ namespace DreamDungeon
         public static bool RestoreEditor(RoomManager manager)
         {
             if (!ReturnPending || manager == null) return false;
+
+            // 1. Restore saved Dungeon Level, Core Level, Expansion, Facilities, and Quests/Achievements BEFORE applying new rewards & saving!
+            SaveManager saver = SaveManager.Instance ?? UnityEngine.Object.FindAnyObjectByType<SaveManager>();
+            saver?.RestoreProgressionAndUpgradesBeforeBattleSave();
+
             if (!manager.LoadLayoutJson(LayoutJson, out string error)) Debug.LogError($"Could not restore dungeon after raid: {error}");
+
+            RoomInventoryManager roomInv = UnityEngine.Object.FindAnyObjectByType<RoomInventoryManager>();
+            if (roomInv != null)
+            {
+                if (!string.IsNullOrEmpty(RoomInventoryJson)) roomInv.LoadFromJson(RoomInventoryJson, out _);
+                roomInv.EnsureOwnedCoversPlaced();
+            }
+
+            MonsterInventoryManager monInv = UnityEngine.Object.FindAnyObjectByType<MonsterInventoryManager>();
+            if (monInv != null)
+            {
+                if (!string.IsNullOrEmpty(MonsterInventoryJson)) monInv.LoadFromJson(MonsterInventoryJson, out _);
+                monInv.EnsureOwnedCoversPlaced();
+            }
+
             CurrencyManager currency = manager.Currency;
             if (currency != null)
             {
@@ -192,18 +225,26 @@ namespace DreamDungeon
                     currency.TryAdd(RewardGold, RewardSoul, 0, out _);
                     if (GameManager.Instance == null) new GameObject("GameManager").AddComponent<GameManager>();
                     GameManager.Instance.GrantExperience(rewardId, RewardExp);
+                    if (RewardExp > 0)
+                    {
+                        DungeonProgressionManager.Instance?.AddExp(RewardExp);
+                    }
+                    DungeonProgressionManager.Instance?.RecordRaidResult(Won, WaveReached, DefeatedCount, LastRunBossesDefeated);
                 }
             }
             if (QuestManager.Instance != null)
             {
-                QuestManager.Instance.NotifyBattleResult(rewardId, Won, WaveReached, DefeatedCount, 0);
+                QuestManager.Instance.NotifyBattleResult(rewardId, Won, WaveReached, DefeatedCount, LastRunBossesDefeated);
+                QuestManager.Instance.SyncCumulativeObjectives();
             }
             if (AchievementManager.Instance != null)
             {
-                AchievementManager.Instance.NotifyBattleResult(rewardId, Won, WaveReached, DefeatedCount, 0);
+                AchievementManager.Instance.NotifyBattleResult(rewardId, Won, WaveReached, DefeatedCount, LastRunBossesDefeated);
+                AchievementManager.Instance.SyncCumulativeObjectives();
             }
-            RewardClaimed = true; ReturnPending = false; LayoutJson = null;
-            SaveManager.Instance?.SaveGame();
+            RewardClaimed = true; ReturnPending = false; RestoredThisSceneLoad = true; LayoutJson = null;
+            saver?.SaveAchievements();
+            saver?.SaveGame();
             return true;
         }
     }

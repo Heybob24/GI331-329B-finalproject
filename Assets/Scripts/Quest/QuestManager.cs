@@ -501,6 +501,9 @@ namespace DreamDungeon
 
         public void SyncCumulativeObjectives()
         {
+            EnsureDatabaseAndSubManagers();
+            mainQuestManager?.EvaluateMainQuestSequence(notifyNewUnlocks: false);
+
             int currentLevel = DungeonProgressionManager.Instance != null ? DungeonProgressionManager.Instance.CurrentLevel : 1;
             if (currentLevel > 1)
             {
@@ -509,6 +512,40 @@ namespace DreamDungeon
             if (DungeonUnlockManager.Instance != null && DungeonUnlockManager.Instance.IsRoomUnlocked("boss_room", currentLevel))
             {
                 ReportObjectiveProgress(QuestObjectiveType.UnlockRoom, 1, targetFilterId: "boss_room", isAbsoluteValue: true);
+            }
+            if (DungeonCoreUpgradeManager.Instance != null && DungeonCoreUpgradeManager.Instance.CoreLevel > 1)
+            {
+                ReportObjectiveProgress(QuestObjectiveType.UpgradeCore, DungeonCoreUpgradeManager.Instance.CoreLevel, isAbsoluteValue: true);
+            }
+            if (RoomManager.Instance?.Layout != null)
+            {
+                int builtRooms = 0;
+                if (RoomManager.Instance.Layout.rooms != null)
+                {
+                    foreach (var r in RoomManager.Instance.Layout.rooms)
+                    {
+                        if (r != null && r.isPlaced && r.roomType != DungeonRoomType.Entrance && r.roomType != DungeonRoomType.DungeonCore && r.roomType != DungeonRoomType.Path)
+                            builtRooms++;
+                    }
+                }
+                if (builtRooms > 0)
+                    ReportObjectiveProgress(QuestObjectiveType.PlaceRoom, builtRooms, isAbsoluteValue: true);
+
+                int placedMonsters = RoomManager.Instance.Layout.monsters != null ? RoomManager.Instance.Layout.monsters.Count : 0;
+                if (placedMonsters > 0)
+                    ReportObjectiveProgress(QuestObjectiveType.PlaceMonster, placedMonsters, isAbsoluteValue: true);
+            }
+            if (DungeonProgressionManager.Instance != null)
+            {
+                if (DungeonProgressionManager.Instance.TotalRaids > 0)
+                    ReportObjectiveProgress(QuestObjectiveType.CompleteRaid, DungeonProgressionManager.Instance.TotalRaids, isAbsoluteValue: true);
+                if (DungeonProgressionManager.Instance.TotalVictories > 0)
+                    ReportObjectiveProgress(QuestObjectiveType.WinRaid, DungeonProgressionManager.Instance.TotalVictories, isAbsoluteValue: true);
+            }
+            if (CampaignManager.Instance != null && CampaignManager.Instance.TotalVictories > 0)
+            {
+                ReportObjectiveProgress(QuestObjectiveType.CompleteRaid, CampaignManager.Instance.TotalVictories, isAbsoluteValue: true);
+                ReportObjectiveProgress(QuestObjectiveType.WinRaid, CampaignManager.Instance.TotalVictories, isAbsoluteValue: true);
             }
         }
 

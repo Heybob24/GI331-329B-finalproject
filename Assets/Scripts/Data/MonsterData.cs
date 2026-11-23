@@ -37,8 +37,8 @@ namespace DreamDungeon
             baseUpgradeGoldCost = Mathf.Max(0, baseUpgradeGoldCost); baseUpgradeSoulCost = Mathf.Max(0, baseUpgradeSoulCost);
         }
 
-        public int MaxHPAtLevel(int level) => Mathf.Max(1, Mathf.RoundToInt(maxHP * (1f + .20f * Mathf.Max(0, level - 1))));
-        public int AttackAtLevel(int level) => Mathf.Max(0, Mathf.RoundToInt(attack * (1f + .10f * Mathf.Max(0, level - 1))));
+        public int MaxHPAtLevel(int level) => Mathf.Max(1, Mathf.RoundToInt(maxHP * 1.35f * (1f + .22f * Mathf.Max(0, level - 1))));
+        public int AttackAtLevel(int level) => Mathf.Max(1, Mathf.RoundToInt(attack * 1.85f * (1f + .18f * Mathf.Max(0, level - 1))));
         public int DefenseAtLevel(int level) => Mathf.Max(0, defense + 2 * Mathf.Max(0, level - 1));
     }
 }

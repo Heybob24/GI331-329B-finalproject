@@ -50,11 +50,11 @@ namespace DreamDungeon
             level = Mathf.Max(1, monsterLevel);
             instanceId = instId;
 
-            maxHP = currentHP = data != null ? data.MaxHPAtLevel(level) : 100;
-            attackStat = data != null ? data.AttackAtLevel(level) : 10;
+            maxHP = currentHP = data != null ? data.MaxHPAtLevel(level) : 135;
+            attackStat = data != null ? data.AttackAtLevel(level) : 20;
             defenseStat = data != null ? data.DefenseAtLevel(level) : 5;
-            attackRange = data != null ? Mathf.Max(0.1f, data.attackRange) : 1f;
-            attackSpeed = data != null ? Mathf.Max(0.01f, data.attackSpeed) : 1f;
+            attackRange = data != null ? Mathf.Max(1.65f, data.attackRange) : 1.65f;
+            attackSpeed = data != null ? Mathf.Max(0.01f, data.attackSpeed * 1.15f) : 1.15f;
             attackCooldown = 0f;
 
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();

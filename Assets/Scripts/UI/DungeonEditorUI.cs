@@ -42,6 +42,7 @@ namespace DreamDungeon
         private EndlessModeUI endlessModeUI;
         private ChallengeSelectionUI challengeSelectionUI;
         private GameModeSelectionUI gameModeSelectionUI;
+        private DungeonBuilderRedesignUI redesignUI;
         private Text headerText;
         private Text levelValueText;
         private Button startRaidButton;
@@ -120,7 +121,12 @@ namespace DreamDungeon
             pathButtonImage = pathButton != null ? pathButton.GetComponent<Image>() : null;
             if (pathButtonImage != null) pathButtonColor = pathButtonImage.color;
 
-            Wire("BackButton", () => SceneLoader.Load("MainMenu"));
+            Wire("BackButton", () =>
+            {
+                SaveManager.Instance?.SaveGame();
+                SelectedGameModeManager.RequestReturnToModeSelect();
+                SceneLoader.Load("MainMenu");
+            });
             Wire("RoomButton", placement.SelectRoomTool);
             Wire("MonsterRoomButton", placement.SelectMonsterRoom);
             Wire("TreasureRoomButton", placement.SelectTreasureRoom);
@@ -207,6 +213,14 @@ namespace DreamDungeon
             isStartingRaid = false;
             if (startRaidButton != null) startRaidButton.interactable = true;
             SetStatus("Select a room or path tool, then tap a green preview cell.");
+
+            GameObject safeRootObj = GameObject.Find("SafeAreaRoot");
+            RectTransform safeRootRt = safeRootObj != null ? safeRootObj.GetComponent<RectTransform>() : null;
+            if (safeRootRt != null)
+            {
+                redesignUI = FindAnyObjectByType<DungeonBuilderRedesignUI>() ?? gameObject.AddComponent<DungeonBuilderRedesignUI>();
+                redesignUI.Initialize(safeRootRt, this, roomManager, placement, grid, monsterPlacement, trapPlacement);
+            }
 
             if (BattleSession.ReturnToEndlessMenuPending)
             {
@@ -623,6 +637,27 @@ namespace DreamDungeon
             isStartingRaid = false;
             if (noticePanel != null) noticePanel.SetActive(false);
         }
+
+        public void TriggerStartRaid() => StartRaid();
+        public void OpenWorldMapPanel() => worldMapUI?.Open();
+        public void OpenEndlessPanel() => endlessModeUI?.Open();
+        public void OpenChallengePanel() => challengeSelectionUI?.Open();
+        public void OpenRoomShopPanel() => shopUI?.Open();
+        public void OpenMonsterShopPanel() => monsterShopUI?.Open();
+        public void OpenTrapShopPanel() { /* Trap system disabled */ }
+        public void OpenUpgradePanel() => upgradeUI?.Open();
+        public void OpenQuestPanel()
+        {
+            QuestManager.Instance?.SyncCumulativeObjectives();
+            questUI?.Open();
+        }
+        public void OpenAchievementPanel()
+        {
+            AchievementManager.Instance?.SyncCumulativeObjectives();
+            achievementUI?.Open();
+        }
+        public void OpenBossPanel() => bossUI?.Open();
+        public void OpenProgressionPanel() => progressionUI?.Open();
 
         private void StartRaid()
         {
