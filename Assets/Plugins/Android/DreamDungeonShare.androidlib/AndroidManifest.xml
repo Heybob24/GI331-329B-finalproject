@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dreamdungeon.share">
+    <application>
+        <provider
+            android:name="com.dreamdungeon.share.DreamDungeonFileProvider"
+            android:authorities="${applicationId}.dreamdungeon.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+    </application>
+</manifest>
