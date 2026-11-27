@@ -148,6 +148,19 @@ namespace DreamDungeon
             statusMessage = "Raid started.";
             initialized = true;
             waveManager.StartWaves();
+
+            int raidDungeonLevel = DungeonProgressionManager.Instance != null
+                ? DungeonProgressionManager.Instance.CurrentLevel
+                : 1;
+            int raidMonsterCount = monsters.Count + bosses.Count;
+            int raidTrapCount = layout != null && layout.traps != null ? layout.traps.Count : 0;
+            AnalyticsManager.Instance?.TrackRaidStarted(
+                raidDungeonLevel,
+                raidMonsterCount,
+                raidTrapCount,
+                AnalyticsEventSource.Gameplay,
+                BattleSession.CurrentBattleResultId);
+
             Notify();
         }
 
@@ -600,6 +613,7 @@ namespace DreamDungeon
                     isNewRecord: outcome.IsNewWaveRecord || outcome.IsNewScoreRecord);
 
                 DungeonProgressionManager.Instance?.RecordRaidResult(endlessWavesCleared > 0, CurrentWave, waveManager.DefeatedCount, totalBossesKilled);
+                TrackRaidOutcomeAnalytics(false, CurrentWave, outcome.ScoreBreakdown.TotalScore);
                 statusMessage = $"Endless Run Ended on Wave {CurrentWave}! Score: {outcome.ScoreBreakdown.TotalScore}";
                 Notify();
 
@@ -642,6 +656,7 @@ namespace DreamDungeon
                     isNewRecord: outcome.IsNewScoreRecord || outcome.IsNewTimeRecord);
 
                 DungeonProgressionManager.Instance?.RecordRaidResult(outcome.Completed, CurrentWave, waveManager.DefeatedCount, totalBossesKilled);
+                TrackRaidOutcomeAnalytics(outcome.Completed, CurrentWave, outcome.ScoreBreakdown.TotalScore);
                 statusMessage = outcome.Completed ? "Challenge Completed!" : "Challenge Failed.";
                 Notify();
 
@@ -674,6 +689,8 @@ namespace DreamDungeon
                     ? Mathf.Max(1, bossesDefeatedCount)
                     : bossesDefeatedCount;
                 DungeonProgressionManager.Instance?.RecordRaidResult(victory, CurrentWave, waveManager.DefeatedCount, bossDefeatedForProg);
+                RefreshLiveScore();
+                TrackRaidOutcomeAnalytics(victory, CurrentWave, liveScore);
 
                 statusMessage = victory ? "Campaign Stage Cleared. Victory!" : "Dungeon Core destroyed. Defeat.";
                 Notify();
@@ -695,10 +712,35 @@ namespace DreamDungeon
             QuestManager.Instance?.NotifyBattleResult(BattleSession.CurrentBattleResultId, victory, completedWaves, waveManager.DefeatedCount, bossesDefeatedCount);
             AchievementManager.Instance?.NotifyBattleResult(BattleSession.CurrentBattleResultId, victory, completedWaves, waveManager.DefeatedCount, bossesDefeatedCount);
 
+            RefreshLiveScore();
+            TrackRaidOutcomeAnalytics(victory, CurrentWave, liveScore);
+
             statusMessage = victory ? "All waves defeated. Victory!" : "Dungeon Core destroyed. Defeat.";
             Notify();
 
             hud?.ShowResult(victory, CurrentWave, waveManager.DefeatedCount, CoreHP, reward.Gold, reward.Soul, reward.Exp);
+        }
+
+        private void TrackRaidOutcomeAnalytics(bool raidVictory, int finalWave, int finalScore)
+        {
+            if (raidVictory)
+            {
+                AnalyticsManager.Instance?.TrackRaidCompleted(
+                    finalWave,
+                    Mathf.Max(0, finalScore),
+                    runElapsedTime,
+                    AnalyticsEventSource.Gameplay,
+                    BattleSession.CurrentBattleResultId);
+            }
+            else
+            {
+                AnalyticsManager.Instance?.TrackRaidFailed(
+                    finalWave,
+                    Mathf.Max(0, CoreHP),
+                    runElapsedTime,
+                    AnalyticsEventSource.Gameplay,
+                    BattleSession.CurrentBattleResultId);
+            }
         }
 
         public void SetPaused(bool paused)

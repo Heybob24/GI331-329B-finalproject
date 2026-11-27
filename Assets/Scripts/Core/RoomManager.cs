@@ -242,6 +242,17 @@ namespace DreamDungeon
             layout.rooms.Add(instance);
             RefreshLayout();
             RoomPlaced?.Invoke(instance);
+
+            int currentDungeonLevel = DungeonProgressionManager.Instance != null
+                ? DungeonProgressionManager.Instance.CurrentLevel
+                : 1;
+            int currentRoomCount = layout != null && layout.rooms != null ? layout.rooms.Count : 0;
+            AnalyticsManager.Instance?.TrackDungeonCreated(
+                currentDungeonLevel,
+                currentRoomCount,
+                AnalyticsEventSource.Gameplay,
+                $"room:{instance.instanceId}");
+
             error = $"Placed {data.roomName}.";
             return true;
         }

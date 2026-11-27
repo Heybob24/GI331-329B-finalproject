@@ -99,6 +99,7 @@ namespace DreamDungeon
                 gameObject.AddComponent<GoogleLoginManager>();
             if (GetComponent<AccountLinkManager>() == null)
                 gameObject.AddComponent<AccountLinkManager>();
+            AnalyticsManager.EnsureInstance();
         }
 
         public async Task<bool> InitializeServicesAsync()

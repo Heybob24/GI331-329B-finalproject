@@ -84,6 +84,7 @@ namespace DreamDungeon.Editor
             AddPackageCheck(manifestText, activeDefines, "com.unity.services.core", "UGS Core", "UGS_CORE_ENABLED");
             AddPackageCheck(manifestText, activeDefines, "com.unity.services.authentication", "UGS Authentication", "UGS_AUTH_ENABLED");
             AddPackageCheck(manifestText, activeDefines, "com.unity.services.cloudsave", "UGS Cloud Save", "UGS_CLOUDSAVE_ENABLED");
+            AddPackageCheck(manifestText, activeDefines, "com.unity.services.analytics", "UGS Analytics", "UGS_ANALYTICS_ENABLED");
             AddPackageCheck(manifestText, activeDefines, "com.unity.services.cloudcode", "UGS Cloud Code (Optional)", "UGS_CLOUDCODE_ENABLED");
             AddPackageCheck(manifestText, activeDefines, "com.unity.purchasing", "Unity IAP (Optional)", "UNITY_IAP_ENABLED");
         }

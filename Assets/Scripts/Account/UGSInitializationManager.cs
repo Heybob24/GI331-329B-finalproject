@@ -34,7 +34,7 @@ namespace DreamDungeon
         public bool IsInitialized => state == UgsInitState.InitializedLiveUgs || state == UgsInitState.InitializedLocalFallback;
         public bool IsLiveUgsInitialized => state == UgsInitState.InitializedLiveUgs;
         public string LastError => lastError;
-        public string EnvironmentName => string.IsNullOrWhiteSpace(environmentName) ? "default" : environmentName.Trim();
+        public string EnvironmentName => string.IsNullOrWhiteSpace(environmentName) ? "production" : environmentName.Trim().ToLowerInvariant();
 
         /// <summary>
         /// Returns the Unity Cloud Project ID linked in Project Settings > Services (read-only).
@@ -84,6 +84,18 @@ namespace DreamDungeon
             get
             {
 #if UGS_CLOUDCODE_ENABLED
+                return true;
+#else
+                return false;
+#endif
+            }
+        }
+
+        public static bool IsLiveUgsAnalyticsCompiled
+        {
+            get
+            {
+#if UGS_ANALYTICS_ENABLED
                 return true;
 #else
                 return false;
@@ -210,7 +222,7 @@ namespace DreamDungeon
         {
             return $"State={state} | ProjectId={(HasLinkedCloudProjectId ? CloudProjectId : "UNLINKED")} | " +
                    $"Core={IsLiveUgsCoreCompiled} | Auth={IsLiveUgsAuthCompiled} | CloudSave={IsLiveUgsCloudSaveCompiled} | " +
-                   $"CloudCode={IsLiveUgsCloudCodeCompiled} | IAP={IsLiveUnityIapCompiled} | GoogleSDK={IsGoogleSignInPluginCompiled}";
+                   $"CloudCode={IsLiveUgsCloudCodeCompiled} | Analytics={IsLiveUgsAnalyticsCompiled} | IAP={IsLiveUnityIapCompiled} | GoogleSDK={IsGoogleSignInPluginCompiled}";
         }
     }
 }

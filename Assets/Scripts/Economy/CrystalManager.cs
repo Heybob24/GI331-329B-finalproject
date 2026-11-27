@@ -108,6 +108,12 @@ namespace DreamDungeon
 
             OnCrystalBalanceChanged?.Invoke(crystalBalance);
 
+            AnalyticsManager.Instance?.TrackCrystalSpent(
+                amount,
+                string.IsNullOrWhiteSpace(reason) ? "crystal_spend" : reason,
+                crystalBalance,
+                AnalyticsEventSource.Gameplay);
+
             if (PlayerDatabaseManager.Instance != null && PlayerDatabaseManager.Instance.CurrentData != null)
             {
                 await PlayerDatabaseManager.Instance.SaveCurrentPlayerDataAsync(captureFromGameSystems: false);

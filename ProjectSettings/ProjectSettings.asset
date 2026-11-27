@@ -680,7 +680,8 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY;UGS_CORE_ENABLED;UGS_AUTH_ENABLED;UGS_CLOUDSAVE_ENABLED;UGS_CLOUDCODE_ENABLED;UNITY_IAP_ENABLED
+    Android: UGS_CORE_ENABLED;UGS_AUTH_ENABLED;UGS_CLOUDSAVE_ENABLED;UGS_CLOUDCODE_ENABLED;UGS_ANALYTICS_ENABLED;UNITY_IAP_ENABLED;UNITY_ANALYTICS_EVENT_LOGS
+    Standalone: SENTIS_ANALYTICS_ENABLED;APP_UI_EDITOR_ONLY;UGS_CORE_ENABLED;UGS_AUTH_ENABLED;UGS_CLOUDSAVE_ENABLED;UGS_CLOUDCODE_ENABLED;UGS_ANALYTICS_ENABLED;UNITY_IAP_ENABLED;UNITY_ANALYTICS_EVENT_LOGS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -784,7 +785,7 @@ PlayerSettings:
   cloudProjectId: b5e79264-149b-42f8-ac0a-1a1c092d1524
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project 2026-11-19_10-03-38
+  projectName: DREAM DUNGEON
   organizationId: heywut
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

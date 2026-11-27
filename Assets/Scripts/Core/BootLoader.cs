@@ -18,6 +18,8 @@ namespace DreamDungeon
             if (AuthenticationManager.Instance == null)
                 new GameObject("AuthenticationManager").AddComponent<AuthenticationManager>();
 
+            AnalyticsManager.EnsureInstance();
+
             yield return null;
             SceneLoader.Load("MainMenu");
         }

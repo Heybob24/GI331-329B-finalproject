@@ -58,7 +58,7 @@ namespace DreamDungeon
                    gold >= goldCost && soul >= soulCost && crystal >= crystalCost;
         }
 
-        public bool TrySpend(int goldCost, int soulCost, int crystalCost, out string error)
+        public bool TrySpend(int goldCost, int soulCost, int crystalCost, out string error, string itemId = "shop_item")
         {
             if (goldCost < 0 || soulCost < 0 || crystalCost < 0)
             {
@@ -75,6 +75,16 @@ namespace DreamDungeon
             soul -= soulCost;
             crystal -= crystalCost;
             CurrencyChanged?.Invoke(gold, soul, crystal);
+
+            if (crystalCost > 0)
+            {
+                AnalyticsManager.Instance?.TrackCrystalSpent(
+                    crystalCost,
+                    string.IsNullOrWhiteSpace(itemId) ? "shop_item" : itemId,
+                    crystal,
+                    AnalyticsEventSource.Gameplay);
+            }
+
             error = string.Empty;
             return true;
         }
